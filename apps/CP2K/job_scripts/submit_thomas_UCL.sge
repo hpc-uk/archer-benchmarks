@@ -1,0 +1,24 @@
+#!/bin/bash --login
+
+# Job submission script for Thomas Tier-2 system at UCL
+# SGE job submission system
+
+#$ -S /bin/bash
+#$ -l h_rt=3:0:0
+#$ -N cp2k_lih
+#$ -pe mpi 96
+#$ -wd /home/mmm0074/benchmarks/ARCHER_apps/CP2K/LiH
+
+module unload compilers 
+module unload mpi
+module load compilers/gnu/4.9.2
+module load mpi/openmpi/1.8.4/gnu-4.9.2
+module load openblas/0.2.14/gnu-4.9.2
+module load fftw/3.3.4/gnu-4.9.2
+module load libxc/2.2.2/gnu-4.9.2
+module load libint/1.1.4/gnu-4.9.2
+module load quip/18c5440/gnu-4.9.2
+module load cp2k
+
+gerun cp2k.popt input_bulk_B88_3.inp > stdout.txt 2> stderr.txt
+
