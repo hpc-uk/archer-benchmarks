@@ -1,0 +1,30 @@
+#!/bin/bash --login
+
+#$ -S /bin/bash
+#$ -l h_rt=0:20:0
+#$ -N npcc
+#$ -pe mpi 96
+#$ -wd /home/mmm0074/benchmarks/hpcc-code
+
+mpilaunch=gerun
+corespn=24
+
+nodeslist="4 2"
+
+for nodes in $nodeslist
+do
+   cores=$(( nodes * corespn ))
+   if [ -f hpccoutf.txt ] 
+   then 
+      rm hpccoutf.txt
+   fi
+
+   timestamp=$(date '+%Y%m%d%H%M')
+   export OMP_NUM_THREADS=24
+   ${mpilaunch} ./hpcc
+   mv hpccoutf.txt nodes${nodes}ppn1_${timestamp}_hpccoutf.txt
+   export OMP_NUM_THREADS=1
+   ${mpilaunch} ./hpcc
+   mv hpccoutf.txt nodes${nodes}ppn${corespn}_${timestamp}_hpccoutf.txt
+done
+
