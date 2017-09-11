@@ -57,7 +57,7 @@
  FFT Lib : fftw3 version fftw-3.3.5
  Fundamental constants values: CODATA 2010
  
- Run started: Thu, 07 Sep 2017 09:23:32 +0100
+ Run started: Mon, 11 Sep 2017 10:51:48 +0100
  
  Pseudo atomic calculation performed for O 2s2 2p4
  
@@ -70,7 +70,6 @@
  
  Calculation parallelised over 36 processes.
  Data is distributed by G-vector(18-way) and k-point(2-way)
- Each process may use up to 72 threads.
 
  ************************************ Title ************************************
  3x3 sapphire surface benchmark (v1.1)
@@ -532,25 +531,25 @@
 SCF loop      Energy           Fermi           Energy gain       Timer   <-- SCF
                                energy          per atom          (sec)   <-- SCF
 ------------------------------------------------------------------------ <-- SCF
-Initial  -5.94026803E+004  0.00000000E+000                       489.11  <-- SCF
-      1  -7.23961935E+004  4.10130583E+000   4.81241230E+001    1606.07  <-- SCF
-      2  -7.78255401E+004  1.95967658E+000   2.01086913E+001    2400.19  <-- SCF
-      3  -7.79864990E+004  1.80098008E+000   5.96144121E-001    3212.27  <-- SCF
-      4  -7.78412729E+004  1.95860528E+000  -5.37874454E-001    4615.21  <-- SCF
-      5  -7.77211098E+004  1.34856593E+000  -4.45048575E-001    6009.51  <-- SCF
-      6  -7.77152134E+004  1.12183630E+000  -2.18383724E-002    7527.29  <-- SCF
-      7  -7.77129442E+004  1.05275937E+000  -8.40464470E-003    8913.62  <-- SCF
-      8  -7.77104470E+004  1.02757487E+000  -9.24880817E-003   10290.59  <-- SCF
-      9  -7.77084257E+004  9.96396863E-001  -7.48637866E-003   11723.86  <-- SCF
-     10  -7.77059672E+004  1.11219800E+000  -9.10547064E-003   13090.77  <-- SCF
-     11  -7.77052070E+004  1.16206376E+000  -2.81542951E-003   14472.66  <-- SCF
+Initial  -5.94026803E+004  0.00000000E+000                         7.89  <-- SCF
+      1  -7.23961935E+004  4.10130583E+000   4.81241230E+001     131.53  <-- SCF
+      2  -7.78255401E+004  1.95967658E+000   2.01086913E+001     213.52  <-- SCF
+      3  -7.79864990E+004  1.80098008E+000   5.96144121E-001     296.17  <-- SCF
+      4  -7.78412729E+004  1.95860528E+000  -5.37874454E-001     403.69  <-- SCF
+      5  -7.77211098E+004  1.34856593E+000  -4.45048575E-001     510.15  <-- SCF
+      6  -7.77152134E+004  1.12183630E+000  -2.18383724E-002     626.47  <-- SCF
+      7  -7.77129442E+004  1.05275937E+000  -8.40464470E-003     730.57  <-- SCF
+      8  -7.77104470E+004  1.02757487E+000  -9.24880817E-003     838.01  <-- SCF
+      9  -7.77084257E+004  9.96396863E-001  -7.48637866E-003     941.57  <-- SCF
+     10  -7.77059672E+004  1.11219800E+000  -9.10547064E-003    1047.12  <-- SCF
+     11  -7.77052070E+004  1.16206376E+000  -2.81542951E-003    1149.21  <-- SCF
 ------------------------------------------------------------------------ <-- SCF
  
 Final energy, E             =  -77705.20704600     eV
 Final free energy (E-TS)    =  -77705.20704601     eV
 (energies not corrected for finite basis set)
  
-NB est. 0K energy (E-0.5TS)      =  -77705.20704600     eV
+NB est. 0K energy (E-0.5TS)      =  -77705.20704601     eV
  
 
 Writing analysis data to al3x3.castep_bin
@@ -843,14 +842,14 @@ Writing model to al3x3.check
  A BibTeX formatted list of references used in this run has been written to 
  al3x3.bib
  
-Initialisation time =     13.84 s
-Calculation time    =  43895.39 s
-Finalisation time   =      3.40 s
-Total time          =  43912.64 s
-Peak Memory Use     = 272381788 kB
+Initialisation time =      5.35 s
+Calculation time    =   1205.08 s
+Finalisation time   =      3.87 s
+Total time          =   1214.31 s
+Peak Memory Use     = 267441152 kB
   
-Overall parallel efficiency rating: Poor (46%)                                  
+Overall parallel efficiency rating: Good (74%)                                  
   
 Data was distributed by:-
-G-vector (18-way); efficiency rating: Mediocre (51%)                            
-k-point (2-way); efficiency rating: Very good (83%)                             
+G-vector (18-way); efficiency rating: Good (75%)                                
+k-point (2-way); efficiency rating: Ideal (100%)                                
