@@ -13,5 +13,17 @@ to represent the performance of their research that can exploit large
 scaling. The synthetic benchmarks have been chosen to provide an understanding
 of the limits of performance of different components of the service.
 
+## Synthetic Benchmarks
+
+* [HPC Challenge (HPCC)](synth/HPCC)
+* benchio
+
+## Application Benchmarks
+
+* [CASTEP](apps/CASTEP)
+* [CP2K](apps/CP2K)
+* [GROMACS](apps/GROMACS)
+* [OpenSBLI](apps/OpenSBLI) 
+
 If you have any questions about these benchmarks, please contact the 
 [ARCHER Helpdesk](mailto:support@archer.ac.uk).
