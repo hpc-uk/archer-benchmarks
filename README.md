@@ -1,8 +1,5 @@
 # ARCHER Benchmarks
 
-This repository contains the links, source code, build instructions and 
-results from the ARCHER benchmark suite.
-
 [ARCHER](http://www.archer.ac.uk) is the UK national supercomputing service
 hosted, supported and adminstered by [EPCC](http://www.epcc.ed.ac.uk) at
 the [University of Edinburgh](http://www.ed.ac.uk).
@@ -13,17 +10,29 @@ to represent the performance of their research that can exploit large
 scaling. The synthetic benchmarks have been chosen to provide an understanding
 of the limits of performance of different components of the service.
 
-## Synthetic Benchmarks
+The selection of the benchmarks is described in an ARCHER white paper:
+
+* http://www.archer.ac.uk/documentation/white-papers/benchmarks/UK_National_HPC_Benchmarks.pdf
+
+This repositiory contains:
+
+* the information required to compile and run the benchmarks
+* results and analysis from running the benchmarks on different HPC systems
+
+This repository is work in progress and not all information is available yet.
+
+## Synthetic Benchmarks
 
 * [HPC Challenge (HPCC)](synth/HPCC)
 * benchio
 
-## Application Benchmarks
+## Application Benchmarks
 
 * [CASTEP](apps/CASTEP)
 * [CP2K](apps/CP2K)
 * [GROMACS](apps/GROMACS)
 * [OpenSBLI](apps/OpenSBLI) 
+* Met Office Unified Model
 
 If you have any questions about these benchmarks, please contact the 
 [ARCHER Helpdesk](mailto:support@archer.ac.uk).
