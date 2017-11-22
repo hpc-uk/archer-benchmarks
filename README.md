@@ -6,9 +6,12 @@ the [University of Edinburgh](http://www.ed.ac.uk).
 
 The benchmark suite contains both application and synthetic benchmarks.
 The appplication benchmarks have been chosen with input from the user community
-to represent the performance of their research that can exploit large 
-scaling. The synthetic benchmarks have been chosen to provide an understanding
-of the limits of performance of different components of the service.
+to represent their research. The initial aim was to find benchmarks that demonstrate
+the performance of their research that can exploit large scaling. For those applications
+where the scale-out benchmarks cannot run on small numbers of nodes we have supplemented
+them with a smaller benchmark to compare the node performance. The synthetic benchmarks
+have been chosen to provide an understanding of the limits of performance of different
+components of the service.
 
 The selection of the benchmarks is described in an ARCHER white paper:
 
