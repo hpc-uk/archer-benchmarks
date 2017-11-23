@@ -1,0 +1,20 @@
+-- started at 11/23/2017 12:19:23 --
+
+mdtest-1.9.3 was launched with 36 total task(s) on 1 node(s)
+Command line used: /lustre/home/z04/aturner/benchmark/ior/src/mdtest -n 29127 -u -F -C -T -r -N 36 -d /lustre/home/z04/aturner/benchmark/ARCHER/mdtest/tmpdir
+Path: 
+FS: 402.0 TiB   Used FS: 24.6%   Inodes: 278.9 Mi   Used Inodes: 11.4%
+
+36 tasks, 1048572 files
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       5420.006       5420.006       5420.006          0.000
+   File stat         :      85169.725      85169.725      85169.725          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       5753.576       5753.576       5753.576          0.000
+   Tree creation     :        108.248        108.248        108.248          0.000
+   Tree removal      :          9.743          9.743          9.743          0.000
+
+-- finished at 11/23/2017 12:25:51 --
