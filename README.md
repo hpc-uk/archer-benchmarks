@@ -45,7 +45,7 @@ information on their configuration (processor and memory information are **per n
 **Note:** Not all benchmarks have been run on all systems.
 
 | System | Processor | Memory | Interconnect |
-|--------+-----------+--------+--------------|
+| ------ | --------- | ------ | ------------ |
 | [ARCHER](http://www.archer.ac.uk) | 2x E5-2697v2, 2.7GHz, 12-core | 64/128GB DDR3 4 channels (119.4GB/s) | Cray Aries, Dragonfly |
 | [Cirrus](http://www.cirrus.ac.uk) | 2x E5-2695v3, 2.1GHz, 18-core | 256GB DDR4, 4 channels (153.6GB/s) | FDR IB, Hypercube |
 | [Athena](http://www.hpc-midlands-plus.ac.uk/) | 2x E5-2680v4, 2.4GHz, 14-core | 128GB DDR4, 4 channels (153.6GB/s) | EDR IB, 27 node nonblocking, 3:1 backbone |
