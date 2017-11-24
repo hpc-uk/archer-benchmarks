@@ -46,11 +46,11 @@ information on their configuration (processor and memory information are **per n
 
 | System | Processor | Memory | Interconnect |
 | ------ | --------- | ------ | ------------ |
-| [ARCHER](http://www.archer.ac.uk) | 2x E5-2697v2, 2.7GHz, 12-core | 64/128GB DDR3 4 channels (119.4GB/s) | Cray Aries, Dragonfly |
-| [Cirrus](http://www.cirrus.ac.uk) | 2x E5-2695v3, 2.1GHz, 18-core | 256GB DDR4, 4 channels (153.6GB/s) | FDR IB, Hypercube |
-| [Athena](http://www.hpc-midlands-plus.ac.uk/) | 2x E5-2680v4, 2.4GHz, 14-core | 128GB DDR4, 4 channels (153.6GB/s) | EDR IB, 27 node nonblocking, 3:1 backbone |
-| [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | 2x Gold 6142, 2.6GHz, 16-core | 6 channels (238.4GB/s) | Intel OPA |
-| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | 2x E5-2650v4, 2.1GHz, 12-core | 128GB DDR4, 4 channels (153.6GB/s) | Intel OPA, 36 node nonblocking, 3:1 backbone |
+| [ARCHER](http://www.archer.ac.uk) | 2x Intel E5-2697v2, 2.7GHz, 12-core | 64/128GB DDR3 4 channels (119.4GB/s) | Cray Aries, Dragonfly |
+| [Cirrus](http://www.cirrus.ac.uk) | 2x Intel E5-2695v3, 2.1GHz, 18-core | 256GB DDR4, 4 channels (153.6GB/s) | FDR IB, Hypercube |
+| [Athena](http://www.hpc-midlands-plus.ac.uk/) | 2x Intel E5-2680v4, 2.4GHz, 14-core | 128GB DDR4, 4 channels (153.6GB/s) | EDR IB, 27 node nonblocking, 3:1 backbone |
+| [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | 2x Intel Gold 6142, 2.6GHz, 16-core | 6 channels (238.4GB/s) | Intel OPA |
+| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | 2x Intel E5-2650v4, 2.1GHz, 12-core | 128GB DDR4, 4 channels (153.6GB/s) | Intel OPA, 36 node nonblocking, 3:1 backbone |
 
 If you have any questions about these benchmarks, please contact the 
 [ARCHER Helpdesk](mailto:support@archer.ac.uk).
