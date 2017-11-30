@@ -1,0 +1,20 @@
+-- started at 11/28/2017 15:09:46 --
+
+mdtest-1.9.3 was launched with 128 total task(s) on 4 node(s)
+Command line used: /home/hpcturn1/software/ior/src/mdtest -n 8192 -u -F -C -T -r -N 32 -d /home/hpcturn1/rds/hpc-work/benchmarks/ARCHER/mdtest/tmpdir
+Path: 
+FS: 1384.9 TiB   Used FS: 11.1%   Inodes: 650.0 Mi   Used Inodes: 5.2%
+
+128 tasks, 1048576 files
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      43342.066      43342.066      43342.066          0.000
+   File stat         :     152180.682     152180.682     152180.682          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      29893.034      29893.034      29893.034          0.000
+   Tree creation     :        128.616        128.616        128.616          0.000
+   Tree removal      :         17.444         17.444         17.444          0.000
+
+-- finished at 11/28/2017 15:10:53 --
