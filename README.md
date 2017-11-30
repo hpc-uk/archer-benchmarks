@@ -1,8 +1,25 @@
-# ARCHER Benchmarks
+# ARCHER and EPSRC Tier-2 HPC Benchmarking
 
-[ARCHER](http://www.archer.ac.uk) is the UK national supercomputing service
-hosted, supported and adminstered by [EPCC](http://www.epcc.ed.ac.uk) at
-the [University of Edinburgh](http://www.ed.ac.uk).
+This repository contains information, results and analysis of running a selection
+of application and synthetic benchmarks on UK HPC systems. The list of systems
+included to date is provided below.
+
+The work in this repository would not be possible without the generous access and
+support provided by the organisations running UK HPC systems, including:
+
+* EPCC, The University of Edinburgh
+* CSD3, Univeristy of Cambridge
+* HPC Midlands+ Consortium
+* GW4 Consortium
+* MMM Hub, UCL
+* The University of Oxford
+
+This repositiory contains:
+
+* the information required to compile and run the benchmarks
+* results and analysis from running the benchmarks on different HPC systems
+
+This repository is work in progress and not all information is available yet.
 
 The benchmark suite contains both application and synthetic benchmarks.
 The appplication benchmarks have been chosen with input from the user community
@@ -17,17 +34,11 @@ The selection of the benchmarks is described in an ARCHER white paper:
 
 * http://www.archer.ac.uk/documentation/white-papers/benchmarks/UK_National_HPC_Benchmarks.pdf
 
-This repositiory contains:
-
-* the information required to compile and run the benchmarks
-* results and analysis from running the benchmarks on different HPC systems
-
-This repository is work in progress and not all information is available yet.
-
 ## Synthetic Benchmarks
 
 * [HPC Challenge (HPCC)](synth/HPCC)
 * benchio
+* mdtest
 
 ## Application Benchmarks
 
