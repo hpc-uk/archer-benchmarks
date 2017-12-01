@@ -1,0 +1,11 @@
+-- started at 11/25/2017 16:15:22 --
+
+mdtest-1.9.3 was launched with 24 total task(s) on 1 node(s)
+Command line used: /home/z01/z01/aturner/benchmark/ior/src/mdtest -n 43690 -F -C -T -r -N 24 -d /work/z01/z01/aturner/benchmark/mdtest/tmpdir
+Path: 
+FS: 1344.2 TiB   Used FS: 54.1%   Inodes: 1890.6 Mi   Used Inodes: 7.7%
+
+24 tasks, 1048560 files
+11/25/2017 16:15:23: Process 0(nid00759): FAILED in create_remove_directory_tree, Unable to create directory: File exists
+Application 29184894 exit codes: 134
+Application 29184894 resources: utime ~0s, stime ~2s, Rss ~137008, inblocks ~10400, outblocks ~24872

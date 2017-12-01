@@ -4,7 +4,7 @@
 #PBS -l select=2:ncpus=72
 #PBS -l place=excl
 #PBS -l walltime=3:0:0
-#PBS -A z04
+#PBS -A t01
 
 cd $PBS_O_WORKDIR
 
@@ -14,8 +14,8 @@ module load mpt/2.14
 nodes=2
 nfile=1048576
 
-mdtest="/lustre/home/z04/aturner/benchmark/ior/src/mdtest"
-testdir="/lustre/home/z04/aturner/benchmark/ARCHER/mdtest/tmpdir"
+mdtest="/lustre/home/t01/auser/benchmark/ior/src/mdtest"
+testdir="/lustre/home/t01/auser/benchmark/ARCHER/mdtest/tmpdir"
 
 cpn=36
 

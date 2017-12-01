@@ -1,0 +1,27 @@
+#!/bin/bash --login
+#
+#PBS -N mdtest
+#PBS -l select=1
+#PBS -l walltime=12:0:0
+#PBS -A t01
+
+cd $PBS_O_WORKDIR
+
+nodes=1
+nfile=1048576
+cpn=24
+
+mdtest="/home/t01/t01/auser/benchmark/ior/src/mdtest"
+testdir="/work/t01/t01/auser/benchmark/mdtest/tmpdir"
+
+cores=$(( nodes * 24 ))
+filespercore=$(( nfile / cores ))
+
+timestamp=$(date '+%Y%m%d%H%M')
+aprun -n $cores -N $cpn $mdtest -n ${filespercore} -F -C -T -r -N $cpn -d ${testdir} > mdtest_mp-mf-sd_${nfile}_${nodes}nodes_${timestamp}.log
+rm -r $testdir
+aprun -n $cores -N $cpn $mdtest -n ${filespercore} -u -F -C -T -r -N $cpn -d ${testdir} > mdtest_mp-mf-md_${nfile}_${nodes}nodes_${timestamp}.log
+rm -r $testdir
+aprun -n $cores -N $cpn $mdtest -n 1 -S -F -C -T -r -d ${testdir} > mdtest_mp-sf-sd_${nfile}_${nodes}nodes_${timestamp}.log
+rm -r $testdir
+

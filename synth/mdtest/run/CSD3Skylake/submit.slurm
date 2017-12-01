@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J mdtest
-#SBATCH -A T2BENCH-SL2-CPU
+#SBATCH -A TEST
 #SBATCH --nodes=1
 #SBATCH --ntasks=32
 #SBATCH --time=0:20:0
@@ -19,7 +19,7 @@ module purge                               # Removes all modules still loaded
 module load rhel7/default-peta4                   # REQUIRED - loads the basic environment
 
 #! Full path to application executable: 
-application="/home/hpcturn1/software/ior/src"
+application="/home/auser/software/ior/src"
 
 #! Run options for the application:
 options=""
@@ -85,8 +85,8 @@ echo -e "\nnumtasks=$numtasks, numnodes=$numnodes, mpi_tasks_per_node=$mpi_tasks
 
 echo -e "\nExecuting command:\n==================\n$CMD\n"
 
-mdtest="/home/hpcturn1/software/ior/src/mdtest"
-testdir="/home/hpcturn1/rds/hpc-work/benchmarks/ARCHER/mdtest/tmpdir"
+mdtest="/home/auser/software/ior/src/mdtest"
+testdir="/home/auser/rds/hpc-work/benchmarks/ARCHER/mdtest/tmpdir"
 
 nfile=1048576
 cpn=32

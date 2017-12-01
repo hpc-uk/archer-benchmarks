@@ -1,0 +1,21 @@
+-- started at 11/24/2017 23:13:56 --
+
+mdtest-1.9.3 was launched with 1536 total task(s) on 64 node(s)
+Command line used: /home/z01/z01/aturner/benchmark/ior/src/mdtest -n 1 -S -F -C -T -r -d /work/z01/z01/aturner/benchmark/mdtest/tmpdir
+Path: 
+FS: 1344.2 TiB   Used FS: 54.1%   Inodes: 1890.6 Mi   Used Inodes: 7.7%
+
+1536 tasks, 1 file
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      18955.521      18955.521      18955.521          0.000
+   File stat         :     641614.475     641614.475     641614.475          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :    1008523.942    1008523.942    1008523.942          0.000
+   Tree creation     :       2100.302       2100.302       2100.302          0.000
+   Tree removal      :        334.341        334.341        334.341          0.000
+
+-- finished at 11/24/2017 23:13:56 --
+Application 29168154 resources: utime ~247s, stime ~127s, Rss ~11608, inblocks ~767488, outblocks ~1591749
