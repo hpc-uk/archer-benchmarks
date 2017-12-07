@@ -1,0 +1,62 @@
+JobID = 113295.sdb
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on         4608  process(es)
+ Process grid is (          16 ,           16 ,           18 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        4096 ,         4096 ,         4608 )
+ 
+ Total amount of data =    589824.000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ Serial                                                          
+ ------
+ 
+ Writing to unstriped/serial.dat                                            
+ time =    1327.10421681404      , rate =    444.444371833873       MiB/s
+ time =    1320.71599698067      , rate =    446.594121180039       MiB/s
+ time =    1372.24582600594      , rate =    429.823861601200       MiB/s
+ time =    1449.38529706001      , rate =    406.947690994535       MiB/s
+ time =    1331.90606498718      , rate =    442.842040820406       MiB/s
+ time =    1250.67862296104      , rate =    471.603167409676       MiB/s
+ time =    1551.89304900169      , rate =    380.067428215768       MiB/s
+ time =    1092.79298186302      , rate =    539.739923104606       MiB/s
+ time =    1126.99829292297      , rate =    523.358379248506       MiB/s
+ time =    1100.03573298454      , rate =    536.186218605580       MiB/s
+ mintime =    1092.79298186302      , maxrate =    539.739923104606       MiB/s
+ avgtime =    1292.37560815811      , avgrate =    462.160720301419       MiB/s
+ Deleting: unstriped/serial.dat                                            
+ 
+ Writing to striped/serial.dat                                              
+ time =    1074.09592008591      , rate =    549.135313681133       MiB/s
+ time =    1088.88801598549      , rate =    541.675536272832       MiB/s
+ time =    1073.57448291779      , rate =    549.402029747356       MiB/s
+ time =    1080.51782703400      , rate =    545.871604561173       MiB/s
+ time =    1088.60005497932      , rate =    541.818822534602       MiB/s
+ time =    1102.07061409950      , rate =    535.196195646631       MiB/s
+ time =    1082.92238807678      , rate =    544.659531000646       MiB/s
+ time =    1079.90973591805      , rate =    546.178981800348       MiB/s
+ time =    1062.17882514000      , rate =    555.296326795310       MiB/s
+ time =    1076.38989305496      , rate =    547.965011382620       MiB/s
+ mintime =    1062.17882514000      , maxrate =    555.296326795310       MiB/s
+ avgtime =    1080.91477572918      , avgrate =    545.719935342265       MiB/s
+ Deleting: striped/serial.dat                                              
+ 
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to unstriped/mpiio.dat                                             
+ time =    1635.79449415207      , rate =    360.573410724029       MiB/s
+ time =    1652.67498517036      , rate =    356.890498913916       MiB/s
+ time =    1655.01333689690      , rate =    356.386251911361       MiB/s
+ time =    1654.74878907204      , rate =    356.443228056850       MiB/s
+ time =    1656.37151694298      , rate =    356.094024780496       MiB/s
+ time =    1656.62416791916      , rate =    356.039717047508       MiB/s
+ time =    1651.46995496750      , rate =    357.150911662579       MiB/s
+ time =    1652.50992298126      , rate =    356.926147188217       MiB/s

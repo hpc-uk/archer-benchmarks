@@ -1,0 +1,20 @@
+JobID = 113538.sdb
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on         9216  process(es)
+ Process grid is (          16 ,           24 ,           24 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        4096 ,         6144 ,         6144 )
+ 
+ Total amount of data =    1179648.00000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    212.920449972153      , rate =    5540.32268931558       MiB/s

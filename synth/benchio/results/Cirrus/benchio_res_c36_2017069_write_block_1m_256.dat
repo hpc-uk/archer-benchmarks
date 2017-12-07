@@ -1,0 +1,2 @@
+JobID = 113237.sdb
+mpiexec_mpt error: The -ppn value does not evenly divide the -np value.

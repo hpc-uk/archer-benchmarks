@@ -1,0 +1,20 @@
+JobID = 113484.sdb
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on         4608  process(es)
+ Process grid is (          16 ,           16 ,           18 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        4096 ,         4096 ,         4608 )
+ 
+ Total amount of data =    589824.000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ NetCDF                                                          
+ ------
+ 
+ Writing to striped/netcdf.dat                                              
+ time =    105.861723899841      , rate =    5571.64552277695       MiB/s

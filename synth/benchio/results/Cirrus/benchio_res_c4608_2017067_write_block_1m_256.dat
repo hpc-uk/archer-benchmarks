@@ -1,0 +1,38 @@
+JobID = 113530.sdb
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on         4608  process(es)
+ Process grid is (          16 ,           16 ,           18 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        4096 ,         4096 ,         4608 )
+ 
+ Total amount of data =    589824.000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ NetCDF                                                          
+ ------
+ 
+ Writing to striped/netcdf.dat                                              
+ time =    111.166357040405      , rate =    5305.77789632540       MiB/s
+ time =    89.5260720252991      , rate =    6588.29307102095       MiB/s
+ time =    98.8306488990784      , rate =    5968.02719166908       MiB/s
+ time =    97.6275420188904      , rate =    6041.57379979793       MiB/s
+ time =    101.379709005356      , rate =    5817.96895835280       MiB/s
+ time =    111.293139934540      , rate =    5299.73366145408       MiB/s
+ time =    96.0940558910370      , rate =    6137.98631487481       MiB/s
+ time =    101.652609109879      , rate =    5802.34983799035       MiB/s
+ time =    120.128520965576      , rate =    4909.94141323873       MiB/s
+ time =    109.685156106949      , rate =    5377.42772982782       MiB/s
+ mintime =    89.5260720252991      , maxrate =    6588.29307102095       MiB/s
+ avgtime =    103.738381099701      , avgrate =    5724.90798745520       MiB/s
+ Deleting: striped/netcdf.dat                                              
+ 
+ 
+ --------
+ Finished
+ --------
+ 

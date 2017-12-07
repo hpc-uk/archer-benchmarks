@@ -1,0 +1,45 @@
+JobID = 113367.sdb
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on         4608  process(es)
+ Process grid is (          16 ,           16 ,           18 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        4096 ,         4096 ,         4608 )
+ 
+ Total amount of data =    589824.000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    83.6940159797668      , rate =    7047.38556389254       MiB/s
+ time =    86.1717760562897      , rate =    6844.74693448016       MiB/s
+ time =    87.9672200679779      , rate =    6705.04307791249       MiB/s
+ time =    83.0609571933746      , rate =    7101.09803607040       MiB/s
+ time =    84.8426170349121      , rate =    6951.97791644371       MiB/s
+ time =    86.9611220359802      , rate =    6782.61717639706       MiB/s
+ time =    91.5128819942474      , rate =    6445.25652724036       MiB/s
+ time =    89.8125741481781      , rate =    6567.27641529207       MiB/s
+ time =    77.4352021217346      , rate =    7617.00084507750       MiB/s
+ time =    85.8738009929657      , rate =    6868.49764631142       MiB/s
+ mintime =    77.4352021217346      , maxrate =    7617.00084507750       MiB/s
+ avgtime =    85.7332167625427      , avgrate =    6893.09001391177       MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ ------
+  HDF5                                                           
+ ------
+ 
+ Writing to striped/hdf5.dat                                                
+ time =    219.282511949539      , rate =    2689.79042038578       MiB/s
+ time =    222.285959959030      , rate =    2653.44693883820       MiB/s
+ time =    212.666834115982      , rate =    2773.46490087085       MiB/s
+ time =    220.182832002640      , rate =    2678.79195955173       MiB/s
+ time =    233.282092809677      , rate =    2528.37237910587       MiB/s
+ time =    233.420782804489      , rate =    2526.87011376374       MiB/s

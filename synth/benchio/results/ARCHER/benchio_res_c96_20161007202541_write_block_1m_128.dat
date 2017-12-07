@@ -1,0 +1,53 @@
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on  96  process(es)
+ Process grid is ( 4 ,  4 ,  6 )
+ Array size is   ( 128 ,  128 ,  128 )
+ Global size is  ( 512 ,  512 ,  768 )
+ 
+ Total amount of data =  1536.  MiB
+ 
+ Clock resolution is  3.70233246945575673E-4 , usecs
+ 
+ ------
+ NetCDF                                                          
+ ------
+ 
+ Writing to striped/netcdf.dat                                              
+ time =  1.0093669126508757 , rate =  1521.7459387152296  MiB/s
+ time =  0.9921357745770365 , rate =  1548.1751987572684  MiB/s
+ time =  11.733993649715558 , rate =  130.90172415742137  MiB/s
+ time =  0.97680370532907546 , rate =  1572.4756075557032  MiB/s
+ time =  1.1067478866316378 , rate =  1387.8499507912152  MiB/s
+ time =  0.79339598293881863 , rate =  1935.9815691409242  MiB/s
+ time =  1.7973229582421482 , rate =  854.60433972437977  MiB/s
+ time =  0.91318603965919465 , rate =  1682.0230854309189  MiB/s
+ time =  0.80622761382255703 , rate =  1905.1691776189384  MiB/s
+ time =  1.1905062906444073 , rate =  1290.2073782143402  MiB/s
+ mintime =  0.79339598293881863 , maxrate =  1935.9815691409242  MiB/s
+ avgtime =  2.1319686814211307 , avgrate =  1382.9133970106341  MiB/s
+ Deleting: striped/netcdf.dat                                              
+ 
+ Writing to defstriped/netcdf.dat                                           
+ time =  1.3996364328777418 , rate =  1097.4278490606921  MiB/s
+ time =  1.8517709100851789 , rate =  829.47625520769532  MiB/s
+ time =  1.8803126035491005 , rate =  816.88544612251792  MiB/s
+ time =  1.7912566227605566 , rate =  857.498574175724  MiB/s
+ time =  14.775442064041272 , rate =  103.95628051888448  MiB/s
+ time =  1.4307224916992709 , rate =  1073.5834579462653  MiB/s
+ time =  1.3039905271725729 , rate =  1177.9226673758824  MiB/s
+ time =  1.3837755138520151 , rate =  1110.0066337524918  MiB/s
+ time =  1.7911839807638898 , rate =  857.53335028428455  MiB/s
+ time =  1.4461544883670285 , rate =  1062.1271879012204  MiB/s
+ mintime =  1.3039905271725729 , maxrate =  1177.9226673758824  MiB/s
+ avgtime =  2.905424563516863 , avgrate =  898.64177023456568  MiB/s
+ Deleting: defstriped/netcdf.dat                                           
+ 
+ 
+ --------
+ Finished
+ --------
+ 
+Application 23638779 resources: utime ~4322s, stime ~108s, Rss ~66624, inblocks ~81948, outblocks ~63060111
