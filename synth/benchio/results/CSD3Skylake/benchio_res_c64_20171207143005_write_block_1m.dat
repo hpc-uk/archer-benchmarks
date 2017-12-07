@@ -1,0 +1,67 @@
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on           64  process(es)
+ Process grid is (           4 ,            4 ,            4 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        1024 ,         1024 ,         1024 )
+ 
+ Total amount of data =    8192.00000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to unstriped/mpiio.dat                                             
+ time =    14.1260499954224      , rate =    579.921492749542       MiB/s
+ time =    14.3224000930786      , rate =    571.971174297724       MiB/s
+ time =    15.5559048652649      , rate =    526.616745920843       MiB/s
+ time =    15.5767760276794      , rate =    525.911137544963       MiB/s
+ time =    14.5314579010010      , rate =    563.742472077472       MiB/s
+ time =    15.6902790069580      , rate =    522.106713103519       MiB/s
+ time =    16.0516581535339      , rate =    510.352259040381       MiB/s
+ time =    15.5202178955078      , rate =    527.827641026296       MiB/s
+ time =    15.1839940547943      , rate =    539.515490485416       MiB/s
+ time =    15.1413562297821      , rate =    541.034757764093       MiB/s
+ mintime =    14.1260499954224      , maxrate =    579.921492749542       MiB/s
+ avgtime =    15.1700094223022      , avgrate =    540.899988401025       MiB/s
+ Deleting: unstriped/mpiio.dat                                             
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    12.1719381809235      , rate =    673.023464154538       MiB/s
+ time =    11.1527838706970      , rate =    734.525127983855       MiB/s
+ time =    11.2803280353546      , rate =    726.220015439690       MiB/s
+ time =    12.8316888809204      , rate =    638.419468865145       MiB/s
+ time =    11.8613731861115      , rate =    690.645161522450       MiB/s
+ time =    11.3735799789429      , rate =    720.265740001541       MiB/s
+ time =    11.3249740600586      , rate =    723.357065239725       MiB/s
+ time =    11.9986209869385      , rate =    682.745126203894       MiB/s
+ time =    11.4271759986877      , rate =    716.887532049978       MiB/s
+ time =    11.4784181118011      , rate =    713.687192800345       MiB/s
+ mintime =    11.1527838706970      , maxrate =    734.525127983855       MiB/s
+ avgtime =    11.6900881290436      , avgrate =    701.977589426116       MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ Writing to defstriped/mpiio.dat                                            
+ time =    14.6768329143524      , rate =    558.158565121299       MiB/s
+ time =    15.8145308494568      , rate =    518.004617271425       MiB/s
+ time =    14.6450331211090      , rate =    559.370534177368       MiB/s
+ time =    14.7486028671265      , rate =    555.442442501409       MiB/s
+ time =    15.5114629268646      , rate =    528.125557120219       MiB/s
+ time =    14.7096319198608      , rate =    556.914003329969       MiB/s
+ time =    15.8965630531311      , rate =    515.331519940497       MiB/s
+ time =    15.9577159881592      , rate =    513.356673729409       MiB/s
+ time =    15.6111679077148      , rate =    524.752539235173       MiB/s
+ time =    14.6176750659943      , rate =    560.417437315829       MiB/s
+ mintime =    14.6176750659943      , maxrate =    560.417437315829       MiB/s
+ avgtime =    15.2189216613770      , avgrate =    538.987388974260       MiB/s
+ Deleting: defstriped/mpiio.dat                                            
+ 
+ 
+ --------
+ Finished
+ --------
+ 
