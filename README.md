@@ -55,6 +55,8 @@ information on their configuration (processor and memory information are **per n
 
 **Note:** Not all benchmarks have been run on all systems.
 
+## Compute node and interconnect
+
 | System | Processor | Memory | Interconnect |
 | ------ | --------- | ------ | ------------ |
 | [ARCHER](http://www.archer.ac.uk) | 2x Intel E5-2697v2, 2.7GHz, 12-core | 64/128GB DDR3 4 channels (119.4GB/s) | Cray Aries, Dragonfly |
@@ -65,3 +67,14 @@ information on their configuration (processor and memory information are **per n
 
 If you have any questions about these benchmarks, please contact the 
 [ARCHER Helpdesk](mailto:support@archer.ac.uk).
+
+## File systems
+
+| System | File System | Versions | Vendor | Other details |
+| ------ | --------- | ------ | ------------ |
+| [ARCHER](http://www.archer.ac.uk) | Lustre | Client: 2.5.2, Server: 2.1.0.0| Cray Sonexion | 1x MDT, 48 OST |
+| [Cirrus](http://www.cirrus.ac.uk) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 1x MDT, 14x OST |
+| [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | | |
+| [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | | Intel Enterrise Lustre | 1x MDT, 24x OST |
+| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | | | 4x MDT, 10x OST |
+
