@@ -46,10 +46,10 @@ def getbeffres(resfilename):
 
     infile.close()
 
-    return pingpong, randring, natringA
+    return pingpong, randring, natring
 
 
-def calcperf(filedict, cpn, restype='rr'):
+def calcbeffperf(filedict, cpn, restype='rr'):
     coreslist = []
     bw = []
     lat = []
