@@ -70,6 +70,9 @@ def calcbeffperf(filedict, cpn, restype='rr'):
         if restype == 'nr':
             tbw = nr['bw']/1024.0
             tlat = nr['lat']*1000
+        if restype == 'pp':
+            tbw = pp['min_bw']/1024.0
+            tlat = pp['max_lat']*1000
         bw.append(tbw)
         lat.append(tlat)
         print("{:>15d} {:>15d} {:>15.3f} {:>15.3f}".format(nodes, nodes*cpn, tbw, tlat))
