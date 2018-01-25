@@ -71,8 +71,9 @@ If you have any questions about these benchmarks, please contact the
 
 ## File systems
 
+| ------ | ----------- | -------- | ------ | ------------- |
 | System | File System | Versions | Vendor | Other details |
-| ------ | --------- | ------ | ------------ |
+| ------ | ----------- | -------- | ------ | ------------- |
 | [ARCHER](http://www.archer.ac.uk) | Lustre | Client: 2.5.2, Server: 2.1.0.0| Cray Sonexion | 1x MDT, 48 OST |
 | [Cirrus](http://www.cirrus.ac.uk) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 1x MDT, 14x OST |
 | [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | | |
