@@ -69,7 +69,7 @@ If you have any questions about these benchmarks, please contact the
 [ARCHER Helpdesk](mailto:support@archer.ac.uk).
 
 
-## File systems
+## File systems
 
 | ------ | ----------- | -------- | ------ | ------------- |
 | System | File System | Versions | Vendor | Other details |
