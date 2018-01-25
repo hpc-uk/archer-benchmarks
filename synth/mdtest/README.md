@@ -20,4 +20,32 @@ i.e.:
 * Creating 1 file by NP processes.
 * Removing that 1 file by NP processes. 
 
+## Compilation details
+
+### ARCHER (Cray XC30)
+
+Clone the above repository and move to the top level directory
+
+Bootstrap the build (need a newwer version of autotools than the default):
+
+```bash
+module load autotools
+./bootstrap.sh
+```
+
+Configure (need to explicity remove GPFS as the RDF directories are mounted and it tries to enable GPFS):
+
+```bash
+./configure --without-gpfs
+```
+
+Finally, build the code:
+
+```bash
+make
+```
+
+The executable is called `mdtest` and can be found in the `src` directory.
+
+
 
