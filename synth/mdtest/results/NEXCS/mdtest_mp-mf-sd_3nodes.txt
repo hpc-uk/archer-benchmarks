@@ -1,0 +1,20 @@
+-- started at 01/30/2018 11:27:01 --
+
+mdtest-1.9.3 was launched with 96 total task(s) on 2 node(s)
+Command line used: /home/d03/gmslis/ior/bin/mdtest -n 10922 -N 1 -d /home/d03/gmslis/ior/temp/ -F -C -T -r -N 1
+Path: /home/d03/gmslis/ior/temp
+FS: 451.6 TiB   Used FS: 25.4%   Inodes: 454.9 Mi   Used Inodes: 5.2%
+
+96 tasks, 1048512 files
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       6627.104       6627.104       6627.104          0.000
+   File stat         :      12791.365      12791.365      12791.365          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       4216.998       4216.998       4216.998          0.000
+   Tree creation     :       1574.438       1574.438       1574.438          0.000
+   Tree removal      :          3.994          3.994          3.994          0.000
+
+-- finished at 01/30/2018 11:35:10 --
