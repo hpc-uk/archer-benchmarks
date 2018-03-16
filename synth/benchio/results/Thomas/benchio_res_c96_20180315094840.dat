@@ -1,0 +1,142 @@
+
+Using environment: intel
+Running on 96 slots:
+   96 MPI tasks
+    1 threads per task
+TMPDIR=/tmpdir/job/207740.undefined
+
+Contents of machinefile:
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-009
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98g-005
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98b-006
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+node-k98i-001
+
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on           96  process(es)
+ Process grid is (           4 ,            4 ,            6 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (        1024 ,         1024 ,         1536 )
+ 
+ Total amount of data =    12288.0000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    6.51338505744934      , rate =    1886.57662515227       MiB/s
+ time =    5.83204603195190      , rate =    2106.97925439511       MiB/s
+ time =    6.08206701278687      , rate =    2020.36576942771       MiB/s
+ time =    6.09033322334290      , rate =    2017.62359289354       MiB/s
+ time =    6.00858402252197      , rate =    2045.07417287349       MiB/s
+ time =    5.87214493751526      , rate =    2092.59140071559       MiB/s
+ time =    6.69111514091492      , rate =    1836.46518423531       MiB/s
+ time =    6.29757094383240      , rate =    1951.22851486642       MiB/s
+ time =    5.74692487716675      , rate =    2138.18698915341       MiB/s
+ time =    6.80438804626465      , rate =    1805.89347880382       MiB/s
+ mintime =    5.74692487716675      , maxrate =    2138.18698915341       MiB/s
+ avgtime =    6.19385592937469      , avgrate =    1990.09849825167       MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ --------
+ Finished
+ --------
+ 

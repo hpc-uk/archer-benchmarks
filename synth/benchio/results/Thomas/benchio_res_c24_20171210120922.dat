@@ -1,0 +1,70 @@
+
+Using environment: intel
+Running on 24 slots:
+   24 MPI tasks
+    1 threads per task
+TMPDIR=/tmpdir/job/148242.undefined
+
+Contents of machinefile:
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+node-k98a-025
+
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on           24  process(es)
+ Process grid is (           2 ,            3 ,            4 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (         512 ,          768 ,         1024 )
+ 
+ Total amount of data =    3072.00000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    4.71016383171082      , rate =    652.206613136893       MiB/s
+ time =    5.01812505722046      , rate =    612.180837458360       MiB/s
+ time =    4.99011087417603      , rate =    615.617583949425       MiB/s
+ time =    5.05334687232971      , rate =    607.913938546581       MiB/s
+ time =    5.00308108329773      , rate =    614.021629642493       MiB/s
+ time =    4.95773100852966      , rate =    619.638297179636       MiB/s
+ time =    5.00926494598389      , rate =    613.263629120463       MiB/s
+ time =    4.86924695968628      , rate =    630.898376162446       MiB/s
+ time =    4.92107796669006      , rate =    624.253470640751       MiB/s
+ time =    4.95773506164551      , rate =    619.637790604402       MiB/s
+ mintime =    4.71016383171082      , maxrate =    652.206613136893       MiB/s
+ avgtime =    4.94898836612701      , avgrate =    620.963216644145       MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ --------
+ Finished
+ --------
+ 

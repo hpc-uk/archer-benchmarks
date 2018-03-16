@@ -1,0 +1,94 @@
+
+Using environment: intel
+Running on 48 slots:
+   48 MPI tasks
+    1 threads per task
+TMPDIR=/tmpdir/job/207341.undefined
+
+Contents of machinefile:
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-004
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+node-k98r-002
+
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on           48  process(es)
+ Process grid is (           3 ,            4 ,            4 )
+ Array size is   (         256 ,          256 ,          256 )
+ Global size is  (         768 ,         1024 ,         1024 )
+ 
+ Total amount of data =    6144.00000000000       MiB
+ 
+ Clock resolution is    1.00000000000000      , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =    16.7583360671997      , rate =    366.623510553972       MiB/s
+ time =    25.9186940193176      , rate =    237.048980763490       MiB/s
+ time =    14.0060739517212      , rate =    438.666825634244       MiB/s
+ time =    13.2049939632416      , rate =    465.278516378190       MiB/s
+ time =    16.8513422012329      , rate =    364.600037589319       MiB/s
+ time =    6.39305901527405      , rate =    961.042278089565       MiB/s
+ time =    6.19628095626831      , rate =    991.562526515938       MiB/s
+ time =    6.44639110565186      , rate =    953.091411815406       MiB/s
+ time =    6.75062894821167      , rate =    910.137417881281       MiB/s
+ time =    7.11185407638550      , rate =    863.909739149570       MiB/s
+ mintime =    6.19628095626831      , maxrate =    991.562526515938       MiB/s
+ avgtime =    11.9637654304504      , avgrate =    655.196124437097       MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ --------
+ Finished
+ --------
+ 
