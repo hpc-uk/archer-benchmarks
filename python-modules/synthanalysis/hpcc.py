@@ -50,7 +50,7 @@ def getbeffres(resfilename):
 
 
 def calcbeffperf(filedict, cpn, restype='rr'):
-    coreslist = []
+    nodeslist = []
     bw = []
     lat = []
     if restype == 'rr':
@@ -61,7 +61,7 @@ def calcbeffperf(filedict, cpn, restype='rr'):
     print("{:>15s} {:>15s} {:>15s} {:>15s}".format('=====', '=====', '==========', '========='))
     for nodes, filename in sorted(filedict.items()):
         pp, rr, nr = getbeffres(filename)
-        coreslist.append(nodes*cpn)
+        nodeslist.append(nodes)
         tbw = None
         tlat = None
         if restype == 'rr':
@@ -76,4 +76,4 @@ def calcbeffperf(filedict, cpn, restype='rr'):
         bw.append(tbw)
         lat.append(tlat)
         print("{:>15d} {:>15d} {:>15.3f} {:>15.3f}".format(nodes, nodes*cpn, tbw, tlat))
-    return coreslist, bw, lat
+    return nodeslist, bw, lat

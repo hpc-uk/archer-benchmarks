@@ -24,17 +24,17 @@ def getmeancycle(castepfilename):
 
 def calcperf(filedict, cpn):
     """Given a list of CASTEP output files, compute the performance and return the data."""
-    coreslist = []
+    nodeslist = []
     scflist = []
     sulist = []
     print("{:>15s} {:>15s} {:>15s} {:>15s}".format('Nodes', 'Cores', 'Mean SCF (s)', 'Speedup'))
     print("{:>15s} {:>15s} {:>15s} {:>15s}".format('=====', '=====', '============', '======='))
     for nodes, filename in sorted(filedict.items()):
-        coreslist.append(nodes*cpn)
+        nodeslist.append(nodes)
         scf = getmeancycle(filename)
         scflist.append(scf)
         speedup = scflist[0]/scf
         sulist.append(speedup)
         print("{:>15d} {:>15d} {:>15.1f} {:>15.2f}".format(nodes, nodes*cpn, scf, speedup))
-    return coreslist, scflist, sulist
+    return nodeslist, scflist, sulist
 

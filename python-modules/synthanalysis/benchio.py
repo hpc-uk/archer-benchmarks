@@ -3,7 +3,7 @@ import os.path
 import re
 from glob import glob
 
-def getperf(filename):
+def getperf(filename, cpn):
     resframe_proto = []
     infile = open(filename, 'r')
     resdict = {}
@@ -16,6 +16,7 @@ def getperf(filename):
         elif re.search('Running', line):
             tokens = line.split()
             resdict['Writers'] = int(tokens[2])
+            resdict['Clients'] = int(tokens[2])/cpn
         elif re.search('Array', line):
             tokens = line.split()
             x = int(tokens[4])
