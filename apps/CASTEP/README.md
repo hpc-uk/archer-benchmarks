@@ -31,9 +31,10 @@ Data from the benchmark can be found in this repository:
 The build process followed for CASTEP on each of the systems benchmarked (if available):
 
 * [ARCHER](https://github.com/ARCHER-CSE/build-instructions/blob/master/CASTEP/build_castep_16.1.2_intel16_ivybrg.md)
-* Cirrus
-* Athena (HPC Mid+)
-* Thomas
+* Cirrus@EPCC
+* [Athena (HPC Mid+)](https://github.com/hpc-uk/build-instructions/blob/master/CASTEP/Athena_18.1.0_gcc6_IMPI.md)
+* Thomas (MMMHub)
+* [CSD3-Skylake](https://github.com/hpc-uk/build-instructions/blob/master/CASTEP/CSD3Skylake_17.2.1_intel17_IMPI.md)
 
 
 

@@ -1,5 +1,12 @@
-OpenSBLI
-========
+# OpenSBLI
+
+A full description of the OpenSBLI benchmark is provided below. The source for the benchmark can be found in this repository.
+
+* [Analysis of OpenSBLI performance](https://github.com/ARCHER-CSE/archer-benchmarks/blob/master/apps/OpenSBLI/analysis/OpenSBLI_benchmark.ipynb)
+* [Results from running OpenSBLI](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/results)
+* [OpenSBLI benchmark source code](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/source)
+
+# OpenSBLI Benchmark Instructions
 
 Satya P Jammy
 
