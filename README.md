@@ -36,9 +36,9 @@ The selection of the benchmarks is described in an ARCHER white paper:
 
 ## Synthetic Benchmarks
 
-* [HPC Challenge (HPCC)](synth/HPCC)
-* benchio
-* mdtest
+* [HPC Challenge (HPCC)](synth/HPCC) - HPC Challenge: tests of floating-point, memory and interconnect performance
+* [benchio](synth/benchio) - Test of parallel I/O write bandwidth using MPI-IO
+* [mdtest](synth/mdtest) - Test of parallel file system metadata server (MDS) performance
 
 ## Application Benchmarks
 
@@ -46,7 +46,7 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * [CP2K](apps/CP2K)
 * [GROMACS](apps/GROMACS)
 * [OpenSBLI](apps/OpenSBLI) 
-* Met Office Unified Model
+* OASIS (Met Office Unified Model coupled to NEMO ocean model)
 
 # Systems Included
 
