@@ -13,7 +13,7 @@ def getperf(filename):
     return perf
 
 def calcperf(filedict, cpn):
-    nodesslist = []
+    nodeslist = []
     perflist = []
     sulist = []
     print("{:>15s} {:>15s} {:>15s} {:>15s}".format('Nodes', 'Cores', 'Perf (ns/day)', 'Speedup'))

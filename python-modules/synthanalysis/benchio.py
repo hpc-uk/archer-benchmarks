@@ -16,7 +16,7 @@ def getperf(filename, cpn):
         elif re.search('Running', line):
             tokens = line.split()
             resdict['Writers'] = int(tokens[2])
-            resdict['Clients'] = int(tokens[2])/cpn
+            resdict['Clients'] = int(float(tokens[2])/cpn)
         elif re.search('Array', line):
             tokens = line.split()
             x = int(tokens[4])
@@ -87,11 +87,13 @@ def get_filelist(dir, stem):
 def get_perf_stats(df, striping, localsize, stat, writestats=False):
     query = '(Striping == {0} & (LocalSize == {1}))'.format(striping, localsize)
     df_q = df.query(query)
+    df_q = df_q.query('(Clients > 0)')
     df_num = df_q.drop(['File', 'GlobalSize', 'TotData'], 1)
     groupf = {'Write':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Writers').groupby(['Writers', 'Striping', 'LocalSize']).agg(groupf)
+    df_group = df_num.sort_values(by='Writers').groupby(['Writers', 'Clients', 'Striping', 'LocalSize']).agg(groupf)
     if writestats:
         print(df_group)
     writeperf = df_group['Write',stat].tolist()
     writers = df_group.index.get_level_values(0).tolist()
-    return writers, writeperf
+    clients = df_group.index.get_level_values(1).tolist()
+    return writers, clients, writeperf
