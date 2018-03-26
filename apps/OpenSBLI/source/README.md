@@ -1,9 +1,9 @@
 # OpenSBLI build instructions
 
-* ARCHER
+* [ARCHER](ARCHER_build.md)
 * [Cirrus@EPCC](Cirrus_build.md)
 * Athena
-* Thomas
-* CSD3-Skylake
+* [Thomas (MMMHub)](Thomas_build.md)
+* [CSD3-Skylake](CSD3Skylake_build.md)
 
 

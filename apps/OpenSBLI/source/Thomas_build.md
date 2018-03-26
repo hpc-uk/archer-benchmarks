@@ -1,4 +1,4 @@
-# Cirrus OpenSBLI benchmark build instructions
+# Thomas (MMMHub) OpenSBLI benchmark build instructions
 
 ## Build OPS
 
@@ -9,9 +9,7 @@ cd OPS/ops/c
 Load the required modules:
 
 ```bash
-module load intel-compilers-17
-module load mpt
-module load hdf5parallel/1.10.1-intel17-mpt214
+module load hdf/5-1.8.15-p1-impi/intel-2015-update2
 ```
 
 Set the required environment variables:
@@ -20,9 +18,9 @@ Set the required environment variables:
 export MPICC_CC=icc
 export MPICXX_CXX=icpc
 export OPS_COMPILER=intel
-export OPS_INSTALL_PATH=/lustre/home/t01/user/benchmark/ARCHER/OpenSBLI/OPS/ops
-export MPI_INSTALL_PATH=/opt/sgi/mpt/mpt-2.14
-export HDF5_INSTALL_PATH=/lustre/sw/hdf5parallel/1.10.1-intel17-mpt214
+export OPS_INSTALL_PATH=/home/user/benchmarks/ARCHER_apps/OpenSBLI/OPS/ops
+export MPI_INSTALL_PATH=/shared/ucl/apps/intel/2017.Update1/impi/2017.1.132/intel64
+export HDF5_INSTALL_PATH=/shared/ucl/apps/hdf5/1.8.15-p1-impi/intel-2015-update2
 ```
 
 Build the OPS library:
