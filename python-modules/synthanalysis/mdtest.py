@@ -27,8 +27,8 @@ def calcperf(filedict, test, cpn):
     createlist = []
     statlist = []
     removelist = []
-    print("{:>15s} {:>15s} {:>15s} {:>15s} {:>15s}".format('Nodes', 'Cores', 'Create (ops/s)', 'Stat (ops/s)', 'Remove (ops/s)'))
-    print("{:>15s} {:>15s} {:>15s} {:>15s} {:>15s}".format('=====', '=====', '==============', '============', '=============='))
+    print("{:>15s} {:>15s} {:>15s} {:>15s} {:>15s}".format('Clients', 'Cores', 'Create (ops/s)', 'Stat (ops/s)', 'Remove (ops/s)'))
+    print("{:>15s} {:>15s} {:>15s} {:>15s} {:>15s}".format('=======', '=====', '==============', '============', '=============='))
     for nodes, filename in sorted(filedict.items()):
         nodeslist.append(nodes)
         fullname = filename.format(test)
