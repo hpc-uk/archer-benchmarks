@@ -12,9 +12,9 @@ Data from the benchmark can be found in this repository:
 
 The build process followed for GROMACS on each of the systems benchmarked (if available):
 
-* [ARCHER](https://github.com/hpc-uk/build-instructions/blob/master/GROMACS/ARCHER_2016.3_gcc5_ivybrg.md)
-* Cirrus@EPCC
+* [ARCHER (EPCC)](https://github.com/hpc-uk/build-instructions/blob/master/GROMACS/ARCHER_2016.3_gcc5_ivybrg.md)
+* [Cirrus (EPCC)](https://github.com/hpc-uk/build-instructions/blob/master/GROMACS/Cirrus_2016.3_gcc6.md)
 * [Athena (HPC Mid+)](https://github.com/hpc-uk/build-instructions/blob/master/GROMACS/Athena_2016.3_gcc6.md)
-* Thomas (MMMHub)
+* Thomas (MMMHub) - Used central install of GROMACS 2016.3
 * [CSD3-Skylake](https://github.com/hpc-uk/build-instructions/blob/master/GROMACS/CSD3Skylake_2016.4_gcc7.md)
 
