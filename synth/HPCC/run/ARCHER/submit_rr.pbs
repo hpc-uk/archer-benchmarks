@@ -1,0 +1,30 @@
+#!/bin/bash --login
+
+#PBS -N bench_hpcc
+#PBS -l select=1
+#PBS -l walltime=1:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+mpilaunch=aprun
+corespn=24
+
+nodeslist="2"
+
+cp hpccinf_rr.txt hpccinf.txt
+
+for nodes in $nodeslist
+do
+   cores=$(( nodes * corespn ))
+   if [ -f hpccoutf.txt ] 
+   then 
+      rm hpccoutf.txt
+   fi
+
+   timestamp=$(date '+%Y%m%d%H%M')
+   ${mpilaunch} -n ${nodes} -N 1 ./hpcc
+   mv hpccoutf.txt nodes${nodes}ppn1_${timestamp}_hpccoutf.txt
+   ${mpilaunch} -n ${cores} -N ${corespn} ./hpcc
+   mv hpccoutf.txt nodes${nodes}ppn${corespn}_${timestamp}_hpccoutf.txt
+done

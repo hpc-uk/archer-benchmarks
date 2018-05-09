@@ -1,0 +1,21 @@
+#!/bin/bash --login
+
+#PBS -N bench_hpcc
+#PBS -l select=1
+#PBS -l walltime=1:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+mpilaunch=aprun
+corespn=24
+
+if [ -f hpccoutf.txt ] 
+then 
+   rm hpccoutf.txt
+fi
+
+cp hpccinf_stream.txt hpccinf.txt
+timestamp=$(date '+%Y%m%d%H%M')
+${mpilaunch} -n ${corespn} ./hpcc
+mv hpccoutf.txt ${timestamp}_hpccoutf.txt
