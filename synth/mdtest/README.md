@@ -5,6 +5,8 @@ code for mdtest is available as part of the LANL IOR distribution at:
 
 * https://github.com/IOR-LANL/ior
 
+## Benchmark details
+
 The benchmark cofigurations were those specified in the Trinity benchmark suite:
 
 * http://www.nersc.gov/users/computational-systems/cori/nersc-8-procurement/trinity-nersc-8-rfp/nersc-8-trinity-benchmarks/mdtest/
@@ -20,32 +22,38 @@ i.e.:
 * Creating 1 file by NP processes.
 * Removing that 1 file by NP processes. 
 
+## Analysis
+
+Results are analysed in a Jupyter notebook:
+
+* [mdtest performance analysis](analysis/mdtest_perf_analysis.ipynb)
+
+Parsing of the benchio output file is performed by functions defined in a custom Python
+module:
+
+* [Synthetic benchmark performance analysis Python functions](../../python-modules/synthanalysis/mdtest.py)
+
 ## Compilation details
 
-### ARCHER (Cray XC30)
+* [ARCHER (EPCC)](build/ARCHER/)
+* [Cirrus (EPCC)](build/Cirrus/)
+* Athena (HPC Mid+) - No results yet
+* [CSD3-Skylake (Cambridge)](build/CSD3Skylake/)
+* Thomas (MMM Hub) - No results yet
 
-Clone the above repository and move to the top level directory
+## Job scripts
 
-Bootstrap the build (need a newwer version of autotools than the default):
+* [ARCHER (EPCC)](run/ARCHER/)
+* [Cirrus (EPCC)](run/Cirrus/)
+* Athena (HPC Mid+) - No results yet
+* [CSD3-Skylake (Cambridge)](run/CSD3Skylake/)
+* Thomas (MMM Hub) - No results yet
 
-```bash
-module load autotools
-./bootstrap.sh
-```
+## Full output data
 
-Configure (need to explicity remove GPFS as the RDF directories are mounted and it tries to enable GPFS):
-
-```bash
-./configure --without-gpfs
-```
-
-Finally, build the code:
-
-```bash
-make
-```
-
-The executable is called `mdtest` and can be found in the `src` directory.
-
-
+* [ARCHER (EPCC)](results/ARCHER/)
+* [Cirrus (EPCC)](results/Cirrus/)
+* Athena (HPC Mid+) - No results yet
+* [CSD3-Skylake (Cambridge)](results/CSD3Skylake/)
+* Thomas (MMM Hub) - No results yet
 
