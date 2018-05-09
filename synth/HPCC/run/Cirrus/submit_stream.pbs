@@ -1,0 +1,30 @@
+#!/bin/bash --login
+#
+#PBS -N HPCC_stream
+#PBS -l select=1:ncpus=72
+#PBS -l walltime=1:0:0
+#PBS -A z04
+
+cd $PBS_O_WORKDIR
+
+module load intel-mpi-17
+module load gcc/6.2.0
+module load intel-cmkl-17
+module list
+
+mpilaunch=mpirun
+hpccexe="./hpcc_impi"
+corespn=36
+
+
+cp hpccinf_stream.txt hpccinf.txt
+
+if [ -f hpccoutf.txt ] 
+then 
+   rm hpccoutf.txt
+fi
+
+timestamp=$(date '+%Y%m%d%H%M')
+${mpilaunch} -n ${corespn} -ppn ${corespn} ${hpccexe}
+mv hpccoutf.txt ${timestamp}_stream.txt
+
