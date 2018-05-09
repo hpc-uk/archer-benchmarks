@@ -1,0 +1,22 @@
+#!/bin/bash --login
+
+#$ -S /bin/bash
+#$ -l h_rt=2:0:0
+#$ -N npcc
+#$ -pe mpi 24
+#$ -wd /home/mmm0074/benchmarks/hpcc-code
+
+mpilaunch=gerun
+
+cp hpccinf_streams.txt hpccinf.txt
+
+if [ -f hpccoutf.txt ] 
+then 
+   rm hpccoutf.txt
+fi
+
+timestamp=$(date '+%Y%m%d%H%M')
+export OMP_NUM_THREADS=1
+${mpilaunch} ./hpcc
+mv hpccoutf.txt ${timestamp}_hpccoutf.txt
+

@@ -3,13 +3,15 @@
 #$ -S /bin/bash
 #$ -l h_rt=0:20:0
 #$ -N npcc
-#$ -pe mpi 96
+#$ -pe mpi 24
 #$ -wd /home/mmm0074/benchmarks/hpcc-code
 
 mpilaunch=gerun
 corespn=24
 
-nodeslist="4 2"
+nodeslist="1"
+
+cp hpccinf_rr.txt hpccinf.txt
 
 for nodes in $nodeslist
 do
