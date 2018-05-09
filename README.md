@@ -55,7 +55,8 @@ information on their configuration (processor and memory information are **per n
 
 **Note:** Not all benchmarks have been run on all systems.
 
-## Compute node and interconnect
+
+## Compute node and interconnect
 
 | System | Processor | Memory | Interconnect |
 | ------ | --------- | ------ | ------------ |
