@@ -7,7 +7,7 @@ The souce code for the benchio benchmark application can be found at:
 
 * https://github.com/EPCCed/benchio
 
-## Benchmark details
+## Benchmark details
 
 The benchmark was compiled with local array size of (256,256,256) on all systems.
 
