@@ -1,0 +1,44 @@
+#!/bin/bash --login
+#
+#PBS -N benchio
+#PBS -l select=4:ncpus=72
+#PBS -l walltime=1:0:0
+#PBS -A z04
+
+module load mpt
+module load intel-compilers-17
+
+cd $PBS_O_WORKDIR
+
+# System and file system identifier
+ssize=1m
+
+# Base directories
+BASE_DIR=/lustre/home/z04/aturner/benchmark/ARCHER/benchio
+RESULT_DIR=${BASE_DIR}/results
+BENCHIO=/lustre/home/z04/aturner/test/benchio/shared-file/source/benchio.x
+
+# Make sure the results direcotry exists
+if [ ! -d "${RESULT_DIR}" ];
+then
+   mkdir -p ${RESULT_DIR}
+fi
+
+sizes="144 72 36"
+
+cd ${RESULT_DIR}
+if [ ! -d "striped" ]; then
+   mkdir -p "striped"
+fi
+lfs setstripe -c -1 -S ${ssize} striped
+
+for size in $sizes
+do
+   # Basic test parameters
+   clients=$size
+   timestamp=$(date '+%Y%m%d%H%M%S')
+   outfile=${RESULT_DIR}/benchio_res_c${clients}_${timestamp}.dat
+   echo "${timestamp} Running benchio: clients=${clients}"
+   echo "JobID = ${PBS_JOBID} >> ${outfile}"
+   mpiexec_mpt -n ${clients} -ppn 36 $BENCHIO >> ${outfile}
+done

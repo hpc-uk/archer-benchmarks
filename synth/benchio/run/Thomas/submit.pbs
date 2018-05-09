@@ -1,0 +1,47 @@
+#!/bin/bash --login
+
+#$ -S /bin/bash
+#$ -l h_rt=2:0:0
+#$ -N benchio
+#$ -pe mpi 768
+#$ -wd /home/mmm0074/Scratch
+
+mpilaunch=gerun
+
+# System and file system identifier
+system=Thomas
+ssize=1m
+
+# Base directories
+BASE_DIR=/scratch/scratch/mmm0074/benchmark/benchio
+RESULT_DIR=${BASE_DIR}/results
+COPY_DIR=/home/mmm0074/benchmarks/benchio
+BENCHIO=/home/mmm0074/software/benchio/shared-file/source/benchio.x
+
+# Make sure the results direcotry exists
+if [ ! -d "${RESULT_DIR}" ];
+then
+   mkdir -p ${RESULT_DIR}
+fi
+
+sizes=( 768 )
+
+cd ${RESULT_DIR}
+if [ ! -d "striped" ]; then
+   mkdir -p "striped"
+fi
+lfs setstripe -c -1 -S ${ssize} striped
+
+for size in "${sizes[@]}"
+do
+   # Basic test parameters
+   clients=$size
+   timestamp=$(date '+%Y%m%d%H%M%S')
+   outfile=${RESULT_DIR}/benchio_res_c${clients}_${timestamp}.dat
+   echo "${timestamp} Running benchio: clients=${clients}"
+   echo "JobID = ${PBS_JOBID} >> ${outfile}"
+   gerun $BENCHIO >> ${outfile}
+   cp ${outfile} ${COPY_DIR}
+done
+
+

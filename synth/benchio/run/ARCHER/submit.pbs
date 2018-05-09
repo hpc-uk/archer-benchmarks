@@ -1,0 +1,45 @@
+#!/bin/bash --login
+#
+#PBS -N mdtest
+#PBS -l select=128
+#PBS -l walltime=1:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+# System and file system identifier
+system=ARCHER
+testname=write_block_1m
+fs=fs3
+ssize=1m
+
+# Base directories
+BASE_DIR=/work/z01/z01/aturner/benchmark/benchio
+RESULT_DIR=${BASE_DIR}/results/${testname}/${system}/${fs}
+BENCHIO=/work/z01/z01/aturner/benchmark/benchio/benchio/shared-file/source/benchio.x
+
+# Make sure the results direcotry exists
+if [ ! -d "${RESULT_DIR}" ];
+then
+   mkdir -p ${RESULT_DIR}
+fi
+
+sizes=( 3072 1536 768 )
+
+cd ${RESULT_DIR}
+if [ ! -d "striped" ]; then
+   mkdir -p "striped"
+fi
+lfs setstripe -c -1 -S ${ssize} striped
+
+for size in "${sizes[@]}"
+do
+   # Basic test parameters
+   clients=$size
+   timestamp=$(date '+%Y%m%d%H%M%S')
+   outfile=${RESULT_DIR}/benchio_res_c${clients}_${timestamp}_${testname}.dat
+   echo "${timestamp} Running benchio: clients=${clients}"
+   echo "JobID = ${PBS_JOBID} >> ${outfile}"
+   aprun -n ${clients} $BENCHIO >> ${outfile}
+done
+
