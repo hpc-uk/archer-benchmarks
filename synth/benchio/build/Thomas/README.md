@@ -2,13 +2,13 @@
 
 Environment set correctly on login
 
-Copy ``Makefille.thomas`` into ``shared-file/source`` directory
+Copy ``Makefile.thomas`` into ``shared-file/source`` directory
 
 Build:
 
 ```bash
 cd shared-file/source
-make
+make -f Makefile.thomas
 ```
 
 Binary is called ``benchio``.
