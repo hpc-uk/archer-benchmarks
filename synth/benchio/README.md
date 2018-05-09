@@ -32,7 +32,7 @@ module:
 * [Cirrus (EPCC)](build/Cirrus/)
 * Athena (HPC Mid+) - No results yet
 * [CSD3-Skylake (Cambridge)](build/CSD3Skylake/)
-* [Thomas (MMM Hub)](build/MMM_Thomas/)
+* [Thomas (MMM Hub)](build/Thomas/)
 
 ## Job scripts
 
@@ -40,7 +40,7 @@ module:
 * [Cirrus (EPCC)](run/Cirrus/)
 * Athena (HPC Mid+) - No results yet
 * [CSD3-Skylake (Cambridge)](run/CSD3Skylake/)
-* [Thomas (MMM Hub)](run/MMM_Thomas/)
+* [Thomas (MMM Hub)](run/Thomas/)
 
 ## Full output data
 
