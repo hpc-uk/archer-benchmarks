@@ -1,0 +1,21 @@
+#!/bin/bash --login
+#
+#PBS -N osbli_bench
+#PBS -l select=2:ncpus=72
+#PBS -l walltime=0:20:0
+#PBS -l place=excl
+#PBS -A z04
+
+cd $PBS_O_WORKDIR
+
+module load intel-compilers-17
+module load gcc
+module load mpt
+module load hdf5-parallel/1.10.1-intel18mpt214
+
+nodes=2
+cpn=24
+cores=$(( nodes * cpn ))
+
+timestamp=$(date '+%Y%m%d%H%M')
+mpiexec_mpt -n $cores -ppn $cpn ./OpenSBLI_mpi > output_${nodes}nodes_${timestamp}.txt 2> stderr.txt
