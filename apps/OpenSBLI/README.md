@@ -4,6 +4,7 @@ A full description of the OpenSBLI benchmark is provided below. The source for t
 
 * [Analysis of OpenSBLI performance](https://github.com/ARCHER-CSE/archer-benchmarks/blob/master/apps/OpenSBLI/analysis/OpenSBLI_benchmark.ipynb)
 * [Results from running OpenSBLI](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/results)
+* [Run scripts for OpenSBLI on different platforms](run/)
 * [Building OpenSBLI on different platforms](source/README.md)
 * [OpenSBLI benchmark source code](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/source)
 
