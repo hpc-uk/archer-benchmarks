@@ -14,7 +14,7 @@ module load mpt
 module load hdf5-parallel/1.10.1-intel18mpt214
 
 nodes=2
-cpn=24
+cpn=36
 cores=$(( nodes * cpn ))
 
 timestamp=$(date '+%Y%m%d%H%M')

@@ -1,0 +1,15 @@
+#!/bin/bash --login
+#
+#PBS -N osbli_bench
+#PBS -l select=2
+#PBS -l walltime=0:20:0
+#PBS -A z01
+
+cd $PBS_O_WORKDIR
+
+nodes=2
+cpn=24
+cores=$(( nodes * cpn ))
+
+timestamp=$(date '+%Y%m%d%H%M')
+aprun -n $cores -N $cpn ./OpenSBLI_mpi > output_${nodes}nodes_${timestamp}.txt 2> stderr.txt

@@ -1,0 +1,12 @@
+#!/bin/bash --login
+#
+#$ -S /bin/bash
+#$ -l h_rt=1:0:0
+#$ -N OSBLI_Bench
+#$ -pe mpi 768
+#$ -wd /home/mmm0074/benchmarks/ARCHER_apps/OpenSBLI/Benchmark
+
+module load hdf/5-1.8.15-p1-impi/intel-2015-update2
+
+timestamp=$(date '+%Y%m%d%H%M')
+gerun ./OpenSBLI_mpi > output_${nodes}nodes_${timestamp}.txt 2> stderr.txt
