@@ -5,7 +5,8 @@ code for mdtest is available as part of the LANL IOR distribution at:
 
 * https://github.com/IOR-LANL/ior
 
-## Benchmark details
+
+## Benchmark details
 
 The benchmark cofigurations were those specified in the Trinity benchmark suite:
 
@@ -22,7 +23,8 @@ i.e.:
 * Creating 1 file by NP processes.
 * Removing that 1 file by NP processes. 
 
-## Analysis
+
+## Analysis
 
 Results are analysed in a Jupyter notebook:
 
