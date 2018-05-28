@@ -58,7 +58,7 @@
  FFT Lib : fftw3 version fftw-3.3.3-fma-sse2-avx
  Fundamental constants values: CODATA 2010
  
- Run started: Mon, 15 Jan 2018 11:16:11 +0000
+ Run started: Thu, 23 Nov 2017 15:36:28 +0000
  
  Pseudo atomic calculation performed for O 2s2 2p4
  
@@ -538,18 +538,18 @@ Calculating total energy with cut-off of  400.000 eV.
 SCF loop      Energy           Fermi           Energy gain       Timer   <-- SCF
                                energy          per atom          (sec)   <-- SCF
 ------------------------------------------------------------------------ <-- SCF
-Initial  -5.93976174E+004  0.00000000E+000                         5.22  <-- SCF
-      1  -7.23958534E+004  3.97291921E+000   4.81416148E+001      78.25  <-- SCF
-      2  -7.78237563E+004  2.01392951E+000   2.01033441E+001     123.42  <-- SCF
-      3  -7.79864334E+004  1.80201344E+000   6.02508016E-001     169.08  <-- SCF
-      4  -7.78411875E+004  1.95777384E+000  -5.37947820E-001     233.24  <-- SCF
-      5  -7.77211101E+004  1.34863294E+000  -4.44731115E-001     296.86  <-- SCF
-      6  -7.77152164E+004  1.12199471E+000  -2.18285275E-002     366.88  <-- SCF
-      7  -7.77129444E+004  1.05278649E+000  -8.41475277E-003     429.12  <-- SCF
-      8  -7.77104466E+004  1.02755353E+000  -9.25121761E-003     493.61  <-- SCF
-      9  -7.77084256E+004  9.96354947E-001  -7.48533179E-003     555.63  <-- SCF
-     10  -7.77059670E+004  1.11152796E+000  -9.10574326E-003     618.36  <-- SCF
-     11  -7.77052071E+004  1.16265097E+000  -2.81433620E-003     680.87  <-- SCF
+Initial  -5.93976174E+004  0.00000000E+000                         5.24  <-- SCF
+      1  -7.23958534E+004  3.97291921E+000   4.81416148E+001      78.63  <-- SCF
+      2  -7.78237563E+004  2.01392951E+000   2.01033441E+001     123.79  <-- SCF
+      3  -7.79864334E+004  1.80201344E+000   6.02508016E-001     169.72  <-- SCF
+      4  -7.78411875E+004  1.95777384E+000  -5.37947820E-001     234.75  <-- SCF
+      5  -7.77211101E+004  1.34863294E+000  -4.44731115E-001     300.09  <-- SCF
+      6  -7.77152164E+004  1.12199471E+000  -2.18285275E-002     370.47  <-- SCF
+      7  -7.77129444E+004  1.05278649E+000  -8.41475277E-003     432.99  <-- SCF
+      8  -7.77104466E+004  1.02755353E+000  -9.25121761E-003     497.42  <-- SCF
+      9  -7.77084256E+004  9.96354947E-001  -7.48533179E-003     559.34  <-- SCF
+     10  -7.77059670E+004  1.11152796E+000  -9.10574326E-003     622.91  <-- SCF
+     11  -7.77052071E+004  1.16265097E+000  -2.81433620E-003     684.41  <-- SCF
 ------------------------------------------------------------------------ <-- SCF
  
 Final energy, E             =  -77705.20713351     eV
@@ -1128,14 +1128,14 @@ Writing model to al3x3.check
  A BibTeX formatted list of references used in this run has been written to 
  al3x3.bib
  
-Initialisation time =      3.31 s
-Calculation time    =    718.14 s
-Finalisation time   =      4.49 s
-Total time          =    725.94 s
-Peak Memory Use     = 1545464 kB
+Initialisation time =      3.28 s
+Calculation time    =    721.46 s
+Finalisation time   =      3.49 s
+Total time          =    728.23 s
+Peak Memory Use     = 1545308 kB
   
 Overall parallel efficiency rating: Good (74%)                                  
   
 Data was distributed by:-
-G-vector (16-way); efficiency rating: Good (75%)                                
+G-vector (16-way); efficiency rating: Good (74%)                                
 k-point (2-way); efficiency rating: Excellent (99%)                             
