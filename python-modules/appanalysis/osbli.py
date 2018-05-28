@@ -4,7 +4,7 @@ def gettiming(filename):
     infile = open(filename, 'r')
     timing = 0.0
     for line in infile:
-        if re.search('Total Wall', line):
+        if re.search('Time taken for ', line):
             line = line.strip()
             tokens = line.split(',')
             timing = float(tokens[1])

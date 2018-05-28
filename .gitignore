@@ -1,2 +1,4 @@
 .ipynb_checkpoints
-.png
+.DS_Store
+*.png
+*.pyc
