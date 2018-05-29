@@ -1,33 +1,10 @@
-<img src="media/image1.png" width="262" height="75" />
+<img src="img/ARCHER_logo.png" />
 
-ARCHER Benchmark Performance
+# ARCHER Benchmark Performance
 
 Andy Turner
 
-<img src="media/image2.png" width="193" height="62" />
-
-Document Information and Version History
-========================================
-
-|                 |                                        |
-|-----------------|----------------------------------------|
-| **Version:**    | 0.5                                    |
-| **Status**      | Draft                                  |
-| **Author(s):**  | Andy Turner                            |
-| **Reviewer(s)** | Adrian Jackson, Mark Bull, Tier2 Sites |
-
-|             |            |                                |                                      |
-|-------------|------------|--------------------------------|--------------------------------------|
-| **Version** | **Date**   | **Comments, Changes, Status**  | **Authors, contributors, reviewers** |
-| 0.1         | 2018-03-12 | Initial draft                  | Andy Turner                          |
-| 0.2         | 2018-03-20 | Added performance data         | Andy Turner                          |
-| 0.3         | 2018-03-23 | Updated analysis               | Andy Turner                          |
-| 0.4         | 2018-03-29 | Added system details           | Andy Turner                          |
-| 0.5         | 2018-05-04 | Incorporated reviewer comments | Mark Bull, Adrian Jackson            |
-| 0.6         | 2018-05-09 | Updated repository links       | Andy Turner                          |
-
-Introduction
-============
+## Introduction
 
 This paper presents a comparison of the performance of the UK National HPC benchmarks across different HPC systems in the UK. All of the raw data and analysis of the data are available in an Open Source manner from Github at:
 
@@ -41,8 +18,7 @@ The remainder of this paper is organised in the following way. Section 3 describ
 
 This study will be extended as more systems and benchmarks are added.
 
-HPC Systems
-===========
+## HPC Systems
 
 This initial benchmarking exercise covered five Intel Xeon based HPC systems:
 
@@ -140,8 +116,7 @@ GPFS</td>
 </tbody>
 </table>
 
-Application Benchmarks
-======================
+## Application Benchmarks
 
 In this initial performance comparison, we have run four benchmarks using three different applications:
 
@@ -153,8 +128,7 @@ In this initial performance comparison, we have run four benchmarks using three 
 
 More details on these benchmarks are found in the individual sections below.
 
-CASTEP
-------
+### CASTEP
 
 CASTEP[1] is a general-purpose, DFT-based, materials science application. Written in Fortran with MPI and OpenMP parallelism.
 
@@ -168,11 +142,11 @@ We have measured the performance of two CASTEP benchmarks:
 
 -   **DNA**: A very large CASTEP benchmark that requires large node counts (a minimum of ~2400 cores). This benchmark was only able to run on the ARCHER and Cirrus systems as the other systems do not support jobs at this scale. We expect this benchmark to be bound by the performance of MPI collective communications. This is a strong scaling benchmark.
 
-### Al Slab (al3x3)
+#### Al Slab (al3x3)
 
 We compare the performance of the different systems as a function of node count in Figure 8 and present numerical data on single node performance in Table 6. The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above.
 
-<img src="media/image3.png" width="553" height="276" />
+<img src="img/CASTEP_AlSlab_perf.png" />
 
 <span id="_Ref513193450" class="anchor"></span>Figure 1: Performance of the medium Al Slab (al3x3) benchmark as a function of number of nodes.
 
@@ -212,11 +186,11 @@ Using the memory bandwidth data, we see that the CASTEP Al Slab performance is a
 
 -   Peta4-Skylake shows the best overall performance for this benchmark as nodes on this system have the highest overall floating-point performance and higher memory bandwidth per core.
 
-### DNA
+#### DNA
 
 We compare the performance of the ARCHER and Cirrus in the plot below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above.
 
-<img src="media/image4.png" width="553" height="276" />
+<img src="img/CASTEP_DNA_perf.png" />
 
 Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
 
@@ -224,8 +198,7 @@ The performance of this benchmark depends critically on the performance of MPI c
 
 We are currently liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
 
-OpenSBLI
---------
+### OpenSBLI
 
 OpenSBLI[3] is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU).
 
@@ -235,7 +208,7 @@ Details of the compile options, source code for the benchmark, the full output d
 
 <https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI>
 
-<img src="media/image5.png" width="553" height="276" />
+<img src="img/osbli_tgv_perf.png" />
 
 <span id="_Ref513193726" class="anchor"></span>Figure 3: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes.
 
@@ -243,12 +216,11 @@ As we can see in Figure 10, Peta4-Skylake shows the best performance (but not as
 
 Figure 4 shows the performance of the OpenSBLI benchmark up to high node counts. Results are only currently available for ARCHER and Cirrus as the other systems do not allow standard jobs to scale up to these sizes (although, as mentioned above, there is no technical reason why this scale cannot be run on these systems and we are in discussions to enable this). The trends seen at lower node counts continue as we scale out, with the ARCHER results showing some fluctuations from a linear trend. We plan to investigate the origin of these fluctuations in future versions of this white paper.
 
-<img src="media/image6.png" width="553" height="276" />
+<img src="img/osbli_tgv_perf_large.png" />
 
 <span id="_Ref515272703" class="anchor"></span>Figure 4: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes up to high node counts.
 
-GROMACS
--------
+### GROMACS
 
 GROMACS[4] is a classical molecular mechanics-based biomolecular simulation application written in C/C++ with MPI and OpenMP parallelism. It also supports GPGPU (implemented in CUDA) and Xeon Phi (Knights Landing varient) versions.
 
@@ -260,20 +232,19 @@ We have been provided with a very large benchmark case for GROMACS by the HECBio
 
 We show a comparison of performance for the GROMACS benchmark in Figure 11.
 
-<img src="media/image7.png" width="553" height="276" />
+<img src="img/gromacs_large_perf.png" />
 
 <span id="_Ref513193781" class="anchor"></span>Figure 5: Performance of the large GROMACS benchmark as a function of number of nodes.
 
 These results indicate that the performance of this GROMACS benchmark is directly correlated to node floating point performance. The lowest performance is seen on ARCHER where the older processors have lower floating-point performance and there is the joint lowest core count per node. The best performance is seen on Peta4-Skylake where the newest processors have the highest floating-point performance and there is a high core count per node. Cirrus, Athena and Thomas all have processors with similar floating-point performance; Thomas shows the lowest performance out of these systems as it has the slowest processors combined with fewer cores per node; Athena and Cirrus have higher floating-point performance per node (Athena from additional cores and higher clock speed, Cirrus from additional cores per node) and show better performance.
 
-<img src="media/image8.png" width="553" height="276" />
+<img src="img/gromacs_large_perf_large.png" />
 
 <span id="_Ref513195524" class="anchor"><span id="_Ref513195470" class="anchor"></span></span>Figure 6: Performance of the large GROMACS benchmark up to high node counts.
 
 Figure 12 shows the performance up to large node counts (as mentioned above, only ARCHER and Cirrus currently allow jobs to run up to these larger node counts). ARCHER appears to provide slightly better performance at larger node counts in line with the results seen for the large CASTEP DNA benchmark. Further investigations are needed to understand the causes of performance differences at high node counts.
 
-Parallel I/O Performance
-========================
+## Parallel I/O Performance
 
 We aimed to measure two aspects of I/O performance that are important for I/O intensive workloads on HPC systems:
 
@@ -281,8 +252,7 @@ We aimed to measure two aspects of I/O performance that are important for I/O in
 
 -   Metadata server performance: We used the mdtest benchmark from the LANL IOR distribution[6] to measure the performance of the metadata server (MDS). Not all systems could support running this benchmark due to limits on the number files a user that a single user can create (the benchmark needs to be able to create more than 1 million files).
 
-Parallel write performance: benchio
------------------------------------
+### Parallel write performance: benchio
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -316,8 +286,7 @@ More investigation is needed here to understand the differences in performance. 
 
 Figure 12: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
-MDS performance: mdtest
------------------------
+### MDS performance: mdtest
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -333,8 +302,7 @@ Figure 13: File create, stat and remove performance as a function of number of c
 
 The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working to try and understand these features.
 
-Summary and Conclusions
-=======================
+## Summary and Conclusions
 
 The conclusions from the benchmarking exercise can be split into three broad sections:
 
