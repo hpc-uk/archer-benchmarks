@@ -1,8 +1,9 @@
 <img src="img/ARCHER_logo.png" width="300"/>
+<img src="img/epcc_logo.png" width="300"/>
 
 # ARCHER Benchmark Performance
 
-Andy Turner
+Andy Turner (<mailto:a.turner@epcc.ed.ac.uk>), EPCC, The University of Edinburgh
 
 ## Introduction
 
@@ -66,55 +67,13 @@ The tables below provide further technical details on the systems. Table 1 provi
 
 <a id="tab4"></a>Table 4: Parallel file system details for the HPC services used in this study
 
-<table>
-<thead>
-<tr class="header">
-<th>System</th>
-<th>Technology</th>
-<th>Vendor</th>
-<th>Client/Server Version</th>
-<th>Configuration</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ARCHER</td>
-<td>Lustre</td>
-<td>Cray Sonexion</td>
-<td>2.5/2.1</td>
-<td>1xMDT, 48xOST</td>
-</tr>
-<tr class="even">
-<td>Cirrus</td>
-<td>Lustre</td>
-<td>DDN</td>
-<td>2.5/2.7</td>
-<td>1xMDT, 14xOST</td>
-</tr>
-<tr class="odd">
-<td>Athena</td>
-<td>SpectrumScale/<br />
-GPFS</td>
-<td>IBM</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Thomas</td>
-<td>Lustre</td>
-<td></td>
-<td></td>
-<td>4xMDS, 10xOST</td>
-</tr>
-<tr class="odd">
-<td>Peta4-Skylake</td>
-<td>Lustre</td>
-<td>Intel Enterprise Lustre</td>
-<td>2.7/2.7</td>
-<td>1xMDT, 24xOST</td>
-</tr>
-</tbody>
-</table>
+| System        | Technology         | Vendor                  | Client/Server Version | Configuration |
+|---------------|--------------------|-------------------------|-----------------------|---------------|
+| ARCHER        | Lustre             | Cray Sonexion           | 2.5/2.1               | 1xMDT, 48xOST |
+| Cirrus        | Lustre             | DDN                     | 2.5/2.1               | 1xMDT, 14xOST |
+| Athena        | SpectrumScale/GPFS | IBM                     |                       |               |
+| Thomas        | Lustre             |                         |                       | 4xMDT, 10xOST |
+| Peta4-Skylake | Lustre             | Intel Enterprise Lustre | 2.7/2.7               | 1xMDT, 24xOST |
 
 ## Application Benchmarks
 
