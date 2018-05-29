@@ -151,7 +151,7 @@ Using the memory bandwidth data, we see that the CASTEP Al Slab performance is a
 
 We compare the performance of the ARCHER and Cirrus in the plot below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above.
 
-<img src="img/CASTEP_DNA_perf.png" />
+<img src="img/CASTEP_DNA_perf_large.png" />
 
 <a id="fig2"></a>Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
 
