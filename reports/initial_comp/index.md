@@ -1,4 +1,4 @@
-<img src="img/ARCHER_logo.png" />
+<img src="img/ARCHER_logo.png" width="300"/>
 
 # ARCHER Benchmark Performance
 
@@ -26,25 +26,25 @@ This initial benchmarking exercise covered five Intel Xeon based HPC systems:
 
 -   Cirrus: Tier2 HPC system provided by EPCC, <http://www.cirrus.ac.uk>
 
--   Athena: Tier2 HPC system provided by HPC Midlands Plus
+-   Athena: Tier2 HPC system provided by HPC Midlands Plus, <http://www.hpc-midlands-plus.ac.uk/>
 
--   Thomas: Tier2 HPC system provided by the Materials and Molecular Modelling Hub
+-   Thomas: Tier2 HPC system provided by the Materials and Molecular Modelling Hub, <https://mmmhub.ac.uk/>
 
 -   Peta4-Skylake: One component of the CSD3 Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
 
 The tables below provide further technical details on the systems. Table 1 provides information on the size of the system and the interconnect; Table 2 provides information on the compute node layout, Table 3 provides information on the processor memory hierarchy; and Table 4 provides information on the parallel file systems.
 
-<span id="_Ref510094133" class="anchor"></span>Table 1: System details for the HPC services used in this study
+<a id="tab1"></a>Table 1: System details for the HPC services used in this study
 
 | System        | Nodes (Cores)  | Interconnect | Topology  | EPSRC Tier2 Grant Award |
 |---------------|----------------|--------------|-----------|-------------------------|
-| ARCHER        | 4920 (118,080) | Cray Aries   | Dragonfly | N/A                     |
-| Cirrus        | 280 (10080)    | Mellanox FDR | Hypercube | £2.4 million            |
+| ARCHER        | 4,920 (118,080)| Cray Aries   | Dragonfly | N/A                     |
+| Cirrus        | 280 (10,080)   | Mellanox FDR | Hypercube | £2.4 million            |
 | Athena        |                | Mellanox EDR |           | £3.2 million            |
 | Thomas        |                | Intel OPA    |           | £4.0 million            |
 | Peta4-Skylake |                | Intel OPA    |           | £5.0 million            |
 
-<span id="_Ref510094144" class="anchor"></span>Table 2: Node details for the HPC services used in this study
+<a id="tab2"></a>Table 2: Node details for the HPC services used in this study
 
 | System        | Processors                            | Cores per node  | Memory per node |
 |---------------|---------------------------------------|-----------------|-----------------|
@@ -54,17 +54,17 @@ The tables below provide further technical details on the systems. Table 1 provi
 | Thomas        | Intel E5-2650v4 (Broadwell), 2.1 GHz  | 24 (2x 12-core) | 128 GB          |
 | Peta4-Skylake | Intel Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 128 GB          |
 
-<span id="_Ref510094152" class="anchor"></span>Table 3: Processor memory details for the HPC services used in this study
+<a id="tab3"></a>Table 3: Processor memory details for the HPC services used in this study
 
 | System        | L1 data cache (per core) | L2 cache (per core) | L3 cache (shared) | Memory channels per socket | Published memory bandwidth per socket (node) |
-|---------------|--------------------------|---------------------|-------------------|----------------------------|----------------------------------------------|
+|---------------|-------------------------:|--------------------:|------------------:|---------------------------:|---------------------------------------------:|
 | ARCHER        | 32 KiB                   | 256 KiB             | 30 MiB            | 4                          | 59.7 (119.4) GB/s                            |
 | Cirrus        | 32 KiB                   | 256 KiB             | 45 MiB            | 4                          | 76.8 (153.6) GB/s                            |
 | Athena        | 32 KiB                   | 256 KiB             | 35 MiB            | 4                          | 76.8 (153.6) GB/s                            |
 | Thomas        | 32 KiB                   | 256 KiB             | 30 MiB            | 4                          | 76.8 (153.6) GB/s                            |
 | Peta4-Skylake | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
 
-<span id="_Ref510094158" class="anchor"></span>Table 4: Parallel file system details for the HPC services used in this study
+<a id="tab4"></a>Table 4: Parallel file system details for the HPC services used in this study
 
 <table>
 <thead>
@@ -148,12 +148,12 @@ We compare the performance of the different systems as a function of node count 
 
 <img src="img/CASTEP_AlSlab_perf.png" />
 
-<span id="_Ref513193450" class="anchor"></span>Figure 1: Performance of the medium Al Slab (al3x3) benchmark as a function of number of nodes.
+<a id="fig1"></a>Figure 1: Performance of the medium Al Slab (al3x3) benchmark as a function of number of nodes.
 
-<span id="_Ref513194934" class="anchor"></span>Table 5: Single node performance comparison for CASTEP Al Slab benchmark
+<a id="tab5"></a>Table 5: Single node performance comparison for CASTEP Al Slab benchmark
 
 | System        | Mean SCF Cycle (s) | Performance relative to ARCHER node |
-|---------------|--------------------|-------------------------------------|
+|---------------|-------------------:|------------------------------------:|
 | Peta4-Skylake | 61.280             | 3.006                               |
 | Athena        | 100.600            | 1.831                               |
 | Cirrus        | 102.421            | 1.798                               |
@@ -162,10 +162,10 @@ We compare the performance of the different systems as a function of node count 
 
 To help understand these results, we have used the STREAM benchmark (run within the HPC Challenge synthetic benchmark suite) to measure the memory bandwidth on the different systems. The results from the Triad metric running on all cores on a compute node simultaneously are shown in Table 6. The major difference in measured memory bandwidth per node comes from the generation of processors (and memory) with the newest generation (Peta4-Skylake) having by far the highest memory bandwidth per node (due both the newer technology and additional memory channels available) and the oldest generation (ARCHER) having the lowest memory bandwidth per node). For the systems with the Broadwell generation on processors having more cores per node allows you to access slightly higher measured memory performance per node this actually results in lower measured memory bandwidth **per core** as the additional cores compete for memory bandwidth.
 
-<span id="_Ref515269837" class="anchor"></span>Table 6: Results from HPCC StarSTREAM Triad benchmark
+<a id="tab6"></a>Table 6: Results from HPCC StarSTREAM Triad benchmark
 
 | System        | Cores per node | StarSTREAM per core (GB/s) | StarSTREAM per node (GB/s) |
-|---------------|----------------|----------------------------|----------------------------|
+|---------------|---------------:|---------------------------:|---------------------------:|
 | Peta4-Skylake | 32             | 4.508                      | 144.256                    |
 | Thomas        | 24             | 3.694                      | 88.656                     |
 | Athena        | 28             | 3.304                      | 92.512                     |
@@ -192,7 +192,7 @@ We compare the performance of the ARCHER and Cirrus in the plot below (although 
 
 <img src="img/CASTEP_DNA_perf.png" />
 
-Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
+<a id="fig2"></a>Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
 
 The performance of this benchmark depends critically on the performance of MPI collective operations over the interconnect and we can see that ARCHER performs much better than Cirrus at all core counts and this improvement increases as the core count increases. We plan further investigations to understand what causes this difference in performance as there are a range possible reasons (interconnect topology, interconnect performance, MPI library performance, contention for interconnect bandwidth, etc.). We will report the results of these investigations in a future update to this paper.
 
@@ -210,7 +210,7 @@ Details of the compile options, source code for the benchmark, the full output d
 
 <img src="img/osbli_tgv_perf.png" />
 
-<span id="_Ref513193726" class="anchor"></span>Figure 3: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes.
+<a id="fig3"></a>Figure 3: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes.
 
 As we can see in Figure 10, Peta4-Skylake shows the best performance (but not as large an improvement as for CASTEP), ARCHER and Cirrus performance is very similar at these low node counts, and Thomas shows the lowest performance. We would expect that the additional memory bandwidth available per node (from the addition of 50% more memory channels) on the most recent Intel processors on Peta4-Skylake to give a performance increase for this benchmark and this is what is observed. It is more difficult to understand the lower performance of the Thomas system as it has a similar memory bandwidth per node to both ARCHER and Cirrus, so some other factor is at work here. Further work and profiling is needed to understand these performance data and we plan to report on this in future versions of this paper.
 
@@ -218,7 +218,7 @@ Figure 4 shows the performance of the OpenSBLI benchmark up to high node counts.
 
 <img src="img/osbli_tgv_perf_large.png" />
 
-<span id="_Ref515272703" class="anchor"></span>Figure 4: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes up to high node counts.
+<a id="fig4"></a>Figure 4: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes up to high node counts.
 
 ### GROMACS
 
@@ -234,13 +234,13 @@ We show a comparison of performance for the GROMACS benchmark in Figure 11.
 
 <img src="img/gromacs_large_perf.png" />
 
-<span id="_Ref513193781" class="anchor"></span>Figure 5: Performance of the large GROMACS benchmark as a function of number of nodes.
+<a id="fig5"></a>Figure 5: Performance of the large GROMACS benchmark as a function of number of nodes.
 
 These results indicate that the performance of this GROMACS benchmark is directly correlated to node floating point performance. The lowest performance is seen on ARCHER where the older processors have lower floating-point performance and there is the joint lowest core count per node. The best performance is seen on Peta4-Skylake where the newest processors have the highest floating-point performance and there is a high core count per node. Cirrus, Athena and Thomas all have processors with similar floating-point performance; Thomas shows the lowest performance out of these systems as it has the slowest processors combined with fewer cores per node; Athena and Cirrus have higher floating-point performance per node (Athena from additional cores and higher clock speed, Cirrus from additional cores per node) and show better performance.
 
 <img src="img/gromacs_large_perf_large.png" />
 
-<span id="_Ref513195524" class="anchor"><span id="_Ref513195470" class="anchor"></span></span>Figure 6: Performance of the large GROMACS benchmark up to high node counts.
+<a id="fig6"></a>Figure 6: Performance of the large GROMACS benchmark up to high node counts.
 
 Figure 12 shows the performance up to large node counts (as mentioned above, only ARCHER and Cirrus currently allow jobs to run up to these larger node counts). ARCHER appears to provide slightly better performance at larger node counts in line with the results seen for the large CASTEP DNA benchmark. Further investigations are needed to understand the causes of performance differences at high node counts.
 
@@ -272,9 +272,9 @@ The mitigation patches for the recent Meltdown/Spectre security vulnerabilities 
 
 -   Peta4-Skylake: patches applied to compute nodes (Lustre clients), no patches applied to Lustre server nodes
 
-<img src="media/image9.png" width="553" height="276" />
+<img src="img/benchio_write_bw.png" />
 
-Figure 11: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
+<a id="fig7"></a>Figure 7: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
 At medium to high numbers of clients (4-32 clients), the performance is broadly similar across most of the systems (with the exception of the Thomas system). The Lustre file system on Thomas reaches its maximum performance at 4 clients and then performance decreases. At low numbers of clients, the performance of the file systems all converge to ~600 MiB/s. At 32 clients the maximum write bandwidth varies from ~6 GiB/s (for ARCHER) up to ~8 GiB/s (for Cirrus). Unsurprisingly, the variation between maximum and median performance grows on all systems as the number of writers increases due to the increased potential for contention with other users on the shared file system and the interconnect (over which parallel I/O traffic passes).
 
@@ -282,9 +282,9 @@ Figure 2 shows a comparison of performance for a wider range of clients (only AR
 
 More investigation is needed here to understand the differences in performance. This investigation also includes understanding the technical differences on how the parallel file systems are connected to the clients (compute nodes) in terms of number and performance of fibre connections from the compute node interconnect out to the parallel file system; and the different technical specifications of the Lustre server nodes.
 
-<img src="media/image10.png" width="553" height="276" />
+<img src="img/benchio_write_bw.png" />
 
-Figure 12: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
+<a id="fig8"></a>Figure 8: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
 ### MDS performance: mdtest
 
@@ -296,9 +296,9 @@ Figure 7 shows the performance of one component of the *mdtest* metadata server 
 
 Note that we were unable to generate results on the Athena and Thomas systems as they are setup to limit the number of files a single user can create to less than required for the benchmark.
 
-<img src="media/image11.png" width="553" height="415" />
+<img src="img/mdtest_mp-mf-sd_large.png" />
 
-Figure 13: File create, stat and remove performance as a function of number of clients (a client is a single compute node, all cores on a node are accessing simultaneously). This benchmark operates on 1048576 files in a single directory.
+<a id="fig9"></a>Figure 9: File create, stat and remove performance as a function of number of clients (a client is a single compute node, all cores on a node are accessing simultaneously). This benchmark operates on 1048576 files in a single directory.
 
 The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working to try and understand these features.
 
@@ -349,146 +349,3 @@ This work used the HPC Midlands+ UK National Tier-2 HPC Service (<http://www.hpc
 
 This work used the Materials and Molecular Modelling Hub UK National Tier-2 HPC Service (<https://mmmhub.ac.uk/>).
 
-Synthetic Benchmarks
-====================
-
-Memory Performance
-------------------
-
-The memory performance of single compute nodes was measured using the STREAM benchmark within the HPC Challenge benchmark suite[7]. We report performance for StarSTREAM Triad: maximum measured bandwidth for the triad test running simultaneously on all cores on the node.
-
-Details of the compile options, the full output data and analysis scripts are available on GitHub at:
-
-<https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/synth/HPCC>
-
-<span id="_Ref513107390" class="anchor"></span>Table 5: Results from HPCC StarSTREAM Triad benchmark
-
-| System       | Cores per node | StarSTREAM per core (GB/s) | Performance relative to ARCHER node |
-|--------------|----------------|----------------------------|-------------------------------------|
-| CSD3-Skylake | 32             | 4.508                      | 1.5                                 |
-| Thomas       | 24             | 3.694                      | 1.2                                 |
-| Athena       | 28             | 3.304                      | 1.1                                 |
-| ARCHER       | 24             | 3.036                      | 1.0                                 |
-| Cirrus       | 36             | 2.718                      | 0.9                                 |
-
-The *Performance relative to ARCHER* column gives a sense of the overall memory performance of the compute nodes on the different systems. The highest memory performance is seen on the CSD3 Skylake system. This is to be expected as the Xeon Scalable processors (Skylake) have six memory channels compared to four memory channels on the older Xeon processors found on the other systems. We would expect the memory bandwidth available on the Xeon v4 processors (Broadwell, Cirrus, Athena, Thomas) to be slightly higher than that available on the Xeon v2 processors (Ivy Bridge, ARCHER) due to the newer memory technology. The data in Table 5 supports this conclusion except for the case of Cirrus where the high number of cores increase the contention for memory access leading to slightly lower performance than on ARCHER.
-
-These results suggest that users who use memory bandwidth bound applications should experiment with under-populating nodes (*i.e.* not using all the cores on a node) to find the correct balance of cores used to memory bandwidth available.
-
-Interconnect Performance
-------------------------
-
-Interconnect performance was measured using the LatencyBandwidth benchmark within the HPC Challenge benchmark suite. We report performance for two benchmarks:
-
--   PingPong: PingPong is a measure of isolated point-to-point MPI message performance. This gives an idea of the relative performance of the MPI library and interconnect for simply sending messages. Within this benchmark, only two processes from the set are communicating at any one time. We report two metrics:
-
-    -   Maximum latency: the slowest transfer time between two MPI processes in the process set. Latency is measured using 8 byte messages (as small messages are usually latency limited). This is maximum of the means of the latencies over 10 runs between each pair of processes. This indicates the maximum latency that a user could expect to see on the system (i.e. worst-case scenario).
-
-    -   Minimum bandwidth: the smallest bandwidth measured between two MPI processes in the process set. Bandwidth is measured using 2 MB messages (as large messages are usually bandwidth limited). This is minimum of the means of the bandwidths over 10 runs between each pair of processes. This indicates the minimum bandwidth that a user could expect to see on the system (i.e. worst-case scenario).
-
--   RandomRing: RandomRing measures performance of all MPI processes passing information around a ring (with a random placement of processes on nodes/cores). This benchmark assesses how the performance of the MPI library and interconnect vary as the number of messages increases. We report two metrics:
-
-    -   Latency: how the latency varies with core count. Latency is measured using 8 B messages (as small messages are usually latency limited).
-
-    -   Bandwidth: how the bandwidth varies with core count. Bandwidth is measured using 2 MB messages (as large messages are usually bandwidth limited).
-
-### PingPong
-
-Although the PingPong benchmark is not particularly useful to measure the interconnect performance for applications (as, usually, more than one core per node is communicating over the interconnect) it does provide a good baseline indicator of how interconnect performance varies from system to system and how the latency and bandwidth vary as more nodes are used (and so the distance between nodes in the topology potentially increases).
-
-We compare the PingPong performance from 2 to 16 nodes for the systems in Figure 1 and Figure 2.
-
-<img src="media/image12.png" width="553" height="276" />
-
-<span id="_Ref513189649" class="anchor"></span>Figure 7: Variation of minimum PingPong bandwidth with node count.
-
-<img src="media/image13.png" width="553" height="276" />
-
-<span id="_Ref513189651" class="anchor"></span>Figure 8: Variation of maximum PingPong latency with node count.
-
-The PingPong results show that, as we would expect, the newer interconnect technology (Intel OPA on CSD3 Skylake, Mellanox EDR on Athena) have higher bandwidth and lower latency than the previous generation of technologies (Cray Aries on ARCHER and Mellanox FDR on Cirrus). The latency results for Intel OPA on Thomas do not completely fit into this trend; as the measured PingPong latencies for 2 and 4 nodes are similar to those for ARCHER and Cirrus and for more than 4 nodes the latencies are much higher than for the other systems. Although the trends are correct, the relative differences in performance do not match those seen in previous results[8]; where EDR sees a two-fold increase in performance over FDR (in our results EDR performs around 3 times better than FDR). These differences warrant further investigation.
-
-It is worth noting that the high latencies measured by this synthetic benchmark do not seem to have any measurable effect on the performance of the application benchmarks presented below.
-
-These results are generally from a small number of runs of this benchmark. Ideally, the benchmark would be run a large number of times at random intervals on all the systems to understand what variation can be seen due to different conditions on the interconnect and the impact of different node placements for the runs (this is particularly true on ARCHER where we would expect the large number of nodes to lead to larger variations in placement than on the smaller systems).
-
-### RandomRing
-
-The RandomRing benchmark consists of all cores on all the nodes sending messages simultaneously and so provides a more stringent test of the performance that applications would see from the interconnect than the PingPong benchmark.
-
-We compare the RandomRing performance from 2 to 16 nodes in Figure 3 and Figure 4.<span id="_Ref513190011" class="anchor"></span>
-
-<img src="media/image14.png" width="553" height="277" />Figure 9: Variation of RandomRing bandwidth with node count.
-
-<img src="media/image15.png" width="553" height="276" />
-
-<span id="_Ref513190013" class="anchor"></span>Figure 10: Variation of RandomRing latency with node count.
-
-There is not as much difference in performance for this benchmark than was seen for the PingPong benchmark (apart from the anomalous bandwidth result for OPA on Thomas and the OPA results on CSD3-Skylake at higher node counts). This indicates that there is not as much variation in the global (all-to-all) interconnect performance exposed to users across the different systems. In general, the performance increases as you move from older (ARCHER, Cray Aries) through newer (Cirrus, FDR Infiniband) to newest (Athena, EDR Infiniband). Both of the systems with Intel OmniPath interconnects (Thomas, CSD3-Skylake) see anomalous results for this benchmark which requires further investigation. As for the PingPong benchmark, these anomalies do not seem to affect the application benchmark performance presented below.
-
-I/O Performance
----------------
-
-We aimed to measure two aspects of I/O performance that are important for I/O intensive workloads on HPC systems:
-
--   Parallel write performance. We used the benchio benchmark[9] to measure the performance of using MPI-IO to write to a single shared file from multiple processes. This was a weak scaling test as each MPI process writes a defined amount of data – the total amount of data written increases as the number of MPI processes increases.
-
--   Metadata server performance: We used the mdtest benchmark from the LANL IOR distribution[10] to measure the performance of the metadata server (MDS). Not all systems could support running this benchmark due to limits on the number files a user that a single user can create (the benchmark needs to be able to create more than 1 million files).
-
-### Parallel write performance: benchio
-
-Details of the compile options, the full output data and analysis scripts are available on GitHub at:
-
-<https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/synth/benchio>
-
-Figure 1 shows the performance of the benchio parallel write benchmark as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously). We show both the maximum write performance and the median write performance to give some idea of the performance variation seen. For Lustre file systems, maximum striping (i.e. ‘lfs setstripe -c -1’) was used in all cases. All Lustre file systems have a stripe size of 1 MiB.
-
-Note that we were unable to generate results on the Athena system as the benchmark did not work correctly on the system. We are in contact with the Athena systems team to try and understand what the issue is and hope to have results in a future version of this paper.
-
-<img src="media/image16.png" width="553" height="276" />
-
-<span id="_Ref513118328" class="anchor"></span>Figure 11: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
-
-At high numbers of writers, the performance is broadly similar across most of the systems with the exception of the Thomas system with write bandwidths in the region of 6-8 GiB/s. The Lustre file system on Thomas reaches its maximum performance at 192 writers (4 nodes) and then performance decreases. At medium numbers of writers (~50-200 writers), performance from different systems is more variable with ARCHER and Thomas showing the best performance (up to ~4 GiB/s), Cirrus the lowest (up to ~2 GiB/s) and CSD3 somewhere in between. At low numbers of writers, the performance of the file systems all converge to ~600 MiB/s. Unsurprisingly, the variation between maximum and median performance grows on all systems as the number of writers increases due to the increased potential for contention with other users on the shared file system and interconnect.
-
-Figure 2 shows a comparison of performance for a wider range of clients (only ARCHER and Cirrus currently support scaling out to larger number of clients in their standard queue configuration).
-
-<img src="media/image17.png" width="553" height="276" />
-
-<span id="_Ref513118394" class="anchor"></span>Figure 12: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
-
-### MDS performance: mdtest
-
-Details of the compile options, the full output data and analysis scripts are available on GitHub at:
-
-<https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/synth/mdtest>
-
-Figure 7 shows the performance of one component of the mdtest metadata server benchmark as a function of number of cores (all cores on a node are working simultaneously). We show the results for multiple processes operating on 1048576 files in a single directory simultaneously. The results for multiple processes operating on files in different directories are available in the online analysis notebook and show similar trends.
-
-Note that we were unable to generate results on the Athena and Thomas systems as they are setup to limit the number of files a single user can create to less than required for the benchmark.
-
-<img src="media/image18.png" width="553" height="415" />
-
-<span id="_Ref513193301" class="anchor"></span>Figure 13: File create, stat and remove performance as a function of number of clients (a client is a single compute node, all cores on a node are accessing simultaneously). This benchmark operates on 1048576 files in a single directory.
-
-The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and CSD3. We are working with Cray to understand this. Initial indications are that it is due to a combination of the older version of file system hardware and software along with the larger amount of data and fragmentation on the file system.
-
-[1] <http://www.castep.org/>
-
-[2] *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
-
-[3] <https://opensbli.github.io/>
-
-[4] <http://www.gromacs.org/>
-
-[5] <https://github.com/EPCCed/benchio>
-
-[6] <https://github.com/IOR-LANL/ior>
-
-[7] <http://icl.cs.utk.edu/hpcc/>
-
-[8] <http://en.community.dell.com/techcenter/high-performance-computing/b/general_hpc/archive/2016/02/02/need-for-speed-comparing-fdr-and-edr-infiniband-part-1>
-
-[9] <https://github.com/EPCCed/benchio>
-
-[10] <https://github.com/IOR-LANL/ior>
