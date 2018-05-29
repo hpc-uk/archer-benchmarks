@@ -3,11 +3,13 @@
 
 # ARCHER Benchmark Performance
 
-Andy Turner (<mailto:a.turner@epcc.ed.ac.uk>), EPCC, The University of Edinburgh
+Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
 
 ## Introduction
 
-This paper presents a comparison of the performance of the UK National HPC benchmarks across different HPC systems in the UK. All of the raw data and analysis of the data are available in an Open Source manner from Github at:
+This paper presents a comparison of the performance of the UK National HPC benchmarks across different HPC systems in the UK. The approach taken is to try and evaluate the performance that a standard user would see on the systems. In particular, this means that large amounts of effort have not been put into optimising the applications used for the application benchmarks in the system. We have used standard central installations of packages where they exist, are accessible to standard users, and have the functionality required for the benchmarks. If central installations do not exist, the applications have been compiled in the standard, recommended way for the systems. All benchmarks have been run on the systems in general production, *i.e.* other user jobs are running as usual when the benchmarks are running. This allows us to experience the same system conditions and potential variability in performance that normal users would see. 
+
+All of the raw data and analysis of the data are available in an Open Source manner from Github at:
 
 <https://github.com/ARCHER-CSE/archer-benchmarks>
 
