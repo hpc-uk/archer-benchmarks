@@ -68,8 +68,8 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 |---------------|--------------------|-------------------------|-----------------------|---------------|
 | ARCHER        | Lustre             | Cray Sonexion           | 2.5/2.1               | 1xMDT, 48xOST |
 | Cirrus        | Lustre             | DDN                     | 2.5/2.1               | 1xMDT, 14xOST |
-| Athena        | SpectrumScale/GPFS | IBM                     |                       | N/A           |
-| Thomas        | Lustre             | DDN                     | 2.10/2.10             | 4xMDT, 10xOST |
+| Athena        | SpectrumScale/GPFS | IBM                     | 4.2.3-6/4.2.3-6       | N/A           |
+| Thomas        | Lustre             | DDN                     | 2.10.3/2.10.3         | 4xMDT, 10xOST |
 | Peta4-Skylake | Lustre             | Intel Enterprise Lustre | 2.7/2.7               | 1xMDT, 24xOST |
 
 ## 3. Application Benchmarks
