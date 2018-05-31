@@ -12,7 +12,7 @@ The input for the large DNA benchmark can be found at:
 
 Data from the benchmark can be found in this repository:
 
-* [Analysis of CASTEP DNA benchmark results](scripts/CASTEP_DNA_perf_analysis.ipynb)
+* [Analysis of CASTEP DNA benchmark results](analysis/CASTEP_DNA_perf_analysis.ipynb)
 * [Output from CASTEP DNA benchmark runs](DNA/results)
 
 
@@ -24,7 +24,7 @@ The input for the small Al3x3 benchmark can be found at:
 
 Data from the benchmark can be found in this repository:
 
-* [Analysis of CASTEP Al3x3 benchmark results](scripts/CASTEP_al3x3_perf_analysis.ipynb)
+* [Analysis of CASTEP Al3x3 benchmark results](analysis/CASTEP_al3x3_perf_analysis.ipynb)
 * [Output from CASTEP Al3x3 benchmark runs](al3x3/results)
 
 # Build instructions
