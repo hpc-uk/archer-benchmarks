@@ -1,0 +1,77 @@
+                      :-) GROMACS - mdrun_mpi, 2018.1 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2017, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      mdrun_mpi, version 2018.1
+Executable:   /home/js947/rds/hpc-work/GROMACS/GromacsARCHERBench_master/build-icc/bin/mdrun_mpi
+Data prefix:  /home/js947/rds/hpc-work/GROMACS/GromacsARCHERBench_master/gromacs-2018.1 (source tree)
+Working dir:  /rds/user/js947/hpc-work/GROMACS/GromacsARCHERBench_master/r3/4
+Command line:
+  mdrun_mpi -s /home/js947/rds/hpc-work/GROMACS/GromacsARCHERBench_master/inputTPR/nsteps800.tpr -deffnm nc2-cubic-md -ntomp 1
+
+Reading file /home/js947/rds/hpc-work/GROMACS/GromacsARCHERBench_master/inputTPR/nsteps800.tpr, VERSION 5.1 (single precision)
+Note: file tpx version 103, software tpx version 112
+The number of OpenMP threads was set by environment variable OMP_NUM_THREADS to 1 (and the command-line setting agreed with that)
+Multiple energy groups is not implemented for GPUs, falling back to the CPU. For better performance, run on the GPU without energy groups and then do gmx mdrun -rerun option on the trajectory with an energy group .tpr file.
+Changing nstlist from 10 to 100, rlist from 1.4 to 1.535
+
+
+Will use 96 particle-particle and 32 PME only ranks
+This is a guess, check the performance at the end of the log file
+
+Using 128 MPI processes
+Using 1 OpenMP thread per MPI process
+
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+starting mdrun 'Protein in water'
+800 steps,      1.6 ps.
+
+step 200 Turning on dynamic load balancing, because the performance loss due to load imbalance is 4.1 %.
+
+
+Writing final coordinates.
+
+ Dynamic load balancing report:
+ DLB was turned on during the run due to measured imbalance.
+ Average load imbalance: 3.1%.
+ The balanceable part of the MD step is 89%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 2.7%.
+ Steps where the load balancing was limited by -rdd, -rcon and/or -dds: X 0 % Y 0 %
+ Average PME mesh/force load: 0.861
+ Part of the total run time spent waiting due to PP/PME imbalance: 3.1 %
+
+
+NOTE: 10 % of the run time was spent communicating energies,
+      you might want to use the -gcom option of mdrun
+
+               Core t (s)   Wall t (s)        (%)
+       Time:    81386.452      635.832    12800.0
+                 (ns/day)    (hour/ns)
+Performance:        0.218      110.250
+
+GROMACS reminds you: "You're Insignificant" (Tricky)
+
