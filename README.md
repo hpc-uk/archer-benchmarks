@@ -1,4 +1,4 @@
-# ARCHER and EPSRC Tier-2 HPC Benchmarking
+# UK HPC Benchmarking
 
 This repository contains information, results and analysis of running a selection
 of application and synthetic benchmarks on UK HPC systems. The list of systems
@@ -79,4 +79,8 @@ If you have any questions about these benchmarks, please contact the
 | [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | | | |
 | [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | Client: 2.7, Server: 2.7 | Intel Enterprise Lustre | 1x MDT, 24x OST |
 | [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | | | 4x MDT, 10x OST |
+
+## Licence
+
+The work in this repository is licensed under the [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0).
 
