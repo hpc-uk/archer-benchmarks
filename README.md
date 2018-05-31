@@ -78,7 +78,7 @@ If you have any questions about these benchmarks, please contact the
 | [Cirrus](http://www.cirrus.ac.uk) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 1x MDT, 14x OST |
 | [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | | | |
 | [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | Client: 2.7, Server: 2.7 | Intel Enterprise Lustre | 1x MDT, 24x OST |
-| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | | | 4x MDT, 10x OST |
+| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | DDN | 2.10.3/2.10.3 | 4x MDT, 10x OST |
 
 ## Licence
 
