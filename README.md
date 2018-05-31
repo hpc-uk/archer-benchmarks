@@ -76,7 +76,7 @@ If you have any questions about these benchmarks, please contact the
 | ------ | ----------- | -------- | ------ | ------------- |
 | [ARCHER](http://www.archer.ac.uk) | Lustre | Client: 2.5.2, Server: 2.1.0.0 | Cray Sonexion | 1x MDT, 48 OST |
 | [Cirrus](http://www.cirrus.ac.uk) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 1x MDT, 14x OST |
-| [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | | | |
+| [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | 4.2.3-6/4.2.3-6 | IBM | N/A |
 | [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | Client: 2.7, Server: 2.7 | Intel Enterprise Lustre | 1x MDT, 24x OST |
 | [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | DDN | 2.10.3/2.10.3 | 4x MDT, 10x OST |
 
