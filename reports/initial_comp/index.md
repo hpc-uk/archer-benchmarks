@@ -1,11 +1,12 @@
-<img src="img/epcc_logo.png" width="300"/>
-<img src="img/cambridge_logo.jpg" width="300"/>
 
 # Performance of HPC Benchmarks across UK National HPC services
 
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
 
 Jeffrey Salmond ([js947@cam.ac.uk](mailto:js947@cam.ac.uk)), University of Cambridge
+
+<img src="img/epcc_logo.png" width="300"/>
+<img src="img/cambridge_logo.jpg" width="300"/>
 
 ## 1. Introduction
 
