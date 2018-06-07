@@ -14,7 +14,7 @@ This report presents a comparison of the performance of a series of application 
 
 All of the raw data and analysis of the data are available under an Open Source licence from Github at:
 
-* <https://github.com/hpc-uk/archer-benchmarks>
+-   <https://github.com/hpc-uk/archer-benchmarks>
 
 This version of the performance comparison report provides baseline results for the benchmarks and initial analysis and conclusions on the origins of any performance differences. It also suggests a large number of avenues for further investigation that will be presented in future reports. This paper represents the beginning of an ongoing process of comparison and analysis of the performance of different benchmarks on a variety of HPC systems, not an endpoint.
 
@@ -106,7 +106,7 @@ We have measured the performance of two CASTEP benchmarks:
 
 #### 3.1.1 Al Slab (al3x3)
 
-We compare the performance of the different systems as a function of node count in [Figure 1](#fig1) and present numerical data on single node performance in [Table 5](#tab5). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above.
+We compare the performance of the different systems as a function of node count in [Figure 1](#fig1) and present numerical data on single node performance in [Table 5](#tab5). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3x performance improvement over ARCHER nodes and nodes with Broadwell processors give 1.5-1.8x performance increase when compared to ARCHER.
 
 <a id="fig1"></a>Figure 1: Performance of the medium Al Slab (al3x3) benchmark as a function of number of nodes.
 
@@ -137,25 +137,27 @@ To help understand these results, we have used the STREAM benchmark (run within 
 Using the memory bandwidth data, we see that the single node CASTEP Al Slab performance is a function of both node performance (influenced by both the performance per core and the number of cores per node) and memory bandwidth per core; with higher floating-point performance and memory bandwidth leading to higher CASTEP performance. In general, the floating-point performance of the nodes seems to dominate the performance on a single node but other factors can play a role as the node count increases. These conclusions is supported by the following facts:
 
 -   ARCHER (which has the oldest processors in the study) shows the worst performance per node for this benchmark yet has similar memory bandwidth per core to the Tier2 systems with Broadwell generation Xeon processors (Cirrus, Athena, Thomas).
--   Cirrus, Athena, Thomas have same generation of Broadwell processors, but their performance does not strictly follow node floating point performance. It appears that the performance depends on a balance of floating point performance to memory bandwidth per core:
-    +   Thomas has the lowest single node performance as its nodes have the lowest floating point performance (slowest cores and least number of cores per node). The additional memory bandwidth available per core does not compensate for the lack of computational power compared to the other Broadwell-based systems. As the node count increases the performance of Thomas supasses that of Cirrus (which has more floating point performance per core). It is likely that reduced contention for interconnect resource compared when compared to Cirrus is the reason for this improved scaling but further investigation is needed to confirm this.
+-   Cirrus, Athena, Thomas have same generation of Broadwell processors, but their performance does not strictly follow node floating point performance at different node counts. It appears that the performance depends on a balance of floating point performance to memory bandwidth per core:
+    +   Thomas has the lowest single node performance as its nodes have the lowest floating point performance (slowest cores, 2.1 GHz, and least number of cores per node). The additional memory bandwidth available per core does not compensate for the lack of computational power compared to the other Broadwell-based systems. As the node count increases the performance of Thomas supasses that of Cirrus (which has more floating point performance per core). It is likely that reduced contention for interconnect resource compared when compared to Cirrus is the reason for this improved scaling but further investigation is needed to confirm this.
     +   Cirrus has the lowest performance as it has the slowest cores (2.1 GHz) and the lowest measured memory bandwidth per core (even though the nodes are more powerful than both Thomas and Athena in terms of raw floating-point performance). Cirrus loses performance due to lack of memory bandwidth per core to allow it to use the floating point performance available.
     +   Athena shows the best performance for this generation of processors at all node counts. This is most likely because it has the best balance between floating-point performance per node, memory bandwidth per core and interconnect performance per node for these systems. Its per-node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
 -   Peta4-Skylake shows the best overall performance for this benchmark at all node counts as nodes on this system have the highest overall floating-point performance, higher memory bandwidth per core and the interconnect provides the required performance for this benchmark.
 
 #### 3.1.2 DNA
 
-We compare the performance of the ARCHER, Cirrus and Peta4-Skylake in [Figure 2](#fig2) below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. This plot shows results for the benchmark with different numbers of shared memory threads per MPI process.
+We compare the performance of the ARCHER, Cirrus and Peta4-Skylake in [Figure 2](#fig2) below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. This plot shows results for the benchmark with different numbers of shared memory threads per MPI process. In all cases, all cores on a node are used; for example, on ARCHER, if we have 6 threads per MPI process then 4 MPI processes per node will be used to ensure all 24 cores are used. Process and thread pinning is used on all systems to stop processes/threads being migrated to different cores throughout the calculation and all threads associated with a MPI process are within the same NUMA domain.
 
 <a id="fig2"></a>Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
 
 <img src="img/CASTEP_DNA_perf_large.png" />
 
-Best performance is always seen when using the minimum number of threads. Depending on the amount memory available per node, the minimum number of threads that can be used on different node counts varies. For example, on ARCHER, a single thread can only be used on 256 nodes and above due to each node only having 64 GB of memory available. In contrast, on Peta4-Skylake, a single thread can be used on all node counts as the nodes have 192 GB memory. 
+The Peta4-Skylake system shows the best performance for the benchmark up to 128 nodes (even showing super-linear scaling) with ARCHER giving the best peformance at 256 nodes and above; however, 512 nodes of ARCHER are required to improve on the best performance seen on the Peta4-Skylake system (at 128 nodes). Cirrus gives the worst performance for this benchmark at all node counts.
 
-The Peta4-Skylake system shows the best performance for the benchmark (as for the smaller Al Slab benchmark described above) 
+On ARCHER, best performance is always seen when using the minimum number of threads per MPI process. Depending on the amount memory available per node, the minimum number of threads that can be used on different node counts varies. For example, on ARCHER, a single thread can only be used on 256 nodes and above due to each node only having 64 GB of memory available. In contrast, on Peta4-Skylake, a single thread can be used on all node counts as the nodes have 192 GB memory. On Cirrus, reducing the thread count per node does not provide any performance improvement.
 
-We are currently liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
+The differences in performance between different systems for this benchmark are complex to interpret and require further investigation to pick out the root causes of the differences. As for the smalller Al Slab benchmark results above it would seem that the more modern technology in the Peta4-Skylake system leads to the performance improvements over the older technology on ARCHER. However, the poor Cirrus results do not tie in with this explanation and it is currently unclear why not. The super-linear scaling on the Peta4-Skylake system is also unexplained at the moment. We plan additional profiling to try and understand where these differences come from.
+
+We are also liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
 
 <a id="osbli"></a>
 ### 3.2 OpenSBLI
