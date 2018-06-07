@@ -155,7 +155,7 @@ The Peta4-Skylake system shows the best performance for the benchmark up to 128 
 
 On ARCHER, best performance is always seen when using the minimum number of threads per MPI process. Depending on the amount memory available per node, the minimum number of threads that can be used on different node counts varies. For example, on ARCHER, a single thread can only be used on 256 nodes and above due to each node only having 64 GB of memory available. In contrast, on Peta4-Skylake, a single thread can be used on all node counts as the nodes have 192 GB memory. On Cirrus, reducing the thread count per node does not provide any performance improvement.
 
-The differences in performance between different systems for this benchmark are complex to interpret and require further investigation to pick out the root causes of the differences. As for the smalller Al Slab benchmark results above it would seem that the more modern technology in the Peta4-Skylake system leads to the performance improvements over the older technology on ARCHER. However, the poor Cirrus results do not tie in with this explanation and it is currently unclear why not. The super-linear scaling on the Peta4-Skylake system is also unexplained at the moment. We plan additional profiling to try and understand where these differences come from.
+The differences in performance between different systems for this benchmark are complex to interpret and require further investigation to pick out the root causes of the differences. As for the smalller Al Slab benchmark results above it would seem that the more modern technology in the Peta4-Skylake system leads to the performance improvements over the older technology on ARCHER. However, the poor Cirrus results do not tie in with this explanation and it is currently unclear why not (as the results for other benchmarks are in line with expectations based on technology differences). The super-linear scaling on the Peta4-Skylake system is also unexplained at the moment. We plan additional profiling to try and understand where these differences come from.
 
 We are also liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
 
@@ -176,7 +176,7 @@ As we can see in [Figure 3](#fig3), Peta4-Skylake shows the best performance (bu
 
 <img src="img/osbli_tgv_perf.png" />
 
-[Figure 4](#fig4) shows the performance of the OpenSBLI benchmark up to high node counts. Results are only currently available for ARCHER and Cirrus as the other systems do not allow standard jobs to scale up to these sizes (although, as mentioned above, there is no technical reason why this scale cannot be run on these systems and we are in discussions to enable this). The trends seen at lower node counts continue as we scale out, with the ARCHER results showing some fluctuations from a linear trend. We plan to investigate the origin of these fluctuations in future reports.
+[Figure 4](#fig4) shows the performance of the OpenSBLI benchmark up to high node counts. Results are only currently available for ARCHER and Cirrus as the other systems do not allow standard jobs to scale up to these sizes (although, as mentioned above, there is no technical reason why this scale cannot be run on these systems and we are in discussions to enable this). The trends seen at lower node counts continue as we scale out, with the ARCHER results showing some fluctuations from a linear trend. We also plan to investigate the origin of these fluctuations in future reports.
 
 <a id="fig4"></a>Figure 4: Performance of the OpenSBLI Taylor-Green vortex benchmark as a function of number of nodes up to high node counts.
 
@@ -189,7 +189,7 @@ As we can see in [Figure 3](#fig3), Peta4-Skylake shows the best performance (bu
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
-<https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/GROMACS>
+-   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/GROMACS>
 
 We have been provided with a very large benchmark case for GROMACS by the HECBioSim user group. We expect that this benchmark will be largely compute bound but due to its very large size there may be elements that are memory bandwidth bound, especially at lower node counts. As the core counts increase the performance will gradually become MPI point-to-point communications bound. This is a strong scaling benchmark.
 
@@ -201,7 +201,7 @@ We show a comparison of performance for the GROMACS benchmark in [Figure 5](#fig
 
 These results indicate that the performance of this GROMACS benchmark is directly correlated to node floating point performance. The lowest performance is seen on ARCHER where the older processors have lower floating-point performance and there is the joint lowest core count per node. The best performance is seen on Peta4-Skylake where the newest processors have the highest floating-point performance and there is a high core count per node. Cirrus, Athena and Thomas all have processors with similar floating-point performance; Thomas shows the lowest performance out of these systems as it has the slowest processors combined with fewer cores per node; Athena and Cirrus have higher floating-point performance per node (Athena from additional cores and higher clock speed, Cirrus from additional cores per node) and show better performance.
 
-[Figure 6](#fig6) shows the performance up to large node counts for ARCHER, Cirrus and Peta4-Skylake. ARCHER appears to provide slightly better performance at larger node counts in line with the results seen for the large CASTEP DNA benchmark. Further investigations are needed to understand the causes of performance differences at high node counts.
+[Figure 6](#fig6) shows the performance up to large node counts for ARCHER, Cirrus and Peta4-Skylake. The more modern technology on the Peta4-Skylake system provides the best performance apart from at the very highest node counts where its peformance drops just below that of ARCHER. The highest absolute performance (1.16 ns/day) is seen on the Peta4-Skylake system at 128 nodes. At 32 nodes and below the Peta4-Skylake system provides 2.0-2.8x the performance than ARCHER; at 64 and 128 nodes the Peta4-Skylake system provides 1.5x the performance of ARCHER. Up to 64 nodes, the performance of Cirrus sits between the performance of ARCHER and Peta4-Skylake as expected but then the Cirrus performance drops below that of ARCHER due to worse scaling properties.
 
 <a id="fig6"></a>Figure 6: Performance of the large GROMACS benchmark up to high node counts.
 
