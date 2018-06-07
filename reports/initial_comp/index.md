@@ -222,9 +222,8 @@ Details of the compile options, the full output data and analysis scripts are av
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/synth/benchio>
 
-[Figure 7](#fig7) shows the performance of the benchio parallel write benchmark as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously). We show both the maximum write performance and the median write performance to give some idea of the performance variation seen. For Lustre file systems, maximum striping (i.e. ‘lfs setstripe -c -1’) was used in all cases. All Lustre file systems have a stripe size of 1 MiB.
+For Lustre file systems, maximum striping (i.e. ‘lfs setstripe -c -1’) was used in all cases. All Lustre file systems have a stripe size of 1 MiB.
 
-Note that we were unable to generate results on the Athena system as the benchmark did not work correctly on the system. We are in contact with the Athena systems team to try and understand what the issue is and hope to have results in a future version of this paper.
 
 The mitigation patches for the recent Meltdown/Spectre security vulnerabilities potentially have an impact on the performance of system calls. These performance impacts are more likely to be seen in I/O performance, so it is important to know the status of implementation of the mitigation patches on the I/O systems on different systems. When these benchmarks were performed, the status was:
 
@@ -233,13 +232,15 @@ The mitigation patches for the recent Meltdown/Spectre security vulnerabilities 
 -   Thomas: patches applied to both compute nodes (Lustre clients) and Lustre server nodes
 -   Peta4-Skylake: patches applied to compute nodes (Lustre clients), no patches applied to Lustre server nodes
 
+[Figure 7](#fig7) shows the performance of the benchio parallel write benchmark as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously). We show both the maximum write performance and the median write performance to give an indication of performance variation. Note that we were unable to generate results on the Athena system as the benchmark did not work correctly on the system. We are in contact with the Athena systems team to try and understand what the issue is and hope to have results in a future report.
+
 <a id="fig7"></a>Figure 7: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
 <img src="img/benchio_write_bw.png" />
 
-At medium to high numbers of clients (4-32 clients), the performance is broadly similar across most of the systems (with the exception of the Thomas system). The Lustre file system on Thomas reaches its maximum performance at 4 clients and then performance decreases. At low numbers of clients, the performance of the file systems all converge to ~600 MiB/s. At 32 clients the maximum write bandwidth varies from ~6 GiB/s (for ARCHER) up to ~8 GiB/s (for Cirrus). Unsurprisingly, the variation between maximum and median performance grows on all systems as the number of writers increases due to the increased potential for contention with other users on the shared file system and the interconnect (over which parallel I/O traffic passes).
+At medium to high numbers of clients (4-32 clients), the performance is broadly similar across most of the systems (with the exception of the Thomas system). The Lustre file system on Thomas reaches its maximum performance at 4 clients and then performance decreases. At low numbers of clients, the performance of the file systems all converge to ~600 MiB/s. At 32 clients the maximum write bandwidth varies from ~6 GiB/s (for ARCHER) up to ~8 GiB/s (for Cirrus and Peta4-Skylake).
 
-[Figure 8](#fig8) shows a comparison of performance for a wider range of clients (we currently only have results for ARCHER, Cirrus and Peta4-Skylake). Cirrus and Peta4-Skylake seem to reach their maximum bandwidth (~8 GiB/s) at 32 clients with ARCHER requiring 128 clients to reach its maximum bandwidth (~12 GiB/s). In both cases, moving to very high numbers of clients leads to a degradation of performance.
+[Figure 8](#fig8) shows a comparison of performance for a wider range of clients (we currently only have results for ARCHER, Cirrus and Peta4-Skylake). Cirrus and Peta4-Skylake seem to reach their maximum bandwidth (~8 GiB/s) at 32 and 16 clients respectively with ARCHER requiring 128 clients to reach its maximum bandwidth (~12 GiB/s). For ARCHER and Cirrus, moving to the maximal numbers of clients leads to a degradation of performance whereas the maximum performance of Peta4-Skylake stabilises at ~7 GiB/s as the number of clients increases.
 
 <a id="fig8"></a>Figure 8: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
