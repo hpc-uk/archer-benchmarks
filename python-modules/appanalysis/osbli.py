@@ -14,14 +14,14 @@ def gettiming(filename):
 def calcperf(filedict, cpn):
     nodeslist = []
     timelist = []
-    sulist = []
-    print("{:>15s} {:>15s} {:>15s} {:>15s}".format('Nodes', 'Cores', 'Time (s)', 'Speedup'))
-    print("{:>15s} {:>15s} {:>15s} {:>15s}".format('=====', '=====', '========', '======='))
+    perflist = []
+    print("{:>15s} {:>15s} {:>15s} {:>20s}".format('Nodes', 'Cores', 'Time (s)', 'Performance (iter/s)'))
+    print("{:>15s} {:>15s} {:>15s} {:>20s}".format('=====', '=====', '========', '===================='))
     for nodes, filename in sorted(filedict.items()):
         nodeslist.append(nodes)
         t = gettiming(filename)
         timelist.append(t)
-        speedup = timelist[0]/t
-        sulist.append(speedup)
-        print("{:>15d} {:>15d} {:>15.1f} {:>15.2f}".format(nodes, nodes*cpn, t, speedup))
-    return nodeslist, timelist, sulist
+        perf = 1.0/t
+        perflist.append(perf)
+        print("{:>15d} {:>15d} {:>15.1f} {:>20.3f}".format(nodes, nodes*cpn, t, perf))
+    return nodeslist, timelist, perflist

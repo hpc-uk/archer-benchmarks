@@ -26,15 +26,15 @@ def calcperf(filedict, cpn):
     """Given a list of CASTEP output files, compute the performance and return the data."""
     nodeslist = []
     scflist = []
-    sulist = []
-    print("{:>15s} {:>15s} {:>15s} {:>15s}".format('Nodes', 'Cores', 'Mean SCF (s)', 'Speedup'))
-    print("{:>15s} {:>15s} {:>15s} {:>15s}".format('=====', '=====', '============', '======='))
+    perflist = []
+    print("{:>15s} {:>15s} {:>15s} {:>26s}".format('Nodes', 'Cores', 'Mean SCF (s)', 'Performance (SCF cycles/s)'))
+    print("{:>15s} {:>15s} {:>15s} {:>26s}".format('=====', '=====', '============', '=========================='))
     for nodes, filename in sorted(filedict.items()):
         nodeslist.append(nodes)
         scf = getmeancycle(filename)
         scflist.append(scf)
-        speedup = scflist[0]/scf
-        sulist.append(speedup)
-        print("{:>15d} {:>15d} {:>15.1f} {:>15.2f}".format(nodes, nodes*cpn, scf, speedup))
-    return nodeslist, scflist, sulist
+        perf = 1/float(scf)
+        perflist.append(perf)
+        print("{:>15d} {:>15d} {:>15.1f} {:>26.6f}".format(nodes, nodes*cpn, scf, perf))
+    return nodeslist, scflist, perflist
 
