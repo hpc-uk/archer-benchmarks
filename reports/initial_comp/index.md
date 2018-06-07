@@ -14,7 +14,7 @@ This report presents a comparison of the performance of a series of application 
 
 All of the raw data and analysis of the data are available under an Open Source licence from Github at:
 
-<https://github.com/hpc-uk/archer-benchmarks>
+* <https://github.com/hpc-uk/archer-benchmarks>
 
 This version of the performance comparison report provides baseline results for the benchmarks and initial analysis and conclusions on the origins of any performance differences. It also suggests a large number of avenues for further investigation that will be presented in future reports. This paper represents the beginning of an ongoing process of comparison and analysis of the performance of different benchmarks on a variety of HPC systems, not an endpoint.
 
@@ -134,14 +134,14 @@ To help understand these results, we have used the STREAM benchmark (run within 
 | ARCHER        | 24             | 3.036                      | 72.864                     |
 | Cirrus        | 36             | 2.718                      | 97.848                     |
 
-Using the memory bandwidth data, we see that the CASTEP Al Slab performance is a function of both node performance (influenced by both the performance per core and the number of cores per node) and memory bandwidth per core; with higher floating-point performance and memory bandwidth leading to higher CASTEP performance. In general, the floating-point performance of the nodes seems to dominate the performance. These conclusions is supported by the following facts:
+Using the memory bandwidth data, we see that the single node CASTEP Al Slab performance is a function of both node performance (influenced by both the performance per core and the number of cores per node) and memory bandwidth per core; with higher floating-point performance and memory bandwidth leading to higher CASTEP performance. In general, the floating-point performance of the nodes seems to dominate the performance on a single node but other factors can play a role as the node count increases. These conclusions is supported by the following facts:
 
 -   ARCHER (which has the oldest processors in the study) shows the worst performance per node for this benchmark yet has similar memory bandwidth per core to the Tier2 systems with Broadwell generation Xeon processors (Cirrus, Athena, Thomas).
 -   Cirrus, Athena, Thomas have same generation of Broadwell processors, but their performance does not strictly follow node floating point performance. It appears that the performance depends on a balance of floating point performance to memory bandwidth per core:
+    +   Thomas has the lowest single node performance as its nodes have the lowest floating point performance (slowest cores and least number of cores per node). The additional memory bandwidth available per core does not compensate for the lack of computational power compared to the other Broadwell-based systems. As the node count increases the performance of Thomas supasses that of Cirrus (which has more floating point performance per core). It is likely that reduced contention for interconnect resource compared when compared to Cirrus is the reason for this improved scaling but further investigation is needed to confirm this.
     +   Cirrus has the lowest performance as it has the slowest cores (2.1 GHz) and the lowest measured memory bandwidth per core (even though the nodes are more powerful than both Thomas and Athena in terms of raw floating-point performance). Cirrus loses performance due to lack of memory bandwidth per core to allow it to use the floating point performance available.
-    +   Thomas has slightly better performance than Cirrus even though the processors are the same speed. The additional performance is likely to come from the higher memory bandwidth available per core. Thomas loses performance due to lack of floating point performance per node to use the memory bandwidth available.
-    +   Athena shows the best performance for this generation of processors as it has the best balance between floating-point performance per node to memory bandwidth per core for these systems. Its node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
--   Peta4-Skylake shows the best overall performance for this benchmark as nodes on this system have the highest overall floating-point performance and higher memory bandwidth per core.
+    +   Athena shows the best performance for this generation of processors at all node counts. This is most likely because it has the best balance between floating-point performance per node, memory bandwidth per core and interconnect performance per node for these systems. Its per-node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
+-   Peta4-Skylake shows the best overall performance for this benchmark at all node counts as nodes on this system have the highest overall floating-point performance, higher memory bandwidth per core and the interconnect provides the required performance for this benchmark.
 
 #### 3.1.2 DNA
 
