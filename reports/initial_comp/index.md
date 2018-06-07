@@ -1,4 +1,3 @@
-
 # Performance of HPC Benchmarks across UK National HPC services
 
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
@@ -253,7 +252,7 @@ More investigation is needed here to understand the differences in performance. 
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
-<https://github.com/hpc-uk/archer-benchmarks/tree/master/synth/mdtest>
+-   <https://github.com/hpc-uk/archer-benchmarks/tree/master/synth/mdtest>
 
 [Figure 9](#fig9) shows the performance of one component of the *mdtest* metadata server benchmark as a function of number of clients (a client is a single compute node, all cores on a node are accessing simultaneously). We show the results for multiple processes operating on 1048576 files in a single directory simultaneously. The results for multiple processes operating on files in different directories are available in the online analysis notebook and show similar trends.
 
@@ -263,7 +262,7 @@ Note that we were unable to generate results on the Athena and Thomas systems as
 
 <img src="img/mdtest_mp-mf-sd_large.png" />
 
-The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working to try and understand these features.
+The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working with Cray to try and understand these features.
 
 ## 5. Summary and Conclusions
 
@@ -304,10 +303,9 @@ This initial benchmarking exercise has identified a large number of opportunitie
 
 Opportunities for further work are captured as issues within the repository and we encourge people to add issues identifying opportunities for further work and investigations. We are also keen for people who are interested in working on these opprotunities to take these forwards and contribute back to the community. You can see the current list of opportunities at:
 
-- <https://github.com/hpc-uk/archer-benchmarks/issues>
+-   <https://github.com/hpc-uk/archer-benchmarks/issues>
 
-Acknowledgements
-================
+## 6. Acknowledgements
 
 Thanks to all of the HPC systems involved in this study for providing access and resources to be able to run the benchmarks. There explicit acknowledgement statements are included below.
 
