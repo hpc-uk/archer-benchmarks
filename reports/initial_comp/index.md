@@ -1,22 +1,27 @@
-<img src="img/ARCHER_logo.png" width="300"/>
 <img src="img/epcc_logo.png" width="300"/>
+<img src="img/cambridge_logo.jpg" width="300"/>
 
-# ARCHER Benchmark Performance
+# Performance of HPC Benchmarks across UK National HPC services
 
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
+
 Jeffrey Salmond ([js947@cam.ac.uk](mailto:js947@cam.ac.uk)), University of Cambridge
 
 ## 1. Introduction
 
-This paper presents a comparison of the performance of the UK National HPC benchmarks across different HPC systems in the UK. The approach taken is to try and evaluate the performance that a standard user would see on the systems. In particular, this means that large amounts of effort have not been put into optimising the applications used for the application benchmarks in the system. We have used standard central installations of packages where they exist, are accessible to standard users, and have the functionality required for the benchmarks. If central installations do not exist, the applications have been compiled in the standard, recommended way for the systems. All benchmarks have been run on the systems in general production, *i.e.* other user jobs are running as usual when the benchmarks are running. This allows us to experience the same system conditions and potential variability in performance that normal users would see. 
+This report presents a comparison of the performance of a series of application benchmarks across different HPC systems in the UK. The approach taken is to try and evaluate the performance that a standard user would see on the systems. In particular, this means that large amounts of effort have not been put into optimising the applications used for the application benchmarks in the system. We have used standard central installations of packages where they exist, are accessible to standard users, and have the functionality required for the benchmarks. If central installations do not exist, the applications have been compiled in the standard, recommended way for the systems. All benchmarks have been run on the systems in general production, *i.e.* other user jobs are running as usual when the benchmarks are running. This allows us to experience the same system conditions and potential variability in performance that normal users would see. 
 
-All of the raw data and analysis of the data are available in an Open Source manner from Github at:
+All of the raw data and analysis of the data are available under an Open Source licence from Github at:
 
 <https://github.com/hpc-uk/archer-benchmarks>
 
 This version of the performance comparison report provides baseline results for the benchmarks and initial analysis and conclusions on the origins of any performance differences. It also suggests a large number of avenues for further investigation that will be presented in future reports. This paper represents the beginning of an ongoing process of comparison and analysis of the performance of different benchmarks on a variety of HPC systems, not an endpoint.
 
-Along with the analysis, a major goal of this initiative is to present an open set of results and analysis that can be contributed to by interested parties and built on and used for further analysis by groups other than ourselves. This philosophy of open contribution and public visibility mirrors that found in the Open Source and Open Data movements and, it is hoped, will allow everyone to extract the most value possible from the benchmarking data.
+Along with the analysis, a major goal of this initiative is to present an open set of results and analysis that can be added to by interested parties and built on and used for further analysis by groups other than ourselves. This philosophy of open contribution and public visibility mirrors that found in the Open Source and Open Data movements and, it is hoped, will allow everyone to extract the most value possible from the benchmarking data.
+
+The benchmark applications and benchmark cases were selected with the input of the user community from ARCHER: the UK national supercomputing service. The approach to choosing the benchmarks is described in more detail in an ARCHER white paper:
+
+-   [UK National HPC Benchmarks (PDF)](http://www.archer.ac.uk/documentation/white-papers/benchmarks/UK_National_HPC_Benchmarks.pdf)
 
 The remainder of this paper is organised in the following way. Section 2 describes the HPC systems included in this study. Section 3 looks at the differences in performance across different application benchmarks. Parallel I/O benchmark results are presented in Section 4. We conclude with a summary of the results and discussion of future work in this area in Section 5.
 
@@ -89,12 +94,11 @@ More details on these benchmarks are found in the individual sections below.
 
 Details of the compile options, job submission scripts, the full output data and analysis scripts are available on GitHub at:
 
-<https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/CASTEP>
+-   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/CASTEP>
 
 We have measured the performance of two CASTEP benchmarks:
 
 -   **Al Slab (al3x3)**: A medium CASTEP benchmark that is able to run on small node counts. This benchmark is able to run on all the systems studied to compare the performance. We expect the performance of this benchmark to depend on the memory-bandwidth and floating-point performance of the processors (especially at low core counts; at higher core counts the performance of MPI collective operations becomes more important). This is a strong scaling benchmark.
-
 -   **DNA**: A very large CASTEP benchmark that requires large node counts (a minimum of ~2400 cores). We expect this benchmark to be bound by the performance of MPI collective communications. This is a strong scaling benchmark.
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
@@ -132,26 +136,23 @@ To help understand these results, we have used the STREAM benchmark (run within 
 Using the memory bandwidth data, we see that the CASTEP Al Slab performance is a function of both node performance (influenced by both the performance per core and the number of cores per node) and memory bandwidth per core; with higher floating-point performance and memory bandwidth leading to higher CASTEP performance. In general, the floating-point performance of the nodes seems to dominate the performance. These conclusions is supported by the following facts:
 
 -   ARCHER (which has the oldest processors in the study) shows the worst performance per node for this benchmark yet has similar memory bandwidth per core to the Tier2 systems with Broadwell generation Xeon processors (Cirrus, Athena, Thomas).
-
 -   Cirrus, Athena, Thomas have same generation of Broadwell processors, but their performance does not strictly follow node floating point performance. It appears that the performance depends on a balance of floating point performance to memory bandwidth per core:
-
-    -   Cirrus has the lowest performance as it has the slowest cores (2.1 GHz) and the lowest measured memory bandwidth per core (even though the nodes are more powerful than both Thomas and Athena in terms of raw floating-point performance). Cirrus loses performance due to lack of memory bandwidth per core to allow it to use the floating point performance available.
-
-    -   Thomas has slightly better performance than Cirrus even though the processors are the same speed. The additional performance is likely to come from the higher memory bandwidth available per core. Thomas loses performance due to lack of floating point performance per node to use the memory bandwidth available.
-
-    -   Athena shows the best performance for this generation of processors as it has the best balance between floating-point performance per node to memory bandwidth per core for these systems. Its node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
-
+    +   Cirrus has the lowest performance as it has the slowest cores (2.1 GHz) and the lowest measured memory bandwidth per core (even though the nodes are more powerful than both Thomas and Athena in terms of raw floating-point performance). Cirrus loses performance due to lack of memory bandwidth per core to allow it to use the floating point performance available.
+    +   Thomas has slightly better performance than Cirrus even though the processors are the same speed. The additional performance is likely to come from the higher memory bandwidth available per core. Thomas loses performance due to lack of floating point performance per node to use the memory bandwidth available.
+    +   Athena shows the best performance for this generation of processors as it has the best balance between floating-point performance per node to memory bandwidth per core for these systems. Its node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
 -   Peta4-Skylake shows the best overall performance for this benchmark as nodes on this system have the highest overall floating-point performance and higher memory bandwidth per core.
 
 #### 3.1.2 DNA
 
-We compare the performance of the ARCHER, Cirrus and Peta4-Skylake in [Figure 2](#fig2) below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above.
+We compare the performance of the ARCHER, Cirrus and Peta4-Skylake in [Figure 2](#fig2) below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. This plot shows results for the benchmark with different numbers of shared memory threads per MPI process.
 
 <a id="fig2"></a>Figure 2: Performance of the large DNA benchmark as a function of number of nodes.
 
 <img src="img/CASTEP_DNA_perf_large.png" />
 
-The performance of this benchmark depends critically on the performance of MPI collective operations over the interconnect and we can see that ARCHER performs much better than Cirrus at all core counts and this improvement increases as the core count increases. We plan further investigations to understand what causes this difference in performance as there are a range possible reasons (interconnect topology, interconnect performance, MPI library performance, contention for interconnect bandwidth, etc.). We will report the results of these investigations in a future update to this paper.
+Best performance is always seen when using the minimum number of threads. Depending on the amount memory available per node, the minimum number of threads that can be used on different node counts varies. For example, on ARCHER, a single thread can only be used on 256 nodes and above due to each node only having 64 GB of memory available. In contrast, on Peta4-Skylake, a single thread can be used on all node counts as the nodes have 192 GB memory. 
+
+The Peta4-Skylake system shows the best performance for the benchmark (as for the smaller Al Slab benchmark described above) 
 
 We are currently liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
 
@@ -225,11 +226,8 @@ Note that we were unable to generate results on the Athena system as the benchma
 The mitigation patches for the recent Meltdown/Spectre security vulnerabilities potentially have an impact on the performance of system calls. These performance impacts are more likely to be seen in I/O performance, so it is important to know the status of implementation of the mitigation patches on the I/O systems on different systems. When these benchmarks were performed, the status was:
 
 -   ARCHER: no patches applied to compute nodes (Lustre clients) or Lustre server nodes
-
 -   Cirrus: no patches applied to compute nodes (Lustre clients) or Lustre server nodes
-
 -   Thomas: patches applied to both compute nodes (Lustre clients) and Lustre server nodes
-
 -   Peta4-Skylake: patches applied to compute nodes (Lustre clients), no patches applied to Lustre server nodes
 
 <a id="fig7"></a>Figure 7: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
