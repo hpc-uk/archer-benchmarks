@@ -220,7 +220,7 @@ We aimed to measure two aspects of I/O performance that are important for I/O in
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
-<https://github.com/hpc-uk/archer-benchmarks/tree/master/synth/benchio>
+-   <https://github.com/hpc-uk/archer-benchmarks/tree/master/synth/benchio>
 
 [Figure 7](#fig7) shows the performance of the benchio parallel write benchmark as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously). We show both the maximum write performance and the median write performance to give some idea of the performance variation seen. For Lustre file systems, maximum striping (i.e. ‘lfs setstripe -c -1’) was used in all cases. All Lustre file systems have a stripe size of 1 MiB.
 
@@ -243,7 +243,7 @@ At medium to high numbers of clients (4-32 clients), the performance is broadly 
 
 <a id="fig8"></a>Figure 8: Write bandwidth measured by benchio benchmark for a single shared file using collective MPI-IO operations as a function of number of clients (a client is a single compute node, all cores on a node are writing simultaneously).
 
-<img src="img/benchio_write_bw.png" />
+<img src="img/benchio_write_bw_large.png" />
 
 More investigation is needed here to understand the differences in performance. This investigation also includes understanding the technical differences on how the parallel file systems are connected to the clients (compute nodes) in terms of number and performance of fibre connections from the compute node interconnect out to the parallel file system; and the different technical specifications of the Lustre server nodes.
 
