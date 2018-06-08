@@ -4,6 +4,10 @@ This repository contains information, results and analysis of running a selectio
 of application and synthetic benchmarks on UK HPC systems. The list of systems
 included to date is provided below.
 
+This is an open source initiative and is keen to accept contributions from the
+community. See the 'Contributing' section below on how to contribute results and
+analyses.
+
 The work in this repository would not be possible without the generous access and
 support provided by the organisations running UK HPC systems, including:
 
@@ -20,6 +24,8 @@ This repositiory contains:
 * results and analysis from running the benchmarks on different HPC systems
 
 This repository is work in progress and not all information is available yet.
+
+# Benchmarks
 
 The benchmark suite contains both application and synthetic benchmarks.
 The appplication benchmarks have been chosen with input from the user community
@@ -80,7 +86,17 @@ If you have any questions about these benchmarks, please contact the
 | [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | Client: 2.7, Server: 2.7 | Intel Enterprise Lustre | 1x MDT, 24x OST |
 | [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | DDN | 2.10.3/2.10.3 | 4x MDT, 10x OST |
 
-## Licence
+# Contributing
+
+To contribute to this effort, first you have to fork it on GitHub and clone it to your machine, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/)
+for the GitHub documentation on this process.
+
+Once you have made your changes and updated your Fork on GitHub you will need to [Open a Pull Request](https://help.github.com/articles/using-pull-requests/).
+
+If you would like to contribute, but do not know what to get involved with then take a look at the
+[current issues](https://github.com/hpc-uk/archer-benchmarks/issues) for ideas of topics that could be worked on.
+
+# Licence
 
 The work in this repository is licensed under the [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0).
 
