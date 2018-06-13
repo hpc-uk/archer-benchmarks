@@ -27,7 +27,7 @@ This repository is work in progress and not all information is available yet.
 
 # Reports
 
--   [Performance of HPC Benchmarks across UK National HPC services](reports/initial_comparison/index.md): Report comparing performance of different application benchmarks across CPU-based UK HPC systems. Includes advice for users on picking the appropriate service for their research along with performance results, analysis and conclusions.
+-   [Performance of HPC Benchmarks across UK National HPC services](reports/initial_comparison/index.md): Report comparing performance of different application benchmarks across CPU-based UK HPC systems. Includes advice for users on picking the appropriate service for their research along with performance results, analysis and conclusions. [![DOI](https://zenodo.org/badge/100923634.svg)](https://zenodo.org/badge/latestdoi/100923634)
 
 # Benchmarks
 
