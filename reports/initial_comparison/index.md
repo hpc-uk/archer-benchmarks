@@ -9,6 +9,17 @@ Jeffrey Salmond ([js947@cam.ac.uk](mailto:js947@cam.ac.uk)), University of Cambr
 <img src="img/epcc_logo.png" width="300"/>
 <img src="img/cambridge_logo.jpg" width="300"/>
 
+## 0. Contents
+
+1. [Introduction](#introduction)
+2. [Advice for users](#advice)
+3. [HPC Systems](#systems)
+4. [Application Benchmarks](#apps)
+5. [Parallel I/O Performance](#io)
+6. [Summary and Conclusions](#summary)
+7. [Acknowledgements](#acknowledgements)
+
+<a id="introduction"></a>
 ## 1. Introduction
 
 This report presents a comparison of the performance of a series of application benchmarks across different HPC systems in the UK. The approach taken is to try and evaluate the performance that a standard user would see on the systems. In particular, this means that large amounts of effort have not been put into optimising the applications used for the application benchmarks in the system. We have used standard central installations of packages where they exist, are accessible to standard users, and have the functionality required for the benchmarks. If central installations do not exist, the applications have been compiled in the standard, recommended way for the systems. All benchmarks have been run on the systems in general production, *i.e.* other user jobs are running as usual when the benchmarks are running. This allows us to experience the same system conditions and potential variability in performance that normal users would see. 
@@ -27,6 +38,7 @@ The benchmark applications and benchmark cases were selected with the input of t
 
 The remainder of this paper is organised in the following way. Section 2 provides a summary of advice for users based on the results from the report; Section 3 describes the HPC systems included in this study; Section 4 looks at the differences in performance across different application benchmarks; parallel I/O benchmark results are presented in Section 4. We conclude with a summary of the results and discussion of future work in this area in Section 5.
 
+<a id="advice"></a>
 ## 2. Advice for users
 
 In this initial report we compared the performance of a number of application benchmarks across different Intel Xeon based HPC systems. The applications benchmarked were: CASTEP (a DFT-based periodic electronic structure application), GROMACS (a classical molecular dynamics application) and OpenSBLI (a CFD application). The systems used covered three generations of Intel Xeon processor and four different interconnect technologies. Full details of the systems and the benchmarks can be found in the report below.
@@ -38,6 +50,7 @@ Based on the results from this report we can provide a brief summary of applicat
 -   **For memory bandwidth bound applications there is no gain in performance on Xeon v4 ("Broadwell") compared to Xeon v2 ("Ivy Bridge").** The Xeon v4 ("Broadwell") processors provide performance improvement over Xeon v2 for applications where performance is dependent on floating point performance but the small uplift in maximum memory bandwidth does not provide noticeable benefit for memory bound applications.
 -   **Scaling performance at large node counts is more complex to assess than other aspects of performance.** The current studies do not provide definitive advice on differences in performance on the systems when scaling out calculations to very large node counts. This is due, in part, to the lack of performance data for a number of systems and also due to the additional complexity for this metric with profiling data required to understand differences in performance.
 
+<a id="systems"></a>
 ## 3. HPC Systems
 
 This initial benchmarking exercise covered five Intel Xeon based HPC systems:
@@ -90,6 +103,7 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Thomas        | Lustre             | DDN                     | 2.10.3/2.10.3         | 4xMDT, 10xOST |
 | Peta4-Skylake | Lustre             | Intel Enterprise Lustre | 2.7/2.7               | 1xMDT, 24xOST |
 
+<a id="apps"></a>
 ## 4. Application Benchmarks
 
 In this initial performance comparison, we have run four benchmarks using three different applications:
@@ -219,6 +233,7 @@ These results indicate that the performance of this GROMACS benchmark is directl
 
 <img src="img/gromacs_large_perf_large.png" />
 
+<a id="io"></a>
 ## 5. Parallel I/O Performance
 
 We aimed to measure two aspects of I/O performance that are important for I/O intensive workloads on HPC systems:
@@ -277,6 +292,7 @@ Note that we were unable to generate results on the Athena and Thomas systems as
 
 The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working with Cray to try and understand these features.
 
+<a id="summary"></a>
 ## 6. Summary and Conclusions
 
 The conclusions from the benchmarking exercise can be split into three broad sections:
@@ -318,6 +334,7 @@ Opportunities for further work are captured as issues within the repository and 
 
 -   <https://github.com/hpc-uk/archer-benchmarks/issues>
 
+<a id="acknowledgements"></a>
 ## 7. Acknowledgements
 
 Thanks to all of the HPC systems involved in this study for providing access and resources to be able to run the benchmarks. There explicit acknowledgement statements are included below.
