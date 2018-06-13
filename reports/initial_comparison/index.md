@@ -36,7 +36,7 @@ Based on the results from this report we can provide a brief summary of applicat
 -   **For memory bandwidth bound applications there is no gain in performance on Xeon v4 ("Broadwell") compared to Xeon v2 ("Ivy Bridge").** The Xeon v4 ("Broadwell") processors provide performance improvement over Xeon v2 for applications where performance is dependent on floating point performance but the small uplift in maximum memory bandwidth does not provide noticeable benefit for memory bound applications.
 -   **Scaling performance at large node counts is more complex to assess than other aspects of performance.** The current studies do not provide definitive advice on differences in performance on the systems when scaling out calculations to very large node counts. This is due, in part, to the lack of performance data for a number of systems and also due to the additional complexity for this metric with profiling data required to understand differences in performance.
 
-## 2. HPC Systems
+## 3. HPC Systems
 
 This initial benchmarking exercise covered five Intel Xeon based HPC systems:
 
@@ -88,7 +88,7 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Thomas        | Lustre             | DDN                     | 2.10.3/2.10.3         | 4xMDT, 10xOST |
 | Peta4-Skylake | Lustre             | Intel Enterprise Lustre | 2.7/2.7               | 1xMDT, 24xOST |
 
-## 3. Application Benchmarks
+## 4. Application Benchmarks
 
 In this initial performance comparison, we have run four benchmarks using three different applications:
 
@@ -99,7 +99,7 @@ In this initial performance comparison, we have run four benchmarks using three 
 More details on these benchmarks are found in the individual sections below.
 
 <a id="castep"></a>
-### 3.1 CASTEP
+### 4.1 CASTEP
 
 [CASTEP](http://www.castep.org) is a general-purpose, DFT-based, materials science application. Written in Fortran with MPI and OpenMP parallelism.
 
@@ -114,7 +114,7 @@ We have measured the performance of two CASTEP benchmarks:
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
 
-#### 3.1.1 Al Slab (al3x3)
+#### 4.1.1 Al Slab (al3x3)
 
 We compare the performance of the different systems as a function of node count in [Figure 1](#fig1) and present numerical data on single node performance in [Table 5](#tab5). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3x performance improvement over ARCHER nodes and nodes with Broadwell processors give 1.5-1.8x performance increase when compared to ARCHER.
 
@@ -153,7 +153,7 @@ Using the memory bandwidth data, we see that the single node CASTEP Al Slab perf
     +   Athena shows the best performance for this generation of processors at all node counts. This is most likely because it has the best balance between floating-point performance per node, memory bandwidth per core and interconnect performance per node for these systems. Its per-node floating point performance is higher than Thomas (but lower than Cirrus) and its memory bandwidth per core is higher than Cirrus (but lower than Thomas).
 -   Peta4-Skylake shows the best overall performance for this benchmark at all node counts as nodes on this system have the highest overall floating-point performance, higher memory bandwidth per core and the interconnect provides the required performance for this benchmark.
 
-#### 3.1.2 DNA
+#### 4.1.2 DNA
 
 We compare the performance of the ARCHER, Cirrus and Peta4-Skylake in [Figure 2](#fig2) below (although technically feasible on the other systems, they currently do not allow standard jobs large enough to run this benchmark). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the plot can be found in the repository linked above. This plot shows results for the benchmark with different numbers of shared memory threads per MPI process. In all cases, all cores on a node are used; for example, on ARCHER, if we have 6 threads per MPI process then 4 MPI processes per node will be used to ensure all 24 cores are used. Process and thread pinning is used on all systems to stop processes/threads being migrated to different cores throughout the calculation and all threads associated with a MPI process are within the same NUMA domain.
 
@@ -170,7 +170,7 @@ The differences in performance between different systems for this benchmark are 
 We are also liaising with other Tier2 sites to see if this large benchmark can be run outwith their usual queue restrictions to provide further data for comparison.
 
 <a id="osbli"></a>
-### 3.2 OpenSBLI
+### 4.2 OpenSBLI
 
 [OpenSBLI](https://opensbli.github.io/) is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU).
 
@@ -193,7 +193,7 @@ As we can see in [Figure 3](#fig3), Peta4-Skylake shows the best performance (bu
 <img src="img/osbli_tgv_perf_large.png" />
 
 <a id="gromacs"></a>
-### 3.3 GROMACS
+### 4.3 GROMACS
 
 [GROMACS](http://www.gromacs.org) is a classical molecular mechanics-based biomolecular simulation application written in C/C++ with MPI and OpenMP parallelism. It also supports GPGPU (implemented in CUDA) and Xeon Phi (Knights Landing variant) versions.
 
@@ -217,7 +217,7 @@ These results indicate that the performance of this GROMACS benchmark is directl
 
 <img src="img/gromacs_large_perf_large.png" />
 
-## 4. Parallel I/O Performance
+## 5. Parallel I/O Performance
 
 We aimed to measure two aspects of I/O performance that are important for I/O intensive workloads on HPC systems:
 
@@ -226,7 +226,7 @@ We aimed to measure two aspects of I/O performance that are important for I/O in
 -   [Metadata server performance](#mdtest): We used the [mdtest benchmark from the LANL IOR distribution](https://github.com/IOR-LANL/ior) to measure the performance of the metadata server (MDS). Not all systems could support running this benchmark due to limits on the number files a user that a single user can create (the benchmark needs to be able to create more than 1 million files).
 
 <a id="benchio"></a>
-### 4.1 Parallel write performance: benchio
+### 5.1 Parallel write performance: benchio
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -259,7 +259,7 @@ At medium to high numbers of clients (4-32 clients), the performance is broadly 
 More investigation is needed here to understand the differences in performance. This investigation also includes understanding the technical differences on how the parallel file systems are connected to the clients (compute nodes) in terms of number and performance of fibre connections from the compute node interconnect out to the parallel file system; and the different technical specifications of the Lustre server nodes.
 
 <a id="mdtest"></a>
-### 4.2 MDS performance: mdtest
+### 5.2 MDS performance: mdtest
 
 Details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -275,7 +275,7 @@ Note that we were unable to generate results on the Athena and Thomas systems as
 
 The most obvious feature is the poor MDS performance on the ARCHER file systems compared to that on the newer systems, Cirrus and Peta4-Skylake. We are working with Cray to try and understand these features.
 
-## 5. Summary and Conclusions
+## 6. Summary and Conclusions
 
 The conclusions from the benchmarking exercise can be split into three broad sections:
 
@@ -284,13 +284,13 @@ The conclusions from the benchmarking exercise can be split into three broad sec
 -   Performance of the synthetic benchmarks
 -   Further work and investigations
 
-### 5.1 Application benchmark performance at low node counts
+### 6.1 Application benchmark performance at low node counts
 
 Our study reveals that, at low node counts (32 nodes or less), the application benchmarks generally show that the more modern the processor, the better the performance. The latest Skylake processors on the Peta4-Skylake system give the best performance on all application benchmarks to varying degrees. We see that the oldest Ivy Bridge processors on ARCHER give the lowest performance for both the CASTEP Al Slab and GROMACS benchmarks with the results from the Broadwell processors lying in between these two extremes. The OpenSBLI CFD benchmark shows slightly different characteristics, we see that Skylake processors give the best performance (but not by as much as for CASTEP Al Slab and GROMACS benchmarks), ARCHER and Cirrus have similar performance with the Thomas system giving the lowest performance. We plan to perform further profiling work to understand the performance of the OpenSBLI benchmark.
 
 It is also worth noting that the GROMACS benchmark used here was chosen for its scalability and so it is larger than the typical calculations run using GROMACS. This means that its performance characteristics may be different from typical GROMACS calculations at low node counts. In particular, we may expect that this larger benchmark has a higher than normal impact from memory performance. We plan to run a smaller GROMACS benchmark to explore the performance of more typical calculations at lower node counts.
 
-### 5.2 Application performance at higher node counts
+### 6.2 Application performance at higher node counts
 
 We have only been able to run the benchmarks at higher node counts on the ARCHER, Cirrus and Peta4-Skylake services due to job size restrictions in the job submission setup on the other Tier2 systems. These restrictions do not reflect the technical ability of the systems to run parallel jobs at large node counts but, rather, policy decisions to serve the research communities.
 
@@ -298,13 +298,13 @@ At higher node counts we see that the performance no longer strictly follows the
 
 We are liaising with other Tier2 systems the possibility of running jobs with higher node counts than are usually allowed in order to try and assess this balance between node performance and internode communications performance (interconnect hardware, interconnect topology and software) on the other systems.
 
-### 5.3 Parallel I/O benchmark performance
+### 6.3 Parallel I/O benchmark performance
 
 Our results demonstrate that all systems show similar MPI-IO parallel write performance at 16 clients (nodes) and less. Beyond 16 clients, the parallel write performance of the Thomas system deteriorated while the other systems show similar scaling. At larger node counts, the larger ARCHER file system allows it to achieve higher maximum and median performance than the smaller Cirrus file system. This is as expected for Lustre file systems.
 
 Our metadata server (MDS) benchmark results show that the more modern systems (Cirrus and Peta4-Skylake) demonstrate much higher MDS performance that ARCHER. This large difference is currently under investigation in collaboration with the Cray Centre of Excellence. We will report the findings from this investigation in a future version of this paper. We could not measure the MDS performance on Athena and Thomas using this benchmark due to limits on the number of files that a single user is allowed to produce.
 
-### 5.4 Further work and investigations
+### 6.4 Further work and investigations
 
 This initial benchmarking exercise has identified a large number of opportunities for further work and investigation many of which are described above. Other work that we have planned includes:
 
@@ -316,7 +316,7 @@ Opportunities for further work are captured as issues within the repository and 
 
 -   <https://github.com/hpc-uk/archer-benchmarks/issues>
 
-## 6. Acknowledgements
+## 7. Acknowledgements
 
 Thanks to all of the HPC systems involved in this study for providing access and resources to be able to run the benchmarks. There explicit acknowledgement statements are included below.
 
