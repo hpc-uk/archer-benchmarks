@@ -23,7 +23,18 @@ The benchmark applications and benchmark cases were selected with the input of t
 
 -   [UK National HPC Benchmarks (PDF)](http://www.archer.ac.uk/documentation/white-papers/benchmarks/UK_National_HPC_Benchmarks.pdf)
 
-The remainder of this paper is organised in the following way. Section 2 describes the HPC systems included in this study. Section 3 looks at the differences in performance across different application benchmarks. Parallel I/O benchmark results are presented in Section 4. We conclude with a summary of the results and discussion of future work in this area in Section 5.
+The remainder of this paper is organised in the following way. Section 2 provides a summary of advice for users based on the results from the report; Section 3 describes the HPC systems included in this study; Section 4 looks at the differences in performance across different application benchmarks; parallel I/O benchmark results are presented in Section 4. We conclude with a summary of the results and discussion of future work in this area in Section 5.
+
+## 2. Advice for users
+
+In this intial report we compared the performance of a number of application benchmarks across different Intel Xeon based HPC systems. The applications benchmarked were: CASTEP (a DFT-based periodic electronic structure application), GROMACS (a classical molecular dynamics application) and OpenSBLI (a CFD application). The systems used covered three generations of Intel Xeon processor and four different interconnect technologies. Full details of the systems and the benchmarks can be found in the report below.
+
+Based on the results from this report we can provide a brief summary of application performance to help users choose the most appropriate system for their research. Note that best practice is to use the pump-priming access available on many of these systems to benchmark your particular application and research problem and the advice here cannot cover all use cases.
+
+-   **For all applications, the latest generation of Xeon processor ("Skylake" Gold) provides the best performance.** The performance gain depends on the particular application. Applications that have a large part of their performance determined by floating point performance (such as CASTEP or GROMACS) are likely to see the largest performance improvement with a gain of ~3x over Xeon v2 ("Ivy Bridge") processors and gains of 1.2-2.0x over Xeon v4 ("Broadwell") processors. Memory bandwidth bound applications (such as CFD) see a more modest improvement of 1.5x over both Xeon v2 and Xeon v4 processors.
+-   **Application scaling properties do not differ markedly depending on interconnect for the sizes of calculations compared.** For the application benchamrks studied here, there seems to be little difference in the scaling properties of the different interconnect technologies. All of the interconnects compared here are low latency, high bandwidth with broadly similar latencies and bandwidths so we would not expect to see much difference in application performance.
+-   **For memory bandwidth bound applications there is no gain in performance on Xeon v4 ("Broadwell") compared to Xeon v2 ("Ivy Bridge").** The Xeon v4 ("Broadwell") processors provide performance improvement over Xeon v2 for applictions where performance is dependent on floating point performance but the small uplift in maximum memory bandwidth does not provide noticable benefit for memory bound applications.
+-   **Scaling performance at large node counts is more complex to assess than other aspects of performance.** The current studies do not provide definitive advice on differences in performance on the systems when scaling out calculations to very large node counts. This is due, in part, to the lack of performance data for a number of systems and also due to the additional complexit for this metric with profiling data required to understand differences in performance.
 
 ## 2. HPC Systems
 
