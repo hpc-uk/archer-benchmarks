@@ -1,5 +1,7 @@
 # Performance of HPC Benchmarks across UK National HPC services
 
+[![DOI](https://zenodo.org/badge/100923634.svg)](https://zenodo.org/badge/latestdoi/100923634)
+
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
 
 Jeffrey Salmond ([js947@cam.ac.uk](mailto:js947@cam.ac.uk)), University of Cambridge
