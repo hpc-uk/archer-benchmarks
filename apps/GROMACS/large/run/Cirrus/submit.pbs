@@ -1,15 +1,15 @@
 #!/bin/bash --login
 #PBS -N GromacsBench
-#PBS -l select=200:ncpus=72
+#PBS -l select=2:ncpus=36
 #PBS -l place=excl
 #PBS -l walltime=6:00:00
 #PBS -A z04
 
 cat $0
 
-NUM_NODES=200
+NUM_NODES=2
 
-BENCHDIR=/lustre/home/z04/aturner/benchmark/ARCHER/GROMACS/GromacsARCHERBench_master
+BENCHDIR=/lustre/home/t01/auser/benchmark/ARCHER/GROMACS/GromacsARCHERBench_master
 
 module load gromacs/2016.3
 
@@ -18,7 +18,7 @@ MDRUN="gmx_mpi mdrun"
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
 
-INPUTDIR=$BENCHDIR/inputTPR
+INPUTDIR=$BENCHDIR/run
 TPRFILE=nsteps800.tpr
 
 WORKDIR=/lustre/home/z04/aturner/benchmark/ARCHER/GROMACS/gromacs_scratch
