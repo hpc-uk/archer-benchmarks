@@ -46,17 +46,17 @@ MPI_LAUNCH=mpirun
 
 NUM_NODES=${numnodes}
 
-BENCHDIR=/home/hpcturn1/rds/hpc-work/benchmarks/ARCHER/GROMACS/ARCHER_large/GromacsARCHERBench_master
+BENCHDIR=/home/hpcuser/rds/hpc-work/benchmarks/ARCHER/GROMACS/ARCHER_large/GromacsARCHERBench_master
 
-MDRUN="/home/hpcturn1/software/gromacs-2016.4/build_mpi1/bin/mdrun_mpi"
+MDRUN="/home/hpcuser/software/gromacs-2016.4/build_mpi1/bin/mdrun_mpi"
 
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
 
-INPUTDIR=$BENCHDIR/inputTPR
+INPUTDIR=$BENCHDIR/run
 TPRFILE=nsteps800.tpr
 
-WORKDIR=/home/hpcturn1/rds/hpc-work/benchmarks/ARCHER/GROMACS/ARCHER_large/gromacs_scratch
+WORKDIR=/home/hpcuser/rds/hpc-work/benchmarks/ARCHER/GROMACS/ARCHER_large/gromacs_scratch
 
 #hardware specific settings
 CHIPS_PER_NODE=2

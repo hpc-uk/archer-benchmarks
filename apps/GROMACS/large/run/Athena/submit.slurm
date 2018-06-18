@@ -12,22 +12,19 @@ MPI_LAUNCH=mpirun
 
 NUM_NODES=2
 
-BENCHDIR=/gpfs/home/lboro/aturner/benchmarks/ARCHER/GROMACS/GromacsARCHERBench_master
+BENCHDIR=/gpfs/home/lboro/auser/benchmarks/ARCHER/GROMACS/GromacsARCHERBench_master
 
 module load gromacs/2016.3
-# module load gromacs/5.1.4/4
 
 MDRUN="mdrun_mpi"
-# MDRUN="gmx_mpi mdrun"
-
 
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
 
-INPUTDIR=$BENCHDIR/inputTPR
+INPUTDIR=$BENCHDIR/run
 TPRFILE=nsteps800.tpr
 
-WORKDIR=/gpfs/home/lboro/aturner/benchmarks/ARCHER/GROMACS/gromacs_scratch
+WORKDIR=/gpfs/home/lboro/auser/benchmarks/ARCHER/GROMACS/gromacs_scratch
 
 #hardware specific settings
 CHIPS_PER_NODE=2
