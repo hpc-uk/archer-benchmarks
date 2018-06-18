@@ -2,7 +2,8 @@
 
 ## Large Benchmark
 
-### Input data
+
+### Input data
 
 There are two sets of input data for this benchmark: one in binary format (the GROMACS tpr file) and 
 the original raw files that can be used to regenerate the tpr file if required. If possible, the 
@@ -23,14 +24,14 @@ gmx grompp -f amber-full.mdp -c nc2.gro -p nc2.top -o nsteps800.tpr
 
 Note that this will take a long time and may be better performed in a job script!
 
-### Results and analysis
+### Results and analysis
 
 Data from the benchmark can be found in this repository:
 
 * [Analysis of large GROMACS benchmark results](analysis/GROMACS_large_perf_analysis.ipynb)
 * [Output from large GROMACS benchmark runs](large/results)
 
-### Job scripts
+### Job scripts
 
 * [ARCHER (EPCC)](run/ARCHER)
 * [Cirrus (EPCC)](run/Cirrus)
