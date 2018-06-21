@@ -10,10 +10,8 @@ the original raw files that can be used to regenerate the tpr file if required. 
 binary tpr file should be used. Both sets of input data are too large to be hosted on Github and 
 so are available from external file hosting sites.
 
-* Binary tpr file (nsteps800.tpr, 1.6GB)
-* Raw input files (ARCHER_GROMACS_large.tar.gz, 628 MB)
-
-(Files will be available soon.)
+* Binary tpr file (nsteps800.tpr, 1.6GB, available soon)
+* [Raw input files (ARCHER_GROMACS_large.tar.gz, 628 MB, password: "gromacs")](https://datasync.ed.ac.uk/index.php/s/JutDxHuyvMaCe7a)
 
 #### Generating the binary tpr file from the raw input data
 
