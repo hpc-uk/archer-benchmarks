@@ -16,5 +16,49 @@ Aerodynamics and Flight Mechanics Research group, University of Southampton, U.K
 
 ## Overview
 
-The benchmark test case setup using OpenSBLI is the Taylor-Green vortex problem in a cu- bic domain of length 2 π. The code was setup to compute the validation, strong scaling and weak scaling simulations across architectures. The rest of the document explains setting up the various types of simulations, dependant libraries, compiling and running the simulation.
+The benchmark test case setup using OpenSBLI is the Taylor-Green vortex problem in a cubic domain of length 2pi. The code was setup to compute the validation, strong scaling and weak scaling simulations across architectures.
+
+## Large size (1024): strong scaling
+
+* [Large size (1024), strong scaling performance analysis](analysis/OpenSBLI_1024ss_benchmark.ipynb)
+* [Large size (1024), strong scaling results](TGV1024ss/)
+
+For the large size, strong scaling benchmark the input file `input` shoukd be set to:
+
+```
+ss 1024 100 0
+```
+
+These options indicate:
+
+- `ss` - Strong scaling
+- `1024` - 1024 cubed size
+- `100` - 100 iterations
+- `0` - Do not write HDF5 output
+
+
+## Medium size (512): strong scaling
+
+For the medium size, strong scaling benchmark the input file `input` shoukd be set to:
+
+```
+ss 512 100 0
+```
+
+These options indicate:
+
+- `ss` - Strong scaling
+- `512` - 512 cubed size
+- `100` - 100 iterations
+- `0` - Do not write HDF5 output
+
+# Example job submission scripts
+
+- ARCHER
+- Cirrus
+- Athena
+- Thomas
+- Peta4 Skylake
+- Isambard
+
 
