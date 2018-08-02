@@ -2,8 +2,6 @@
 
 A full description of the OpenSBLI benchmark is provided below. The source for the benchmark can be found in this repository.
 
-* [Analysis of OpenSBLI performance](https://github.com/ARCHER-CSE/archer-benchmarks/blob/master/apps/OpenSBLI/analysis/OpenSBLI_benchmark.ipynb)
-* [Results from running OpenSBLI](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/results)
 * [Run scripts for OpenSBLI on different platforms](run/)
 * [Building OpenSBLI on different platforms](source/README.md)
 * [OpenSBLI benchmark source code](https://github.com/ARCHER-CSE/archer-benchmarks/tree/master/apps/OpenSBLI/source)
@@ -38,6 +36,9 @@ These options indicate:
 
 
 ## Medium size (512): strong scaling
+
+* [Medium size (512), strong scaling performance analysis](analysis/OpenSBLI_512ss_benchmark.ipynb)
+* [Medium size (512), strong scaling results](TGV512ss/)
 
 For the medium size, strong scaling benchmark the input file `input` shoukd be set to:
 
