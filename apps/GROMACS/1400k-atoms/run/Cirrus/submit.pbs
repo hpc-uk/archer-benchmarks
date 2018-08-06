@@ -1,0 +1,28 @@
+#!/bin/bash --login
+#
+#PBS -N GROMACS_1400k
+#PBS -l select=1:ncpus=36
+#PBS -l walltime=1:0:0
+#PBS -l place=scatter:excl
+#PBS -A z04
+
+cd $PBS_O_WORKDIR
+
+module load gromacs/2016.3
+
+nodes=1
+casename="benchmark"
+# steps=100000
+
+cpn=36
+mdrun="gmx_mpi mdrun"
+
+cores=$(( nodes * cpn ))
+timestamp=$(date '+%Y%m%d%H%M')
+resfile="${casename}_${nodes}nodes_${timestamp}"
+
+# export I_MPI_PIN_DOMAIN=omp
+export OMP_NUM_THREADS=1
+mpiexec_mpt -n ${cores} -ppn ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile}
+
+rm ener.edr
