@@ -1,0 +1,27 @@
+#!/bin/bash --login
+#
+#PBS -N GROMACS_1400k
+#PBS -l select=2
+#PBS -l walltime=3:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+module load gromacs/2018.2
+
+nodes=2
+casename="benchmark"
+
+cpn=24
+mdrun="mdrun_mpi"
+
+cores=$(( nodes * cpn ))
+timestamp=$(date '+%Y%m%d%H%M')
+resfile="${casename}_${nodes}nodes_${timestamp}"
+
+# export I_MPI_PIN_DOMAIN=omp
+export OMP_NUM_THREADS=1
+aprun -n ${cores} -N ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile}
+
+rm ener.edr
+
