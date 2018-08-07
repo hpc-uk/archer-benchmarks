@@ -1,5 +1,10 @@
 # GROMACS Benchmarks
 
+There are two GROMACS benchmarks in the set. The large benchmark allows the scaling of GROMACS
+to be evaluated up to large core counts while the small benchmark provides information on 
+a more typical research problem and allows for comparisons on smaller node counts and 
+with GPU-based systems.
+
 ## Large Benchmark
 
 
@@ -31,13 +36,36 @@ Data from the benchmark can be found in this repository:
 * [Analysis of large GROMACS benchmark results](analysis/GROMACS_large_perf_analysis.ipynb)
 * [Output from large GROMACS benchmark runs](large/results)
 
-### Job scripts
+### Example job scripts
 
-* [ARCHER (EPCC)](run/ARCHER)
-* [Cirrus (EPCC)](run/Cirrus)
-* [Athena (HPC Mid+)](run/Athena)
-* [Thomas (MMMHub)](run/Thomas)
-* [Peta4-Skylake](run/CSD3Skylake)
+Example job scripts can be found in this repository:
+
+* [Example job submission scripts from large GROMACS benchmark](large/run/)
+
+## Small benchmark: 1400k-atom (pair of hEGFR Dimers of 1IVO and 1NQL)
+
+### Input data
+
+The input data for this benchmark is available from the HEC BioSim benchmark pages at:
+
+* http://www.hecbiosim.ac.uk/benchmarks
+
+A copy of the input file as used in these runs is also available in this repository:
+
+* [1400k-atoms/input/benchmark.tpr](1400k-atoms/input/benchmark.tpr)
+
+### Results and analysis
+
+Data from the benchmark can be found in this repository:
+
+* [Analysis of 1400k atom GROMACS benchmark results](analysis/GROMACS_1400k-atoms_perf_analysis.ipynb)
+* [Output from large GROMACS benchmark runs](1400k-atoms/results)
+
+### Example job scripts
+
+Example job scripts can be found in this repository:
+
+* [Example job submission scripts from 1400k atoms GROMACS benchmark](1400k-atoms/run/)
 
 ## Build instructions
 
