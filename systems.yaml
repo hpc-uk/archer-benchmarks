@@ -1,0 +1,160 @@
+ARCHER:
+ - URL: http://www.archer.ac.uk
+ - Org: EPCC, The University of Edinburgh
+ - PModel: Intel Xeon E5-2697v2
+ - PGen: Ivy Bridge
+ - PFreq: 2.7GHz
+ - PCores: 12
+ - PPerNode: 2
+ - MType: DDR3
+ - MFreq:
+ - MTot: 64/128GB
+ - MChannels: 4
+ - MBW: 119.4GB/s
+ - Nodes: 4920
+ - Interconnect: Cray Aries
+ - Topology: Dragonfly
+ - FS: Lustre
+ - FSVendor: Cray Sonexion
+ - FSClientV: 2.5.2
+ - FSServerV: 2.1.0.0
+ - FSLayout: 1xMDT, 48xOST
+ - AModel:
+ - APerNode:
+Cirrus:
+ - URL: http://www.cirrus.ac.uk
+ - Org: EPCC, The University of Edinburgh
+ - PModel: Intel Xeon E5-2695v4
+ - PGen: Broadwell
+ - PFreq: 2.1GHz
+ - PCores: 18
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq: 
+ - MTot: 256GB
+ - MChannels: 4
+ - MBW: 153.6GB/s
+ - Nodes: 480
+ - Interconnect: FDR§
+ - Topology: Hypercube
+ - FS: Lustre
+ - FSVendor: DDN
+ - FSClientV: 2.5
+ - FSServerV: 2.7
+ - FSLayout: 1xMDT, 14xOST
+ - AModel:
+ - APerNode:
+Athena:
+ - URL: http://www.hpc-midlands-plus.ac.uk/
+ - Org: HPC Midlands+
+ - PModel: Intel Xeon E5-2680v4
+ - PGen: Broadwell
+ - PFreq: 2.4GHz
+ - PCores: 14
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq:
+ - MTot: 128GB
+ - MChannels: 4
+ - MBW: 153.6GB/s
+ - Nodes:
+ - Interconnect: EDR
+ - Topology: 27 node non-blocking, 3:1 backbone
+ - FS: SpectrumScale
+ - FSVendor: IBM
+ - FSClientV: 4.2.3-6
+ - FSServerV: 4.2.3-6
+ - FSLayout:
+ - AModel:
+ - APerNode:
+Thomas:
+ - URL: https://wiki.rc.ucl.ac.uk/wiki/Thomas
+ - Org: MMM Hub
+ - PModel: Intel Xeon E5-2650v4
+ - PGen: Broadwell
+ - PFreq: 2.1GHz
+ - PCores: 12
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq:
+ - MTot: 128GB
+ - MChannels: 4
+ - MBW: 153.6GB/s
+ - Nodes:
+ - Interconnect: OPA
+ - Topology: 36 node non-blocking, 3:1 backbone
+ - FS: Lustre
+ - FSVendor: DDN
+ - FSClientV: 2.10.3
+ - FSServerV: 2.10.3
+ - FSLayout: 4xMDT, 10xOST
+ - AModel:
+ - APerNode:
+Peta4-Skylake:
+ - URL: https://www.csd3.cam.ac.uk/
+ - Org: CSD3, University of Cambridge
+ - PModel: Intel Xeon 6142
+ - PGen: Skylake Gold
+ - PFreq: 2.6GHz
+ - PCores: 16
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq:
+ - MTot: 196GB
+ - MChannels: 6
+ - MBW: 238.4GB/s
+ - Nodes: 
+ - Interconnect: OPA
+ - Topology:
+ - FS: Lustre
+ - FSVendor: Intel
+ - FSClientV: 2.7
+ - FSServerV: 2.7
+ - FSLayout: 1xMDT, 24xOST
+ - AModel:
+ - APerNode:
+Tesseract:
+ - URL: http://tesseract-dirac.readthedocs.io
+ - PModel: Intel Xeon 4116
+ - PGen: Skylake Silver
+ - PFreq: 2.1GHz
+ - PCores: 12
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq: 2666MHz
+ - MTot: 96GB
+ - MChannels: 6
+ - MBW: 238.4GB/s
+ - Nodes: 800
+ - Interconnect: OPA
+ - Topology: Hypercube
+ - FS: Lustre
+ - FSVendor: DDN
+ - FSClientV: 2.4
+ - FSServerV: 2.7
+ - FSLayout: 2xMDS, 32xOST
+ - AModel:
+ - APerNode:
+Isambard:
+ - URL: http://gw4.ac.uk/isambard/
+ - Org: GW4
+ - PModel: Cavium ThunderX2
+ - PGen:
+ - PFreq: 2.2GHz
+ - PCores: 32
+ - PPerNode: 2
+ - MType: DDR4
+ - MFreq:
+ - MTot: 256GB
+ - MChannels: 8
+ - MBW: 238.4GB/s
+ - Nodes:
+ - Interconnect:
+ - Topology: 
+ - FS: Local   
+ - FSVendor:
+ - FSClientV:
+ - FSServerV:
+ - FSLayout:
+ - AModel:
+ - APerNode:
