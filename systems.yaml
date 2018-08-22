@@ -90,7 +90,7 @@ Thomas:
   FSLayout: 4xMDT, 10xOST
   AModel:
   APerNode:
-Peta4Skylake:
+Peta4-Skylake:
   URL: https://www.csd3.cam.ac.uk/
   Org: CSD3, University of Cambridge
   PModel: Intel Xeon 6142
