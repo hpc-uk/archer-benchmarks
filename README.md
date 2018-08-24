@@ -59,38 +59,13 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * OASIS (Met Office Unified Model coupled to NEMO ocean model)
 
 # Systems Included
+i
+The Jupyter notebook linked below provides a list of systems that have been benchmarked along with basic
+information on their configuration.
 
-The following is a list of systems that have been benchmarked along with basic
-information on their configuration (processor and memory information are **per node**).
+* [Technical details of systems benchmarked](SystemDetails.ipynb)
 
 **Note:** Not all benchmarks have been run on all systems.
-
-
-## Compute node and interconnect
-
-| System | Processor | Memory | Interconnect |
-| ------ | --------- | ------ | ------------ |
-| [ARCHER](http://www.archer.ac.uk) | 2x Intel E5-2697v2, 2.7GHz, 12-core | 64/128GB DDR3 4 channels (119.4GB/s) | Cray Aries, Dragonfly |
-| [Cirrus](http://www.cirrus.ac.uk) | 2x Intel E5-2695v3, 2.1GHz, 18-core | 256GB DDR4, 4 channels (153.6GB/s) | FDR IB, Hypercube |
-| [Athena](http://www.hpc-midlands-plus.ac.uk/) | 2x Intel E5-2680v4, 2.4GHz, 14-core | 128GB DDR4, 4 channels (153.6GB/s) | EDR IB, 27 node nonblocking, 3:1 backbone |
-| [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | 2x Intel Gold 6142, 2.6GHz, 16-core | 6 channels (238.4GB/s) | Intel OPA |
-| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | 2x Intel E5-2650v4, 2.1GHz, 12-core | 128GB DDR4, 4 channels (153.6GB/s) | Intel OPA, 36 node nonblocking, 3:1 backbone |
-| [Isambard](http://gw4.ac.uk/isambard/) | 2x Cavium ThunderX2 (Arm64), 2.2GHz, 32-core | 256GB DDR4, 8 channels (320GB/s) | None |
-| [Tesseract](http://tesseract-dirac.readthedocs.io/en/latest/index.html) | 2x Intel Silver 4116, 2.1GHz, 12-core | 96GB DDR4, 6 channels (238.4GB/s) | Intel OPA, Hypercube |
-
-* More information on Intel processors is available from [Intel Ark](https://ark.intel.com/)
-
-## File systems
-
-| System | File System | Versions | Vendor | Other details |
-| ------ | ----------- | -------- | ------ | ------------- |
-| [ARCHER](http://www.archer.ac.uk) | Lustre | Client: 2.5.2, Server: 2.1.0.0 | Cray Sonexion | 1x MDT, 48 OST |
-| [Cirrus](http://www.cirrus.ac.uk) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 1x MDT, 14x OST |
-| [Athena](http://www.hpc-midlands-plus.ac.uk/) | SpectrumScale/GPFS | 4.2.3-6/4.2.3-6 | IBM | N/A |
-| [CSD3 Skylake](https://www.csd3.cam.ac.uk/) | Lustre | Client: 2.7, Server: 2.7 | Intel Enterprise Lustre | 1x MDT, 24x OST |
-| [Thomas](https://wiki.rc.ucl.ac.uk/wiki/Thomas) | Lustre | DDN | 2.10.3/2.10.3 | 4x MDT, 10x OST |
-| [Isambard](http://gw4.ac.uk/isambard/) | Local file systems | N/A | N/A | N/A |
-| [Tesseract](http://tesseract-dirac.readthedocs.io/en/latest/index.html) | Lustre | Client: 2.5, Server: 2.7 | DDN Lustre | 2x MDT, 32x OST |
 
 # Contributing
 

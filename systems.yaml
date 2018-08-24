@@ -7,10 +7,11 @@ ARCHER:
   PCores: 12
   PPerNode: 2
   MType: DDR3
-  MFreq:
+  MFreq: ?MHz
   MTot: 64/128GB
   MChannels: 4
   MBW: 119.4GB/s
+  Vendor: Cray
   Nodes: 4920
   Interconnect: Cray Aries
   Topology: Dragonfly
@@ -30,12 +31,13 @@ Cirrus:
   PCores: 18
   PPerNode: 2
   MType: DDR4
-  MFreq: 
+  MFreq: ?MHz
   MTot: 256GB
   MChannels: 4
   MBW: 153.6GB/s
-  Nodes: 480
-  Interconnect: FDR§
+  Vendor: HPE
+  Nodes: 280
+  Interconnect: FDR
   Topology: Hypercube
   FS: Lustre
   FSVendor: DDN
@@ -53,18 +55,19 @@ Athena:
   PCores: 14
   PPerNode: 2
   MType: DDR4
-  MFreq:
+  MFreq: ?MHz
   MTot: 128GB
   MChannels: 4
   MBW: 153.6GB/s
-  Nodes:
+  Vendor: Huawei
+  Nodes: 512
   Interconnect: EDR
-  Topology: 27 node non-blocking, 3:1 backbone
+  Topology: Fat Tree, 27 node non-blocking, 3:1 backbone
   FS: SpectrumScale
   FSVendor: IBM
   FSClientV: 4.2.3-6
   FSServerV: 4.2.3-6
-  FSLayout:
+  FSLayout: NA
   AModel:
   APerNode:
 Thomas:
@@ -76,13 +79,14 @@ Thomas:
   PCores: 12
   PPerNode: 2
   MType: DDR4
-  MFreq:
+  MFreq: ?MHz
   MTot: 128GB
   MChannels: 4
   MBW: 153.6GB/s
-  Nodes:
+  Vendor: Lenovo
+  Nodes: 720
   Interconnect: OPA
-  Topology: 36 node non-blocking, 3:1 backbone
+  Topology: Fat Tree, 36 node non-blocking, 3:1 backbone
   FS: Lustre
   FSVendor: DDN
   FSClientV: 2.10.3
@@ -99,13 +103,14 @@ Peta4-Skylake:
   PCores: 16
   PPerNode: 2
   MType: DDR4
-  MFreq:
+  MFreq: ?MHz
   MTot: 196GB
   MChannels: 6
   MBW: 238.4GB/s
-  Nodes: 
+  Vendor: Dell
+  Nodes: 768
   Interconnect: OPA
-  Topology:
+  Topology: Fat Tree
   FS: Lustre
   FSVendor: Intel
   FSClientV: 2.7
@@ -125,6 +130,7 @@ Tesseract:
   MTot: 96GB
   MChannels: 6
   MBW: 238.4GB/s
+  Vendor: HPE
   Nodes: 800
   Interconnect: OPA
   Topology: Hypercube
@@ -144,17 +150,18 @@ Isambard:
   PCores: 32
   PPerNode: 2
   MType: DDR4
-  MFreq:
+  MFreq: ?MHz
   MTot: 256GB
   MChannels: 8
-  MBW: 238.4GB/s
-  Nodes:
-  Interconnect:
-  Topology: 
+  MBW: 320GB/s
+  Vendor: Cray
+  Nodes: 0
+  Interconnect: None
+  Topology: None
   FS: Local   
-  FSVendor:
-  FSClientV:
-  FSServerV:
-  FSLayout:
+  FSVendor: NA
+  FSClientV: NA
+  FSServerV: NA
+  FSLayout: NA
   AModel:
   APerNode:
