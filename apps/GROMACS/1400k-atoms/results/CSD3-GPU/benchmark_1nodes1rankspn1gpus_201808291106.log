@@ -1,16 +1,17 @@
-Log file opened on Mon Aug  6 15:57:14 2018
-Host: gpu-e-7  pid: 161510  rank ID: 0  number of ranks:  1
-                      :-) GROMACS - gmx mdrun, 2016.4 (-:
+Log file opened on Wed Aug 29 11:06:25 2018
+Host: gpu-e-25  pid: 93233  rank ID: 0  number of ranks:  1
+                      :-) GROMACS - mdrun_mpi, 2018.2 (-:
 
                             GROMACS is written by:
-     Emile Apol      Rossen Apostolov  Herman J.C. Berendsen    Par Bjelkmar   
- Aldert van Buuren   Rudi van Drunen     Anton Feenstra    Gerrit Groenhof  
- Christoph Junghans   Anca Hamuraru    Vincent Hindriksen Dimitrios Karkoulis
-    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
-  Justin A. Lemkul   Magnus Lundborg   Pieter Meulenhoff    Erik Marklund   
-   Teemu Murtola       Szilard Pall       Sander Pronk      Roland Schulz   
-  Alexey Shvetsov     Michael Shirts     Alfons Sijbers     Peter Tieleman  
-  Teemu Virolainen  Christian Wennberg    Maarten Wolf   
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar    Aldert van Buuren   Rudi van Drunen     Anton Feenstra  
+  Gerrit Groenhof    Aleksei Iupinov   Christoph Junghans   Anca Hamuraru   
+ Vincent Hindriksen Dimitrios Karkoulis    Peter Kasson        Jiri Kraus    
+  Carsten Kutzner      Per Larsson      Justin A. Lemkul    Viveca Lindahl  
+  Magnus Lundborg   Pieter Meulenhoff    Erik Marklund      Teemu Murtola   
+    Szilard Pall       Sander Pronk      Roland Schulz     Alexey Shvetsov  
+   Michael Shirts     Alfons Sijbers     Peter Tieleman    Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
                            and the project leaders:
         Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
 
@@ -25,56 +26,80 @@ under the terms of the GNU Lesser General Public License
 as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
-GROMACS:      gmx mdrun, version 2016.4
-Executable:   /home/hpcturn1/software_gpu/gromacs-2016.4/build/bin/gmx
-Data prefix:  /home/hpcturn1/software_gpu/gromacs-2016.4 (source tree)
+GROMACS:      mdrun_mpi, version 2018.2
+Executable:   /home/hpcturn1/software_gpu/gromacs-2018.2/build_gpu_mpi/bin/mdrun_mpi
+Data prefix:  /home/hpcturn1/software_gpu/gromacs-2018.2 (source tree)
 Working dir:  /rds/user/hpcturn1/hpc-work/benchmarks/ARCHER/GROMACS/1400k-atoms_gpu
 Command line:
-  gmx mdrun -s benchmark.tpr -g benchmark_1nodes_201808061557
+  mdrun_mpi -s benchmark.tpr -g benchmark_1nodes1rankspn1gpus_201808291106
 
-GROMACS version:    2016.4
+GROMACS version:    2018.2
 Precision:          single
 Memory model:       64 bit
-MPI library:        thread_mpi
-OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 32)
+MPI library:        MPI
+OpenMP support:     enabled (GMX_OPENMP_MAX_THREADS = 64)
 GPU support:        CUDA
 SIMD instructions:  AVX2_256
-FFT library:        fftw-3.3.5-fma-sse2-avx-avx2-avx2_128-avx512
+FFT library:        fftw-3.3.8-sse2-avx-avx2-avx2_128-avx512
 RDTSCP usage:       enabled
 TNG support:        enabled
 Hwloc support:      hwloc-1.11.0
 Tracing support:    disabled
-Built on:           Mon  5 Mar 10:01:49 GMT 2018
-Built by:           hpcturn1@login-e-8 [CMAKE]
-Build OS/arch:      Linux 3.10.0-693.17.1.el7.csd3.x86_64 x86_64
+Built on:           2018-08-17 12:35:29
+Built by:           hpcturn1@login-e-2 [CMAKE]
+Build OS/arch:      Linux 3.10.0-693.25.7.el7.csd3.x86_64 x86_64
 Build CPU vendor:   Intel
 Build CPU brand:    Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
 Build CPU family:   6   Model: 79   Stepping: 1
-Build CPU features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
-C compiler:         /usr/local/Cluster-Apps/gcc/5.3.0/bin/gcc GNU 5.3.0
-C compiler flags:    -march=core-avx2     -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
-C++ compiler:       /usr/local/Cluster-Apps/gcc/5.3.0/bin/g++ GNU 5.3.0
-C++ compiler flags:  -march=core-avx2    -std=c++0x   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+Build CPU features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+C compiler:         /usr/local/software/spack/spack-0.11.2/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-5.4.0-fis24ggupugiobii56fesif2y3qulpdr/bin/gcc GNU 5.4.0
+C compiler flags:    -march=core-avx2 -pthread    -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
+C++ compiler:       /usr/local/software/spack/spack-0.11.2/opt/spack/linux-rhel7-x86_64/gcc-4.8.5/gcc-5.4.0-fis24ggupugiobii56fesif2y3qulpdr/bin/g++ GNU 5.4.0
+C++ compiler flags:  -march=core-avx2 -pthread   -std=c++11   -O3 -DNDEBUG -funroll-all-loops -fexcess-precision=fast  
 CUDA compiler:      /usr/local/Cluster-Apps/cuda/8.0/bin/nvcc nvcc: NVIDIA (R) Cuda compiler driver;Copyright (c) 2005-2016 NVIDIA Corporation;Built on Sun_Sep__4_22:14:01_CDT_2016;Cuda compilation tools, release 8.0, V8.0.44
-CUDA compiler flags:-gencode;arch=compute_20,code=sm_20;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_60,code=compute_60;-gencode;arch=compute_61,code=compute_61;-use_fast_math;-Wno-deprecated-gpu-targets;;;-Xcompiler;,-march=core-avx2,,,,,,;-Xcompiler;-O3,-DNDEBUG,-funroll-all-loops,-fexcess-precision=fast,,; 
+CUDA compiler flags:-gencode;arch=compute_20,code=sm_20;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_37,code=sm_37;-gencode;arch=compute_50,code=sm_50;-gencode;arch=compute_52,code=sm_52;-gencode;arch=compute_60,code=sm_60;-gencode;arch=compute_61,code=sm_61;-gencode;arch=compute_60,code=compute_60;-gencode;arch=compute_61,code=compute_61;-use_fast_math;-Wno-deprecated-gpu-targets;;; ;-march=core-avx2;-pthread;-std=c++11;-O3;-DNDEBUG;-funroll-all-loops;-fexcess-precision=fast;
 CUDA driver:        9.0
 CUDA runtime:       8.0
 
 
-Running on 1 node with total 12 cores, 12 logical cores, 1 compatible GPU
-Hardware detected:
+Running on 1 node with total 12 cores, 12 logical cores, 4 compatible GPUs
+Hardware detected on host gpu-e-25 (the node of MPI rank 0):
   CPU info:
     Vendor: Intel
     Brand:  Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz
     Family: 6   Model: 79   Stepping: 1
-    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
-    SIMD instructions most likely to fit this hardware: AVX2_256
-    SIMD instructions selected at GROMACS compile time: AVX2_256
-
-  Hardware topology: Only logical processor count
+    Features: aes apic avx avx2 clfsh cmov cx8 cx16 f16c fma hle htt intel lahf mmx msr nonstop_tsc pcid pclmuldq pdcm pdpe1gb popcnt pse rdrnd rdtscp rtm sse2 sse3 sse4.1 sse4.2 ssse3 tdt x2apic
+  Hardware topology: Full, with devices
+    Sockets, cores, and logical processors:
+      Socket  0: [   0] [   1] [   2] [   3] [   4] [   5] [   6] [   7] [   8] [   9] [  10] [  11]
+    Numa nodes:
+      Node  0 (101085614080 bytes mem):   0   1   2   3   4   5   6   7   8   9  10  11
+      Latency:
+               0
+         0  1.00
+    Caches:
+      L1: 32768 bytes, linesize 64 bytes, assoc. 8, shared 1 ways
+      L2: 262144 bytes, linesize 64 bytes, assoc. 8, shared 1 ways
+      L3: 31457280 bytes, linesize 64 bytes, assoc. 20, shared 12 ways
+    PCI devices:
+      0000:08:00.0  Id: 8086:154d  Class: 0x0200  Numa: 0
+      0000:08:00.1  Id: 8086:154d  Class: 0x0200  Numa: 0
+      0000:04:00.0  Id: 10de:15f8  Class: 0x0302  Numa: 0
+      0000:05:00.0  Id: 10de:15f8  Class: 0x0302  Numa: 0
+      0000:06:00.0  Id: 10de:15f8  Class: 0x0302  Numa: 0
+      0000:07:00.0  Id: 10de:15f8  Class: 0x0302  Numa: 0
+      0000:09:00.0  Id: 15b3:1013  Class: 0x0207  Numa: 0
+      0000:00:11.4  Id: 8086:8d62  Class: 0x0106  Numa: 0
+      0000:01:00.0  Id: 8086:1521  Class: 0x0200  Numa: 0
+      0000:01:00.1  Id: 8086:1521  Class: 0x0200  Numa: 0
+      0000:0d:00.0  Id: 102b:0534  Class: 0x0300  Numa: 0
+      0000:00:1f.2  Id: 8086:8d02  Class: 0x0106  Numa: 0
   GPU info:
-    Number of GPUs detected: 1
+    Number of GPUs detected: 4
     #0: NVIDIA Tesla P100-PCIE-16GB, compute cap.: 6.0, ECC: yes, stat: compatible
+    #1: NVIDIA Tesla P100-PCIE-16GB, compute cap.: 6.0, ECC: yes, stat: compatible
+    #2: NVIDIA Tesla P100-PCIE-16GB, compute cap.: 6.0, ECC: yes, stat: compatible
+    #3: NVIDIA Tesla P100-PCIE-16GB, compute cap.: 6.0, ECC: yes, stat: compatible
 
 
 ++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
@@ -133,13 +158,8 @@ Comp. Phys. Comm. 91 (1995) pp. 43-56
 -------- -------- --- Thank You --- -------- --------
 
 
-For optimal performance with a GPU nstlist (now 10) should be larger.
-The optimum depends on your CPU and GPU resources.
-You might want to try several nstlist values.
-Changing nstlist from 10 to 40, rlist from 1.2 to 1.271
+The number of OpenMP threads was set by environment variable OMP_NUM_THREADS to 12
 
-
-Non-default thread affinity set, disabling internal thread affinity
 Input Parameters:
    integrator                     = md
    tinit                          = 0
@@ -167,12 +187,12 @@ Input Parameters:
    nstxout-compressed             = 0
    compressed-x-precision         = 1000
    cutoff-scheme                  = Verlet
-   nstlist                        = 40
+   nstlist                        = 10
    ns-type                        = Grid
    pbc                            = xyz
    periodic-molecules             = false
    verlet-buffer-tolerance        = 0.005
-   rlist                          = 1.271
+   rlist                          = 1.2
    coulombtype                    = PME
    coulomb-modifier               = None
    rcoulomb-switch                = 0
@@ -254,6 +274,7 @@ qm-opts:
    wall-density[1]                = 0
    wall-ewald-zfac                = 3
    pull                           = false
+   awh                            = false
    rotation                       = false
    interactiveMD                  = false
    disre                          = No
@@ -272,18 +293,6 @@ qm-opts:
       deform[    1]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
       deform[    2]={ 0.00000e+00,  0.00000e+00,  0.00000e+00}
    simulated-tempering            = false
-   E-x:
-      n = 0
-   E-xt:
-      n = 0
-   E-y:
-      n = 0
-   E-yt:
-      n = 0
-   E-z:
-      n = 0
-   E-zt:
-      n = 0
    swapcoords                     = no
    userint1                       = 0
    userint2                       = 0
@@ -293,6 +302,8 @@ qm-opts:
    userreal2                      = 0
    userreal3                      = 0
    userreal4                      = 0
+   applied-forces:
+     electric-field:
 grpopts:
    nrdf:  2.9207e+06
    ref-t:         300
@@ -303,13 +314,26 @@ annealing-npoints:           0
    nfreeze:           N           N           N
    energygrp-flags[  0]: 0
 
-Using 1 MPI thread
-Using 3 OpenMP threads 
+Changing nstlist from 10 to 100, rlist from 1.2 to 1.331
 
-1 compatible GPU is present, with ID 0
+Using 1 MPI process
+Using 12 OpenMP threads 
+
 1 GPU auto-selected for this run.
-Mapping of GPU ID to the 1 PP rank in this node: 0
+Mapping of GPU IDs to the 2 GPU tasks in the 1 rank on this node:
+  PP:0,PME:0
 
+NOTE: GROMACS was configured without NVML support hence it can not exploit
+      application clocks of the detected Tesla P100-PCIE-16GB GPU to improve performance.
+      Recompile with the NVML library (compatible with the driver used) or set application clocks manually.
+
+NOTE: GROMACS was configured without NVML support hence it can not exploit
+      application clocks of the detected Tesla P100-PCIE-16GB GPU to improve performance.
+      Recompile with the NVML library (compatible with the driver used) or set application clocks manually.
+
+Non-default thread affinity set probably by the OpenMP library,
+disabling internal thread affinity
+System total charge: 0.000
 Will do PME sum in reciprocal space for electrostatic interactions.
 
 ++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
@@ -318,22 +342,25 @@ A smooth particle mesh Ewald method
 J. Chem. Phys. 103 (1995) pp. 8577-8592
 -------- -------- --- Thank You --- -------- --------
 
-Will do ordinary reciprocal space Ewald sum.
 Using a Gaussian width (1/beta) of 0.384195 nm for Ewald
-Cut-off's:   NS: 1.271   Coulomb: 1.2   LJ: 1.2
-System total charge: 0.000
-Generated table with 1135 data points for 1-4 COUL.
-Tabscale = 500 points/nm
-Generated table with 1135 data points for 1-4 LJ6.
-Tabscale = 500 points/nm
-Generated table with 1135 data points for 1-4 LJ12.
-Tabscale = 500 points/nm
 Potential shift: LJ r^-12: -2.648e-01 r^-6: -5.349e-01, Ewald -0.000e+00
 Initialized non-bonded Ewald correction tables, spacing: 1.02e-03 size: 1176
 
-Changing GPU application clocks for Tesla P100-PCIE-16GB to (715,1328)
+Generated table with 1165 data points for 1-4 COUL.
+Tabscale = 500 points/nm
+Generated table with 1165 data points for 1-4 LJ6.
+Tabscale = 500 points/nm
+Generated table with 1165 data points for 1-4 LJ12.
+Tabscale = 500 points/nm
 
-Using GPU 8x8 non-bonded kernels
+Using GPU 8x8 nonbonded short-range kernels
+
+Using a dual 8x4 pair-list setup updated with dynamic, rolling pruning:
+  outer list: updated every 100 steps, buffer 0.131 nm, rlist 1.331 nm
+  inner list: updated every  14 steps, buffer 0.003 nm, rlist 1.203 nm
+At tolerance 0.005 kJ/mol/ps per atom, equivalent classical 1x1 list would be:
+  outer list: updated every 100 steps, buffer 0.287 nm, rlist 1.487 nm
+  inner list: updated every  14 steps, buffer 0.061 nm, rlist 1.261 nm
 
 
 Initializing LINear Constraint Solver
@@ -353,6 +380,7 @@ Water Models
 J. Comp. Chem. 13 (1992) pp. 952-962
 -------- -------- --- Thank You --- -------- --------
 
+
 Intra-simulation communication will occur every 10 steps.
 Center of mass motion removal mode is Linear
 We have the following groups for center of mass motion removal:
@@ -366,82 +394,76 @@ J. Chem. Phys. 81 (1984) pp. 3684-3690
 
 There are: 1403180 Atoms
 
-Started mdrun on rank 0 Mon Aug  6 15:57:21 2018
+Started mdrun on rank 0 Wed Aug 29 11:06:31 2018
            Step           Time
               0        0.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.36789e+05    6.73728e+05    3.12981e+05    1.00469e+04   -1.64137e+04
+    1.36790e+05    6.73794e+05    3.13005e+05    1.00469e+04   -1.64137e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.50511e+04   -6.85140e+05    1.84030e+06   -1.81458e+07    6.45051e+04
-      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
-   -1.57139e+07    3.64307e+06   -1.20708e+07    3.00037e+02   -1.23572e+01
-   Constr. rmsd
-    6.02099e-06
+    9.50518e+04   -6.85141e+05    1.84030e+06   -1.81457e+07    6.45526e+04
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.57137e+07    3.64368e+06   -1.20701e+07   -1.20701e+07    3.00088e+02
+ Pressure (bar)   Constr. rmsd
+   -1.20181e+01    6.02198e-06
 
-step   80: timed with pme grid 160 280 208, coulomb cutoff 1.200: 24845.9 M-cycles
-step  160: timed with pme grid 144 256 192, coulomb cutoff 1.264: 21861.5 M-cycles
-step  240: timed with pme grid 128 224 192, coulomb cutoff 1.429: 19566.5 M-cycles
-step  320: timed with pme grid 120 216 160, coulomb cutoff 1.517: 17830.3 M-cycles
-step  400: timed with pme grid 112 192 144, coulomb cutoff 1.672: 16596.8 M-cycles
-step  480: timed with pme grid 100 192 128, coulomb cutoff 1.881: 16036.8 M-cycles
-step  560: timed with pme grid 96 160 120, coulomb cutoff 2.006: 15589.8 M-cycles
-step  640: timed with pme grid 84 144 108, coulomb cutoff 2.229: 15263.8 M-cycles
-step  720: timed with pme grid 80 128 100, coulomb cutoff 2.500: 17896.3 M-cycles
-step  800: timed with pme grid 80 144 100, coulomb cutoff 2.407: 16456.3 M-cycles
-step  880: timed with pme grid 80 144 104, coulomb cutoff 2.315: 15362.2 M-cycles
-step  960: timed with pme grid 80 144 108, coulomb cutoff 2.275: 14974.2 M-cycles
-step 1040: timed with pme grid 84 144 108, coulomb cutoff 2.229: 15190.6 M-cycles
-step 1120: timed with pme grid 84 160 112, coulomb cutoff 2.167: 15149.6 M-cycles
-step 1200: timed with pme grid 96 160 112, coulomb cutoff 2.150: 15274.7 M-cycles
-step 1280: timed with pme grid 96 160 120, coulomb cutoff 2.006: 15695.3 M-cycles
-step 1360: timed with pme grid 96 160 128, coulomb cutoff 2.000: 15460.4 M-cycles
-step 1440: timed with pme grid 96 168 128, coulomb cutoff 1.905: 15540.0 M-cycles
-step 1520: timed with pme grid 96 192 128, coulomb cutoff 1.896: 15726.7 M-cycles
-step 1600: timed with pme grid 100 192 128, coulomb cutoff 1.881: 16052.4 M-cycles
-step 1680: timed with pme grid 100 192 144, coulomb cutoff 1.820: 16455.4 M-cycles
-step 1760: timed with pme grid 104 192 144, coulomb cutoff 1.750: 16642.0 M-cycles
-step 1840: timed with pme grid 108 192 144, coulomb cutoff 1.685: 16562.0 M-cycles
-step 1920: timed with pme grid 112 192 144, coulomb cutoff 1.672: 16447.5 M-cycles
-step 2000: timed with pme grid 112 200 160, coulomb cutoff 1.625: 16986.0 M-cycles
-step 2080: timed with pme grid 120 200 160, coulomb cutoff 1.600: 17353.0 M-cycles
-step 2160: timed with pme grid 120 208 160, coulomb cutoff 1.538: 17799.9 M-cycles
-              optimal pme grid 80 144 108, coulomb cutoff 2.275
-Writing checkpoint, step 4640 at Mon Aug  6 16:12:25 2018
-
-
+step  200: timed with pme grid 160 280 208, coulomb cutoff 1.200: 26919.9 M-cycles
+step  400: timed with pme grid 144 256 192, coulomb cutoff 1.264: 26912.7 M-cycles
+step  600: timed with pme grid 128 224 192, coulomb cutoff 1.429: 27393.5 M-cycles
+step  800: timed with pme grid 120 216 160, coulomb cutoff 1.517: 27226.5 M-cycles
+step 1000: timed with pme grid 112 192 144, coulomb cutoff 1.672: 29381.0 M-cycles
+step 1200: timed with pme grid 100 192 128, coulomb cutoff 1.881: 33513.5 M-cycles
+step 1400: timed with pme grid 100 192 144, coulomb cutoff 1.820: 32476.9 M-cycles
+step 1600: timed with pme grid 104 192 144, coulomb cutoff 1.750: 30931.7 M-cycles
+step 1800: timed with pme grid 108 192 144, coulomb cutoff 1.685: 30224.8 M-cycles
+step 2000: timed with pme grid 112 192 144, coulomb cutoff 1.672: 29384.2 M-cycles
+step 2200: timed with pme grid 112 200 160, coulomb cutoff 1.625: 28868.9 M-cycles
+step 2400: timed with pme grid 120 200 160, coulomb cutoff 1.600: 28339.7 M-cycles
+step 2600: timed with pme grid 120 208 160, coulomb cutoff 1.538: 27520.4 M-cycles
+step 2800: timed with pme grid 120 216 160, coulomb cutoff 1.517: 27266.8 M-cycles
+step 3000: timed with pme grid 128 216 160, coulomb cutoff 1.505: 26810.4 M-cycles
+step 3200: timed with pme grid 128 216 168, coulomb cutoff 1.481: 26871.6 M-cycles
+step 3400: timed with pme grid 128 224 168, coulomb cutoff 1.433: 26853.9 M-cycles
+step 3600: timed with pme grid 128 224 192, coulomb cutoff 1.429: 27284.0 M-cycles
+step 3800: timed with pme grid 144 240 192, coulomb cutoff 1.333: 26785.2 M-cycles
+step 4000: timed with pme grid 144 256 192, coulomb cutoff 1.264: 26523.9 M-cycles
+step 4200: timed with pme grid 160 256 192, coulomb cutoff 1.254: 26553.8 M-cycles
+step 4400: timed with pme grid 160 256 200, coulomb cutoff 1.250: 26703.9 M-cycles
+step 4600: timed with pme grid 160 280 200, coulomb cutoff 1.204: 26782.4 M-cycles
+step 4800: timed with pme grid 160 280 208, coulomb cutoff 1.200: 26980.3 M-cycles
+              optimal pme grid 144 256 192, coulomb cutoff 1.264
            Step           Time
            5000       10.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.36766e+05    6.73849e+05    3.12615e+05    1.01061e+04   -1.64015e+04
+    1.36527e+05    6.71631e+05    3.11969e+05    1.03274e+04   -1.67007e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.41296e+04   -6.86378e+05    1.84225e+06   -1.80869e+07    9.24071e+03
-      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
-   -1.57107e+07    3.63936e+06   -1.20714e+07    2.99732e+02   -7.18498e-01
-   Constr. rmsd
-    6.08001e-06
+    9.45333e+04   -6.84438e+05    1.83558e+06   -1.81292e+07    5.42299e+04
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.57155e+07    3.64388e+06   -1.20717e+07   -1.20672e+07    3.00104e+02
+ Pressure (bar)   Constr. rmsd
+   -2.97201e+01    6.07450e-06
 
-Writing checkpoint, step 9920 at Mon Aug  6 16:27:28 2018
+Writing checkpoint, step 6700 at Wed Aug 29 11:21:36 2018
 
 
            Step           Time
           10000       20.00000
 
-Writing checkpoint, step 10000 at Mon Aug  6 16:27:42 2018
+Writing checkpoint, step 10000 at Wed Aug 29 11:28:21 2018
 
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.37142e+05    6.75206e+05    3.11683e+05    1.03563e+04   -1.65421e+04
+    1.36532e+05    6.74212e+05    3.13429e+05    9.97280e+03   -1.65251e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.43378e+04   -6.86726e+05    1.84558e+06   -1.80962e+07    9.15933e+03
-      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
-   -1.57160e+07    3.64458e+06   -1.20714e+07    3.00162e+02   -2.03569e+01
-   Constr. rmsd
-    6.05374e-06
+    9.42786e+04   -6.84819e+05    1.84074e+06   -1.81331e+07    5.44864e+04
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.57108e+07    3.63911e+06   -1.20716e+07   -1.20642e+07    2.99712e+02
+ Pressure (bar)   Constr. rmsd
+   -7.21845e+00    6.05326e-06
 
 	<======  ###############  ==>
 	<====  A V E R A G E S  ====>
@@ -451,26 +473,26 @@ Writing checkpoint, step 10000 at Mon Aug  6 16:27:42 2018
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.36433e+05    6.73551e+05    3.12263e+05    1.01133e+04   -1.65294e+04
+    1.36072e+05    6.73290e+05    3.12668e+05    1.01134e+04   -1.66040e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.45256e+04   -6.84567e+05    1.84142e+06   -1.80922e+07    1.16607e+04
-      Potential    Kinetic En.   Total Energy    Temperature Pressure (bar)
-   -1.57134e+07    3.64310e+06   -1.20703e+07    3.00040e+02   -1.19004e+01
-   Constr. rmsd
-    0.00000e+00
+    9.46728e+04   -6.84472e+05    1.84196e+06   -1.81283e+07    4.60087e+04
+      Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
+   -1.57146e+07    3.64313e+06   -1.20714e+07   -1.20672e+07    3.00043e+02
+ Pressure (bar)   Constr. rmsd
+   -5.26367e+00    0.00000e+00
 
           Box-X          Box-Y          Box-Z
-    1.82000e+01    3.20000e+01    2.40809e+01
+    1.82000e+01    3.20000e+01    2.40788e+01
 
    Total Virial (kJ/mol)
-    1.21718e+06   -9.68335e+02    5.53811e+02
-   -9.49059e+02    1.21096e+06    3.84757e+02
-    5.49330e+02    2.99782e+02    1.23004e+06
+    1.21312e+06   -1.92196e+03    1.58780e+02
+   -1.69998e+03    1.20918e+06    9.42505e+02
+   -3.36255e+02    7.41023e+02    1.22750e+06
 
    Pressure (bar)
-   -2.43235e+01    2.61283e+00   -1.82287e+00
-    2.56717e+00   -8.68059e+00   -5.25609e-02
-   -1.81226e+00    1.48685e-01   -2.69714e+00
+   -1.45741e+01    4.84600e+00   -1.31149e+00
+    4.32034e+00   -4.37252e+00   -2.16572e+00
+   -1.39183e-01   -1.68855e+00    3.15565e+00
 
 
        P P   -   P M E   L O A D   B A L A N C I N G
@@ -478,9 +500,9 @@ Writing checkpoint, step 10000 at Mon Aug  6 16:27:42 2018
  PP/PME load balancing changed the cut-off and PME settings:
            particle-particle                    PME
             rcoulomb  rlist            grid      spacing   1/beta
-   initial  1.200 nm  1.271 nm     160 280 208   0.116 nm  0.384 nm
-   final    2.275 nm  2.346 nm      80 144 108   0.228 nm  0.728 nm
- cost-ratio           6.29             0.13
+   initial  1.200 nm  1.203 nm     160 280 208   0.116 nm  0.384 nm
+   final    1.264 nm  1.267 nm     144 256 192   0.126 nm  0.405 nm
+ cost-ratio           1.17             0.76
  (note that these numbers concern only part of the total PP and PME load)
 
 
@@ -493,81 +515,54 @@ Writing checkpoint, step 10000 at Mon Aug  6 16:27:42 2018
 
  Computing:                               M-Number         M-Flops  % Flops
 -----------------------------------------------------------------------------
- NB VdW [V&F]                          5292.309178        5292.309    -0.0
- Pair Search distance check          129642.804320     1166785.239    -0.1
- 1,4 nonbonded interactions            7402.700196      666243.018    -0.1
- Calc Weights                         42099.609540     1515585.943    -0.1
- Spread Q Bspline                    898125.003520     1796250.007    -0.2
- Gather F Bspline                    898125.003520     5388750.021    -0.5
- 3D-FFT                              665035.487410     5320283.899    -0.5
- Solve PME                              132.517120        8481.096    -0.0
- Shift-X                                352.198180        2113.189    -0.0
- Bonds                                 1121.572146       66172.757    -0.0
- Propers                               7956.015522     1821927.555    -0.2
- Impropers                              111.671166       23227.603    -0.0
- Virial                                1404.628225       25283.308    -0.0
- Stop-CM                                  4.209540          42.095    -0.0
- P-Coupling                            1403.180000        8419.080    -0.0
- Calc-Ekin                             2809.166360       75847.492    -0.0
- Lincs                                 1654.565440       99273.926    -0.0
- Lincs-Mat                            11022.862176       44091.449    -0.0
- Constraint-V                         14544.174272      116353.394    -0.0
- Constraint-Vir                        1290.120832       30962.900    -0.0
- Settle                                3745.014464     1209639.672    -0.1
- (null)                                  28.342834           0.000    -0.0
+ Pair Search distance check           19544.827632      175903.449     0.0
+ NxN Ewald Elec. + LJ [F]           9060458.723712   706715780.450    97.6
+ NxN Ewald Elec. + LJ [V&F]           93482.852224    12059287.937     1.7
+ 1,4 nonbonded interactions            7402.700196      666243.018     0.1
+ Shift-X                                141.721180         850.327     0.0
+ Bonds                                 1121.572146       66172.757     0.0
+ Propers                               7956.015522     1821927.555     0.3
+ Impropers                              111.671166       23227.603     0.0
+ Virial                                1404.628225       25283.308     0.0
+ Stop-CM                                  4.209540          42.095     0.0
+ P-Coupling                            1404.583180        8427.499     0.0
+ Calc-Ekin                             2809.166360       75847.492     0.0
+ Lincs                                 1654.565440       99273.926     0.0
+ Lincs-Mat                            11022.862176       44091.449     0.0
+ Constraint-V                         14544.174272      116353.394     0.0
+ Constraint-Vir                        1290.120832       30962.900     0.0
+ Settle                                3745.014464     1209639.672     0.2
+ CMAP                                    28.342834       48182.818     0.0
+ Urey-Bradley                          5292.309178      968492.580     0.1
 -----------------------------------------------------------------------------
- Total                                                19391025.951    -1.7
+ Total                                               724155990.226   100.0
 -----------------------------------------------------------------------------
 
 
      R E A L   C Y C L E   A N D   T I M E   A C C O U N T I N G
 
-On 1 MPI rank, each using 3 OpenMP threads
+On 1 MPI rank, each using 12 OpenMP threads
 
  Computing:          Num   Num      Call    Wall time         Giga-Cycles
                      Ranks Threads  Count      (s)         total sum    %
 -----------------------------------------------------------------------------
- Neighbor search        1    3        251     144.136        951.298   7.9
- Launch GPU ops.        1    3      10001       0.982          6.483   0.1
- Force                  1    3      10001     423.799       2797.071  23.2
- PME mesh               1    3      10001     935.424       6173.799  51.2
- Wait GPU local         1    3      10001      14.692         96.968   0.8
- NB X/F buffer ops.     1    3      19751      84.255        556.081   4.6
- Write traj.            1    3          5       6.658         43.942   0.4
- Update                 1    3      10001      63.084        416.352   3.5
- Constraints            1    3      10001      73.817        487.192   4.0
- Rest                                          78.905        520.773   4.3
+ Neighbor search        1   12        101      84.278       2224.934   6.4
+ Launch GPU ops.        1   12      20002       2.580         68.124   0.2
+ Force                  1   12      10001     608.832      16073.087  46.3
+ Wait PME GPU gather    1   12      10001       0.413         10.908   0.0
+ Reduce GPU PME F       1   12      10001      30.495        805.068   2.3
+ Wait GPU NB local      1   12      10001      22.211        586.360   1.7
+ NB X/F buffer ops.     1   12      19901     177.174       4677.368  13.5
+ Write traj.            1   12          4       5.526        145.892   0.4
+ Update                 1   12      10001      92.788       2449.590   7.1
+ Constraints            1   12      10001     199.089       5255.921  15.2
+ Rest                                          90.608       2392.045   6.9
 -----------------------------------------------------------------------------
- Total                                       1825.752      12049.957 100.0
+ Total                                       1313.994      34689.297 100.0
 -----------------------------------------------------------------------------
- Breakdown of PME mesh computation
------------------------------------------------------------------------------
- PME spread/gather      1    3      20002     847.561       5593.900  46.4
- PME 3D-FFT             1    3      20002      77.724        512.977   4.3
- PME solve Elec         1    3      10001      10.076         66.504   0.6
------------------------------------------------------------------------------
-
- GPU timings
------------------------------------------------------------------------------
- Computing:                         Count  Wall t (s)      ms/step       %
------------------------------------------------------------------------------
- Pair list H2D                        251       4.876       19.427     0.4
- X / q H2D                          10001      26.594        2.659     2.3
- Nonbonded F kernel                  9700    1084.004      111.753    91.9
- Nonbonded F+ene k.                    50       9.850      196.998     0.8
- Nonbonded F+prune k.                 200      27.093      135.466     2.3
- Nonbonded F+ene+prune k.              51      11.287      221.313     1.0
- F D2H                              10001      15.632        1.563     1.3
------------------------------------------------------------------------------
- Total                                       1179.336      117.922   100.0
------------------------------------------------------------------------------
-
-Average per-step force GPU/CPU evaluation time ratio: 117.922 ms/135.909 ms = 0.868
-For optimal performance this ratio should be close to 1!
 
                Core t (s)   Wall t (s)        (%)
-       Time:     5477.255     1825.752      300.0
-                         30:25
+       Time:    15767.931     1313.994     1200.0
                  (ns/day)    (hour/ns)
-Performance:        0.947       25.355
-Finished mdrun on rank 0 Mon Aug  6 16:27:47 2018
+Performance:        1.315       18.248
+Finished mdrun on rank 0 Wed Aug 29 11:28:26 2018
