@@ -26,8 +26,8 @@ def fsinfo(infile):
    """Print table with parallel file system  details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
-   formath = '{:>15s} {:>25s} {:>15s} {:>15s} {:>10s} {:>15s}'
-   formatp = '{:>15s} {:>25s} {:>15s} {:>15s} {:>10s} {:>15s}'
+   formath = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
+   formatp = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
    print(formath.format('System','Type','Vendor','Client','Server','Layout'))
    print(formath.format('======','====','======','======','======','======'))
    for system, details in systems.items():
@@ -39,8 +39,8 @@ def nodesinfo(infile):
    """Print table with node details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
-   formath = '{:>15s} {:>10s} {:>10s} {:>10s} {:>15s} {:>45s}'
-   formatp = '{:>15s} {:>10s} {:10d} {:10d} {:>15s} {:>45s}'
+   formath = '{:>15s} {:>10s} {:>10s} {:>10s} {:>15s} {:}'
+   formatp = '{:>15s} {:>10s} {:10d} {:10d} {:>15s} {:}'
    print(formath.format('System','Vendor','Nodes','Cores','Interconnect','Topology'))
    print(formath.format('======','======','=====','=====','============','========'))
    for system, details in systems.items():
