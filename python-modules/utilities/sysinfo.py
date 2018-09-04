@@ -39,8 +39,8 @@ def nodesinfo(infile):
    """Print table with node details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
-   formath = '{:>15s} {:>10s} {:>10s} {:>10s} {:>15s} {:}'
-   formatp = '{:>15s} {:>10s} {:10d} {:10d} {:>15s} {:}'
+   formath = '{:>15s} {:>10s} {:>6s} {:>7s} {:>13s} {:}'
+   formatp = '{:>15s} {:>10s} {:6d} {:7d} {:>13s} {:}'
    print(formath.format('System','Vendor','Nodes','Cores','Interconnect','Topology'))
    print(formath.format('======','======','=====','=====','============','========'))
    for system, details in systems.items():
