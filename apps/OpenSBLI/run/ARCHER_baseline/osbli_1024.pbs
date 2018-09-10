@@ -1,0 +1,16 @@
+#!/bin/bash --login
+#
+#PBS -N osbli_bench
+#PBS -l select=512
+#PBS -l walltime=0:20:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+nodes=512
+cores=$(( nodes * 24 ))
+
+timestamp=$(date '+%Y%m%d%H%M')
+aprun -n $cores ./OpenSBLI_mpi > output_${nodes}nodes_${timestamp}.txt 2> stderr.txt
+
+
