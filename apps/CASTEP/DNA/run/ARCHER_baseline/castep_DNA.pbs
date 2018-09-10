@@ -1,0 +1,38 @@
+#!/bin/bash --login
+#
+#PBS -N CASTEP_DNA
+#PBS -l select=512
+#PBS -l walltime=12:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+module load castep/18.1.0-gcc6
+
+if [ -f polyA20-no-wat.castep ]; then
+   rm polyA20-no-wat.castep
+fi
+
+nodes=512
+threads_a="1 2 4"
+
+sockets=2
+cores=12
+cpn=$(( sockets * cores ))
+
+
+for threads in $threads_a
+do
+   rankspn=$(( cpn / threads))
+   ranksps=$(( rankspn / sockets ))
+   ranks=$(( nodes * rankspn ))
+
+   export OMP_NUM_THREADS=${threads}
+   export KMP_AFFINITY=disabled
+   timestamp=$(date '+%Y%m%d%H%M')
+   aprun -n ${ranks} -N ${rankspn} -S ${ranksps} -d ${threads} castep.mpi polyA20-no-wat > stdout.txt 2> stderr.txt
+
+   mv polyA20-no-wat.castep polyA20-no-wat.castep.${nodes}nodes.${threads}threads.${timestamp}
+done
+
+
