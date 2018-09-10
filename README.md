@@ -56,7 +56,7 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * [CP2K](apps/CP2K)
 * [GROMACS](apps/GROMACS)
 * [OpenSBLI](apps/OpenSBLI) 
-* OASIS (Met Office Unified Model coupled to NEMO ocean model)
+* [OASIS](apps/OASIS) (Met Office Unified Model coupled to NEMO ocean model)
 
 # Systems Included
 i
