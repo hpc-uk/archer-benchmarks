@@ -6,6 +6,9 @@ The build process followed on each of the systems benchmarked (if available):
 
 * [ARCHER(EPCC)](https://github.com/ebreitmo/build-instructions/blob/master/OASIS/OASIS_ACRHER.md)
 
+## Example job scripts
+
+Example job scripts can be found [here](run/ARCHER/coupled_run.job).
 ## Results
 
 The output file on ARCHER [link](results/ARCHER).
