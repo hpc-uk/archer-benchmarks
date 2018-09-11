@@ -8,7 +8,7 @@ The build process followed on each of the systems benchmarked (if available):
 
 ## Results
 
-The output file on ARCHER [](results/ARCHER).
+The output file on ARCHER [link](results/ARCHER).
 To check if the run was successfull, see ```coupled_run.oxxx```:
 * Usually the model will either crash or run with NaNs if something goes wrong.
 * In the UM output check that the following lines don't vary too much:
