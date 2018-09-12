@@ -1,6 +1,9 @@
 # Results for the HadGEM3-GC31_benchmark on ARCHER
 
-The timings are averaged over five runs.
+* The timings are averaged over five runs.
+* See ```coupled_run.job``` to understand how the total number of nodes is calculated depending on the UM and the nemo grid sizes.
+  * We use two OpenMP threads per process for the UM-model.
+  * We use eight XIOS processors.
 
 UM: | UM_ATM_NPROCX | UM_ATM_NPROCY | NEMO: | NEMO_IPROC (jpni) | NEMO_JPROC (jpnj) | total number of nodes | overall time (min)
 ---- | -------|--------|---------|--------|----------|-------|----
