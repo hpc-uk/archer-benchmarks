@@ -20,7 +20,7 @@ Example job scripts can be found [here](run/ARCHER/coupled_run.job).
 
 ### The output
 
-The output file on ARCHER [link]().
+Two of the [output file on ARCHER](results/ARCHER).
 To check if the run was successfull, see ```coupled_run.oxxx```:
 * Usually the model will either crash or run with NaNs if something goes wrong.
 * In the UM output check that the following lines don't vary too much:
