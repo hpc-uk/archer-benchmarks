@@ -1,8 +1,12 @@
 # Results for the HadGEM3-GC31_benchmark on ARCHER
 
+The timings are averaged over five runs.
+
 UM: | UM_ATM_NPROCX | UM_ATM_NPROCY | NEMO: | NEMO_IPROC (jpni) | NEMO_JPROC (jpnj) | total number of nodes | overall time (min)
 ---- | -------|--------|---------|--------|----------|-------|----
  .  | 48 | 37 | .| 24 |36 | 189 | 
  .  | 36 | 37 | .| 24 |36 | 152 |
-
- 
+ .  | 60 | 47 | .| 24 |36 | 276 | 
+ .  | 60 | 47 | .| 33 |42 | 298 |
+ .  | 48 | 37 | .| 33 |42 | 217 | 
+ .  | 48 | 37 | .| 12 |18 | 168 |
