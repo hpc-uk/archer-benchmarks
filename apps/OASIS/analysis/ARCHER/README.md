@@ -4,6 +4,7 @@
 * See ```coupled_run.job``` to understand how the total number of nodes is calculated depending on the UM and the nemo grid sizes.
   * We use two OpenMP threads per process for the UM-model.
   * We use eight XIOS processors.
+ * We use the ```UM Run job``` start and end time here, which is slighlty shorter than the overall run time for the batch script (about 6%).
 
 UM: | UM_ATM_NPROCX | UM_ATM_NPROCY | NEMO: | NEMO_IPROC (jpni) | NEMO_JPROC (jpnj) | total number of nodes | overall time (min)
 ---- | -------|--------|---------|--------|----------|-------|----
