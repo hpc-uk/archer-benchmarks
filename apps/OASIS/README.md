@@ -1,5 +1,8 @@
 # OASIS HadGEN-G31 coupled model benchmark
 
+The models UM and Nemo are coupled. They have to exchange fields every one model-hour, so if one model runs an hour faster than the other it will need to wait for the other model to catch up, so they can exchange fields and carry on.
+If you speed up the slower model the coupled job will run faster, but if you up the faster model there won't be any change in total run time.
+
 ## Build Instructions
 
 The build process followed on each of the systems benchmarked (if available):
@@ -11,7 +14,13 @@ The build process followed on each of the systems benchmarked (if available):
 Example job scripts can be found [here](run/ARCHER/coupled_run.job).
 ## Results
 
-The output file on ARCHER [link](results/ARCHER).
+### Benchmark results
+
+* [ARCHER](analysis/ARCHER/README.md)
+
+### The output
+
+The output file on ARCHER [link]().
 To check if the run was successfull, see ```coupled_run.oxxx```:
 * Usually the model will either crash or run with NaNs if something goes wrong.
 * In the UM output check that the following lines don't vary too much:
@@ -38,5 +47,5 @@ w_max   level  proc         position             run w_max level timestep
 
   ````
 
-* Statistics re the job can be found in ```pe_output/atmos.fort6.pe0```.
+* Statistics re the job can be found in ```pe_output/atmos.fort6.pe0``` as well as the ```UM Run job```-start and end time.
 * There are many more other files generated during the run.
