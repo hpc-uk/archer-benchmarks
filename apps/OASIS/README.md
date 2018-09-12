@@ -47,5 +47,5 @@ w_max   level  proc         position             run w_max level timestep
 
   ````
 
-* Statistics re the job can be found in ```pe_output/atmos.fort6.pe0```.
+* Statistics re the job can be found in ```pe_output/atmos.fort6.pe0``` as well as the ```UM Run job```-start and end time.
 * There are many more other files generated during the run.
