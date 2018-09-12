@@ -1,6 +1,6 @@
 # OASIS HadGEN-G31 coupled model benchmark
 
-The models UM and Nemo are coupled. Tehy have to exchange fields every one model-hour, so if one model runs an hour faster than the other it will need to wait for the other model to catch up, so they can exchange fields and carry on.
+The models UM and Nemo are coupled. They have to exchange fields every one model-hour, so if one model runs an hour faster than the other it will need to wait for the other model to catch up, so they can exchange fields and carry on.
 If you speed up the slower model the coupled job will run faster, but if you up the faster model there won't be any change in total run time.
 
 ## Build Instructions
