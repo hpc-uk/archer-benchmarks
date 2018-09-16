@@ -6,11 +6,11 @@
   * We use eight XIOS processors.
  * We use the ```UM Run job``` start and end time from ```pe_output/atmos.fort6.pe0``` here, which is slighlty shorter than the overall run time for the batch script (can vary from less than 2% to - rarely - 17%).
 
-UM: | UM_ATM_NPROCX | UM_ATM_NPROCY | NEMO: | NEMO_IPROC (jpni) | NEMO_JPROC (jpnj) | total number of nodes | time (sec)
+UM_ATM_NPROCX | UM_ATM_NPROCY| NEMO_IPROC (jpni) | NEMO_JPROC (jpnj) | total number of nodes | UM time (sec)| total run time(s)
 ---- | -------|--------|---------|--------|----------|-------|----
- .  | 48 | 37 | .| 24 |36 | 189 | 1569.80±88.53
- .  | 36 | 37 | .| 24 |36 | 152 | 1801.60±106.90
- .  | 60 | 47 | .| 24 |36 | 276 | 1484.20±71.26
- .  | 60 | 47 | .| 33 |42 | 298 |
- .  | 48 | 37 | .| 33 |42 | 211 | 
- .  | 48 | 37 | .| 12 |18 | 168 | 1793.80±24.55
+ 48 | 37 | 24 |36 | 189 | 1569.80±88.53 | 1667.20±82.46
+ 36 | 37 | 24 |36 | 152 | 1801.60±106.90 | 1877.00±93.74
+ 60 | 47 | 24 |36 | 276 | 1484.20±71.26 | 1651.80±71.60
+ 60 | 47 | 33 |42 | 298 |
+ 48 | 37 | 33 |42 | 211 | 
+ 48 | 37 | 12 |18 | 168 | 1793.80±24.55 | 1864.00±16.17
