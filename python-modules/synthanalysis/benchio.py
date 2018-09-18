@@ -69,21 +69,6 @@ def getperf(filename, cpn):
     
     return resframe_proto
 
-def get_filelist(dir, stem):
-    """
-    Get list of date files in the specified directory
-    """
-
-    files = []
-    if os.path.exists(dir):
-        files = glob(os.path.join(dir, stem + '*' ))
-        files.sort()
-    else:
-        sys.stderr.write("Directory does not exist: {1}".format(dir))
-        sys.exit(1)
-
-    return files
-
 def get_perf_stats(df, striping, localsize, stat, writestats=False):
     query = '(Striping == {0} & (LocalSize == {1}))'.format(striping, localsize)
     df_q = df.query(query)
