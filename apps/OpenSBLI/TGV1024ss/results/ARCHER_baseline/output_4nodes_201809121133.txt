@@ -1,0 +1,2129 @@
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 107The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+3741824
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The simulation is performed is the strong scaling simulation 
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+The total number of grid points are 1073741824
+The number of grid points used per direction are 1024
+The total number of grid points are 1073741824
+block "taylor_green_vortex_block" decomposed on to a processor grid of 6 x 4 x 4  
+ ===========================================================================
+ rank 82 (5 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         66  :         -1  :    853  :    171
+     1  :         -1  :         86  :      0  :    256
+     2  :         81  :         83  :    512  :    256
+
+ ===========================================================================
+ rank 79 (4 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         63  :         95  :    682  :    171
+     1  :         75  :         -1  :    768  :    256
+     2  :         78  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 80 (5 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         64  :         -1  :    853  :    171
+     1  :         -1  :         84  :      0  :    256
+     2  :         -1  :         81  :      0  :    256
+
+ ===========================================================================
+ rank 83 (5 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         67  :         -1  :    853  :    171
+     1  :         -1  :         87  :      0  :    256
+     2  :         82  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 74 (4 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         58  :         90  :    682  :    171
+     1  :         70  :         78  :    512  :    256
+     2  :         73  :         75  :    512  :    256
+
+ ===========================================================================
+ rank 72 (4 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         56  :         88  :    682  :    171
+     1  :         68  :         76  :    512  :    256
+     2  :         -1  :         73  :      0  :    256
+
+ ===========================================================================
+ rank 75 (4 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         59  :         91  :    682  :    171
+     1  :         71  :         79  :    512  :    256
+     2  :         74  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 81 (5 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         65  :         -1  :    853  :    171
+     1  :         -1  :         85  :      0  :    256
+     2  :         80  :         82  :    256  :    256
+
+ ===========================================================================
+ rank 59 (3 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         43  :         75  :    512  :    170
+     1  :         55  :         63  :    512  :    256
+     2  :         58  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 48 (3 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         32  :         64  :    512  :    170
+     1  :         -1  :         52  :      0  :    256
+     2  :         -1  :         49  :      0  :    256
+
+ ===========================================================================
+ rank 57 (3 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         41  :         73  :    512  :    170
+     1  :         53  :         61  :    512  :    256
+     2  :         56  :         58  :    256  :    256
+
+ ===========================================================================
+ rank 77 (4 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         61  :         93  :    682  :    171
+     1  :         73  :         -1  :    768  :    256
+     2  :         76  :         78  :    256  :    256
+
+ ===========================================================================
+ rank 56 (3 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         40  :         72  :    512  :    170
+     1  :         52  :         60  :    512  :    256
+     2  :         -1  :         57  :      0  :    256
+
+ ===========================================================================
+ rank 33 (2 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         17  :         49  :    341  :    171
+     1  :         -1  :         37  :      0  :    256
+     2  :         32  :         34  :    256  :    256
+
+ ===========================================================================
+ rank 78 (4 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         62  :         94  :    682  :    171
+     1  :         74  :         -1  :    768  :    256
+     2  :         77  :         79  :    512  :    256
+
+ ===========================================================================
+ rank 76 (4 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         60  :         92  :    682  :    171
+     1  :         72  :         -1  :    768  :    256
+     2  :         -1  :         77  :      0  :    256
+
+ ===========================================================================
+ rank 58 (3 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         42  :         74  :    512  :    170
+     1  :         54  :         62  :    512  :    256
+     2  :         57  :         59  :    512  :    256
+
+ ===========================================================================
+ rank 73 (4 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         57  :         89  :    682  :    171
+     1  :         69  :         77  :    512  :    256
+     2  :         72  :         74  :    256  :    256
+
+ ===========================================================================
+ rank 32 (2 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         16  :         48  :    341  :    171
+     1  :         -1  :         36  :      0  :    256
+     2  :         -1  :         33  :      0  :    256
+
+ ===========================================================================
+ rank 51 (3 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         35  :         67  :    512  :    170
+     1  :         -1  :         55  :      0  :    256
+     2  :         50  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 55 (3 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         39  :         71  :    512  :    170
+     1  :         51  :         59  :    256  :    256
+     2  :         54  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 49 (3 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         33  :         65  :    512  :    170
+     1  :         -1  :         53  :      0  :    256
+     2  :         48  :         50  :    256  :    256
+
+ ===========================================================================
+ rank 31 (1 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         15  :         47  :    170  :    171
+     1  :         27  :         -1  :    768  :    256
+     2  :         30  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 1 (0 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         17  :      0  :    170
+     1  :         -1  :          5  :      0  :    256
+     2  :          0  :          2  :    256  :    256
+
+ ===========================================================================
+ rank 34 (2 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         18  :         50  :    341  :    171
+     1  :         -1  :         38  :      0  :    256
+     2  :         33  :         35  :    512  :    256
+
+ ===========================================================================
+ rank 29 (1 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         13  :         45  :    170  :    171
+     1  :         25  :         -1  :    768  :    256
+     2  :         28  :         30  :    256  :    256
+
+ ===========================================================================
+ rank 35 (2 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         19  :         51  :    341  :    171
+     1  :         -1  :         39  :      0  :    256
+     2  :         34  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 53 (3 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         37  :         69  :    512  :    170
+     1  :         49  :         57  :    256  :    256
+     2  :         52  :         54  :    256  :    256
+
+ ===========================================================================
+ rank 8 (0 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         24  :      0  :    170
+     1  :          4  :         12  :    512  :    256
+     2  :         -1  :          9  :      0  :    256
+
+ ===========================================================================
+ rank 30 (1 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         14  :         46  :    170  :    171
+     1  :         26  :         -1  :    768  :    256
+     2  :         29  :         31  :    512  :    256
+
+ ===========================================================================
+ rank 25 (1 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          9  :         41  :    170  :    171
+     1  :         21  :         29  :    512  :    256
+     2  :         24  :         26  :    256  :    256
+
+ ===========================================================================
+ rank 50 (3 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         34  :         66  :    512  :    170
+     1  :         -1  :         54  :      0  :    256
+     2  :         49  :         51  :    512  :    256
+
+ ===========================================================================
+ rank 28 (1 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         12  :         44  :    170  :    171
+     1  :         24  :         -1  :    768  :    256
+     2  :         -1  :         29  :      0  :    256
+
+ ===========================================================================
+ rank 7 (0 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         23  :      0  :    170
+     1  :          3  :         11  :    256  :    256
+     2  :          6  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 52 (3 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         36  :         68  :    512  :    170
+     1  :         48  :         56  :    256  :    256
+     2  :         -1  :         53  :      0  :    256
+
+ ===========================================================================
+ rank 54 (3 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         38  :         70  :    512  :    170
+     1  :         50  :         58  :    256  :    256
+     2  :         53  :         55  :    512  :    256
+
+ ===========================================================================
+ rank 6 (0 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         22  :      0  :    170
+     1  :          2  :         10  :    256  :    256
+     2  :          5  :          7  :    512  :    256
+
+ ===========================================================================
+ rank 24 (1 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          8  :         40  :    170  :    171
+     1  :         20  :         28  :    512  :    256
+     2  :         -1  :         25  :      0  :    256
+
+ ===========================================================================
+ rank 11 (0 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         27  :      0  :    170
+     1  :          7  :         15  :    512  :    256
+     2  :         10  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 10 (0 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         26  :      0  :    170
+     1  :          6  :         14  :    512  :    256
+     2  :          9  :         11  :    512  :    256
+
+ ===========================================================================
+ rank 27 (1 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         11  :         43  :    170  :    171
+     1  :         23  :         31  :    512  :    256
+     2  :         26  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 3 (0 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         19  :      0  :    170
+     1  :         -1  :          7  :      0  :    256
+     2  :          2  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 0 (0 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         16  :      0  :    170
+     1  :         -1  :          4  :      0  :    256
+     2  :         -1  :          1  :      0  :    256
+
+Finished block decomposition
+End of the simulation information
+---------------------------------------------------------------------------
+ ===========================================================================
+ rank 26 (1 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         10  :         42  :    170  :    171
+     1  :         22  :         30  :    512  :    256
+     2  :         25  :         27  :    512  :    256
+
+ ===========================================================================
+ rank 9 (0 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         25  :      0  :    170
+     1  :          5  :         13  :    512  :    256
+     2  :          8  :         10  :    256  :    256
+
+ ===========================================================================
+ rank 2 (0 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         18  :      0  :    170
+     1  :         -1  :          6  :      0  :    256
+     2  :          1  :          3  :    512  :    256
+
+ ===========================================================================
+ rank 5 (0 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         21  :      0  :    170
+     1  :          1  :          9  :    256  :    256
+     2  :          4  :          6  :    256  :    256
+
+ ===========================================================================
+ rank 4 (0 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         20  :      0  :    170
+     1  :          0  :          8  :    256  :    256
+     2  :         -1  :          5  :      0  :    256
+
+ ===========================================================================
+ rank 93 (5 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         77  :         -1  :    853  :    171
+     1  :         89  :         -1  :    768  :    256
+     2  :         92  :         94  :    256  :    256
+
+ ===========================================================================
+ rank 63 (3 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         47  :         79  :    512  :    170
+     1  :         59  :         -1  :    768  :    256
+     2  :         62  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 60 (3 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         44  :         76  :    512  :    170
+     1  :         56  :         -1  :    768  :    256
+     2  :         -1  :         61  :      0  :    256
+
+ ===========================================================================
+ rank 14 (0 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         30  :      0  :    170
+     1  :         10  :         -1  :    768  :    256
+     2  :         13  :         15  :    512  :    256
+
+ ===========================================================================
+ rank 39 (2 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         23  :         55  :    341  :    171
+     1  :         35  :         43  :    256  :    256
+     2  :         38  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 38 (2 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         22  :         54  :    341  :    171
+     1  :         34  :         42  :    256  :    256
+     2  :         37  :         39  :    512  :    256
+
+ ===========================================================================
+ rank 12 (0 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         28  :      0  :    170
+     1  :          8  :         -1  :    768  :    256
+     2  :         -1  :         13  :      0  :    256
+
+ ===========================================================================
+ rank 36 (2 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         20  :         52  :    341  :    171
+     1  :         32  :         40  :    256  :    256
+     2  :         -1  :         37  :      0  :    256
+
+ ===========================================================================
+ rank 18 (1 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          2  :         34  :    170  :    171
+     1  :         -1  :         22  :      0  :    256
+     2  :         17  :         19  :    512  :    256
+
+ ===========================================================================
+ rank 85 (5 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         69  :         -1  :    853  :    171
+     1  :         81  :         89  :    256  :    256
+     2  :         84  :         86  :    256  :    256
+
+ ===========================================================================
+ rank 89 (5 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         73  :         -1  :    853  :    171
+     1  :         85  :         93  :    512  :    256
+     2  :         88  :         90  :    256  :    256
+
+ ===========================================================================
+ rank 15 (0 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         31  :      0  :    170
+     1  :         11  :         -1  :    768  :    256
+     2  :         14  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 95 (5 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         79  :         -1  :    853  :    171
+     1  :         91  :         -1  :    768  :    256
+     2  :         94  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 94 (5 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         78  :         -1  :    853  :    171
+     1  :         90  :         -1  :    768  :    256
+     2  :         93  :         95  :    512  :    256
+
+ ===========================================================================
+ rank 86 (5 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         70  :         -1  :    853  :    171
+     1  :         82  :         90  :    256  :    256
+     2  :         85  :         87  :    512  :    256
+
+ ===========================================================================
+ rank 84 (5 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         68  :         -1  :    853  :    171
+     1  :         80  :         88  :    256  :    256
+     2  :         -1  :         85  :      0  :    256
+
+ ===========================================================================
+ rank 88 (5 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         72  :         -1  :    853  :    171
+     1  :         84  :         92  :    512  :    256
+     2  :         -1  :         89  :      0  :    256
+
+ ===========================================================================
+ rank 91 (5 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         75  :         -1  :    853  :    171
+     1  :         87  :         95  :    512  :    256
+     2  :         90  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 92 (5 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         76  :         -1  :    853  :    171
+     1  :         88  :         -1  :    768  :    256
+     2  :         -1  :         93  :      0  :    256
+
+ ===========================================================================
+ rank 87 (5 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         71  :         -1  :    853  :    171
+     1  :         83  :         91  :    256  :    256
+     2  :         86  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 90 (5 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         74  :         -1  :    853  :    171
+     1  :         86  :         94  :    512  :    256
+     2  :         89  :         91  :    512  :    256
+
+ ===========================================================================
+ rank 42 (2 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         26  :         58  :    341  :    171
+     1  :         38  :         46  :    512  :    256
+     2  :         41  :         43  :    512  :    256
+
+ ===========================================================================
+ rank 68 (4 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         52  :         84  :    682  :    171
+     1  :         64  :         72  :    256  :    256
+     2  :         -1  :         69  :      0  :    256
+
+ ===========================================================================
+ rank 62 (3 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         46  :         78  :    512  :    170
+     1  :         58  :         -1  :    768  :    256
+     2  :         61  :         63  :    512  :    256
+
+ ===========================================================================
+ rank 17 (1 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          1  :         33  :    170  :    171
+     1  :         -1  :         21  :      0  :    256
+     2  :         16  :         18  :    256  :    256
+
+ ===========================================================================
+ rank 71 (4 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         55  :         87  :    682  :    171
+     1  :         67  :         75  :    256  :    256
+     2  :         70  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 69 (4 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         53  :         85  :    682  :    171
+     1  :         65  :         73  :    256  :    256
+     2  :         68  :         70  :    256  :    256
+
+ ===========================================================================
+ rank 61 (3 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         45  :         77  :    512  :    170
+     1  :         57  :         -1  :    768  :    256
+     2  :         60  :         62  :    256  :    256
+
+ ===========================================================================
+ rank 70 (4 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         54  :         86  :    682  :    171
+     1  :         66  :         74  :    256  :    256
+     2  :         69  :         71  :    512  :    256
+
+ ===========================================================================
+ rank 65 (4 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         49  :         81  :    682  :    171
+     1  :         -1  :         69  :      0  :    256
+     2  :         64  :         66  :    256  :    256
+
+ ===========================================================================
+ rank 67 (4 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         51  :         83  :    682  :    171
+     1  :         -1  :         71  :      0  :    256
+     2  :         66  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 13 (0 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         29  :      0  :    170
+     1  :          9  :         -1  :    768  :    256
+     2  :         12  :         14  :    256  :    256
+
+ ===========================================================================
+ rank 19 (1 0 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          3  :         35  :    170  :    171
+     1  :         -1  :         23  :      0  :    256
+     2  :         18  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 66 (4 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         50  :         82  :    682  :    171
+     1  :         -1  :         70  :      0  :    256
+     2  :         65  :         67  :    512  :    256
+
+ ===========================================================================
+ rank 20 (1 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          4  :         36  :    170  :    171
+     1  :         16  :         24  :    256  :    256
+     2  :         -1  :         21  :      0  :    256
+
+ ===========================================================================
+ rank 21 (1 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          5  :         37  :    170  :    171
+     1  :         17  :         25  :    256  :    256
+     2  :         20  :         22  :    256  :    256
+
+ ===========================================================================
+ rank 22 (1 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          6  :         38  :    170  :    171
+     1  :         18  :         26  :    256  :    256
+     2  :         21  :         23  :    512  :    256
+
+ ===========================================================================
+ rank 64 (4 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         48  :         80  :    682  :    171
+     1  :         -1  :         68  :      0  :    256
+     2  :         -1  :         65  :      0  :    256
+
+ ===========================================================================
+ rank 23 (1 1 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          7  :         39  :    170  :    171
+     1  :         19  :         27  :    256  :    256
+     2  :         22  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 16 (1 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          0  :         32  :    170  :    171
+     1  :         -1  :         20  :      0  :    256
+     2  :         -1  :         17  :      0  :    256
+
+ ===========================================================================
+ rank 37 (2 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         21  :         53  :    341  :    171
+     1  :         33  :         41  :    256  :    256
+     2  :         36  :         38  :    256  :    256
+
+ ===========================================================================
+ rank 43 (2 2 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         27  :         59  :    341  :    171
+     1  :         39  :         47  :    512  :    256
+     2  :         42  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 40 (2 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         24  :         56  :    341  :    171
+     1  :         36  :         44  :    512  :    256
+     2  :         -1  :         41  :      0  :    256
+
+ ===========================================================================
+ rank 45 (2 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         29  :         61  :    341  :    171
+     1  :         41  :         -1  :    768  :    256
+     2  :         44  :         46  :    256  :    256
+
+ ===========================================================================
+ rank 44 (2 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         28  :         60  :    341  :    171
+     1  :         40  :         -1  :    768  :    256
+     2  :         -1  :         45  :      0  :    256
+
+ ===========================================================================
+ rank 47 (2 3 3 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         31  :         63  :    341  :    171
+     1  :         43  :         -1  :    768  :    256
+     2  :         46  :         -1  :    768  :    256
+
+ ===========================================================================
+ rank 46 (2 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         30  :         62  :    341  :    171
+     1  :         42  :         -1  :    768  :    256
+     2  :         45  :         47  :    512  :    256
+
+ ===========================================================================
+ rank 41 (2 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         25  :         57  :    341  :    171
+     1  :         37  :         45  :    512  :    256
+     2  :         40  :         42  :    256  :    256
+
+Iteration is 0 
+End of time iteration loop 
+performed 100 iterations
+
+---------------------------------------------------------------------------
+
+Timings are:
+------------------Simulation time-----------------------------------------
+Total Wall time of the time iteration loop for 100 iterations, 3010.727554
+Time taken for 1 iteration, 30.107276
+
+Not performing file I/O as write HDF5 is set to False
+Application 31903460 resources: utime ~288785s, stime ~437s, Rss ~2724364, inblocks ~67537, outblocks ~130454
