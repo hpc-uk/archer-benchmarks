@@ -3,7 +3,25 @@ import os.path
 import re
 from glob import glob
 
-def getperf(filename, cpn):
+def create_df_list(filelist, cpn):
+    """Create a list of dictionaries from multiple benchio log files which can
+    then be used to create a Pandas dataframe.
+
+    Input parameters are:
+    - filelist: list of benchio output files ([String])
+    - cpn: Cores per node for the platform used (Int)
+
+    Returns
+    - df_list: A list of dicts than can be used to create a Pandas dataframe
+    """
+    df_list = []
+    for file in filelist:
+        resdict = get_perf_dict(file, cpn)
+        if resdict is not None:
+            df_list.extend(resdict) 
+    return df_list 
+
+def get_perf_dict(filename, cpn):
     resframe_proto = []
     infile = open(filename, 'r')
     resdict = {}

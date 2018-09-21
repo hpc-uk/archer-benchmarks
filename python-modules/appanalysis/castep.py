@@ -4,13 +4,23 @@ import os
 
 def create_df_list(filelist, cpn):
     """Create a list of dictionaries from multiple CASTEP log files which can
-    then be used to create a Pandas dataframe"""
+    then be used to create a Pandas dataframe.
+
+    Input parameters are:
+    - filelist: list of CASTEP output files ([String])
+    - cpn: Cores per node for the platform used (Int)
+
+    Returns
+    - df_list: A list of dicts than can be used to create a Pandas dataframe
+    """
     df_list = []
     for file in filelist:
-       df_list.append(getcastepperf(file, cpn)) 
+        resdict = get_perf_dict(file, cpn)
+        if resdict is not None:
+            df_list.append(resdict) 
     return df_list 
 
-def getcastepperf(castepfilename, cpn):
+def get_perf_dict(filename, cpn):
     """Extract the details from CASTEP output.
 
     This routine calculates the time for each SCF cycle in the output, removes
@@ -19,8 +29,8 @@ def getcastepperf(castepfilename, cpn):
     'SCF cycles per second' is also computed.
 
     Input parameters are:
-    - castepfilename: The file path to read from (String)
-    - cpn: Cores per node of the system the calculation was run on
+    - filename: The file path to read from (String)
+    - cpn: Cores per node of the system the calculation was run on (Int)
 
     The function returns a dict containing the details extracted from the 
     CASTEP output. This dict has the following fields:
@@ -34,10 +44,10 @@ def getcastepperf(castepfilename, cpn):
     - Perf: performance in SCF cycles per second
     - Count: set to 1, used for counting entries in performance results
     """
-    infile = open(castepfilename, 'r')
+    infile = open(filename, 'r')
     resdict = {}
     tvals = []
-    resdict['File'] = os.path.abspath(castepfilename)
+    resdict['File'] = os.path.abspath(filename)
     # Default to 1 thread as CASTEP only reports threads if > 1
     resdict['Threads'] = 1
     for line in infile:
@@ -60,6 +70,11 @@ def getcastepperf(castepfilename, cpn):
             resdict['Date'] = tokens[1].strip()         
     infile.close()
 
+    # If we do not have enough SCF cycle data then exit and return None
+    if len(tvals) < 3:
+        resdict = None
+        return resdict
+
     resdict['Cores'] = resdict['Processes'] * resdict['Threads']
     resdict['Nodes'] = int(resdict['Cores'] / cpn)
 
@@ -81,12 +96,12 @@ def get_perf_stats(df, threads, stat, writestats=False):
     df_q = df.query(query)
     df_num = df_q.drop(['File', 'Date'], 1)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes']).agg(groupf)
+    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     if writestats:
         print(df_group)
-    writeperf = df_group['Perf',stat].tolist()
+    perf = df_group['Perf',stat].tolist()
     nodes = df_group.index.get_level_values(0).tolist()
-    return nodes, writeperf
+    return nodes, perf
 
 def getmeancycle(castepfilename):
     """Extract the mean SCF cycle time from CASTEP output. Max and min values are removed."""
