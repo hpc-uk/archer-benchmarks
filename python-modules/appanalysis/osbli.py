@@ -42,7 +42,7 @@ def get_perf_dict(filename, cpn):
     tvals = []
     resdict['File'] = os.path.abspath(filename)
     # Use to catch if we are missing data
-    resdict['Time'] = False
+    resdict['Time'] = None
     for line in infile:
         if re.search('Time taken for ', line):
             line = line.strip()
