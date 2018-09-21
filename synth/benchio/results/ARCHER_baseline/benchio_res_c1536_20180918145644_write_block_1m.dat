@@ -1,0 +1,38 @@
+ 
+ Simple Parallel IO benchmark
+ ----------------------------
+ 
+ Running on  1536  process(es)
+ Process grid is ( 8 ,  12 ,  16 )
+ Array size is   ( 256 ,  256 ,  256 )
+ Global size is  ( 2048 ,  3072 ,  4096 )
+ 
+ Total amount of data =  196608.  MiB
+ 
+ Clock resolution is  3.70233246945575673E-4 , usecs
+ 
+ ------
+ MPI-IO                                                          
+ ------
+ 
+ Writing to striped/mpiio.dat                                               
+ time =  40.900697818025947 , rate =  4806.9595505373018  MiB/s
+ time =  44.694965104572475 , rate =  4398.8847410440467  MiB/s
+ time =  42.426871602423489 , rate =  4634.0442406969605  MiB/s
+ time =  48.575221599079669 , rate =  4047.4956887016042  MiB/s
+ time =  44.496391642838717 , rate =  4418.5155861203912  MiB/s
+ time =  48.738091410137713 , rate =  4033.9700286069219  MiB/s
+ time =  42.906520664691925 , rate =  4582.2405768219305  MiB/s
+ time =  48.084798731841147 , rate =  4088.7766026939544  MiB/s
+ time =  45.362140805460513 , rate =  4334.1869785901536  MiB/s
+ time =  37.358847470022738 , rate =  5262.6891168888715  MiB/s
+ mintime =  37.358847470022738 , maxrate =  5262.6891168888715  MiB/s
+ avgtime =  44.354454684909435 , avgrate =  4460.7763110702144  MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ --------
+ Finished
+ --------
+ 
+Application 31961131 resources: utime ~725380s, stime ~3660s, Rss ~207988, inblocks ~946279, outblocks ~4028069329
