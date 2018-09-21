@@ -13,23 +13,29 @@ Instructions for compiling CP2K (for ARCHER) can be found [here](https://github.
 
 
 ## Required files
-The input and data files required for this benchmark can be found in the `input` directory in this repository. The submit scripts can be found in the `job_scripts` directory, also in this repository.
+The input and data files required for this benchmark can be found in the [input](input/) directory in this repository. The submit scripts can be found in the job_scripts directory:
+
+- [ARCHER job submission scripts](job_scripts/ARCHER/)
 
 ## Results
-Results from this benchmark can be found in the `results` directory of this repository. Each run was completed using 6 OpenMP threads per MPI process.
+Results from this benchmark can be found in the results directory of this repository.
 
+- [ARCHER results](results/ARCHER_baseline/). Each run was completed using 6 OpenMP threads per MPI process.
 
+## Running the benchmark
 
-# Setup calculation
+### ARCHER
 
-In order to run the benchmark, first a setup calculation must be performed to produce an input wave function file. This calculation can be carried out on 8 nodes, taking around 3 minutes.
+#### Setup Calculation
+
+In order to run the benchmark, first a setup calculation must be performed to produce an input wave function file. This setup calculation can be carried out on 8 nodes, taking around 3 minutes.
 
 To run this setup calculation, copy `input_bulk_B88_3.inp` and `BASIS_OPT` into a working directory. Also copy the batch script `setup_ARCHER.pbs` into this working directory, remembering to change the budget code, and path to the `CP2K.psmp` executable. Now submit this job (the runtime is short enough that it can be submitted to the short queue on ARCHER).
 
 Once the job has completed, rename `LiH_bulk_3-RESTART.wfn` to `B88.wfn`. This is the input file required by the benchmark.
 
+#### Benchmark Calculation
 
-# Running the benchmark
 Once the input file `B88.wfn` has been created (see above), the main benchmark calculation can be run. Copy `input_bulk_HFX_3.inp`, `BASIS_OPT` and `B88.wfn` into a working directory.
 
 Also copy the `LiH_HFX_ARCHER.pbs` batch script into your work directory, remembering to change the budget code, path to the `CP2K.psmp` executable, as well as the node/core/thread counts to the appropriate values. __Please note:__ the benchmark requires a lot of memory, so must be run on 128 or more nodes. Also, using several OpenMP threads per MPI process is beneficial for saving memory.
