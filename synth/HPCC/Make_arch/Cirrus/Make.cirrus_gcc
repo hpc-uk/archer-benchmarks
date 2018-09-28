@@ -94,7 +94,7 @@ MPlib        =
 #
 LAdir        =
 LAinc        = 
-LAlib        = -L/lustre/sw/intel/compilers_and_libraries_2017.2.174/linux/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lmkl_scalapack_lp64 -lmkl_blacs_sgimpt_lp64
+LAlib        = -L/lustre/sw/intel/compilers_and_libraries_2017.2.174/linux/mkl/lib/intel64 -lmkl_gf_lp64 -lmkl_core -lmkl_sequential -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
 #
 # ----------------------------------------------------------------------
 # - F77 / C interface --------------------------------------------------
