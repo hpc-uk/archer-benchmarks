@@ -17,3 +17,22 @@
  
  Writing to striped/mpiio.dat                                               
  time =  7.7248407052829862 , rate =  3181.4248264294401  MiB/s
+ time =  10.275479892268777 , rate =  2391.7131129311897  MiB/s
+ time =  7.6039056070148945 , rate =  3232.0232877861736  MiB/s
+ time =  10.272955623455346 , rate =  2392.3008042483661  MiB/s
+ time =  7.7335562640801072 , rate =  3177.8394261056392  MiB/s
+ time =  7.6385083673521876 , rate =  3217.3820879794393  MiB/s
+ time =  7.950204779393971 , rate =  3091.2411292471616  MiB/s
+ time =  6.9346288815140724 , rate =  3543.9531689306782  MiB/s
+ time =  10.360150123015046 , rate =  2372.1663979949944  MiB/s
+ time =  8.5624106656759977 , rate =  2870.2197266147755  MiB/s
+ mintime =  6.9346288815140724 , maxrate =  3543.9531689306782  MiB/s
+ avgtime =  8.5056640909053378 , avgrate =  2947.0263968267855  MiB/s
+ Deleting: striped/mpiio.dat                                               
+ 
+ 
+ --------
+ Finished
+ --------
+ 
+Application 32157521 resources: utime ~20439s, stime ~518s, Rss ~163736, inblocks ~128279, outblocks ~503507806
