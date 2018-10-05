@@ -49,7 +49,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-${MPI_LAUNCH} -n $tasks -ppn  $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS
+${MPI_LAUNCH} -n $tasks -ppn  $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout
 date
 
 echo

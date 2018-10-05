@@ -55,6 +55,6 @@ resfile="${casename}_${nodes}nodes_${timestamp}"
 
 MPI_LAUNCH=mpirun
 
-${MPI_LAUNCH} -n ${cores} -ppn ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile}
+${MPI_LAUNCH} -n ${cores} -ppn ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile} -noconfout
 
 rm ener.edr

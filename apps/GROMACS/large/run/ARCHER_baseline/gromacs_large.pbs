@@ -45,7 +45,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-aprun -n $tasks -N $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] -j $HTHREADS_PER_CORE $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS
+aprun -n $tasks -N $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] -j $HTHREADS_PER_CORE $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout
 date
 
 echo

@@ -46,7 +46,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-mpiexec_mpt -n $tasks -ppn  $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] omplace -nt $OMP_NUM_THREADS $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS
+mpiexec_mpt -n $tasks -ppn  $[$CHIPS_PER_NODE*$TASKS_PER_CHIP] omplace -nt $OMP_NUM_THREADS $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout
 date
 
 echo

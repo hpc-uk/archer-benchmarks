@@ -54,7 +54,7 @@ timestamp=$(date '+%Y%m%d%H%M')
 resfile="${casename}_${nodes}nodes_${timestamp}"
 
 export OMP_NUM_THREADS=${cpucores}
-${mdrun} -s ${casename}.tpr -g ${resfile}
+${mdrun} -s ${casename}.tpr -g ${resfile} -noconfout
 
 rm ener.edr
 

@@ -7,6 +7,12 @@ with GPU-based systems.
 
 ## Large Benchmark
 
+### Run options
+
+In all cases, the following options were specified to `mdrun`:
+
+* `-noconfout`
+* `-ntomp <number of OMP threads>` (where `<number of OMP threads>` is replaced by the number of OpenMP threads used).
 
 ### Input data
 
@@ -43,6 +49,13 @@ Example job scripts can be found in this repository:
 * [Example job submission scripts from large GROMACS benchmark](large/run/)
 
 ## Small benchmark: 1400k-atom (pair of hEGFR Dimers of 1IVO and 1NQL)
+
+### Run options
+
+In all cases, the following options were specified to `mdrun`:
+
+* `-noconfout`
+* `-ntomp <number of OMP threads>` (where `<number of OMP threads>` is replaced by the number of OpenMP threads used).
 
 ### Input data
 

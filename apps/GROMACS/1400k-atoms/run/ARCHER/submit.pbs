@@ -21,7 +21,7 @@ resfile="${casename}_${nodes}nodes_${timestamp}"
 
 # export I_MPI_PIN_DOMAIN=omp
 export OMP_NUM_THREADS=1
-aprun -n ${cores} -N ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile}
+aprun -n ${cores} -N ${cpn} ${mdrun} -s ${casename}.tpr -g ${resfile} -noconfout
 
 rm ener.edr
 
