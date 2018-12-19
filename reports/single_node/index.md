@@ -287,6 +287,10 @@ We have run three different HPC application benchamrks on a number of different 
 different processor architectures. In particular, we compared the single node performance of the applications across the different
 HPC systems.
 
+In general, we were able to broadly correlate the performance of the different applications to particular properties of the 
+compute node architecture (such as floating point performance and memory bandwidth) but there we a number of exceptions
+to these correlations that we plan to investigate further which we describe below.
+
 ### 4.1 CASTEP
 
 CASTEP performance was generally correlated to floating point performance of the compute node. However, the Isambard
@@ -318,7 +322,18 @@ of the benchmark.
 
 ### 4.3 GROMACS
 
-The performance of the GROMACS benchmark was correlated with the floating point performance of the compute nodes.
+The performance of the GROMACS benchmark was correlated with the floating point performance of the compute nodes. There
+is an issue with the performance of the GROMACS benchmark on the JADE GPU-accelerated system that requires further 
+investigation - the results on the Wilkes2-GPU system with the same GPU accelerators demonstrate that good performance
+can be achieved on the hardware.
+
+While the performance of the GROMACS benchmark was correlated with the order of increasing floating point performance of
+the different compute node architectures, we also saw that the ratio of observed performance improvement did not match 
+the ratio of increased theoretical maximum floating point performance. As the increasing floating point performance 
+theoretically available on the different architectures is obtained mostly from increased SIMD, this difference in 
+performance ratios suggests that the GROMACS benchmark is less able to exploit the additional SIMD capability as 
+this is added to processors. We plan to investigate further if this is a function of the benchmark or the GROMACS
+application.
 
 <a id="acknowledgements"></a>
 ## 5. Acknowledgements
