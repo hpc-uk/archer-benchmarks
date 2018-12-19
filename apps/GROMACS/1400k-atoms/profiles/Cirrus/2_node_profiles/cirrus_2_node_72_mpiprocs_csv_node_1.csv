@@ -1,0 +1,699 @@
+Function,CPU Time,CPU Time:Effective Time,CPU Time:Effective Time:Idle,CPU Time:Effective Time:Poor,CPU Time:Effective Time:Ok,CPU Time:Effective Time:Ideal,CPU Time:Effective Time:Over,CPU Time:Spin Time,CPU Time:Spin Time:Imbalance or Serial Spinning,CPU Time:Spin Time:Lock Contention,CPU Time:Spin Time:Other,CPU Time:Overhead Time,CPU Time:Overhead Time:Creation,CPU Time:Overhead Time:Scheduling,CPU Time:Overhead Time:Reduction,CPU Time:Overhead Time:Atomics,CPU Time:Overhead Time:Other,Module,Function (Full),Source File,Start Address
+nbnxn_kernel_ElecEw_VdwLJFSw_F_4xn,14466.496575,14466.496575,0.0,0.940032,14465.556543,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_kernel_ElecEw_VdwLJFSw_F_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*)[3], float*, float*)",[Unknown],0xb90ef0
+PMPI_Waitall,1578.280928,1394.236384,0.0,4.774679,1389.461705,0.0,0.0,184.044543,0.0,0.0,184.044543,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Waitall,waitall.c,0x124df0
+PMPI_Sendrecv,744.846185,665.311219,0.0,2.536736,662.774484,0.0,0.0,79.534966,0.0,0.0,79.534966,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Sendrecv,sendrecv.c,0x10a4a0
+spread_on_grid._omp_fn.1,420.707220,420.707220,0.0,0.0,420.707220,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,spread_on_grid._omp_fn.1,[Unknown],0x2215d0
+gather_f_bsplines,364.776849,364.776849,0.0,0.0,364.776849,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gather_f_bsplines(gmx_pme_t const*, float const*, int, pme_atomcomm_t const*, splinedata_t const*, float)",[Unknown],0x1fb720
+fft5d_execute,261.011277,261.011277,0.0,0.0,261.011277,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"fft5d_execute(fft5d_plan_t*, int, gmx_wallcycle*)",[Unknown],0xffb8e0
+PMPI_Alltoall,224.842482,209.869139,0.0,0.0,209.869139,0.0,0.0,14.973343,0.0,0.0,14.973343,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Alltoall,alltoall.c,0x6ace0
+nbnxn_kernel_ElecEw_VdwLJFSw_VF_4xn,196.749228,196.749228,0.0,0.218968,196.530260,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_kernel_ElecEw_VdwLJFSw_VF_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*)[3], float*, float*, float*, float*)",[Unknown],0xb96600
+nbnxn_kernel_prune_4xn,152.904960,152.904960,0.0,0.0,152.904960,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_kernel_prune_4xn(nbnxn_pairlist_t*, nbnxn_atomdata_t const*, float const (*)[3], float)",[Unknown],0xd228a0
+nbnxn_make_pairlist_part,150.908571,150.908571,0.0,0.0,150.908571,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_make_pairlist_part(nbnxn_search*, nbnxn_grid_t const*, nbnxn_grid_t const*, nbnxn_search_work_t*, nbnxn_atomdata_t const*, t_blocka const&, float, int, int, int, int, int, float, int, int, nbnxn_pairlist_t*, t_nblist*)",[Unknown],0xf7f0e0
+PMPI_Recv,128.576270,116.587512,0.0,0.539952,116.047560,0.0,0.0,11.988758,0.0,0.0,11.988758,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Recv,recv.c,0xfa8f0
+solve_pme_yzx,103.288546,103.288546,0.0,0.0,103.288546,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"solve_pme_yzx(gmx_pme_t const*, t_complex*, float, int, int, int)",[Unknown],0x2145c0
+__memset_sse2,80.098692,80.098692,0.0,0.239983,79.858709,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__memset_sse2,[Unknown],0x88e40
+PMPI_Bcast,77.605518,69.007418,0.0,1.660977,67.346440,0.0,0.0,8.598101,0.0,0.0,8.598101,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Bcast,bcast.c,0x74c20
+copy_rvec_to_nbat_real,75.009183,75.009183,0.0,0.0,75.009183,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"copy_rvec_to_nbat_real(int const*, int, int, float const (*)[3], int, float*, int)",[Unknown],0xf6e790
+"settleTemplate<gmx::SimdFloat, gmx::SimdFBool, (int)8, float const*, (bool)1, (bool)0>.isra.4",67.053364,67.053364,0.0,0.020006,67.033358,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"void settleTemplate<gmx::SimdFloat, gmx::SimdFBool, (int)8, float const*, (bool)1, (bool)0>(gmx_settledata*, int, int, float const*, float const*, float*, float, float*, float (*)[3], bool*).isra.4",[Unknown],0xeff600
+do_pairs,65.553983,65.553983,0.0,0.110013,65.443970,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_pairs(int, int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float const*, float*, t_mdatoms const*, t_forcerec const*, int, gmx_grppairener_t*, int*)",[Unknown],0x1801d0
+spread_on_grid._omp_fn.0,60.194691,60.194691,0.0,0.0,60.194691,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,spread_on_grid._omp_fn.0,[Unknown],0x21f180
+urey_bradley_noener_simd,54.167772,54.167772,0.0,0.029998,54.137774,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"urey_bradley_noener_simd(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x169db0
+dih_angle_simd,52.097283,52.097283,0.0,0.039007,52.058276,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dih_angle_simd(float const (*)[3], int const*, int const*, int const*, int const*, float const*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*, gmx::SimdFloat*)",[Unknown],0x163c60
+do_force_cutsVERLET.isra.42,51.647643,51.647643,0.0,0.0,51.647643,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_force_cutsVERLET(_IO_FILE*, t_commrec*, t_inputrec*, long, t_nrnb*, gmx_wallcycle*, gmx_localtop_t*, gmx_groups_t*, float (*)[3], gmx::ArrayRef<gmx::BasicVector<float>>, history_t*, gmx::ArrayRef<gmx::BasicVector<float>>, float (*)[3], t_mdatoms*, gmx_enerdata_t*, t_fcdata*, float*, t_graph*, t_forcerec*, interaction_const_t*, gmx_vsite_t*, float*, double, gmx_edsam*, int, int, DdOpenBalanceRegionBeforeForceComputation, DdCloseBalanceRegionAfterForceComputation).isra.42",[Unknown],0xfb8010
+pdihs_noener_simd,51.320103,51.320103,0.0,0.010000,51.310103,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"pdihs_noener_simd(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x16c630
+hc2cbdftv_16,48.664759,48.664759,0.0,0.009997,48.654762,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hc2cbdftv_16,[Unknown],0x132c7c0
+do_redist_pos_coeffs,48.356729,48.356729,0.0,0.0,48.356729,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_redist_pos_coeffs(gmx_pme_t*, t_commrec*, int, int, int, float (*)[3], float*)",[Unknown],0x212690
+hc2cfdftv_16,48.271517,48.271517,0.0,0.050000,48.221517,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hc2cfdftv_16,[Unknown],0x13306f0
+dd_move_f,47.062420,47.062420,0.0,0.040031,47.022390,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_move_f(gmx_domdec_t*, float (*)[3], float (*)[3])",[Unknown],0x1c0a60
+n1fv_13,45.970438,45.970438,0.0,0.058993,45.911445,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_13,[Unknown],0x12150b0
+update_coords._omp_fn.3,45.064388,45.064388,0.0,0.060030,45.004358,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,update_coords._omp_fn.3,[Unknown],0xfd05d0
+dd_move_x,44.998856,44.998856,0.0,0.010015,44.988841,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_move_x(gmx_domdec_t*, float (*)[3], float (*)[3])",[Unknown],0x1bf4f0
+n1bv_13,41.579708,41.579708,0.0,0.009997,41.569711,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_13,[Unknown],0x1205d50
+nbnxn_atomdata_add_nbat_f_to_f._omp_fn.1,40.764363,40.764363,0.0,0.040003,40.724360,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,nbnxn_atomdata_add_nbat_f_to_f._omp_fn.1,[Unknown],0xf6d4f0
+copy_pmegrid_to_fftgrid,33.969271,33.969271,0.0,0.0,33.969271,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"copy_pmegrid_to_fftgrid(gmx_pme_t const*, float*, float*, int)",[Unknown],0x203530
+copy_fftgrid_to_pmegrid,33.074204,33.074204,0.0,0.009999,33.064205,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"copy_fftgrid_to_pmegrid(gmx_pme_t*, float const*, float*, int, int, int)",[Unknown],0x203af0
+t2bv_20,31.638134,31.638134,0.0,0.0,31.638134,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_20,[Unknown],0x130d320
+t2fv_20,30.709423,30.709423,0.0,0.0,30.709423,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_20,[Unknown],0x13121e0
+pme_calc_pidx_wrapper._omp_fn.0,30.517287,30.517287,0.0,0.0,30.517287,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,pme_calc_pidx_wrapper._omp_fn.0,[Unknown],0x2110b0
+pbc_dx_aiuc,28.961835,28.961835,0.0,0.080005,28.881830,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"pbc_dx_aiuc(t_pbc const*, float const*, float const*, float*)",[Unknown],0x286a70
+n2fv_14,27.740319,27.740319,0.0,0.0,27.740319,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_14,[Unknown],0x1291fe0
+lincs_matrix_expand,27.159727,27.159727,0.0,0.009998,27.149729,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"lincs_matrix_expand(gmx_lincsdata const*, lincs_task_t const*, float const*, float*, float*, float*)",[Unknown],0xee1760
+do_lincs.isra.13,22.912043,22.912043,0.0,0.0,22.912043,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_lincs(float (*)[3], float (*)[3], float (*)[3], t_pbc*, gmx_lincsdata*, int, float const*, t_commrec*, int, float, int*, float, float (*)[3], int, float (*)[3]).isra.13",[Unknown],0xee2ee0
+n2bv_14,20.427725,20.427725,0.0,0.0,20.427725,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_14,[Unknown],0x128da00
+dd_pmeredist_f,20.118569,20.118569,0.0,0.0,20.118569,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_pmeredist_f(gmx_pme_t*, pme_atomcomm_t*, int, float (*)[3], int)",[Unknown],0x211bd0
+gmx_sum_qgrid_dd,19.099029,19.099029,0.0,0.0,19.099029,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_sum_qgrid_dd(gmx_pme_t*, float*, int)",[Unknown],0x201b80
+do_dih_fup,18.985003,18.985003,0.0,0.050002,18.935001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_dih_fup(int, int, int, int, float, float*, float*, float*, float*, float*, float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float const (*)[3], int, int, int)",[Unknown],0x16b680
+make_local_bondeds_excls._omp_fn.0,18.483253,18.483253,0.0,0.0,18.483253,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,make_local_bondeds_excls._omp_fn.0,[Unknown],0x1e8360
+t2bv_20,18.234391,18.234391,0.0,0.009998,18.224394,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_20,[Unknown],0x12ba9e0
+lincs_update_atoms,16.069296,16.069296,0.0,0.0,16.069296,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"lincs_update_atoms(gmx_lincsdata*, int, float, float const*, float (*)[3], float const*, float (*)[3])",[Unknown],0xee1d70
+n2bv_8,15.802442,15.802442,0.0,0.0,15.802442,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_8,[Unknown],0x1291770
+__atan2f_finite,15.519684,15.519684,0.0,0.030000,15.489684,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,__atan2f_finite,[Unknown],0x2add0
+t2fv_20,14.823352,14.823352,0.0,0.0,14.823352,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_20,[Unknown],0x12bfa00
+PMPI_Irecv,13.454790,13.424780,0.0,0.010003,13.414777,0.0,0.0,0.030009,0.0,0.0,0.030009,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Irecv,irecv.c,0xcd530
+bonds,13.363708,13.363708,0.0,0.0,13.363708,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"bonds(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x1654c0
+urey_bradley,12.539321,12.539321,0.0,0.019990,12.519331,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"urey_bradley(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x1691f0
+dih_angle,12.453480,12.453480,0.0,0.020005,12.433476,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dih_angle(float const*, float const*, float const*, float const*, t_pbc const*, float*, float*, float*, float*, float*, int*, int*, int*)",[Unknown],0x16b3a0
+(anonymous namespace)::reduce_thread_forces._omp_fn.1,11.217853,11.217853,0.0,0.030008,11.187845,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,(anonymous namespace)::reduce_thread_forces._omp_fn.1,[Unknown],0x1780a0
+gmx_pme_receive_f,11.098443,11.098443,0.0,0.0,11.098443,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_pme_receive_f(t_commrec*, gmx::ForceWithVirial*, float*, float*, float*, float*, float*)",[Unknown],0x2104e0
+calc_ke_part_normal._omp_fn.0,10.233640,10.233640,0.0,0.0,10.233640,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,calc_ke_part_normal._omp_fn.0,[Unknown],0xfcb270
+sincosf,9.781892,9.781892,0.0,0.030004,9.751888,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,sincosf,[Unknown],0x32a40
+r2cb_16,9.352736,9.352736,0.0,0.0,9.352736,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cb_16,[Unknown],0x1195440
+"settleTemplate<gmx::SimdFloat, gmx::SimdFBool, (int)8, float const*, (bool)1, (bool)1>",9.347066,9.347066,0.0,0.019998,9.327067,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"void settleTemplate<gmx::SimdFloat, gmx::SimdFBool, (int)8, float const*, (bool)1, (bool)1>(gmx_settledata*, int, int, float const*, float const*, float*, float, float*, float (*)[3], bool*)",[Unknown],0xf01120
+calcBondedForces._omp_fn.0,8.765338,8.765338,0.0,0.0,8.765338,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,calcBondedForces._omp_fn.0,[Unknown],0x1785e0
+apply,8.654029,8.654029,0.0,0.020000,8.634030,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x133db20
+n2fv_8,8.599614,8.599614,0.0,0.0,8.599614,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_8,[Unknown],0x1295d50
+bond_angle,8.392699,8.392699,0.0,0.0,8.392699,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"bond_angle(float const*, float const*, float const*, t_pbc const*, float*, float*, float*, int*, int*)",[Unknown],0x167530
+update_constraints._omp_fn.2,8.237863,8.237863,0.0,0.0,8.237863,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,update_constraints._omp_fn.2,[Unknown],0xfcbbc0
+r2cf_16,7.394487,7.394487,0.0,0.040001,7.354486,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cf_16,[Unknown],0x1157740
+n2fv_8,7.285613,7.285613,0.0,0.0,7.285613,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_8,[Unknown],0x1226780
+pdihs,6.893827,6.893827,0.0,0.0,6.893827,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"pdihs(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x16bbe0
+close_ci_entry_simple,6.403678,6.403678,0.0,0.0,6.403678,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,close_ci_entry_simple(nbnxn_pairlist_t*),[Unknown],0xf7bef0
+__acosf_finite,6.287650,6.287650,0.0,0.0,6.287650,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,__acosf_finite,[Unknown],0x2a7e0
+dd_move_x_specat,5.859756,5.859756,0.0,0.0,5.859756,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_move_x_specat(gmx_domdec_t*, gmx_domdec_specat_comm_t*, float const (*)[3], float (*)[3], float (*)[3], int)",[Unknown],0x1e31b0
+PMPI_Reduce,5.519410,4.980380,0.0,0.119984,4.860396,0.0,0.0,0.539029,0.0,0.0,0.539029,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Reduce,reduce.c,0xfd2e0
+get_cell_range,4.828968,4.828968,0.0,0.0,4.828968,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"get_cell_range(float, float, int, float, float, float, float, float, int*, int*)",[Unknown],0xf7b400
+n2bv_14,4.486715,4.486715,0.0,0.0,4.486715,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_14,[Unknown],0x121e390
+cmap_dihs,4.160672,4.160672,0.0,0.0,4.160672,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"cmap_dihs(int, int const*, t_iparams const*, gmx_cmap_t const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x171520
+[libgomp.so.1.0.0],4.097360,4.077350,0.0,0.0,4.077350,0.0,0.0,0.020010,0.0,0.020010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,[libgomp.so.1.0.0],[Unknown],0x0
+berendsen_pscale._omp_fn.0,3.939821,3.939821,0.0,0.0,3.939821,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,berendsen_pscale._omp_fn.0,[Unknown],0xef2c70
+dd_make_local_constraints._omp_fn.0,3.838766,3.838766,0.0,0.019992,3.818774,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dd_make_local_constraints._omp_fn.0,[Unknown],0x1dbe70
+t2fv_20,3.535005,3.535005,0.0,0.0,3.535005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_20,[Unknown],0x124ffc0
+dd_partition_system,3.359038,3.359038,0.0,0.0,3.359038,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_partition_system(_IO_FILE*, long, t_commrec*, int, int, t_state*, gmx_mtop_t const*, t_inputrec const*, t_state*, std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy>>*, gmx::MDAtoms*, gmx_localtop_t*, t_forcerec*, gmx_vsite_t*, gmx_constr*, t_nrnb*, gmx_wallcycle*, int)",[Unknown],0x1d1e50
+wrap_periodic_pmegrid,3.178283,3.178283,0.0,0.0,3.178283,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wrap_periodic_pmegrid(gmx_pme_t const*, float*)",[Unknown],0x204050
+nbnxn_atomdata_copy_x_to_nbat_x._omp_fn.0,3.148460,3.148460,0.0,0.0,3.148460,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,nbnxn_atomdata_copy_x_to_nbat_x._omp_fn.0,[Unknown],0xf6f9b0
+make_dd_indices,3.116617,3.116617,0.0,0.0,3.116617,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"make_dd_indices(gmx_domdec_t*, int const*, int)",[Unknown],0x1ace10
+calc_x_times_f,2.958649,2.958649,0.0,0.0,2.958649,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_x_times_f(int, float const (*)[3], float const (*)[3], int, float const (*)[3], float (*)[3])",[Unknown],0xedff90
+sum_forces._omp_fn.3,2.945194,2.945194,0.0,0.010004,2.935190,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,sum_forces._omp_fn.3,[Unknown],0xfb3960
+unwrap_periodic_pmegrid._omp_fn.1,2.849097,2.849097,0.0,0.0,2.849097,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,unwrap_periodic_pmegrid._omp_fn.1,[Unknown],0x201630
+apply,2.817674,2.817674,0.0,0.0,2.817674,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x133d240
+atoms2md._omp_fn.0,2.629946,2.629946,0.0,0.011008,2.618938,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,atoms2md._omp_fn.0,[Unknown],0xf42ca0
+apply,2.399852,2.399852,0.0,0.009999,2.389853,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x133c410
+erfcf,2.374903,2.374903,0.0,0.0,2.374903,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,erfcf,[Unknown],0x30310
+PMPI_Allreduce,2.330942,2.041081,0.0,1.185175,0.855906,0.0,0.0,0.289861,0.0,0.0,0.289861,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Allreduce,allreduce.c,0x67f60
+sort_atoms.isra.4.constprop.10,2.240838,2.240838,0.0,0.0,2.240838,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"sort_atoms(int, int, int, int*, int, float (*)[3], float, float, int, int*).isra.4.constprop.10",[Unknown],0xf75890
+PMPI_Scatter,1.779855,1.589886,0.0,0.149996,1.439890,0.0,0.0,0.189970,0.0,0.0,0.189970,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Scatter,scatter.c,0x109100
+dd_redistribute_cg._omp_fn.0,1.760690,1.760690,0.0,0.0,1.760690,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dd_redistribute_cg._omp_fn.0,[Unknown],0x1bd160
+PMPI_Isend,1.729793,1.699781,0.0,0.0,1.699781,0.0,0.0,0.030013,0.0,0.0,0.030013,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Isend,isend.c,0xd6cb0
+energyDriftAtomPair,1.566192,1.566192,0.0,0.0,1.566192,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"energyDriftAtomPair(bool, bool, float, float, float, float, pot_derivatives_t const*)",[Unknown],0xedc070
+setup_dd_communication._omp_fn.1,1.488443,1.488443,0.0,0.0,1.488443,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,setup_dd_communication._omp_fn.1,[Unknown],0x1b16c0
+[Import thunk pbc_dx_aiuc],1.350137,1.350137,0.0,0.0,1.350137,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk pbc_dx_aiuc(t_pbc const*, float const*, float const*, float*)]",[Unknown],0x156fd0
+check_cell_list_space_simple,1.239929,1.239929,0.0,0.0,1.239929,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"check_cell_list_space_simple(nbnxn_pairlist_t*, int)",[Unknown],0xf7bd50
+apply_r2hc,1.187747,1.187747,0.0,0.0,1.187747,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_r2hc,[Unknown],0x13403e0
+PMPI_Scatterv,1.186051,1.054041,0.0,0.554074,0.499967,0.0,0.0,0.132011,0.0,0.0,0.132011,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Scatterv,scatterv.c,0x109d40
+idihs,1.180131,1.180131,0.0,0.010001,1.170130,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"idihs(int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*)",[Unknown],0x16dcd0
+apply_dit,1.179920,1.179920,0.0,0.0,1.179920,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_dit,[Unknown],0x13385b0
+write,1.170000,0.0,0.0,0.0,0.0,0.0,0.0,1.170000,0.0,0.0,1.170000,0.0,0.0,0.0,0.0,0.0,0.0,libpthread-2.17.so,write,[Unknown],0xe1a0
+apply,1.106809,1.106809,0.0,0.0,1.106809,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x111c950
+fftwf_cpy2d,0.998017,0.998017,0.0,0.009999,0.988017,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d,[Unknown],0x13340b0
+apply_dif_dft,0.988897,0.988897,0.0,0.0,0.988897,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_dif_dft,[Unknown],0x133eed0
+sort_cluster_on_flag,0.980387,0.980387,0.0,0.0,0.980387,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"sort_cluster_on_flag(int, int, int, int const*, int*, int*)",[Unknown],0xf74af0
+order_vec_atom,0.979858,0.979858,0.0,0.0,0.979858,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"order_vec_atom(int, int const*, gmx_cgsort_t const*, float (*)[3], float (*)[3])",[Unknown],0x1a5020
+constrain,0.970420,0.970420,0.0,0.0,0.970420,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,constrain,[Unknown],0xeed550
+get_verlet_buffer_atomtypes,0.932071,0.932071,0.0,0.0,0.932071,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"get_verlet_buffer_atomtypes(gmx_mtop_t const*, bool, verletbuf_atomtype_t**, int*, int*)",[Unknown],0xeda8d0
+atoms_to_constraints,0.918621,0.918621,0.0,0.0,0.918621,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"atoms_to_constraints(gmx_domdec_t*, gmx_mtop_t const*, int const*, t_blocka const*, int, t_ilist*, ind_req_t*)",[Unknown],0x1db260
+setup_specat_communication,0.909697,0.909697,0.0,0.0,0.909697,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"setup_specat_communication(gmx_domdec_t*, ind_req_t*, gmx_domdec_specat_comm_t*, gmx_hash_t*, int, int, char const*, char const*)",[Unknown],0x1e5ba0
+func@0x9800,0.900476,0.900476,0.0,0.0,0.900476,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0x9800,[Unknown],0x9800
+apply,0.869929,0.869929,0.0,0.0,0.869929,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x10e4500
+expf,0.860531,0.860531,0.0,0.0,0.860531,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,expf,[Unknown],0x318f0
+icell_set_x_simd_4xn,0.860061,0.860061,0.0,0.0,0.860061,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"icell_set_x_simd_4xn(int, float, float, float, int, float const*, nbnxn_list_work*)",[Unknown],0xf7b830
+apply_dit_dft,0.849758,0.849758,0.0,0.010000,0.839758,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_dit_dft,[Unknown],0x133eea0
+exp,0.840791,0.840791,0.0,0.010001,0.830790,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,exp,[Unknown],0x25a70
+calc_verlet_buffer_size,0.819880,0.819880,0.0,0.0,0.819880,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_verlet_buffer_size(gmx_mtop_t const*, float, t_inputrec const*, int, int, float, VerletbufListSetup const*, int*, float*)",[Unknown],0xedc850
+nbnxn_atomdata_set,0.810752,0.810752,0.0,0.0,0.810752,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_atomdata_set(nbnxn_atomdata_t*, nbnxn_search*, t_mdatoms const*, int const*)",[Unknown],0xf726f0
+__memcpy_ssse3_back,0.791180,0.791180,0.0,0.0,0.791180,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__memcpy_ssse3_back,[Unknown],0x147ca0
+func@0xdc90,0.769132,0.769132,0.0,0.0,0.769132,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0xdc90,[Unknown],0xdc90
+setup_bonded_threading._omp_fn.0,0.749028,0.749028,0.0,0.0,0.749028,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,setup_bonded_threading._omp_fn.0,[Unknown],0x17b390
+unwrap_periodic_pmegrid,0.748997,0.748997,0.0,0.0,0.748997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"unwrap_periodic_pmegrid(gmx_pme_t*, float*)",[Unknown],0x205490
+PMPI_Gather,0.700071,0.640042,0.0,0.051019,0.589023,0.0,0.0,0.060030,0.0,0.0,0.060030,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Gather,gather.c,0xaaf60
+nbnxn_put_on_grid,0.680353,0.680353,0.0,0.0,0.680353,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_put_on_grid(nbnxn_search*, int, float (*)[3], int, float*, float*, int, int, float, int const*, float (*)[3], int, int*, int, nbnxn_atomdata_t*)",[Unknown],0xf78de0
+dd_sort_state,0.670679,0.670679,0.0,0.0,0.670679,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_sort_state(gmx_domdec_t*, float (*)[3], t_forcerec*, t_state*, int)",[Unknown],0x1b4db0
+calc_cell_indices._omp_fn.1,0.670286,0.670286,0.0,0.0,0.670286,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,calc_cell_indices._omp_fn.1,[Unknown],0xf75cc0
+apply,0.618915,0.618915,0.0,0.0,0.618915,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x13403b0
+calc_cell_indices._omp_fn.0,0.599252,0.599252,0.0,0.0,0.599252,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,calc_cell_indices._omp_fn.0,[Unknown],0xf75130
+cosf,0.598071,0.598071,0.0,0.010001,0.588070,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,cosf,[Unknown],0x2faf0
+gmx::do_md,0.590262,0.590262,0.0,0.010002,0.580260,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,"gmx::do_md(_IO_FILE*, t_commrec*, gmx::MDLogger const&, int, t_filenm const*, gmx_output_env_t const*, MdrunOptions const&, gmx_vsite_t*, gmx_constr*, gmx::IMDOutputProvider*, t_inputrec*, gmx_mtop_t*, t_fcdata*, t_state*, ObservablesHistory*, gmx::MDAtoms*, t_nrnb*, gmx_wallcycle*, t_forcerec*, ReplicaExchangeParameters const&, gmx_membed_t*, gmx_walltime_accounting*)",[Unknown],0x40ef30
+_dl_runtime_resolve,0.563643,0.563643,0.0,0.172473,0.391170,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,ld-2.17.so,_dl_runtime_resolve,[Unknown],0x15210
+calloc,0.542132,0.542132,0.0,0.0,0.542132,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,calloc,[Unknown],0x80220
+setup_dd_communication,0.540463,0.540463,0.0,0.0,0.540463,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"setup_dd_communication(gmx_domdec_t*, float (*)[3], gmx_ddbox_t*, t_forcerec*, t_state*, std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy>>*)",[Unknown],0x1cb3f0
+xdr_vector,0.529992,0.529992,0.0,0.029999,0.499992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,xdr_vector,[Unknown],0x128690
+wallcycle_stop,0.510244,0.510244,0.0,0.0,0.510244,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wallcycle_stop(gmx_wallcycle*, int)",[Unknown],0x29d5c0
+PMPI_Gatherv,0.491119,0.441110,0.0,0.020001,0.421108,0.0,0.0,0.050009,0.0,0.0,0.050009,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Gatherv,gatherv.c,0xac2f0
+atan2f,0.400064,0.400064,0.0,0.0,0.400064,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,atan2f,[Unknown],0x31800
+dd_redistribute_cg.isra.105,0.390143,0.390143,0.0,0.0,0.390143,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_redistribute_cg(_IO_FILE*, long, gmx_domdec_t*, int*, t_state*, std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy>>*, t_forcerec*, int, t_nrnb*, int*, int*).isra.105",[Unknown],0x1ce250
+fftwf_cpy2d_pair,0.379997,0.379997,0.0,0.049999,0.329998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d_pair,[Unknown],0x1333ee0
+nbnxn_kernel_cpu._omp_fn.0,0.340515,0.340515,0.0,0.0,0.340515,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,nbnxn_kernel_cpu._omp_fn.0,[Unknown],0xe64170
+reset_enerdata,0.330396,0.330396,0.0,0.0,0.330396,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,reset_enerdata(gmx_enerdata_t*),[Unknown],0xf1c560
+make_at2con,0.329007,0.329007,0.0,0.0,0.329007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,make_at2con,[Unknown],0xeeed90
+fftwf_cpy1d,0.319999,0.319999,0.0,0.019999,0.299999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy1d,[Unknown],0x1333bb0
+fftwf_measure_execution_time,0.318003,0.318003,0.0,0.020002,0.298000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_measure_execution_time,[Unknown],0x10ddfb0
+search0,0.309992,0.309992,0.0,0.010000,0.299992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,search0,[Unknown],0x10dcd20
+__libc_memalign,0.300007,0.300007,0.0,0.010000,0.290007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__libc_memalign,[Unknown],0x800c0
+r2cb_13,0.300003,0.300003,0.0,0.010000,0.290003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cb_13,[Unknown],0x1194640
+compact_and_copy_vec_at.isra.13,0.289109,0.289109,0.0,0.0,0.289109,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"compact_and_copy_vec_at(int, int*, int*, int, int, float (*)[3], gmx_domdec_comm_t*, int).isra.13",[Unknown],0x1aa080
+acosf,0.289064,0.289064,0.0,0.0,0.289064,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,acosf,[Unknown],0x31750
+fftwf_choose_radix,0.270020,0.270020,0.0,0.010014,0.260006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_choose_radix,[Unknown],0x10ddd30
+PMPI_Comm_split,0.259138,0.259138,0.0,0.079293,0.179845,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Comm_split,comm_split.c,0x88590
+r2cf_13,0.258994,0.258994,0.0,0.030004,0.228990,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cf_13,[Unknown],0x1156950
+do_nb_verlet.part.36,0.250114,0.250114,0.0,0.0,0.250114,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_nb_verlet(t_forcerec*, interaction_const_t*, gmx_enerdata_t*, int, int, int, long, t_nrnb*, gmx_wallcycle*).part.36",[Unknown],0xfb5690
+__asinf_finite,0.250028,0.250028,0.0,0.0,0.250028,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,__asinf_finite,[Unknown],0x2ab90
+nbnxn_kernel_cpu,0.230258,0.230258,0.0,0.0,0.230258,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_kernel_cpu(nonbonded_verlet_group_t*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*)[3], int, int, float*, float*, float*)",[Unknown],0xe65070
+_where,0.230055,0.230055,0.0,0.0,0.230055,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,_where,[Unknown],0x2c8270
+calc_listed,0.220013,0.220013,0.0,0.0,0.220013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_listed(t_commrec const*, gmx_wallcycle*, t_idef const*, float const (*)[3], history_t*, float (*)[3], gmx::ForceWithVirial*, t_forcerec const*, t_pbc const*, t_pbc const*, t_graph const*, gmx_enerdata_t*, t_nrnb*, float const*, t_mdatoms const*, t_fcdata*, int*, int)",[Unknown],0x179180
+n1_10,0.219999,0.219999,0.0,0.0,0.219999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_10,[Unknown],0x10e48e0
+hf_16,0.219997,0.219997,0.0,0.079996,0.140001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hf_16,[Unknown],0x113f450
+__cos_avx,0.210084,0.210084,0.0,0.0,0.210084,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,__cos_avx,[Unknown],0x66ad0
+reset_foreign_enerdata,0.200215,0.200215,0.0,0.0,0.200215,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,reset_foreign_enerdata(gmx_enerdata_t*),[Unknown],0xf1ad20
+fftwf_isqrt,0.200010,0.200010,0.0,0.0,0.200010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_isqrt,[Unknown],0x10ddcf0
+n1_5,0.199996,0.199996,0.0,0.010000,0.189996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_5,[Unknown],0x10ec400
+apply,0.199993,0.199993,0.0,0.0,0.199993,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x1117af0
+make_dp_periodic,0.199033,0.199033,0.0,0.0,0.199033,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,make_dp_periodic(float*),[Unknown],0x16bff0
+calc_bounding_box_x_x8,0.190080,0.190080,0.0,0.0,0.190080,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_bounding_box_x_x8(int, float const*, nbnxn_bb_t*)",[Unknown],0xf748f0
+wallcycle_sub_stop,0.190059,0.190059,0.0,0.0,0.190059,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wallcycle_sub_stop(gmx_wallcycle*, int)",[Unknown],0x29eb10
+settle_set_constraints,0.190039,0.190039,0.0,0.0,0.190039,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,settle_set_constraints,[Unknown],0xf03220
+n1_8,0.189993,0.189993,0.0,0.009999,0.179994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_8,[Unknown],0x10f0510
+gmx_omp_nthreads_get,0.180133,0.180133,0.0,0.0,0.180133,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_omp_nthreads_get(int),[Unknown],0xf39c60
+MPI_SGI_shared_init_slave,0.180000,0.180000,0.0,0.180000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,MPI_SGI_shared_init_slave,shared.c,0x596b0
+mkplan,0.179999,0.179999,0.0,0.0,0.179999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x1338780
+do_per_step,0.170062,0.170062,0.0,0.0,0.170062,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_per_step(long, long)",[Unknown],0xfc2910
+dd_bonded_cg_distance,0.170005,0.170005,0.0,0.0,0.170005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_bonded_cg_distance(_IO_FILE*, gmx_mtop_t const*, t_inputrec const*, float const (*)[3], float const (*)[3], int, float*, float*)",[Unknown],0x1f1e80
+hb_16,0.169991,0.169991,0.0,0.0,0.169991,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hb_16,[Unknown],0x1166450
+func@0xdf70,0.160040,0.160040,0.0,0.0,0.160040,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0xdf70,[Unknown],0xdf70
+n1_4,0.160010,0.160010,0.0,0.010001,0.150009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_4,[Unknown],0x10ec2b0
+__vdso_gettimeofday,0.159992,0.159992,0.0,0.020001,0.139991,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,[vdso],__vdso_gettimeofday,[Unknown],0xffffffffff700ca0
+wallcycle_start,0.159049,0.159049,0.0,0.0,0.159049,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wallcycle_start(gmx_wallcycle*, int)",[Unknown],0x29d4d0
+gmx::erfinv,0.158718,0.158718,0.0,0.040110,0.118608,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::erfinv(double),[Unknown],0x251ee0
+init_ekindata,0.150055,0.150055,0.0,0.0,0.150055,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"init_ekindata(_IO_FILE*, gmx_mtop_t*, t_grpopts*, gmx_ekindata_t*)",[Unknown],0xfc2bc0
+fftwf_md5putc,0.149989,0.149989,0.0,0.0,0.149989,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_md5putc,[Unknown],0x10e0d30
+OS_BARESYSCALL_DoCallAsmIntel64Linux,0.141736,0.141736,0.0,0.131730,0.010006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-dynamic.so,OS_BARESYSCALL_DoCallAsmIntel64Linux,[Unknown],0x70e5c
+constrain_lincs,0.140075,0.140075,0.0,0.0,0.140075,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,constrain_lincs,[Unknown],0xee9f60
+gmx_pme_do,0.140049,0.140049,0.0,0.0,0.140049,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_pme_do(gmx_pme_t*, int, int, float (*)[3], float (*)[3], float*, float*, float*, float*, float*, float*, float (*)[3], t_commrec*, int, int, t_nrnb*, gmx_wallcycle*, float (*)[3], float (*)[3], float*, float*, float, float, float*, float*, int)",[Unknown],0x227870
+gmx_mtop_global_cgs,0.140021,0.140021,0.0,0.0,0.140021,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_mtop_global_cgs(gmx_mtop_t const*),[Unknown],0x2b08b0
+ForceProviders::calculateForces,0.140020,0.140020,0.0,0.0,0.140020,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"ForceProviders::calculateForces(t_commrec const*, t_mdatoms const*, float const (*)[3], double, float const (*)[3], gmx::ForceWithVirial*) const",[Unknown],0x2560b0
+do_force_lowlevel,0.140004,0.140004,0.0,0.0,0.140004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_force_lowlevel(t_forcerec*, t_inputrec*, t_idef*, t_commrec*, t_nrnb*, gmx_wallcycle*, t_mdatoms*, float (*)[3], history_t*, float (*)[3], gmx::ForceWithVirial*, gmx_enerdata_t*, t_fcdata*, gmx_localtop_t*, gmx_genborn_t*, int, float (*)[3], t_lambda*, float*, t_graph*, t_blocka*, float (*)[3], int, float*)",[Unknown],0xf1adc0
+n1_7,0.130010,0.130010,0.0,0.0,0.130010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_7,[Unknown],0x10f0080
+apply_hc2r,0.129994,0.129994,0.0,0.0,0.129994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_hc2r,[Unknown],0x111bc60
+nbnxn_set_atomorder,0.120165,0.120165,0.0,0.0,0.120165,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,nbnxn_set_atomorder(nbnxn_search*),[Unknown],0xf7b250
+calc_shifts,0.120050,0.120050,0.0,0.0,0.120050,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_shifts(float const (*)[3], float (*)[3])",[Unknown],0x289090
+csettle,0.120046,0.120046,0.0,0.0,0.120046,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,csettle,[Unknown],0xf04130
+ftype_is_bonded_potential,0.120008,0.120008,0.0,0.0,0.120008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,ftype_is_bonded_potential(int),[Unknown],0x178590
+n1bv_14,0.119996,0.119996,0.0,0.0,0.119996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_14,[Unknown],0x12064a0
+erf,0.118623,0.118623,0.0,0.030011,0.088612,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,erf,[Unknown],0x19a30
+init_cginfo_mb,0.110078,0.110078,0.0,0.0,0.110078,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"init_cginfo_mb(_IO_FILE*, gmx_mtop_t const*, t_forcerec*, int, int*, int*)",[Unknown],0xf1ce40
+set_lincs_matrix._omp_fn.2,0.110032,0.110032,0.0,0.0,0.110032,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,set_lincs_matrix._omp_fn.2,[Unknown],0xee25d0
+read,0.110022,0.110022,0.0,0.110022,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,read,[Unknown],0xe79c0
+set_pbc,0.110005,0.110005,0.0,0.0,0.110005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_pbc(t_pbc*, int, float const (*)[3])",[Unknown],0x284500
+n1fv_5,0.110003,0.110003,0.0,0.0,0.110003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_5,[Unknown],0x12e3460
+mkplan,0.109999,0.109999,0.0,0.020002,0.089997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x133d390
+n1fv_10,0.109990,0.109990,0.0,0.0,0.109990,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_10,[Unknown],0x11aa6b0
+dd_make_local_constraints,0.109967,0.109967,0.0,0.0,0.109967,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_make_local_constraints(gmx_domdec_t*, int, gmx_mtop_t const*, int const*, gmx_constr*, int, t_ilist*)",[Unknown],0x1dcb40
+n1_13,0.109009,0.109009,0.0,0.010000,0.099009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_13,[Unknown],0x10e5fd0
+do_force,0.100038,0.100038,0.0,0.0,0.100038,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_force(_IO_FILE*, t_commrec*, t_inputrec*, long, t_nrnb*, gmx_wallcycle*, gmx_localtop_t*, gmx_groups_t*, float (*)[3], gmx::ArrayRef<gmx::BasicVector<float>>, history_t*, gmx::ArrayRef<gmx::BasicVector<float>>, float (*)[3], t_mdatoms*, gmx_enerdata_t*, t_fcdata*, gmx::ArrayRef<float>, t_graph*, t_forcerec*, gmx_vsite_t*, float*, double, gmx_edsam*, int, int, DdOpenBalanceRegionBeforeForceComputation, DdCloseBalanceRegionAfterForceComputation)",[Unknown],0xfbacc0
+do_force_listed,0.100000,0.100000,0.0,0.0,0.100000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_force_listed(gmx_wallcycle*, float (*)[3], t_lambda const*, t_commrec const*, t_idef const*, float const (*)[3], history_t*, float (*)[3], gmx::ForceWithVirial*, t_forcerec const*, t_pbc const*, t_graph const*, gmx_enerdata_t*, t_nrnb*, float const*, t_mdatoms const*, t_fcdata*, int*, int)",[Unknown],0x17a220
+std::string::string,0.090235,0.090235,0.0,0.0,0.090235,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libstdc++.so.6.0.22,"std::string::string(char const*, std::allocator<char> const&)",basic_string.tcc,0xd05a0
+update_constraints,0.090055,0.090055,0.0,0.0,0.090055,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_constraints(_IO_FILE*, long, float*, t_inputrec*, t_mdatoms*, t_state*, int, t_graph*, gmx::ArrayRef<gmx::BasicVector<float>>, t_idef*, float (*)[3], t_commrec*, t_nrnb*, gmx_wallcycle*, gmx_update_t*, gmx_constr*, int, int)",[Unknown],0xfd6030
+[Import thunk GOMP_parallel_end],0.090018,0.090018,0.0,0.0,0.090018,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk GOMP_parallel_end],[Unknown],0x1507a0
+fftwf_execute_dft,0.090007,0.090007,0.0,0.0,0.090007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_execute_dft,[Unknown],0x10dae50
+fftwf_dft_solve,0.090004,0.090004,0.0,0.0,0.090004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_dft_solve,[Unknown],0x10e44d0
+n1_2,0.089999,0.089999,0.0,0.009999,0.079999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_2,[Unknown],0x10e8700
+n1fv_14,0.089993,0.089993,0.0,0.0,0.089993,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_14,[Unknown],0x1215810
+mk_grey,0.089992,0.089992,0.0,0.0,0.089992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"mk_grey(egCol*, t_graph*, int*, int, float const (*)[3], float const (*)[3], int*)",[Unknown],0x27ad20
+dd_collect_vec,0.089975,0.089975,0.0,0.009998,0.079977,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_collect_vec(gmx_domdec_t*, t_state const*, gmx::ArrayRef<gmx::BasicVector<float> const>, gmx::ArrayRef<gmx::BasicVector<float>>)",[Unknown],0x1c3ac0
+inputrecNeedMutot,0.089102,0.089102,0.0,0.0,0.089102,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,inputrecNeedMutot(t_inputrec const*),[Unknown],0x25cd60
+gmx_mtop_atomloop_all_next,0.080042,0.080042,0.0,0.0,0.080042,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_mtop_atomloop_all_next(gmx_mtop_atomloop_all*, int*, t_atom const**)",[Unknown],0x2ae6a0
+walltime_accounting_get_current_elapsed_time,0.080033,0.080033,0.0,0.0,0.080033,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,walltime_accounting_get_current_elapsed_time,[Unknown],0x2a1370
+ddOpenBalanceRegionCpu,0.080027,0.080027,0.0,0.0,0.080027,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"ddOpenBalanceRegionCpu(gmx_domdec_t const*, DdAllowBalanceRegionReopen)",[Unknown],0x1a4e20
+dd_clear_local_constraint_indices,0.080023,0.080023,0.0,0.0,0.080023,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dd_clear_local_constraint_indices(gmx_domdec_t*),[Unknown],0x1dc4d0
+wallcycle_sub_start,0.080015,0.080015,0.0,0.0,0.080015,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wallcycle_sub_start(gmx_wallcycle*, int)",[Unknown],0x29eaf0
+set_lincs._omp_fn.0,0.080012,0.080012,0.0,0.0,0.080012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,set_lincs._omp_fn.0,[Unknown],0xee2a60
+n1bv_16,0.080002,0.080002,0.0,0.0,0.080002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_16,[Unknown],0x12d4800
+n1fv_20,0.080001,0.080001,0.0,0.0,0.080001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_20,[Unknown],0x11b13b0
+n1fv_13,0.080000,0.080000,0.0,0.0,0.080000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_13,[Unknown],0x11afc90
+n1bv_8,0.079998,0.079998,0.0,0.020000,0.059999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_8,[Unknown],0x11aa0c0
+_int_free,0.079998,0.079998,0.0,0.0,0.079998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,_int_free,[Unknown],0x7c920
+ePBC2npbcdim,0.079997,0.079997,0.0,0.0,0.079997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,ePBC2npbcdim(int),[Unknown],0x283040
+n1_20,0.079995,0.079995,0.0,0.0,0.079995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_20,[Unknown],0x10e87d0
+n1bv_10,0.079993,0.079993,0.0,0.0,0.079993,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_10,[Unknown],0x119e4a0
+nbnxn_atomdata_add_nbat_f_to_f,0.078994,0.078994,0.0,0.0,0.078994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_atomdata_add_nbat_f_to_f(nbnxn_search*, int, nbnxn_atomdata_t const*, float (*)[3])",[Unknown],0xf74220
+dd_make_reverse_top,0.070069,0.070069,0.0,0.0,0.070069,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_make_reverse_top(_IO_FILE*, gmx_domdec_t*, gmx_mtop_t const*, gmx_vsite_t const*, t_inputrec const*, int)",[Unknown],0x1ed270
+update_tcouple,0.070028,0.070028,0.0,0.0,0.070028,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_tcouple(long, t_inputrec*, t_state*, gmx_ekindata_t*, t_extmass*, t_mdatoms*)",[Unknown],0xfce2c0
+gmx_get_stop_condition,0.070025,0.070025,0.0,0.0,0.070025,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_get_stop_condition(void),[Unknown],0xfb30b0
+wallcycle_start_nocount,0.070021,0.070021,0.0,0.0,0.070021,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"wallcycle_start_nocount(gmx_wallcycle*, int)",[Unknown],0x29d590
+set_pbc_dd,0.070016,0.070016,0.0,0.0,0.070016,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_pbc_dd(t_pbc*, int, int const*, int, float const (*)[3])",[Unknown],0x285060
+dd_cycles_add,0.070014,0.070014,0.0,0.0,0.070014,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_cycles_add(gmx_domdec_t const*, float, int)",[Unknown],0x1c73c0
+set_lincs_matrix,0.070011,0.070011,0.0,0.0,0.070011,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_lincs_matrix(gmx_lincsdata*, float*, float)",[Unknown],0xee2d40
+ddCloseBalanceRegionCpu,0.070010,0.070010,0.0,0.0,0.070010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,ddCloseBalanceRegionCpu(gmx_domdec_t const*),[Unknown],0x1a4eb0
+[Import thunk bond_angle],0.070009,0.070009,0.0,0.0,0.070009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk bond_angle(float const*, float const*, float const*, t_pbc const*, float*, float*, float*, int*, int*)]",[Unknown],0x15cca0
+apply_extra_iter,0.070005,0.070005,0.0,0.0,0.070005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_extra_iter,[Unknown],0x133d270
+n1bv_14,0.070004,0.070004,0.0,0.0,0.070004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_14,[Unknown],0x11a4140
+n1_14,0.070003,0.070003,0.0,0.0,0.070003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_14,[Unknown],0x10e6ab0
+apply_extra_iter,0.070002,0.070002,0.0,0.0,0.070002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_extra_iter,[Unknown],0x133c490
+n1_16,0.070001,0.070001,0.0,0.0,0.070001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_16,[Unknown],0x10e7ee0
+apply_buf,0.070001,0.070001,0.0,0.010000,0.060001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_buf,[Unknown],0x133d7c0
+n1fv_10,0.070001,0.070001,0.0,0.010000,0.060001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_10,[Unknown],0x120e9e0
+n1bv_5,0.070000,0.070000,0.0,0.010000,0.060001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_5,[Unknown],0x11a7aa0
+n1bv_20,0.069999,0.069999,0.0,0.010001,0.059998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_20,[Unknown],0x1207d50
+n1fv_8,0.069998,0.069998,0.0,0.0,0.069998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_8,[Unknown],0x11b6180
+do_IMD,0.069037,0.069037,0.0,0.0,0.069037,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"do_IMD(int, long, t_commrec*, int, float (*)[3], float (*)[3], t_inputrec*, double, gmx_wallcycle*)",[Unknown],0x3e2980
+gmx_pmeonly,0.060043,0.060043,0.0,0.0,0.060043,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_pmeonly(gmx_pme_t*, t_commrec*, t_nrnb*, gmx_wallcycle*, gmx_walltime_accounting*, t_inputrec*, PmeRunMode)",[Unknown],0x20a180
+set_pbc_simd,0.060033,0.060033,0.0,0.0,0.060033,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_pbc_simd(t_pbc const*, float*)",[Unknown],0x2827e0
+__clock_gettime,0.060031,0.060031,0.0,0.0,0.060031,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__clock_gettime,[Unknown],0x109e50
+func@0xdbf0,0.060031,0.060031,0.0,0.0,0.060031,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0xdbf0,[Unknown],0xdbf0
+check_box,0.060030,0.060030,0.0,0.0,0.060030,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"check_box(int, float const (*)[3])",[Unknown],0x283520
+gmx_pme_send_coordinates,0.060030,0.060030,0.0,0.0,0.060030,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_pme_send_coordinates(t_commrec*, float (*)[3], float (*)[3], float, float, int, long)",[Unknown],0x2100e0
+inputrecDeform,0.060026,0.060026,0.0,0.0,0.060026,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,inputrecDeform(t_inputrec const*),[Unknown],0x25cc90
+constrain._omp_fn.0,0.060018,0.060018,0.0,0.0,0.060018,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,constrain._omp_fn.0,[Unknown],0xeecb00
+sched_setaffinity,0.060012,0.060012,0.0,0.060012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,sched_setaffinity,[Unknown],0xdb1d0
+assign_constraint.isra.7,0.060010,0.060010,0.0,0.0,0.060010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"assign_constraint(gmx_lincsdata*, int, int, int, float, float, t_blocka const*).isra.7",[Unknown],0xee2350
+q1_2,0.060008,0.060008,0.0,0.0,0.060008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,q1_2,[Unknown],0x10f0d70
+gmx_fft_1d,0.060006,0.060006,0.0,0.0,0.060006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_fft_1d(gmx_fft*, gmx_fft_direction, void*, void*)",[Unknown],0xffea00
+fftwf_ct_applicable,0.060004,0.060004,0.0,0.0,0.060004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_ct_applicable,[Unknown],0x13386c0
+[Import thunk sincosf],0.060003,0.060003,0.0,0.0,0.060003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk sincosf],[Unknown],0x1529f0
+func@0x4dcc,0.060002,0.060002,0.0,0.060002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmlx5-rdmav2.so,func@0x4dcc,[Unknown],0x4dcc
+n1bv_5,0.060002,0.060002,0.0,0.0,0.060002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_5,[Unknown],0x1277490
+n1fv_7,0.060001,0.060001,0.0,0.0,0.060001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_7,[Unknown],0x12e5690
+n1bv_8,0.060001,0.060001,0.0,0.0,0.060001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_8,[Unknown],0x12d9c50
+[Import thunk wallcycle_stop],0.059995,0.059995,0.0,0.0,0.059995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk wallcycle_stop(gmx_wallcycle*, int)]",[Unknown],0x15ed60
+t1_2,0.059994,0.059994,0.0,0.010000,0.049994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1_2,[Unknown],0x10fa6b0
+distribute_cg.isra.58,0.059993,0.059993,0.0,0.010000,0.049993,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"distribute_cg(_IO_FILE*, float const (*)[3], int*, t_block*, float (*)[3], gmx_domdec_t*).isra.58",[Unknown],0x1af7d0
+clear_f,0.050082,0.050082,0.0,0.0,0.050082,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"clear_f(nbnxn_atomdata_t const*, int, float*)",[Unknown],0xe63c10
+dd_force_flop_start,0.050067,0.050067,0.0,0.0,0.050067,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_force_flop_start(gmx_domdec_t*, t_nrnb*)",[Unknown],0x1c7400
+[Import thunk copy_rvec_to_nbat_real],0.050042,0.050042,0.0,0.0,0.050042,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk copy_rvec_to_nbat_real(int const*, int, int, float const (*)[3], int, float*, int)]",[Unknown],0x15dd40
+dd_sendrecv2_rvec,0.050037,0.050037,0.0,0.0,0.050037,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_sendrecv2_rvec(gmx_domdec_t const*, int, float (*)[3], int, float (*)[3], int, float (*)[3], int, float (*)[3], int)",[Unknown],0x1ddba0
+nbnxn_atomdata_copy_x_to_nbat_x,0.050031,0.050031,0.0,0.0,0.050031,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_atomdata_copy_x_to_nbat_x(nbnxn_search*, int, int, float (*)[3], nbnxn_atomdata_t*)",[Unknown],0xf74150
+dd_move_x_constraints,0.050030,0.050030,0.0,0.0,0.050030,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_move_x_constraints(gmx_domdec_t*, float (*)[3], float (*)[3], float (*)[3], int)",[Unknown],0x1dc470
+gmx_gettime,0.050029,0.050029,0.0,0.0,0.050029,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_gettime,[Unknown],0x2a12d0
+update_forcerec,0.050022,0.050022,0.0,0.0,0.050022,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_forcerec(t_forcerec*, float (*)[3])",[Unknown],0xf203b0
+constrain_lincs._omp_fn.3,0.050018,0.050018,0.0,0.0,0.050018,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,constrain_lincs._omp_fn.3,[Unknown],0xee5710
+nbnxn_atomdata_copy_shiftvec,0.050014,0.050014,0.0,0.0,0.050014,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_atomdata_copy_shiftvec(int, float (*)[3], nbnxn_atomdata_t*)",[Unknown],0xf73df0
+n1bv_10,0.050010,0.050010,0.0,0.010001,0.040008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_10,[Unknown],0x11ff640
+set_lincs,0.050009,0.050009,0.0,0.0,0.050009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,set_lincs,[Unknown],0xee7f00
+calc_ke_part,0.050006,0.050006,0.0,0.0,0.050006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_ke_part(t_state*, t_grpopts*, t_mdatoms*, gmx_ekindata_t*, t_nrnb*, int)",[Unknown],0xfcc5a0
+n1fv_14,0.050002,0.050002,0.0,0.0,0.050002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_14,[Unknown],0x12dfa40
+fftwf_elapsed_since,0.050001,0.050001,0.0,0.0,0.050001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_elapsed_since,[Unknown],0x10ddf40
+n1bv_4,0.050001,0.050001,0.0,0.0,0.050001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_4,[Unknown],0x12d7570
+t1fuv_2,0.050001,0.050001,0.0,0.0,0.050001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_2,[Unknown],0x11d5bb0
+n1fv_13,0.050000,0.050000,0.0,0.0,0.050000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_13,[Unknown],0x1282e30
+n1fv_14,0.049998,0.049998,0.0,0.0,0.049998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_14,[Unknown],0x11b0260
+fftwf_cpy2d_ci,0.049997,0.049997,0.0,0.009999,0.039998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d_ci,[Unknown],0x1334570
+n1bv_2,0.049996,0.049996,0.0,0.0,0.049996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_2,[Unknown],0x11a51e0
+n1fv_4,0.049994,0.049994,0.0,0.0,0.049994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_4,[Unknown],0x12e3300
+apply_r2hc,0.049993,0.049993,0.0,0.0,0.049993,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_r2hc,[Unknown],0x133f540
+n1bv_13,0.049000,0.049000,0.0,0.0,0.049000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_13,[Unknown],0x12d3650
+__strlen_sse2_pminub,0.040108,0.040108,0.0,0.0,0.040108,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__strlen_sse2_pminub,[Unknown],0x1628e0
+gmx::DataFileFinder::setSearchPathFromEnv,0.040094,0.040094,0.0,0.0,0.040094,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::DataFileFinder::setSearchPathFromEnv(char const*),[Unknown],0x2bb780
+state_change_natoms,0.040043,0.040043,0.0,0.0,0.040043,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"state_change_natoms(t_state*, int)",[Unknown],0x25efe0
+dd_sendrecv_rvec,0.040024,0.040024,0.0,0.0,0.040024,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_sendrecv_rvec(gmx_domdec_t const*, int, int, float (*)[3], int, float (*)[3], int)",[Unknown],0x1dda90
+update_pcouple_after_coordinates,0.040020,0.040020,0.0,0.0,0.040020,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_pcouple_after_coordinates(_IO_FILE*, long, t_inputrec const*, t_mdatoms const*, float const (*)[3], float const (*)[3], float const (*)[3], float const (*)[3], t_state*, t_nrnb*, gmx_update_t*)",[Unknown],0xfce690
+update_coords,0.040018,0.040018,0.0,0.0,0.040018,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_coords(_IO_FILE*, long, t_inputrec*, t_mdatoms*, t_state*, gmx::ArrayRef<gmx::BasicVector<float>>, t_fcdata*, gmx_ekindata_t*, float (*)[3], gmx_update_t*, int, t_commrec*, gmx_constr*)",[Unknown],0xfd4db0
+gmx::invertBoxMatrix,0.040016,0.040016,0.0,0.0,0.040016,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::invertBoxMatrix(float const (*)[3], float (*)[3])",[Unknown],0x2523c0
+[Import thunk omp_get_num_threads],0.040014,0.040014,0.0,0.0,0.040014,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk omp_get_num_threads],[Unknown],0x15df90
+dd_force_flop_stop,0.040013,0.040013,0.0,0.0,0.040013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_force_flop_stop(gmx_domdec_t*, t_nrnb*)",[Unknown],0x1c7450
+do_md_trajectory_writing,0.040013,0.040013,0.0,0.0,0.040013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,do_md_trajectory_writing,[Unknown],0xfcaaf0
+func@0xf710,0.040008,0.040008,0.0,0.0,0.040008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0xf710,[Unknown],0xf710
+ewald_charge_correction,0.040008,0.040008,0.0,0.0,0.040008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"ewald_charge_correction(t_commrec*, t_forcerec*, float, float (*)[3], float*, float (*)[3])",[Unknown],0x1f8370
+dd_distribute_vec,0.040006,0.040006,0.0,0.019005,0.021001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_distribute_vec(gmx_domdec_t*, t_block*, float const (*)[3], float (*)[3])",[Unknown],0x1b2810
+t2_4,0.040006,0.040006,0.0,0.0,0.040006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2_4,[Unknown],0x110df90
+n1fv_4,0.040005,0.040005,0.0,0.010001,0.030005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_4,[Unknown],0x11b3aa0
+n1fv_16,0.040004,0.040004,0.0,0.0,0.040004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_16,[Unknown],0x12e05d0
+gmx_omp_get_thread_num,0.040004,0.040004,0.0,0.0,0.040004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_omp_get_thread_num,[Unknown],0x2cbbd0
+gmx_pme_do._omp_fn.1,0.040003,0.040003,0.0,0.0,0.040003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_pme_do._omp_fn.1,[Unknown],0x2272a0
+t2bv_2,0.040003,0.040003,0.0,0.0,0.040003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_2,[Unknown],0x130d280
+n1bv_13,0.040002,0.040002,0.0,0.0,0.040002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_13,[Unknown],0x11a3b80
+asinf,0.040002,0.040002,0.0,0.0,0.040002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,asinf,[Unknown],0x317c0
+n1bv_5,0.040002,0.040002,0.0,0.0,0.040002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_5,[Unknown],0x12d76d0
+n1bv_20,0.040000,0.040000,0.0,0.009998,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_20,[Unknown],0x11a5290
+t2_5,0.040000,0.040000,0.0,0.0,0.040000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2_5,[Unknown],0x110e1b0
+n1fv_10,0.039999,0.039999,0.0,0.0,0.039999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_10,[Unknown],0x12da2b0
+n1bv_4,0.039999,0.039999,0.0,0.0,0.039999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_4,[Unknown],0x11a7970
+n1bv_20,0.039999,0.039999,0.0,0.0,0.039999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_20,[Unknown],0x12d4e50
+t2fv_10,0.039998,0.039998,0.0,0.0,0.039998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_10,[Unknown],0x11e6540
+n1fv_16,0.039998,0.039998,0.0,0.0,0.039998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_16,[Unknown],0x11b0e00
+fftwf_compute_tilesz,0.039998,0.039998,0.0,0.0,0.039998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_compute_tilesz,[Unknown],0x1335470
+fftwf_execute_dft_c2r,0.039998,0.039998,0.0,0.0,0.039998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_execute_dft_c2r,[Unknown],0x10dadf0
+n1bv_7,0.039997,0.039997,0.0,0.0,0.039997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_7,[Unknown],0x11a9df0
+mk_mshift,0.039997,0.039997,0.0,0.0,0.039997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mk_mshift,[Unknown],0x27e150
+n1fv_20,0.039997,0.039997,0.0,0.0,0.039997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_20,[Unknown],0x12170c0
+gmx::decideWhetherToUseGpusForNonbonded,0.031026,0.031026,0.0,0.0,0.031026,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::decideWhetherToUseGpusForNonbonded(gmx::TaskTarget, std::vector<int, std::allocator<int>> const&, EmulateGpuNonbonded, bool, bool, bool)",[Unknown],0x104c7c0
+__libc_realloc,0.031005,0.031005,0.0,0.0,0.031005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__libc_realloc,[Unknown],0x7fd10
+[Import thunk operator new],0.030097,0.030097,0.0,0.030097,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk operator new(unsigned long)],[Unknown],0x157260
+init_domdec_constraints,0.030031,0.030031,0.0,0.0,0.030031,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"init_domdec_constraints(gmx_domdec_t*, gmx_mtop_t const*)",[Unknown],0x1dd2b0
+IMD_prep_energies_send_positions,0.030012,0.030012,0.0,0.0,0.030012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"IMD_prep_energies_send_positions(int, int, t_IMD*, gmx_enerdata_t*, long, int, gmx_wallcycle*)",[Unknown],0x3e43c0
+[Import thunk do_dih_fup],0.030009,0.030009,0.0,0.0,0.030009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk do_dih_fup(int, int, int, int, float, float*, float*, float*, float*, float*, float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float const (*)[3], int, int, int)]",[Unknown],0x15acc0
+post_process_forces,0.030008,0.030008,0.0,0.0,0.030008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"post_process_forces(t_commrec*, long, t_nrnb*, gmx_wallcycle*, gmx_localtop_t*, float (*)[3], float (*)[3], float (*)[3], gmx::ForceWithVirial*, float (*)[3], t_mdatoms*, t_graph*, t_forcerec*, gmx_vsite_t*, int)",[Unknown],0xfb50b0
+PMPI_Send,0.030008,0.030008,0.0,0.0,0.030008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Send,send.c,0x10a150
+t2fv_10,0.030004,0.030004,0.0,0.0,0.030004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_10,[Unknown],0x12bf0c0
+dd_get_constraint_range,0.030004,0.030004,0.0,0.0,0.030004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_get_constraint_range(gmx_domdec_t const*, int*, int*)",[Unknown],0x1bf4d0
+dotile_buf,0.030003,0.030003,0.0,0.0,0.030003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dotile_buf,[Unknown],0x1334650
+xdr_int,0.030003,0.030003,0.0,0.0,0.030003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,xdr_int,[Unknown],0x128800
+n1fv_20,0.030003,0.030003,0.0,0.0,0.030003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_20,[Unknown],0x12e0c20
+n1bv_16,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_16,[Unknown],0x11a4cd0
+fftwf_rdft_solve,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_rdft_solve,[Unknown],0x111c900
+n2fv_14,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_14,[Unknown],0x11bb7b0
+t1buv_5,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_5,[Unknown],0x11cceb0
+iterate.constprop.0,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,iterate.constprop.0,[Unknown],0x133fe90
+n1bv_10,0.030002,0.030002,0.0,0.0,0.030002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_10,[Unknown],0x1269a40
+htab_insert,0.030001,0.030001,0.0,0.0,0.030001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,htab_insert,[Unknown],0x10dc250
+n1bv_2,0.030001,0.030001,0.0,0.0,0.030001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_2,[Unknown],0x12d4d80
+cexp_zero,0.030001,0.030001,0.0,0.0,0.030001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,cexp_zero,[Unknown],0x13366c0
+t1_4,0.030000,0.030000,0.0,0.0,0.030000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1_4,[Unknown],0x10ffca0
+PMPI_Finalize,0.030000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Finalize,finalize.c,0xa0af0
+__memcpy_sse2,0.030000,0.030000,0.0,0.030000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__memcpy_sse2,[Unknown],0x8e9e0
+n1fv_13,0.030000,0.030000,0.0,0.0,0.030000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_13,[Unknown],0x12df450
+t1buv_8,0.030000,0.030000,0.0,0.0,0.030000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_8,[Unknown],0x12fb4d0
+fftwf_mkstride,0.030000,0.030000,0.0,0.0,0.030000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_mkstride,[Unknown],0x1334ce0
+dobatch_hc2r,0.030000,0.030000,0.0,0.009999,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dobatch_hc2r,[Unknown],0x133f5e0
+fftwf_cpy2d_co,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d_co,[Unknown],0x13345e0
+n1fv_2,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_2,[Unknown],0x11b1300
+t2fv_8,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_8,[Unknown],0x12c3e10
+max_cutoff2,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"max_cutoff2(int, float const (*)[3])",[Unknown],0x283350
+setup_bonded_threading,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,setup_bonded_threading,[Unknown],0x17ba60
+t1_10,0.029999,0.029999,0.0,0.0,0.029999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1_10,[Unknown],0x10f7b40
+t2_10,0.029998,0.029998,0.0,0.0,0.029998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2_10,[Unknown],0x1106670
+n1fv_5,0.029998,0.029998,0.0,0.0,0.029998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_5,[Unknown],0x12891a0
+htab_lookup,0.029997,0.029997,0.0,0.0,0.029997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,htab_lookup,[Unknown],0x10dbef0
+t1_5,0.029997,0.029997,0.0,0.0,0.029997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1_5,[Unknown],0x10ffe90
+fftwf_md5putb,0.029996,0.029996,0.0,0.0,0.029996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_md5putb,[Unknown],0x10e0c40
+fftwf_twiddle_awake,0.029995,0.029995,0.0,0.0,0.029995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_twiddle_awake,[Unknown],0x1336d40
+apply_r2hc,0.029994,0.029994,0.0,0.0,0.029994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_r2hc,[Unknown],0x111bea0
+gmx_fft_1d_real,0.029990,0.029990,0.0,0.0,0.029990,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_fft_1d_real(gmx_fft*, gmx_fft_direction, void*, void*)",[Unknown],0xffea90
+gmx_fft_many_1d_real,0.029976,0.029976,0.0,0.0,0.029976,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_fft_many_1d_real(gmx_fft*, gmx_fft_direction, void*, void*)",[Unknown],0xffeb20
+fftwf_execute_dft_r2c,0.029953,0.029953,0.0,0.0,0.029953,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_execute_dft_r2c,[Unknown],0x10dae20
+parse_common_args,0.029463,0.029463,0.0,0.029463,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,parse_common_args,[Unknown],0x19e070
+low_set_pbc,0.029012,0.029012,0.0,0.0,0.029012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"low_set_pbc(t_pbc*, int, int const*, float const (*)[3])",[Unknown],0x2836a0
+n1fv_8,0.029001,0.029001,0.0,0.0,0.029001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_8,[Unknown],0x12e5950
+strncmp,0.021049,0.021049,0.0,0.010000,0.011049,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-dynamic.so,strncmp,[Unknown],0x42560
+constrained_atom_sigma2,0.020994,0.020994,0.0,0.0,0.020994,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"constrained_atom_sigma2(float, atom_nonbonded_kinetic_prop_t const*, float*, float*)",[Unknown],0xedc7c0
+sum_ekin,0.020350,0.020350,0.0,0.0,0.020350,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"sum_ekin(t_grpopts*, gmx_ekindata_t*, float*, int, int)",[Unknown],0xfc4400
+gmx::setProgramContext,0.020299,0.020299,0.0,0.0,0.020299,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::setProgramContext(gmx::IProgramContext const*),[Unknown],0x2f80c0
+check_callbacks,0.020043,0.020043,0.0,0.010000,0.010043,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"check_callbacks(_IO_FILE*, gmx_ana_selmethod_t*)",[Unknown],0x704fa0
+gmx_strcasecmp,0.020039,0.020039,0.0,0.009953,0.010087,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_strcasecmp,[Unknown],0x2b9bc0
+clear_fshift,0.020035,0.020035,0.0,0.0,0.020035,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,clear_fshift(float*),[Unknown],0xe63e30
+gmx::CommandLineProgramContext::Impl::Impl,0.020033,0.020033,0.0,0.0,0.020033,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::CommandLineProgramContext::Impl::Impl(int, char const** const, std::unique_ptr<gmx::IExecutableEnvironment, std::default_delete<gmx::IExecutableEnvironment>>)",[Unknown],0x198ed0
+func@0x6d30,0.020021,0.020021,0.0,0.0,0.020021,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0x6d30,[Unknown],0x6d30
+[Import thunk walltime_accounting_get_current_elapsed_time],0.020015,0.020015,0.0,0.0,0.020015,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,[Import thunk walltime_accounting_get_current_elapsed_time],[Unknown],0x40c950
+[Import thunk gmx_omp_nthreads_get],0.020015,0.020015,0.0,0.0,0.020015,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk gmx_omp_nthreads_get(int)],[Unknown],0x152440
+computeSpecialForces,0.020015,0.020015,0.0,0.0,0.020015,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"computeSpecialForces(_IO_FILE*, t_commrec*, t_inputrec*, long, double, gmx_wallcycle*, ForceProviders*, float (*)[3], float (*)[3], t_mdatoms*, float*, int, gmx::ForceWithVirial*, gmx_enerdata_t*, gmx_edsam*, int)",[Unknown],0xfb4940
+nbnxn_make_pairlist._omp_fn.1,0.020014,0.020014,0.0,0.0,0.020014,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,nbnxn_make_pairlist._omp_fn.1,[Unknown],0xf85d50
+toupper,0.020012,0.020012,0.0,0.0,0.020012,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,toupper,[Unknown],0x2e820
+[Import thunk wallcycle_start],0.020009,0.020009,0.0,0.0,0.020009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,"[Import thunk wallcycle_start(gmx_wallcycle*, int)]",[Unknown],0x40ca80
+[Import thunk gmx_gettime],0.020008,0.020008,0.0,0.0,0.020008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk gmx_gettime],[Unknown],0x152960
+func@0x6ef0,0.020007,0.020007,0.0,0.0,0.020007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgomp.so.1.0.0,func@0x6ef0,[Unknown],0x6ef0
+ddReopenBalanceRegionCpu,0.020006,0.020006,0.0,0.0,0.020006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,ddReopenBalanceRegionCpu(gmx_domdec_t const*),[Unknown],0x1a4e80
+func@0x2ee0,0.020005,0.020005,0.0,0.0,0.020005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmlx5-rdmav2.so,func@0x2ee0,[Unknown],0x2ee0
+[Import thunk MPI_Sendrecv],0.020005,0.020005,0.0,0.0,0.020005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk MPI_Sendrecv],[Unknown],0x1555a0
+wcycle_get_reset_counters,0.020005,0.020005,0.0,0.0,0.020005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,wcycle_get_reset_counters(gmx_wallcycle*),[Unknown],0x29eac0
+compute_globals,0.020004,0.020004,0.0,0.0,0.020004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"compute_globals(_IO_FILE*, gmx_global_stat*, t_commrec*, t_inputrec*, t_forcerec*, gmx_ekindata_t*, t_state*, t_mdatoms*, t_nrnb*, t_vcm*, gmx_wallcycle*, gmx_enerdata_t*, float (*)[3], float (*)[3], float (*)[3], float (*)[3], float*, gmx_constr*, gmx::SimulationSignaller*, float (*)[3], int*, int*, int)",[Unknown],0xf3ee80
+t1buv_2,0.020004,0.020004,0.0,0.0,0.020004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_2,[Unknown],0x1235bf0
+calc_vir,0.020004,0.020004,0.0,0.0,0.020004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_vir(int, float (*)[3], float (*)[3], float (*)[3], int, float (*)[3])",[Unknown],0xee0360
+MPI_SGI_interior_send,0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,MPI_SGI_interior_send,req.c,0x559f0
+t1_20,0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1_20,[Unknown],0x10fa790
+global_stat,0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"global_stat(gmx_global_stat*, t_commrec*, gmx_enerdata_t*, float (*)[3], float (*)[3], float*, t_inputrec*, gmx_ekindata_t*, gmx_constr*, t_vcm*, int, float*, int*, int, int)",[Unknown],0xfbf870
+n1fv_8,0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_8,[Unknown],0x121d4b0
+t1fv_7,0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_7,[Unknown],0x1309c30
+"std::vector<float, gmx::Allocator<float, gmx::HostAllocationPolicy>>::_M_default_append",0.020003,0.020003,0.0,0.0,0.020003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::vector<float, gmx::Allocator<float, gmx::HostAllocationPolicy>>::_M_default_append(unsigned long)",[Unknown],0x20de00
+t1fuv_2,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_2,[Unknown],0x12af1e0
+mkplan,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x10dd170
+[Import thunk erfcf],0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk erfcf],[Unknown],0x15c4d0
+n1bv_32,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_32,[Unknown],0x12d6840
+t2_20,0.020002,0.020002,0.0,0.010000,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2_20,[Unknown],0x1107dc0
+gmx::SimulationSignaller::getCommunicationBuffer,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::SimulationSignaller::getCommunicationBuffer(void),[Unknown],0xfbdb50
+t1bv_5,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_5,[Unknown],0x12ff8c0
+t1buv_2,0.020002,0.020002,0.0,0.0,0.020002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_2,[Unknown],0x11ccb20
+n1fv_7,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_7,[Unknown],0x11b5ec0
+t1bv_7,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_7,[Unknown],0x1301c10
+n1bv_10,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_10,[Unknown],0x12ce2d0
+n1fv_10,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_10,[Unknown],0x127b740
+n2bv_8,0.020001,0.020001,0.0,0.010001,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_8,[Unknown],0x1222190
+std::string::append,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libstdc++.so.6.0.22,"std::string::append(char const*, unsigned long)",basic_string.tcc,0xcf8c0
+t1fuv_10,0.020001,0.020001,0.0,0.0,0.020001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_10,[Unknown],0x11d5700
+q1fv_2,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,q1fv_2,[Unknown],0x11c97a0
+n2fv_20,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_20,[Unknown],0x12eb300
+fftwf_ifree0,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_ifree0,[Unknown],0x10dbcb0
+t2fv_5,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_5,[Unknown],0x1314620
+[Import thunk _where],0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk _where],[Unknown],0x15d2a0
+apply_iter,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_iter,[Unknown],0x111b2b0
+recur,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,recur,[Unknown],0x1117d60
+_int_malloc,0.020000,0.020000,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,_int_malloc,[Unknown],0x7dcb0
+gmx::StringOption::createStorage,0.020000,0.020000,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::StringOption::createStorage(gmx::OptionManagerContainer const&) const,[Unknown],0x1016040
+gmx::stripSuffixIfPresent,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::stripSuffixIfPresent(std::string const&, char const*)",[Unknown],0x2ff5a0
+setup_headers,0.020000,0.020000,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,setup_headers,ud.c,0x11c630
+n1bv_7,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_7,[Unknown],0x12d9990
+t3fv_20,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t3fv_20,[Unknown],0x131d630
+n1fv_5,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_5,[Unknown],0x121a4c0
+copy,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,copy,[Unknown],0x111ab40
+t2fv_4,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_4,[Unknown],0x1314500
+n1bv_14,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_14,[Unknown],0x12d3c50
+t1fuv_2,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_2,[Unknown],0x1302940
+t1fuv_5,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_5,[Unknown],0x1302d40
+fftwf_malloc_plain,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_malloc_plain,[Unknown],0x10dbc50
+r2cb_8,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cb_8,[Unknown],0x11994c0
+t1buv_4,0.020000,0.020000,0.0,0.0,0.020000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_4,[Unknown],0x12faaa0
+fftwf_tile2d,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_tile2d,[Unknown],0x1335370
+fftwf_cpy2d_pair_ci,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d_pair_ci,[Unknown],0x1333fd0
+t1buv_4,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_4,[Unknown],0x12a65f0
+std::string::append,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libstdc++.so.6.0.22,std::string::append(std::string const&),basic_string.tcc,0xcf730
+n1fv_7,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_7,[Unknown],0x121d0d0
+n1fv_5,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_5,[Unknown],0x11b3bd0
+t1fuv_5,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_5,[Unknown],0x11d5f50
+[Import thunk expf],0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk expf],[Unknown],0x156270
+r2cf_2,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cf_2,[Unknown],0x1157b20
+n1fv_32,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_32,[Unknown],0x12e25e0
+gmx_fio_ndoe_rvec,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_fio_ndoe_rvec(t_fileio*, float (*)[3], int, char const*, char const*, int)",[Unknown],0x32aaf0
+free,0.019999,0.019999,0.0,0.010000,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,free,[Unknown],0x7fc30
+n2bv_16,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_16,[Unknown],0x12e69e0
+n1fv_2,0.019999,0.019999,0.0,0.009998,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_2,[Unknown],0x12e0b50
+[Import thunk gmx_fft_1d],0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk gmx_fft_1d(gmx_fft*, gmx_fft_direction, void*, void*)]",[Unknown],0x1579e0
+t1fv_20,0.019999,0.019999,0.0,0.0,0.019999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_20,[Unknown],0x11d8570
+t1buv_5,0.019998,0.019998,0.0,0.0,0.019998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_5,[Unknown],0x12361b0
+apply_hc2r,0.019998,0.019998,0.0,0.0,0.019998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_hc2r,[Unknown],0x1338d70
+n2fv_8,0.019998,0.019998,0.0,0.0,0.019998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_8,[Unknown],0x12ee530
+gmx_parallel_3dfft_real_limits,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_parallel_3dfft_real_limits,[Unknown],0xffd510
+n1bv_5,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_5,[Unknown],0x120b120
+r2cf_4,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cf_4,[Unknown],0x1159b50
+t3fv_5,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t3fv_5,[Unknown],0x11f70d0
+apply_buf_r2hc,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_buf_r2hc,[Unknown],0x1340100
+t3bv_5,0.019997,0.019997,0.0,0.0,0.019997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t3bv_5,[Unknown],0x11f2c30
+"std::vector<gmx::BasicVector<float>, std::allocator<gmx::BasicVector<float>>>::_M_default_append",0.019996,0.019996,0.0,0.0,0.019996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::vector<gmx::BasicVector<float>, std::allocator<gmx::BasicVector<float>>>::_M_default_append(unsigned long)",[Unknown],0x20e720
+t1fuv_2,0.019996,0.019996,0.0,0.0,0.019996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_2,[Unknown],0x123ef60
+gmx_pme_do._omp_fn.0,0.019995,0.019995,0.0,0.0,0.019995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_pme_do._omp_fn.0,[Unknown],0x226eb0
+t1fuv_4,0.019995,0.019995,0.0,0.0,0.019995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_4,[Unknown],0x11d5dd0
+gmx_mtop_atomloop_block_next,0.019992,0.019992,0.0,0.0,0.019992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_mtop_atomloop_block_next(gmx_mtop_atomloop_block*, t_atom const**, int*)",[Unknown],0x2b03f0
+[Import thunk omp_get_thread_num],0.019988,0.019988,0.0,0.0,0.019988,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk omp_get_thread_num],[Unknown],0x15bfa0
+__strcmp_sse42,0.019824,0.019824,0.0,0.019824,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__strcmp_sse42,[Unknown],0x131ff0
+init_forcerec,0.011013,0.011013,0.0,0.0,0.011013,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"init_forcerec(_IO_FILE*, gmx::MDLogger const&, t_forcerec*, t_fcdata*, t_inputrec const*, gmx_mtop_t const*, t_commrec const*, float (*)[3], char const*, char const*, t_filenm const*, gmx_hw_info_t const&, gmx_device_info_t const*, int, float)",[Unknown],0xf23f00
+[Import thunk memset],0.010264,0.010264,0.0,0.010264,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk memset],[Unknown],0x1539c0
+__vsnprintf,0.010153,0.010153,0.0,0.0,0.010153,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__vsnprintf,[Unknown],0x74510
+gmx::createSelectionHelpTopic,0.010104,0.010104,0.0,0.0,0.010104,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::createSelectionHelpTopic(void),[Unknown],0x703a00
+gmx_ana_selmethod_register_defaults,0.010099,0.010099,0.0,0.0,0.010099,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_ana_selmethod_register_defaults(gmx::SelectionParserSymbolTable*),[Unknown],0x705fa0
+gmx::CommandLineHelpModuleImpl::CommandLineHelpModuleImpl,0.010084,0.010084,0.0,0.0,0.010084,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::CommandLineHelpModuleImpl::CommandLineHelpModuleImpl(gmx::IProgramContext const&, std::string const&, std::map<std::string, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>> const&, std::vector<std::unique_ptr<gmx::CommandLineModuleGroupData, std::default_delete<gmx::CommandLineModuleGroupData>>, std::allocator<std::unique_ptr<gmx::CommandLineModuleGroupData, std::default_delete<gmx::CommandLineModuleGroupData>>>> const&)",[Unknown],0x188fa0
+gmx::MDModules::assignOptionsToModules,0.010082,0.010082,0.0,0.0,0.010082,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::MDModules::assignOptionsToModules(gmx::KeyValueTreeObject const&, gmx::IKeyValueTreeErrorHandler*)",[Unknown],0x100f660
+[Import thunk gmx::erfinv],0.010075,0.010075,0.0,0.010075,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk gmx::erfinv(double)],[Unknown],0x15be70
+gmx::registerTrajectoryAnalysisModules,0.010051,0.010051,0.0,0.0,0.010051,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::registerTrajectoryAnalysisModules(gmx::CommandLineModuleManager*),[Unknown],0x71b100
+calc_temp,0.010045,0.010045,0.0,0.0,0.010045,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_temp(float, float)",[Unknown],0xef4d60
+mdAlgorithmsSetupAtomData,0.010044,0.010044,0.0,0.0,0.010044,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"mdAlgorithmsSetupAtomData(t_commrec*, t_inputrec const*, gmx_mtop_t const*, gmx_localtop_t*, t_forcerec*, t_graph**, gmx::MDAtoms*, gmx_vsite_t*, gmx_shellfc_t*)",[Unknown],0xf52230
+set_pme_maxshift,0.010039,0.010039,0.0,0.0,0.010039,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_pme_maxshift(gmx_domdec_t*, gmx_ddpme_t*, int, gmx_ddbox_t const*, float const*)",[Unknown],0x1a6680
+gmx_mtop_ftype_count,0.010030,0.010030,0.0,0.0,0.010030,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_mtop_ftype_count(gmx_mtop_t const*, int)",[Unknown],0x2b0740
+[Import thunk clear_fshift],0.010022,0.010022,0.0,0.0,0.010022,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk clear_fshift(float*)],[Unknown],0x15ca20
+[Import thunk clear_f],0.010017,0.010017,0.0,0.0,0.010017,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk clear_f(nbnxn_atomdata_t const*, int, float*)]",[Unknown],0x154540
+gmx::runTaskAssignment,0.010016,0.010016,0.0,0.0,0.010016,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::runTaskAssignment(std::vector<int, std::allocator<int>> const&, std::vector<int, std::allocator<int>> const&, gmx_hw_info_t const&, gmx::MDLogger const&, t_commrec const*, std::vector<gmx::GpuTask, std::allocator<gmx::GpuTask>> const&)",[Unknown],0x1051c70
+[Import thunk do_IMD],0.010009,0.010009,0.0,0.0,0.010009,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,"[Import thunk do_IMD(int, long, t_commrec*, int, float (*)[3], float (*)[3], t_inputrec*, double, gmx_wallcycle*)]",[Unknown],0x40da90
+[Import thunk inputrecNeedMutot],0.010008,0.010008,0.0,0.0,0.010008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk inputrecNeedMutot(t_inputrec const*)],[Unknown],0x15a540
+"std::vector<double, std::allocator<double>>::_M_fill_insert",0.010008,0.010008,0.0,0.0,0.010008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::vector<double, std::allocator<double>>::_M_fill_insert(__gnu_cxx::__normal_iterator<double*, std::vector<double, std::allocator<double>>>, unsigned long, double const&)",[Unknown],0x25fb80
+[Import thunk set_pbc_simd],0.010008,0.010008,0.0,0.0,0.010008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk set_pbc_simd(t_pbc const*, float*)]",[Unknown],0x150eb0
+[Import thunk gmx_mtop_atomloop_all_next],0.010008,0.010008,0.0,0.0,0.010008,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk gmx_mtop_atomloop_all_next(gmx_mtop_atomloop_all*, int*, t_atom const**)]",[Unknown],0x159be0
+isalnum,0.010007,0.010007,0.0,0.0,0.010007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,isalnum,[Unknown],0x2e690
+[Import thunk wallcycle_start_nocount],0.010007,0.010007,0.0,0.0,0.010007,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk wallcycle_start_nocount(gmx_wallcycle*, int)]",[Unknown],0x150d40
+[Import thunk MPI_Irecv],0.010006,0.010006,0.0,0.0,0.010006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk MPI_Irecv],[Unknown],0x15a410
+set_zones_size,0.010005,0.010005,0.0,0.0,0.010005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"set_zones_size(gmx_domdec_t*, float (*)[3], gmx_ddbox_t const*, int, int, int)",[Unknown],0x1a6d10
+tMPI_Lock_unlock,0.010005,0.010005,0.0,0.0,0.010005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,tMPI_Lock_unlock,[Unknown],0x1057070
+register_solver,0.010005,0.010005,0.0,0.0,0.010005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,register_solver,[Unknown],0x10dbdf0
+upd_mdebin,0.010005,0.010005,0.0,0.0,0.010005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"upd_mdebin(t_mdebin*, int, int, double, float, gmx_enerdata_t*, t_state*, t_lambda*, t_expanded*, float (*)[3], float (*)[3], float (*)[3], float (*)[3], float (*)[3], gmx_ekindata_t*, float*, gmx_constr*)",[Unknown],0xf48070
+calc_dispcorr,0.010005,0.010005,0.0,0.0,0.010005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_dispcorr(t_inputrec*, t_forcerec*, float (*)[3], float, float (*)[3], float (*)[3], float*, float*, float*)",[Unknown],0xfb7790
+[Import thunk IMD_prep_energies_send_positions],0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,"[Import thunk IMD_prep_energies_send_positions(int, int, t_IMD*, gmx_enerdata_t*, long, int, gmx_wallcycle*)]",[Unknown],0x40d6e0
+berendsen_tcoupl,0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"berendsen_tcoupl(t_inputrec const*, gmx_ekindata_t const*, float, std::vector<double, std::allocator<double>>&)",[Unknown],0xef63c0
+[Import thunk dd_sendrecv2_rvec],0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk dd_sendrecv2_rvec(gmx_domdec_t const*, int, float (*)[3], int, float (*)[3], int, float (*)[3], int, float (*)[3], int)]",[Unknown],0x153640
+settle_init,0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,settle_init,[Unknown],0xf02fc0
+gmx_sumd,0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_sumd(int, double*, t_commrec const*)",[Unknown],0x752fa0
+gmx::simdSuggested,0.010004,0.010004,0.0,0.0,0.010004,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::simdSuggested(gmx::CpuInfo const&),[Unknown],0x3de600
+"std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::HostAllocationPolicy>>::_M_default_append",0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::HostAllocationPolicy>>::_M_default_append(unsigned long)",[Unknown],0x20e3b0
+[Import thunk calc_ke_part],0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk calc_ke_part(t_state*, t_grpopts*, t_mdatoms*, gmx_ekindata_t*, t_nrnb*, int)]",[Unknown],0x1545c0
+spread_on_grid,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"spread_on_grid(gmx_pme_t const*, pme_atomcomm_t const*, pmegrids_t const*, int, int, float*, int, int)",[Unknown],0x224410
+t1bv_7,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_7,[Unknown],0x12ae230
+cconerr,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"cconerr(gmx_lincsdata const*, float (*)[3], t_pbc*, float*, float*, float*, int*)",[Unknown],0xee1390
+berendsen_pscale,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"berendsen_pscale(t_inputrec const*, float const (*)[3], float (*)[3], float (*)[3], int, int, float (*)[3], unsigned short const*, t_nrnb*)",[Unknown],0xef6230
+nbnxn_put_on_grid_nonlocal,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_put_on_grid_nonlocal(nbnxn_search*, gmx_domdec_zones_t const*, int const*, float (*)[3], int, nbnxn_atomdata_t*)",[Unknown],0xf7afd0
+[Import thunk ftype_is_bonded_potential],0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk ftype_is_bonded_potential(int)],[Unknown],0x159c30
+set_constraints,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,set_constraints,[Unknown],0xeef9e0
+t1fuv_7,0.010003,0.010003,0.0,0.0,0.010003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_7,[Unknown],0x1303260
+gmx::SimulationSignaller::SimulationSignaller,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::SimulationSignaller::SimulationSignaller(std::array<gmx::SimulationSignal, (unsigned long)3>*, t_commrec const*, bool, bool)",[Unknown],0xfbdb30
+n1bv_13,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_13,[Unknown],0x1271100
+update_pcouple_before_coordinates,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"update_pcouple_before_coordinates(_IO_FILE*, long, t_inputrec const*, t_state*, float (*)[3], float (*)[3], int)",[Unknown],0xfce5c0
+fftwf_tensor_compress_contiguous,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_tensor_compress_contiguous,[Unknown],0x10e1700
+[Import thunk ddReopenBalanceRegionCpu],0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk ddReopenBalanceRegionCpu(gmx_domdec_t const*)],[Unknown],0x15b680
+minCellSizeForAtomDisplacement,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"minCellSizeForAtomDisplacement(gmx_mtop_t const&, t_inputrec const&, float)",[Unknown],0xede6f0
+t1fv_2,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_2,[Unknown],0x13050a0
+n2fv_16,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_16,[Unknown],0x12eadf0
+hc2cb_2,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hc2cb_2,[Unknown],0x117b1e0
+fftwf_cpy2d_tiledbuf,0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_cpy2d_tiledbuf,[Unknown],0x13347b0
+[Import thunk fftwf_dft_zerotens],0.010002,0.010002,0.0,0.0,0.010002,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk fftwf_dft_zerotens],[Unknown],0x154bf0
+add_binr,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"add_binr(t_bin*, int, float*)",[Unknown],0xfa7a20
+n1fv_32,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_32,[Unknown],0x11b2df0
+n2fv_10,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_10,[Unknown],0x11bb170
+[Import thunk cos],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk cos],[Unknown],0x15df30
+t1fuv_7,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_7,[Unknown],0x11d6430
+t2bv_10,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_10,[Unknown],0x11e1000
+[Import thunk nbnxn_kernel_cpu],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk nbnxn_kernel_cpu(nonbonded_verlet_group_t*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*)[3], int, int, float*, float*, float*)]",[Unknown],0x15a570
+n1fv_2,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_2,[Unknown],0x1216f80
+gmx::CommandLineProgramContext::installationPrefix,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::CommandLineProgramContext::installationPrefix(void) const,[Unknown],0x19a860
+[Import thunk dd_move_f],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk dd_move_f(gmx_domdec_t*, float (*)[3], float (*)[3])]",[Unknown],0x153310
+fftwf_ifree,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_ifree,[Unknown],0x10dbca0
+nbnxn_get_ncells,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"nbnxn_get_ncells(nbnxn_search*, int*, int*)",[Unknown],0xf7b210
+t1fuv_4,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_4,[Unknown],0x1302ba0
+inputrecDynamicBox,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,inputrecDynamicBox(t_inputrec const*),[Unknown],0x25cd00
+mkcldw,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkcldw,[Unknown],0x133c6b0
+n1bv_20,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_20,[Unknown],0x1273750
+r2cfII_4,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cfII_4,[Unknown],0x114f5c0
+fftwf_ct_uglyp,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_ct_uglyp,[Unknown],0x1341380
+t1fv_10,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_10,[Unknown],0x1303dc0
+calc_1se.isra.2,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"calc_1se(t_graph*, int, t_ilist const*, int*, int, int).isra.2",[Unknown],0x27b6c0
+[Import thunk do_pairs],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk do_pairs(int, int, int const*, t_iparams const*, float const (*)[3], float (*)[4], float (*)[3], t_pbc const*, t_graph const*, float const*, float*, t_mdatoms const*, t_forcerec const*, int, gmx_grppairener_t*, int*)]",[Unknown],0x158f30
+[Import thunk fftwf_kernel_malloc],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk fftwf_kernel_malloc],[Unknown],0x15c080
+[Import thunk dd_cycles_add],0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,gmx_mpi,"[Import thunk dd_cycles_add(gmx_domdec_t const*, float, int)]",[Unknown],0x40c310
+fftwf_tensor_md5,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_tensor_md5,[Unknown],0x10e1090
+t2_8,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2_8,[Unknown],0x1114480
+hc2cfdft2_4,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hc2cfdft2_4,[Unknown],0x112eae0
+hb_4,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hb_4,[Unknown],0x116cab0
+fftwf_dft_zerotens,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_dft_zerotens,[Unknown],0x10dec80
+PMPI_Barrier,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Barrier,barrier.c,0x737c0
+t1buv_7,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_7,[Unknown],0x1236880
+t3bv_10,0.010001,0.010001,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t3bv_10,[Unknown],0x12c6d00
+t2fv_5,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_5,[Unknown],0x12c1f50
+n2fv_10,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_10,[Unknown],0x12ea3a0
+iterate.constprop.1,0.010001,0.010001,0.0,0.0,0.010001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,iterate.constprop.1,[Unknown],0x133fc30
+t1fv_2,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_2,[Unknown],0x11d84c0
+hf_2,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hf_2,[Unknown],0x1140140
+apply_hc2r,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_hc2r,[Unknown],0x133f590
+t1fuv_5,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_5,[Unknown],0x123f530
+n1bv_2,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_2,[Unknown],0x1207c10
+t1fuv_10,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_10,[Unknown],0x1302490
+t2fv_4,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_4,[Unknown],0x1252520
+n2fv_16,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_16,[Unknown],0x11bbd20
+dotile,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dotile,[Unknown],0x1334500
+n1bv_32,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_32,[Unknown],0x11a6cf0
+t1fv_5,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_5,[Unknown],0x11db310
+q1_4,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,q1_4,[Unknown],0x10f1400
+t2fv_10,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2fv_10,[Unknown],0x124f690
+n2bv_10,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_10,[Unknown],0x11b6780
+extract_binr,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"extract_binr(t_bin*, int, int, float*)",[Unknown],0xfa8480
+[Import thunk gmx_fft_many_1d_real],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk gmx_fft_many_1d_real(gmx_fft*, gmx_fft_direction, void*, void*)]",[Unknown],0x150a40
+t1fv_16,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_16,[Unknown],0x11d7ea0
+n1fv_4,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_4,[Unknown],0x121a2c0
+n1_32,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1_32,[Unknown],0x10ead90
+[Import thunk fftwf_pickdim],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk fftwf_pickdim],[Unknown],0x152ab0
+t1bv_20,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_20,[Unknown],0x12fd080
+[Import thunk ePBC2npbcdim],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk ePBC2npbcdim(int)],[Unknown],0x15b9b0
+t1buv_10,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_10,[Unknown],0x12fa390
+f_calc_vir,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"f_calc_vir(int, int, float (*)[3], float (*)[3], float (*)[3], t_graph*, float (*)[3])",[Unknown],0xee0740
+IntHashMap_FindEntry,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-dynamic.so,IntHashMap_FindEntry,[Unknown],0x6d180
+MPI_SGI_try_gps,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,MPI_SGI_try_gps,gps.h,0x4a370
+[Import thunk __cxa_atexit],0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk __cxa_atexit],[Unknown],0x1564a0
+[Import thunk std::string::swap],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk std::string::swap(std::string&)],[Unknown],0x15cf60
+_IO_file_underflow,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,_IO_file_underflow,[Unknown],0x77880
+_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIJSsEEEvDpOT_,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIJSsEEEvDpOT_,[Unknown],0x268580
+__madvise,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,__madvise,[Unknown],0xf0bf0
+__memset_sse2,0.010000,0.010000,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,__memset_sse2,[Unknown],0x88e40
+calc_vcm_grp._omp_fn.0,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,calc_vcm_grp._omp_fn.0,[Unknown],0xfd6e60
+check_match.9346,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,ld-2.17.so,check_match.9346,[Unknown],0x9330
+constr_r_max,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,constr_r_max,[Unknown],0xef07d0
+do_lookup_x,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,ld-2.17.so,do_lookup_x,[Unknown],0x9480
+fgets,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,fgets,[Unknown],0x6b750
+func@0xcd5,0.010000,0.010000,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libxpmem.so.0.0.0,func@0xcd5,[Unknown],0xcd5
+gmx::CommandLineHelpModule::name,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::CommandLineHelpModule::name(void) const,[Unknown],0x18be90
+gmx::CommandLineModuleManager::addModuleGroup,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::CommandLineModuleManager::addModuleGroup(char const*),[Unknown],0x192620
+gmx::FileNameOption::createStorage,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::FileNameOption::createStorage(gmx::OptionManagerContainer const&) const,[Unknown],0x1036c20
+gmx::OptionStorageTemplate<std::string>::OptionStorageTemplate<gmx::StringOption>,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::OptionStorageTemplate<std::string>::OptionStorageTemplate<gmx::StringOption>(gmx::OptionTemplate<std::string, gmx::StringOption> const&, gmx::FlagsTemplate<gmx::OptionFlag>)",[Unknown],0x1028bd0
+gmx::TrajectoryAnalysisCommandLineRunner::registerModule,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::TrajectoryAnalysisCommandLineRunner::registerModule(gmx::CommandLineModuleManager*, char const*, char const*, std::function<std::unique_ptr<gmx::TrajectoryAnalysisModule, std::default_delete<gmx::TrajectoryAnalysisModule>> (void)>)",[Unknown],0x71a7d0
+gmx::formatString,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::formatString(char const*, ellipsis)",[Unknown],0x3000b0
+init_domain_decomposition,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"init_domain_decomposition(_IO_FILE*, t_commrec*, DomdecOptions const&, MdrunOptions const&, gmx_mtop_t const*, t_inputrec const*, float const (*)[3], float const (*)[3], gmx_ddbox_t*, int*, int*)",[Unknown],0x1c7a40
+master_init,0.010000,0.010000,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi.so,master_init,adi.c,0x5f850
+operator new,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libstdc++.so.6.0.22,operator new(unsigned long),new_op.cc,0x8ed00
+opt2fn_null,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"opt2fn_null(char const*, int, t_filenm const*)",[Unknown],0x19c960
+read,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,read,[Unknown],0xe79c0
+"std::_Rb_tree<std::string, std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>, std::_Select1st<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>>::_M_insert_unique<std::pair<std::string, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>",0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::pair<std::_Rb_tree_iterator<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>, bool> std::_Rb_tree<std::string, std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>, std::_Select1st<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>>::_M_insert_unique<std::pair<std::string, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>>(std::pair<std::string, std::unique_ptr<gmx::ICommandLineModule, std::default_delete<gmx::ICommandLineModule>>>&&)",[Unknown],0x194750
+std::string::_M_replace_safe,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libstdc++.so.6.0.22,"std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long)",basic_string.tcc,0xcf110
+strlen,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-dynamic.so,strlen,[Unknown],0x42500
+[Import thunk cosf],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk cosf],[Unknown],0x155020
+done_blocka,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,done_blocka,[Unknown],0x2a56d0
+[Import thunk solve_pme_yzx],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk solve_pme_yzx(gmx_pme_t const*, t_complex*, float, int, int, int)]",[Unknown],0x154de0
+t1fv_4,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_4,[Unknown],0x1307810
+n2fv_14,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_14,[Unknown],0x12ea970
+mkplan,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x133f830
+n1fv_20,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1fv_20,[Unknown],0x1285470
+t2bv_4,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_4,[Unknown],0x11e3ff0
+dobatch_r2hc,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dobatch_r2hc,[Unknown],0x133f700
+mkplan,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x10e45e0
+mkplan,0.010000,0.010000,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x10e3340
+hash,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hash,[Unknown],0x10de270
+mkplan,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x1114bd0
+posix_memalign,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,posix_memalign,[Unknown],0x81dd0
+fftwf_md5puts,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_md5puts,[Unknown],0x10e0c80
+hf_8,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hf_8,[Unknown],0x114b660
+n2bv_20,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2bv_20,[Unknown],0x128e4a0
+fftwf_hc2hc_applicable,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_hc2hc_applicable,[Unknown],0x1117290
+[Import thunk calc_listed],0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk calc_listed(t_commrec const*, gmx_wallcycle*, t_idef const*, float const (*)[3], history_t*, float (*)[3], gmx::ForceWithVirial*, t_forcerec const*, t_pbc const*, t_pbc const*, t_graph const*, gmx_enerdata_t*, t_nrnb*, float const*, t_mdatoms const*, t_fcdata*, int*, int)]",[Unknown],0x150cb0
+n2fv_10,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_10,[Unknown],0x12223c0
+mkplan,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mkplan,[Unknown],0x1115a90
+n2fv_20,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n2fv_20,[Unknown],0x11bc260
+awake,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,awake,[Unknown],0x1338690
+t1fuv_8,0.010000,0.010000,0.0,0.0,0.010000,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_8,[Unknown],0x13035d0
+"std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy>>::_M_default_append",0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"std::vector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy>>::_M_default_append(unsigned long)",[Unknown],0x1d8980
+hgrow,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hgrow,[Unknown],0x10dc070
+r2cbIII_2,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cbIII_2,[Unknown],0x118b250
+r2cb_4,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cb_4,[Unknown],0x1197460
+apply,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x133cf20
+n1bv_2,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,n1bv_2,[Unknown],0x12735f0
+t1bv_2,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_2,[Unknown],0x12fcfd0
+[Import thunk fftwf_ct_applicable],0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk fftwf_ct_applicable],[Unknown],0x151660
+q1bv_2,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,q1bv_2,[Unknown],0x11c67b0
+cbrtf,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,cbrtf,[Unknown],0x2f990
+PMPI_Init_thread,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libmpi_mt.so,PMPI_Init_thread,init_thread.c,0xcc6e0
+t1buv_7,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_7,[Unknown],0x12fb160
+t3fv_4,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t3fv_4,[Unknown],0x125ef10
+t1bv_10,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_10,[Unknown],0x12fbcd0
+recur,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,recur,[Unknown],0x10de4c0
+t1fuv_10,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_10,[Unknown],0x12aeae0
+apply,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply,[Unknown],0x111cda0
+gmx_parallel_3dfft_execute,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx_parallel_3dfft_execute,[Unknown],0xffd660
+t1buv_4,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1buv_4,[Unknown],0x11ccd30
+t1bv_16,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1bv_16,[Unknown],0x12fca40
+qsort_r,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,qsort_r,[Unknown],0x38100
+t_okp_t1b,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t_okp_t1b,[Unknown],0x133c0f0
+r2cf_8,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cf_8,[Unknown],0x115bb10
+t2bv_8,0.009999,0.009999,0.0,0.0,0.009999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t2bv_8,[Unknown],0x12bee70
+[Import thunk wallcycle_start],0.009998,0.009998,0.0,0.0,0.009998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk wallcycle_start(gmx_wallcycle*, int)]",[Unknown],0x1560c0
+logf,0.009998,0.009998,0.0,0.0,0.009998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,logf,[Unknown],0x31f50
+fftwf_triggen_destroy,0.009998,0.009998,0.0,0.0,0.009998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,fftwf_triggen_destroy,[Unknown],0x1336cc0
+[Import thunk gmx_sum_qgrid_dd],0.009998,0.009998,0.0,0.0,0.009998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk gmx_sum_qgrid_dd(gmx_pme_t*, float*, int)]",[Unknown],0x159640
+gmx_fio_doe_real,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx_fio_doe_real(t_fileio*, float*, char const*, char const*, int)",[Unknown],0x327860
+t1fv_10,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fv_10,[Unknown],0x12b1120
+t1fuv_4,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,t1fuv_4,[Unknown],0x123f2d0
+hf_4,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hf_4,[Unknown],0x1145780
+dd_natoms_mdatoms,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,dd_natoms_mdatoms(gmx_domdec_t const*),[Unknown],0x1bf4b0
+q1bv_2,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,q1bv_2,[Unknown],0x12f46e0
+r2cfII_8,0.009997,0.009997,0.0,0.0,0.009997,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,r2cfII_8,[Unknown],0x1151a60
+hc2cfdft_16,0.009996,0.009996,0.0,0.0,0.009996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,hc2cfdft_16,[Unknown],0x1130700
+apply_before,0.009995,0.009995,0.0,0.0,0.009995,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,apply_before,[Unknown],0x1117650
+gmx::SimulationSignaller::signalInterSim,0.009992,0.009992,0.0,0.0,0.009992,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::SimulationSignaller::signalInterSim(void),[Unknown],0xfbdba0
+gmx::(anonymous namespace)::CommandLineOptionsModule::name,0.009986,0.009986,0.0,0.0,0.009986,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,gmx::(anonymous namespace)::CommandLineOptionsModule::name(void) const,[Unknown],0x195eb0
+dd_make_local_top,0.009985,0.009985,0.0,0.0,0.009985,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"dd_make_local_top(gmx_domdec_t*, gmx_domdec_zones_t*, int, float (*)[3], float*, int*, t_forcerec*, float (*)[3], gmx_vsite_t*, gmx_mtop_t const*, gmx_localtop_t*)",[Unknown],0x1eeac0
+berendsen_pcoupl,0.009985,0.009985,0.0,0.0,0.009985,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"berendsen_pcoupl(_IO_FILE*, long, t_inputrec const*, float, float const (*)[3], float const (*)[3], float const (*)[3], float const (*)[3], float (*)[3], double*)",[Unknown],0xef5a10
+[Import thunk GOMP_parallel_start],0.009984,0.009984,0.0,0.0,0.009984,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,[Import thunk GOMP_parallel_start],[Unknown],0x153c20
+[Import thunk gmx_fft_1d_real],0.009981,0.009981,0.0,0.0,0.009981,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"[Import thunk gmx_fft_1d_real(gmx_fft*, gmx_fft_direction, void*, void*)]",[Unknown],0x15cff0
+gmx::AbstractOptionStorage::AbstractOptionStorage,0.009930,0.009930,0.0,0.009930,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::AbstractOptionStorage::AbstractOptionStorage(gmx::AbstractOption const&, gmx::FlagsTemplate<gmx::OptionFlag>)",[Unknown],0x1011ab0
+_IO_fprintf,0.009847,0.009847,0.0,0.009847,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc-2.17.so,_IO_fprintf,[Unknown],0x51b70
+ftp2defopt,0.009812,0.009812,0.0,0.009812,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,ftp2defopt(int),[Unknown],0x324f40
+__ieee754_log_avx,0.009736,0.009736,0.0,0.0,0.009736,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libm-2.17.so,__ieee754_log_avx,[Unknown],0x5b4b0
+gmx::CommandLineHelpModule::addTopic,0.009701,0.009701,0.0,0.0,0.009701,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,"gmx::CommandLineHelpModule::addTopic(std::unique_ptr<gmx::IHelpTopic, std::default_delete<gmx::IHelpTopic>>, bool)",[Unknown],0x18a4d0
+pme_realloc_atomcomm_things,0.009005,0.009005,0.0,0.0,0.009005,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,pme_realloc_atomcomm_things(pme_atomcomm_t*),[Unknown],0x2115d0
+mdoutf_get_fp_ene,0.008999,0.008999,0.0,0.0,0.008999,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libgromacs_mpi.so.3.3.0,mdoutf_get_fp_ene(gmx_mdoutf*),[Unknown],0xf517d0
+__fork,0.008270,0.008270,0.0,0.008270,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,libc.so.6,__fork,[Unknown],0xbd460
