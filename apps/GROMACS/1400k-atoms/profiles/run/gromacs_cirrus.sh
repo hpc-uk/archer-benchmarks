@@ -18,8 +18,9 @@ cat <<EOF > gromacs_1400k_atom_${1}_nodes_cirrus.pbs
 #PBS -l select=$1:ncpus=36
 #PBS -l walltime=01:00:00
 #PBS -l place=scatter:excl
-### Please note: using tds queue, this only works for people in z04 and a single node
-### If not in z04 or you need multiple nodes, please comment out the "#PBS -q tds" line
+### Please note: using tds queue, this only works for people in the z04 project 
+### If not in z04 or you need more than two nodes then then please comment out
+### the "#PBS -q tds" line
 #PBS -q tds
 #PBS -A z04
 
@@ -88,20 +89,17 @@ rm -rf \$TMPDIR/*
 echo "TMPDIR =  \$TMPDIR"
 
 # VTune profile test run with 500 time steps and no source paths added in
-###rm -rf short_run_no_symbols/
-###mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots -result-dir=short_run_no_symbols gmx_mpi mdrun -s \${TOPDIR}/\${casename_short}_500.tpr -g \${resfile}_500step_tmp_no_symbols -noconfout
+###mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots gmx_mpi mdrun -s \${TOPDIR}/\${casename_short}_500.tpr -g \${resfile}_500step_tmp_no_symbols -noconfout
 ###sleep 30
 
 # VTune profile test run with 500 time steps and source and library paths added in. 
 # adding the paths in won't add source lines unless you've compiled with -g (harms performance on Gromacs)
 # but the paths are included as an example here
-###rm -rf short_run_with_symbols/
-###mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/lib64 -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/bin -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gromacs-2018.3/src/gromacs -search-dir=/usr/lib64 -search-dir=/lib64 -search-dir=/lustre/sw/gcc/6.3.0/lib64 -search-dir=/opt/hpe/hpc/mpt/mpt-2.16/lib -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64/pinruntime -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64 -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots -result-dir=short_run_with_symbols gmx_mpi mdrun -s \${TOPDIR}/\${casename_short}_500.tpr -g \${resfile}_500step_tmp_with_symbols -noconfout
+###mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/lib64 -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/bin -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gromacs-2018.3/src/gromacs -search-dir=/usr/lib64 -search-dir=/lib64 -search-dir=/lustre/sw/gcc/6.3.0/lib64 -search-dir=/opt/hpe/hpc/mpt/mpt-2.16/lib -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64/pinruntime -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64 -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots gmx_mpi mdrun -s \${TOPDIR}/\${casename_short}_500.tpr -g \${resfile}_500step_tmp_with_symbols -noconfout
 ###sleep 30
 
 # VTune profile, full 10000 time step run with source and library paths added (see above)
-rm -rf full_run_with_symbols
-mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/lib64 -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/bin -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gromacs-2018.3/src/gromacs -search-dir=/usr/lib64 -search-dir=/lib64 -search-dir=/lustre/sw/gcc/6.3.0/lib64 -search-dir=/opt/hpe/hpc/mpt/mpt-2.16/lib -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64/pinruntime -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64 -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots -result-dir=full_run_with_symbols gmx_mpi mdrun -s \${TOPDIR}/\${casename}.tpr -g \${resfile}_full_tmp -noconfout
+mpiexec_mpt -n \${cores} -ppn \${cpn} amplxe-cl -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/lib64 -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gmx/gromacs-2018.3_gcc_6.3.0/bin -search-dir=/lustre/home/z04/fiona/Projects/Profiling/gromacs-2018.3/src/gromacs -search-dir=/usr/lib64 -search-dir=/lib64 -search-dir=/lustre/sw/gcc/6.3.0/lib64 -search-dir=/opt/hpe/hpc/mpt/mpt-2.16/lib -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64/pinruntime -search-dir=/lustre/sw/intel/vtune_amplifier_2018.4.0.573462/lib64 -data-limit=0 -target-tmp-dir=\$TMPDIR -collect hotspots gmx_mpi mdrun -s \${TOPDIR}/\${casename}.tpr -g \${resfile}_full_tmp -noconfout
 sleep 300  
 
 
