@@ -108,6 +108,10 @@ In this initial performance comparison, we have run three benchmarks using three
 
 More details on these benchmarks are found in the individual sections below.
 
+A Python notebook with the analysis used to produce the perfomance data reported below can be found on GitHub at:
+
+-   <https://github.com/hpc-uk/archer-benchmarks/blob/master/analysis/Single_Node_Performance_Comparison.ipynb>
+
 <a id="castep"></a>
 ### 3.1 CASTEP
 
@@ -220,7 +224,8 @@ We have used the 1400k atom benchmark desgined by the High End Consortium for Bi
 
 The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 8](#tab8).
 
-<a id="tab8"></a>Table 8: Single node performance comparison for GROMACS 1400k atom benchmark.
+<a id="tab8"></a>Table 8: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
+from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/jade-benchmarks). 
 
 | System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                              |
 |---------------|---------------------:|--------------------------------------:|----------------------------------------------------|
