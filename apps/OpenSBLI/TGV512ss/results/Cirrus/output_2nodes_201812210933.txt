@@ -64,72 +64,7 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
-
----------------------------------------------------------------------------
-This is the benchmark application developed for the CFD application of the 
-UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
-on a Cartesian mesh using fourth order central finite difference scheme
-and three stage Runge-Kutta time stepping scheme.
-
-    Authors Dr. Satya P Jammy and Prof. Neil Sandham
-
----------------------------------------------------------------------------
-Some simulation information 
+The simulation is performed is the strong scaling simulation 
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -141,6 +76,8 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -174,6 +111,9 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -625,6 +565,9 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -658,6 +601,9 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -691,6 +637,9 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -746,6 +695,9 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -779,7 +731,21 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
+The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
+The number of grid points used per direction are 512
+The total number of grid points are 134217728
 
 ---------------------------------------------------------------------------
 This is the benchmark application developed for the CFD application of the 
@@ -791,23 +757,15 @@ and three stage Runge-Kutta time stepping scheme.
 
 ---------------------------------------------------------------------------
 Some simulation information 
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
@@ -817,12 +775,9 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
@@ -838,71 +793,120 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The simulation is performed is the strong scaling simulation 
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The simulation is performed is the strong scaling simulation 
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The simulation is performed is the strong scaling simulation 
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+
+---------------------------------------------------------------------------
+This is the benchmark application developed for the CFD application of the 
+UK HPC benchmark suite. The compressible Navier-Stokes equations are solved
+on a Cartesian mesh using fourth order central finite difference scheme
+and three stage Runge-Kutta time stepping scheme.
+
+    Authors Dr. Satya P Jammy and Prof. Neil Sandham
+
+---------------------------------------------------------------------------
+Some simulation information 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
@@ -918,11 +922,7 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The number of grid points used per direction are 512
-The total number of grid points are 134217728
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
@@ -935,6 +935,7 @@ The simulation is performed is the strong scaling simulation
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
+The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
@@ -946,12 +947,10 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
-The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
@@ -965,7 +964,6 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
-The simulation is performed is the strong scaling simulation 
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
@@ -975,6 +973,7 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
@@ -989,6 +988,7 @@ The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
+The simulation is performed is the strong scaling simulation 
 The number of grid points used per direction are 512
 The total number of grid points are 134217728
 The simulation is performed is the strong scaling simulation 
@@ -1008,53 +1008,12 @@ The number of grid points used per direction are 512
 The total number of grid points are 134217728
 block "taylor_green_vortex_block" decomposed on to a processor grid of 6 x 4 x 3  
  ===========================================================================
- rank 0 (0 0 0 )
+ rank 62 (5 0 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         12  :      0  :     85
-     1  :         -1  :          3  :      0  :    128
-     2  :         -1  :          1  :      0  :    170
-
-Finished block decomposition
- ===========================================================================
- rank 18 (1 2 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          6  :         30  :     85  :     85
-     1  :         15  :         21  :    256  :    128
-     2  :         -1  :         19  :      0  :    170
-
- ===========================================================================
- rank 58 (4 3 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         46  :         70  :    341  :     85
-     1  :         55  :         -1  :    384  :    128
-     2  :         57  :         59  :    170  :    171
-
- ===========================================================================
- rank 20 (1 2 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          8  :         32  :     85  :     85
-     1  :         17  :         23  :    256  :    128
-     2  :         19  :         -1  :    341  :    171
-
- ===========================================================================
- rank 56 (4 2 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         44  :         68  :    341  :     85
-     1  :         53  :         59  :    256  :    128
-     2  :         55  :         -1  :    341  :    171
-
- ===========================================================================
- rank 31 (2 2 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         19  :         43  :    170  :     86
-     1  :         28  :         34  :    256  :    128
-     2  :         30  :         32  :    170  :    171
+     0  :         50  :         -1  :    426  :     86
+     1  :         -1  :         65  :      0  :    128
+     2  :         61  :         -1  :    341  :    171
 
  ===========================================================================
  rank 60 (5 0 0 )
@@ -1065,36 +1024,153 @@ Finished block decomposition
      2  :         -1  :         61  :      0  :    170
 
  ===========================================================================
- rank 32 (2 2 2 )
+ rank 50 (4 0 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         20  :         44  :    170  :     86
-     1  :         29  :         35  :    256  :    128
-     2  :         31  :         -1  :    341  :    171
+     0  :         38  :         62  :    341  :     85
+     1  :         -1  :         53  :      0  :    128
+     2  :         49  :         -1  :    341  :    171
 
  ===========================================================================
- rank 57 (4 3 0 )
+ rank 53 (4 1 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         45  :         69  :    341  :     85
-     1  :         54  :         -1  :    384  :    128
-     2  :         -1  :         58  :      0  :    170
+     0  :         41  :         65  :    341  :     85
+     1  :         50  :         56  :    128  :    128
+     2  :         52  :         -1  :    341  :    171
 
  ===========================================================================
- rank 34 (2 3 1 )
+ rank 48 (4 0 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         22  :         46  :    170  :     86
-     1  :         31  :         -1  :    384  :    128
-     2  :         33  :         35  :    170  :    171
+     0  :         36  :         60  :    341  :     85
+     1  :         -1  :         51  :      0  :    128
+     2  :         -1  :         49  :      0  :    170
 
  ===========================================================================
- rank 59 (4 3 2 )
+ rank 49 (4 0 1 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         47  :         71  :    341  :     85
-     1  :         56  :         -1  :    384  :    128
-     2  :         58  :         -1  :    341  :    171
+     0  :         37  :         61  :    341  :     85
+     1  :         -1  :         52  :      0  :    128
+     2  :         48  :         50  :    170  :    171
+
+ ===========================================================================
+ rank 51 (4 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         39  :         63  :    341  :     85
+     1  :         48  :         54  :    128  :    128
+     2  :         -1  :         52  :      0  :    170
+
+ ===========================================================================
+ rank 52 (4 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         40  :         64  :    341  :     85
+     1  :         49  :         55  :    128  :    128
+     2  :         51  :         53  :    170  :    171
+
+ ===========================================================================
+ rank 26 (2 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         14  :         38  :    170  :     86
+     1  :         -1  :         29  :      0  :    128
+     2  :         25  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 43 (3 2 1 )
+ ------------------------------
+ ===========================================================================
+ rank 47 (3 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         35  :         59  :    256  :     85
+     1  :         44  :         -1  :    384  :    128
+     2  :         46  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 40 (3 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+ ===========================================================================
+ rank 4 (0 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         16  :      0  :     85
+     1  :          1  :          7  :    128  :    128
+     2  :          3  :          5  :    170  :    171
+
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         31  :         55  :    256  :     85
+     1  :         40  :         46  :    256  :    128
+     2  :         42  :         44  :    170  :    171
+
+ ===========================================================================
+ rank 2 (0 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         14  :      0  :     85
+     1  :         -1  :          5  :      0  :    128
+     2  :          1  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 44 (3 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         32  :         56  :    256  :     85
+     1  :         41  :         47  :    256  :    128
+     2  :         43  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 7 (0 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         19  :      0  :     85
+     1  :          4  :         10  :    256  :    128
+     2  :          6  :          8  :    170  :    171
+
+ ===========================================================================
+ rank 45 (3 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         33  :         57  :    256  :     85
+     1  :         42  :         -1  :    384  :    128
+     2  :         -1  :         46  :      0  :    170
+
+ ===========================================================================
+ rank 17 (1 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          5  :         29  :     85  :     85
+     1  :         14  :         20  :    128  :    128
+     2  :         16  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 46 (3 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         34  :         58  :    256  :     85
+     1  :         43  :         -1  :    384  :    128
+     2  :         45  :         47  :    170  :    171
+
+ ===========================================================================
+ rank 0 (0 0 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         12  :      0  :     85
+     1  :         -1  :          3  :      0  :    128
+     2  :         -1  :          1  :      0  :    170
+
+Finished block decomposition
+ ===========================================================================
+ rank 37 (3 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         25  :         49  :    256  :     85
+     1  :         -1  :         40  :      0  :    128
+     2  :         36  :         38  :    170  :    171
 
  ===========================================================================
  rank 1 (0 0 1 )
@@ -1105,21 +1181,13 @@ Finished block decomposition
      2  :          0  :          2  :    170  :    171
 
  ===========================================================================
- ===========================================================================
- rank 2 (0 0 2 )
+ rank 38 (3 0 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         14  :      0  :     85
-     1  :         -1  :          5  :      0  :    128
-     2  :          1  :         -1  :    341  :    171
+     0  :         26  :         50  :    256  :     85
+     1  :         -1  :         41  :      0  :    128
+     2  :         37  :         -1  :    341  :    171
 
- ===========================================================================
- rank 50 (4 0 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         38  :         62  :    341  :     85
-     1  :         -1  :         53  :      0  :    128
-     2  :         49  :         -1  :    341  :    171
  ===========================================================================
  rank 3 (0 1 0 )
  ------------------------------
@@ -1128,20 +1196,33 @@ Finished block decomposition
      1  :          0  :          6  :    128  :    128
      2  :         -1  :          4  :      0  :    170
 
- rank 51 (4 1 0 )
+ ===========================================================================
+ rank 39 (3 1 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         39  :         63  :    341  :     85
-     1  :         48  :         54  :    128  :    128
-     2  :         -1  :         52  :      0  :    170
+     0  :         27  :         51  :    256  :     85
+     1  :         36  :         42  :    128  :    128
+     2  :         -1  :         40  :      0  :    170
 
  ===========================================================================
- rank 4 (0 1 1 )
+ rank 5 (0 1 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         16  :      0  :     85
-     1  :          1  :          7  :    128  :    128
-     2  :          3  :          5  :    170  :    171
+     0  :         -1  :         17  :      0  :     85
+     1  :          2  :          8  :    128  :    128
+     2  :          4  :         -1  :    341  :    171
+
+     0  :         28  :         52  :    256  :     85
+     1  :         37  :         43  :    128  :    128
+     2  :         39  :         41  :    170  :    171
+
+ ===========================================================================
+ rank 6 (0 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         18  :      0  :     85
+     1  :          3  :          9  :    256  :    128
+     2  :         -1  :          7  :      0  :    170
 
  ===========================================================================
  rank 41 (3 1 2 )
@@ -1160,302 +1241,12 @@ Finished block decomposition
      2  :          7  :         -1  :    341  :    171
 
  ===========================================================================
- rank 43 (3 2 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         31  :         55  :    256  :     85
-     1  :         40  :         46  :    256  :    128
-     2  :         42  :         44  :    170  :    171
-
- ===========================================================================
- rank 11 (0 3 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         23  :      0  :     85
-     1  :          8  :         -1  :    384  :    128
-     2  :         10  :         -1  :    341  :    171
-
- ===========================================================================
- rank 45 (3 3 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         33  :         57  :    256  :     85
-     1  :         42  :         -1  :    384  :    128
-     2  :         -1  :         46  :      0  :    170
-
- ===========================================================================
- rank 13 (1 0 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          1  :         25  :     85  :     85
-     1  :         -1  :         16  :      0  :    128
-     2  :         12  :         14  :    170  :    171
-
- ===========================================================================
- rank 47 (3 3 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         35  :         59  :    256  :     85
-     1  :         44  :         -1  :    384  :    128
-     2  :         46  :         -1  :    341  :    171
-
- ===========================================================================
- rank 14 (1 0 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          2  :         26  :     85  :     85
-     1  :         -1  :         17  :      0  :    128
-     2  :         13  :         -1  :    341  :    171
-
- ===========================================================================
- rank 48 (4 0 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         36  :         60  :    341  :     85
-     1  :         -1  :         51  :      0  :    128
-     2  :         -1  :         49  :      0  :    170
-
- ===========================================================================
- rank 19 (1 2 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          7  :         31  :     85  :     85
-     1  :         16  :         22  :    256  :    128
-     2  :         18  :         20  :    170  :    171
-
- ===========================================================================
- rank 49 (4 0 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         37  :         61  :    341  :     85
-     1  :         -1  :         52  :      0  :    128
-     2  :         48  :         50  :    170  :    171
-
- ===========================================================================
- rank 21 (1 3 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          9  :         33  :     85  :     85
-     1  :         18  :         -1  :    384  :    128
-     2  :         -1  :         22  :      0  :    170
-
-
- ===========================================================================
- rank 22 (1 3 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         10  :         34  :     85  :     85
-     1  :         19  :         -1  :    384  :    128
-     2  :         21  :         23  :    170  :    171
-
- ===========================================================================
- rank 53 (4 1 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         41  :         65  :    341  :     85
-     1  :         50  :         56  :    128  :    128
-     2  :         52  :         -1  :    341  :    171
-
- ===========================================================================
- rank 23 (1 3 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         11  :         35  :     85  :     85
-     1  :         20  :         -1  :    384  :    128
-     2  :         22  :         -1  :    341  :    171
-
- ===========================================================================
- ===========================================================================
- rank 24 (2 0 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         12  :         36  :    170  :     86
-     1  :         -1  :         27  :      0  :    128
-     2  :         -1  :         25  :      0  :    170
-
- ===========================================================================
- rank 37 (3 0 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         25  :         49  :    256  :     85
-     1  :         -1  :         40  :      0  :    128
-     2  :         36  :         38  :    170  :    171
-
- ===========================================================================
- rank 25 (2 0 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         13  :         37  :    170  :     86
-     1  :         -1  :         28  :      0  :    128
-     2  :         24  :         26  :    170  :    171
-
- ===========================================================================
- rank 38 (3 0 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         26  :         50  :    256  :     85
-     1  :         -1  :         41  :      0  :    128
-     2  :         37  :         -1  :    341  :    171
-
- ===========================================================================
- rank 26 (2 0 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         14  :         38  :    170  :     86
-     1  :         -1  :         29  :      0  :    128
-     2  :         25  :         -1  :    341  :    171
-
- ===========================================================================
- rank 39 (3 1 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         27  :         51  :    256  :     85
-     1  :         36  :         42  :    128  :    128
-     2  :         -1  :         40  :      0  :    170
-
- ===========================================================================
- rank 27 (2 1 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         15  :         39  :    170  :     86
-     1  :         24  :         30  :    128  :    128
-     2  :         -1  :         28  :      0  :    170
-
- ===========================================================================
- rank 40 (3 1 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         28  :         52  :    256  :     85
-     1  :         37  :         43  :    128  :    128
-     2  :         39  :         41  :    170  :    171
-
- ===========================================================================
- rank 28 (2 1 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         16  :         40  :    170  :     86
-     1  :         25  :         31  :    128  :    128
-     2  :         27  :         29  :    170  :    171
-
- ===========================================================================
  rank 42 (3 2 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
      0  :         30  :         54  :    256  :     85
      1  :         39  :         45  :    256  :    128
      2  :         -1  :         43  :      0  :    170
-
- ===========================================================================
- rank 29 (2 1 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         17  :         41  :    170  :     86
-     1  :         26  :         32  :    128  :    128
-     2  :         28  :         -1  :    341  :    171
-
- ===========================================================================
- rank 44 (3 2 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         32  :         56  :    256  :     85
-     1  :         41  :         47  :    256  :    128
-     2  :         43  :         -1  :    341  :    171
-
- ===========================================================================
- rank 30 (2 2 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         18  :         42  :    170  :     86
-     1  :         27  :         33  :    256  :    128
-     2  :         -1  :         31  :      0  :    170
-
- ===========================================================================
- rank 46 (3 3 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         34  :         58  :    256  :     85
-     1  :         43  :         -1  :    384  :    128
-     2  :         45  :         47  :    170  :    171
-
- ===========================================================================
- rank 33 (2 3 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         21  :         45  :    170  :     86
-     1  :         30  :         -1  :    384  :    128
-     2  :         -1  :         34  :      0  :    170
-
- ===========================================================================
- rank 52 (4 1 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         40  :         64  :    341  :     85
-     1  :         49  :         55  :    128  :    128
-     2  :         51  :         53  :    170  :    171
-
- ===========================================================================
- rank 35 (2 3 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         23  :         47  :    170  :     86
-     1  :         32  :         -1  :    384  :    128
-     2  :         34  :         -1  :    341  :    171
-
- ===========================================================================
- rank 54 (4 2 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         42  :         66  :    341  :     85
-     1  :         51  :         57  :    256  :    128
-     2  :         -1  :         55  :      0  :    170
-
- ===========================================================================
- rank 5 (0 1 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         17  :      0  :     85
-     1  :          2  :          8  :    128  :    128
-     2  :          4  :         -1  :    341  :    171
-
- ===========================================================================
- rank 55 (4 2 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         43  :         67  :    341  :     85
-     1  :         52  :         58  :    256  :    128
-     2  :         54  :         56  :    170  :    171
-
- ===========================================================================
- rank 6 (0 2 0 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         18  :      0  :     85
-     1  :          3  :          9  :    256  :    128
-     2  :         -1  :          7  :      0  :    170
-
- ===========================================================================
- rank 61 (5 0 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         49  :         -1  :    426  :     86
-     1  :         -1  :         64  :      0  :    128
-     2  :         60  :         62  :    170  :    171
-
- ===========================================================================
- rank 7 (0 2 1 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         -1  :         19  :      0  :     85
-     1  :          4  :         10  :    256  :    128
-     2  :          6  :          8  :    170  :    171
-
- ===========================================================================
- rank 62 (5 0 2 )
- ------------------------------
-   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         50  :         -1  :    426  :     86
-     1  :         -1  :         65  :      0  :    128
-     2  :         61  :         -1  :    341  :    171
 
  ===========================================================================
  rank 9 (0 3 0 )
@@ -1466,12 +1257,12 @@ Finished block decomposition
      2  :         -1  :         10  :      0  :    170
 
  ===========================================================================
- rank 63 (5 1 0 )
+ rank 36 (3 0 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         51  :         -1  :    426  :     86
-     1  :         60  :         66  :    128  :    128
-     2  :         -1  :         64  :      0  :    170
+     0  :         24  :         48  :    256  :     85
+     1  :         -1  :         39  :      0  :    128
+     2  :         -1  :         37  :      0  :    170
 
  ===========================================================================
  rank 10 (0 3 1 )
@@ -1482,12 +1273,28 @@ Finished block decomposition
      2  :          9  :         11  :    170  :    171
 
  ===========================================================================
- rank 64 (5 1 1 )
+ rank 55 (4 2 1 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         52  :         -1  :    426  :     86
-     1  :         61  :         67  :    128  :    128
-     2  :         63  :         65  :    170  :    171
+     0  :         43  :         67  :    341  :     85
+     1  :         52  :         58  :    256  :    128
+     2  :         54  :         56  :    170  :    171
+
+ ===========================================================================
+ rank 11 (0 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         -1  :         23  :      0  :     85
+     1  :          8  :         -1  :    384  :    128
+     2  :         10  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 56 (4 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         44  :         68  :    341  :     85
+     1  :         53  :         59  :    256  :    128
+     2  :         55  :         -1  :    341  :    171
 
  ===========================================================================
  rank 12 (1 0 0 )
@@ -1498,12 +1305,44 @@ Finished block decomposition
      2  :         -1  :         13  :      0  :    170
 
  ===========================================================================
- rank 65 (5 1 2 )
+ rank 57 (4 3 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         53  :         -1  :    426  :     86
-     1  :         62  :         68  :    128  :    128
-     2  :         64  :         -1  :    341  :    171
+     0  :         45  :         69  :    341  :     85
+     1  :         54  :         -1  :    384  :    128
+     2  :         -1  :         58  :      0  :    170
+
+ ===========================================================================
+ rank 13 (1 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          1  :         25  :     85  :     85
+     1  :         -1  :         16  :      0  :    128
+     2  :         12  :         14  :    170  :    171
+
+ ===========================================================================
+ rank 58 (4 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         46  :         70  :    341  :     85
+     1  :         55  :         -1  :    384  :    128
+     2  :         57  :         59  :    170  :    171
+
+ ===========================================================================
+ rank 14 (1 0 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          2  :         26  :     85  :     85
+     1  :         -1  :         17  :      0  :    128
+     2  :         13  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 59 (4 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         47  :         71  :    341  :     85
+     1  :         56  :         -1  :    384  :    128
+     2  :         58  :         -1  :    341  :    171
 
  ===========================================================================
  rank 15 (1 1 0 )
@@ -1514,12 +1353,12 @@ Finished block decomposition
      2  :         -1  :         16  :      0  :    170
 
  ===========================================================================
- rank 66 (5 2 0 )
+ rank 54 (4 2 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         54  :         -1  :    426  :     86
-     1  :         63  :         69  :    256  :    128
-     2  :         -1  :         67  :      0  :    170
+     0  :         42  :         66  :    341  :     85
+     1  :         51  :         57  :    256  :    128
+     2  :         -1  :         55  :      0  :    170
 
  ===========================================================================
  rank 16 (1 1 1 )
@@ -1530,6 +1369,102 @@ Finished block decomposition
      2  :         15  :         17  :    170  :    171
 
  ===========================================================================
+ rank 61 (5 0 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         49  :         -1  :    426  :     86
+     1  :         -1  :         64  :      0  :    128
+     2  :         60  :         62  :    170  :    171
+
+ ===========================================================================
+ rank 18 (1 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          6  :         30  :     85  :     85
+     1  :         15  :         21  :    256  :    128
+     2  :         -1  :         19  :      0  :    170
+
+ ===========================================================================
+ rank 63 (5 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         51  :         -1  :    426  :     86
+     1  :         60  :         66  :    128  :    128
+     2  :         -1  :         64  :      0  :    170
+
+ ===========================================================================
+ rank 19 (1 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          7  :         31  :     85  :     85
+     1  :         16  :         22  :    256  :    128
+     2  :         18  :         20  :    170  :    171
+
+ ===========================================================================
+ rank 64 (5 1 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         52  :         -1  :    426  :     86
+     1  :         61  :         67  :    128  :    128
+     2  :         63  :         65  :    170  :    171
+
+ ===========================================================================
+ rank 20 (1 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          8  :         32  :     85  :     85
+     1  :         17  :         23  :    256  :    128
+     2  :         19  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 69 (5 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         57  :         -1  :    426  :     86
+     1  :         66  :         -1  :    384  :    128
+     2  :         -1  :         70  :      0  :    170
+
+ ===========================================================================
+ rank 21 (1 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :          9  :         33  :     85  :     85
+     1  :         18  :         -1  :    384  :    128
+     2  :         -1  :         22  :      0  :    170
+
+ ===========================================================================
+ rank 65 (5 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         53  :         -1  :    426  :     86
+     1  :         62  :         68  :    128  :    128
+     2  :         64  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 22 (1 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         10  :         34  :     85  :     85
+     1  :         19  :         -1  :    384  :    128
+     2  :         21  :         23  :    170  :    171
+
+ ===========================================================================
+ rank 66 (5 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         54  :         -1  :    426  :     86
+     1  :         63  :         69  :    256  :    128
+     2  :         -1  :         67  :      0  :    170
+
+ ===========================================================================
+ rank 23 (1 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         11  :         35  :     85  :     85
+     1  :         20  :         -1  :    384  :    128
+     2  :         22  :         -1  :    341  :    171
+
+ ===========================================================================
  rank 67 (5 2 1 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
@@ -1538,12 +1473,12 @@ Finished block decomposition
      2  :         66  :         68  :    170  :    171
 
  ===========================================================================
- rank 17 (1 1 2 )
+ rank 24 (2 0 0 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :          5  :         29  :     85  :     85
-     1  :         14  :         20  :    128  :    128
-     2  :         16  :         -1  :    341  :    171
+     0  :         12  :         36  :    170  :     86
+     1  :         -1  :         27  :      0  :    128
+     2  :         -1  :         25  :      0  :    170
 
  ===========================================================================
  rank 68 (5 2 2 )
@@ -1553,15 +1488,13 @@ Finished block decomposition
      1  :         65  :         71  :    256  :    128
      2  :         67  :         -1  :    341  :    171
 
-End of the simulation information
----------------------------------------------------------------------------
  ===========================================================================
- rank 69 (5 3 0 )
+ rank 25 (2 0 1 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         57  :         -1  :    426  :     86
-     1  :         66  :         -1  :    384  :    128
-     2  :         -1  :         70  :      0  :    170
+     0  :         13  :         37  :    170  :     86
+     1  :         -1  :         28  :      0  :    128
+     2  :         24  :         26  :    170  :    171
 
  ===========================================================================
  rank 70 (5 3 1 )
@@ -1572,6 +1505,14 @@ End of the simulation information
      2  :         69  :         71  :    170  :    171
 
  ===========================================================================
+ rank 27 (2 1 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         15  :         39  :    170  :     86
+     1  :         24  :         30  :    128  :    128
+     2  :         -1  :         28  :      0  :    170
+
+ ===========================================================================
  rank 71 (5 3 2 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
@@ -1579,13 +1520,72 @@ End of the simulation information
      1  :         68  :         -1  :    384  :    128
      2  :         70  :         -1  :    341  :    171
 
- rank 36 (3 0 0 )
+ ===========================================================================
+ rank 28 (2 1 1 )
  ------------------------------
    dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
-     0  :         24  :         48  :    256  :     85
-     1  :         -1  :         39  :      0  :    128
-     2  :         -1  :         37  :      0  :    170
+     0  :         16  :         40  :    170  :     86
+     1  :         25  :         31  :    128  :    128
+     2  :         27  :         29  :    170  :    171
 
+ ===========================================================================
+ rank 29 (2 1 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         17  :         41  :    170  :     86
+     1  :         26  :         32  :    128  :    128
+     2  :         28  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 30 (2 2 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         18  :         42  :    170  :     86
+     1  :         27  :         33  :    256  :    128
+     2  :         -1  :         31  :      0  :    170
+
+ ===========================================================================
+ rank 31 (2 2 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         19  :         43  :    170  :     86
+     1  :         28  :         34  :    256  :    128
+     2  :         30  :         32  :    170  :    171
+
+ ===========================================================================
+ rank 32 (2 2 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         20  :         44  :    170  :     86
+     1  :         29  :         35  :    256  :    128
+     2  :         31  :         -1  :    341  :    171
+
+ ===========================================================================
+ rank 33 (2 3 0 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         21  :         45  :    170  :     86
+     1  :         30  :         -1  :    384  :    128
+     2  :         -1  :         34  :      0  :    170
+
+ ===========================================================================
+ rank 34 (2 3 1 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         22  :         46  :    170  :     86
+     1  :         31  :         -1  :    384  :    128
+     2  :         33  :         35  :    170  :    171
+
+ ===========================================================================
+ rank 35 (2 3 2 )
+ ------------------------------
+   dim  :  prev_rank  :  next_rank  :   disp  :   size  :  start  :    end
+     0  :         23  :         47  :    170  :     86
+     1  :         32  :         -1  :    384  :    128
+     2  :         34  :         -1  :    341  :    171
+
+End of the simulation information
+---------------------------------------------------------------------------
 Iteration is 0 
 End of time iteration loop 
 performed 100 iterations
@@ -1594,7 +1594,7 @@ performed 100 iterations
 
 Timings are:
 ------------------Simulation time-----------------------------------------
-Total Wall time of the time iteration loop for 100 iterations, 538.711567
-Time taken for 1 iteration, 5.387116
+Total Wall time of the time iteration loop for 100 iterations, 401.727928
+Time taken for 1 iteration, 4.017279
 
 Not performing file I/O as write HDF5 is set to False
