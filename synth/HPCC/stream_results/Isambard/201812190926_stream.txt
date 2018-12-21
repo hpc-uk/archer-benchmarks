@@ -1,0 +1,584 @@
+########################################################################
+This is the DARPA/DOE HPC Challenge Benchmark version 1.5.0 October 2012
+Produced by Jack Dongarra and Piotr Luszczek
+Innovative Computing Laboratory
+University of Tennessee Knoxville and Oak Ridge National Laboratory
+
+See the source files for authors of specific codes.
+Compiled on Dec 18 2018 at 09:20:44
+Current time (1545211569) is Wed Dec 19 09:26:09 2018
+
+Hostname: 'gw4arm06'
+########################################################################
+================================================================================
+HPLinpack 2.0  --  High-Performance Linpack benchmark  --   September 10, 2008
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :   43000 
+NB     :      80 
+PMAP   : Row-major process mapping
+P      :       2 
+Q      :       2 
+PFACT  :   Right 
+NBMIN  :       4 
+NDIV   :       2 
+RFACT  :   Crout 
+BCAST  :  1ringM 
+DEPTH  :       1 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+Begin of MPIRandomAccess section.
+Running on 64 processors (PowerofTwo)
+Total Main table size = 2^34 = 17179869184 words
+PE Main table size = 2^28 = 268435456 words/PE
+Default number of updates (RECOMMENDED) = 68719476736
+Number of updates EXECUTED = 1262665792 (for a TIME BOUND of 60.00 secs)
+CPU time used = 42.721845 seconds
+Real time used = 49.270150 seconds
+0.025627399 Billion(10^9) Updates    per second [GUP/s]
+0.000400428 Billion(10^9) Updates/PE per second [GUP/s]
+Verification:  CPU time used = 4.902637 seconds
+Verification:  Real time used = 4.937000 seconds
+Found 0 errors in 17179869184 locations (passed).
+Current time (1545211659) is Wed Dec 19 09:27:39 2018
+
+End of MPIRandomAccess section.
+Begin of StarRandomAccess section.
+Main table size   = 2^28 = 268435456 words
+Number of updates = 1073741824
+CPU time used  = 51.396749 seconds
+Real time used = 51.402033 seconds
+0.020889092 Billion(10^9) Updates    per second [GUP/s]
+Found 0 errors in 268435456 locations (passed).
+Node(s) with error 0
+Minimum GUP/s 0.015442
+Average GUP/s 0.020004
+Maximum GUP/s 0.020925
+Current time (1545211774) is Wed Dec 19 09:29:34 2018
+
+End of StarRandomAccess section.
+Begin of SingleRandomAccess section.
+Node(s) with error 0
+Node selected 54
+Single GUP/s 0.036645
+Current time (1545211830) is Wed Dec 19 09:30:30 2018
+
+End of SingleRandomAccess section.
+Begin of MPIRandomAccess_LCG section.
+Running on 64 processors (PowerofTwo)
+Total Main table size = 2^34 = 17179869184 words
+PE Main table size = 2^28 = 268435456 words/PE
+Default number of updates (RECOMMENDED) = 68719476736
+Number of updates EXECUTED = 1690423360 (for a TIME BOUND of 60.00 secs)
+CPU time used = 51.944049 seconds
+Real time used = 60.165485 seconds
+0.028096231 Billion(10^9) Updates    per second [GUP/s]
+0.000439004 Billion(10^9) Updates/PE per second [GUP/s]
+Verification:  CPU time used = 2.876521 seconds
+Verification:  Real time used = 2.904577 seconds
+Found 0 errors in 17179869184 locations (passed).
+Current time (1545211919) is Wed Dec 19 09:31:59 2018
+
+End of MPIRandomAccess_LCG section.
+Begin of StarRandomAccess_LCG section.
+Main table size   = 2^28 = 268435456 words
+Number of updates = 1073741824
+CPU time used  = 36.702298 seconds
+Real time used = 36.706077 seconds
+0.029252427 Billion(10^9) Updates    per second [GUP/s]
+Found 0 errors in 268435456 locations (passed).
+Node(s) with error 0
+Minimum GUP/s 0.023257
+Average GUP/s 0.028449
+Maximum GUP/s 0.029253
+Current time (1545212003) is Wed Dec 19 09:33:23 2018
+
+End of StarRandomAccess_LCG section.
+Begin of SingleRandomAccess_LCG section.
+Node(s) with error 0
+Node selected 26
+Single GUP/s 0.072263
+Current time (1545212032) is Wed Dec 19 09:33:52 2018
+
+End of SingleRandomAccess_LCG section.
+Begin of PTRANS section.
+M: 21500
+N: 21500
+MB: 80
+NB: 80
+P: 2
+Q: 2
+TIME   M     N    MB  NB  P   Q     TIME   CHECK   GB/s   RESID
+---- ----- ----- --- --- --- --- -------- ------ -------- -----
+WALL 21500 21500  80  80   2   2     0.87 PASSED    4.247  0.00
+CPU  21500 21500  80  80   2   2     0.87 PASSED    4.248  0.00
+WALL 21500 21500  80  80   2   2     1.02 PASSED    3.618  0.00
+CPU  21500 21500  80  80   2   2     1.02 PASSED    3.618  0.00
+WALL 21500 21500  80  80   2   2     0.89 PASSED    3.618  0.00
+CPU  21500 21500  80  80   2   2     0.89 PASSED    4.158  0.00
+WALL 21500 21500  80  80   2   2     0.89 PASSED    3.618  0.00
+CPU  21500 21500  80  80   2   2     0.89 PASSED    4.165  0.00
+WALL 21500 21500  80  80   2   2     0.89 PASSED    3.618  0.00
+CPU  21500 21500  80  80   2   2     0.89 PASSED    4.141  0.00
+
+Finished    5 tests, with the following results:
+    5 tests completed and passed residual checks.
+    0 tests completed and failed residual checks.
+    0 tests skipped because of illegal input values.
+
+END OF TESTS.
+Current time (1545212103) is Wed Dec 19 09:35:03 2018
+
+End of PTRANS section.
+Begin of StarDGEMM section.
+Scaled residual: 0.00644141
+Node(s) with error 0
+Minimum Gflop/s 10.960862
+Average Gflop/s 12.155009
+Maximum Gflop/s 12.411790
+Current time (1545212476) is Wed Dec 19 09:41:16 2018
+
+End of StarDGEMM section.
+Begin of SingleDGEMM section.
+Node(s) with error 0
+Node selected 27
+Single DGEMM Gflop/s 12.124640
+Current time (1545212815) is Wed Dec 19 09:46:55 2018
+
+End of SingleDGEMM section.
+Begin of StarSTREAM section.
+-------------------------------------------------------------
+This system uses 8 bytes per DOUBLE PRECISION word.
+-------------------------------------------------------------
+Array size = 154083333, Offset = 0
+Total memory required = 3.4440 GiB.
+Each test is run 10 times.
+ The *best* time for each kernel (excluding the first iteration)
+ will be used to compute the reported bandwidth.
+The SCALAR value used for this run is 0.420000
+-------------------------------------------------------------
+Your clock granularity/precision appears to be 1 microseconds.
+Each test below will take on the order of 583510 microseconds.
+   (= 583510 clock ticks)
+Increase the size of the arrays if this shows that
+you are not getting at least 20 clock ticks per test.
+-------------------------------------------------------------
+WARNING -- The above is only a rough guideline.
+For best results, please be sure you know the
+precision of your system timer.
+-------------------------------------------------------------
+VERBOSE: total setup time for rank 0 = 2.413031 seconds
+-------------------------------------------------------------
+Function      Rate (GB/s)   Avg time     Min time     Max time
+Copy:           3.4422       0.7200       0.7162       0.7239
+Scale:          3.4407       0.7251       0.7165       0.7399
+Add:            3.4517       1.0813       1.0713       1.0873
+Triad:          3.4607       1.0792       1.0686       1.0867
+-------------------------------------------------------------
+Solution Validates: avg error less than 1.000000e-13 on all three arrays
+-------------------------------------------------------------
+Node(s) with error 0
+Minimum Copy GB/s 3.442237
+Average Copy GB/s 3.442237
+Maximum Copy GB/s 3.442237
+Minimum Scale GB/s 3.440740
+Average Scale GB/s 3.440740
+Maximum Scale GB/s 3.440740
+Minimum Add GB/s 3.451736
+Average Add GB/s 3.451736
+Maximum Add GB/s 3.451736
+Minimum Triad GB/s 3.460746
+Average Triad GB/s 3.460746
+Maximum Triad GB/s 3.460746
+Current time (1545212855) is Wed Dec 19 09:47:35 2018
+
+End of StarSTREAM section.
+Begin of SingleSTREAM section.
+Node(s) with error 0
+Node selected 48
+Single STREAM Copy GB/s 14.112868
+Single STREAM Scale GB/s 14.435207
+Single STREAM Add GB/s 15.660058
+Single STREAM Triad GB/s 15.545295
+Current time (1545212865) is Wed Dec 19 09:47:45 2018
+
+End of SingleSTREAM section.
+Begin of MPIFFT section.
+Number of nodes: 64
+Vector size:           2147483648
+Generation time:     1.433
+Tuning:     3.431
+Computing:     9.286
+Inverse FFT:     9.687
+max(|x-x0|): 2.476e-15
+Gflop/s:    35.847
+Current time (1545212894) is Wed Dec 19 09:48:14 2018
+
+End of MPIFFT section.
+Begin of StarFFT section.
+Vector size: 67108864
+Generation time:     2.967
+Tuning:     0.003
+Computing:     7.014
+Inverse FFT:     7.268
+max(|x-x0|): 2.181e-15
+Node(s) with error 0
+Minimum Gflop/s 1.210035
+Average Gflop/s 1.245653
+Maximum Gflop/s 1.327001
+Current time (1545212916) is Wed Dec 19 09:48:36 2018
+
+End of StarFFT section.
+Begin of SingleFFT section.
+Node(s) with error 0
+Node selected 7
+Single FFT Gflop/s 2.109469
+Current time (1545212931) is Wed Dec 19 09:48:51 2018
+
+End of SingleFFT section.
+Begin of LatencyBandwidth section.
+
+------------------------------------------------------------------
+Latency-Bandwidth-Benchmark R1.5.1 (c) HLRS, University of Stuttgart
+Written by Rolf Rabenseifner, Gerrit Schulz, and Michael Speck, Germany
+
+Details - level 2
+-----------------
+
+MPI_Wtime granularity.
+Max. MPI_Wtick is 0.000000 sec
+wtick is set to   0.000001 sec  
+
+Message Length: 8
+Latency   min / avg / max:   0.000546 /   0.000546 /   0.000546 msecs
+Bandwidth min / avg / max:     14.642 /     14.642 /     14.642 MByte/s
+
+Use MPI_Wtick for estimation of max pairs
+message size:                                  8
+max time :                             10.000000 secs
+latency for msg:                        0.000546 msecs
+estimation for ping pong:               0.049174 msecs
+max number of ping pong pairs       =     200000
+max client pings = max server pongs =        447
+stride for latency                  =          1
+Message Length: 8
+Latency   min / avg / max:   0.000437 /   0.000873 /   0.001311 msecs
+Bandwidth min / avg / max:      6.101 /     11.104 /     18.302 MByte/s
+
+Message Length: 2000000
+Latency   min / avg / max:   0.186563 /   0.186563 /   0.186563 msecs
+Bandwidth min / avg / max:  10720.266 /  10720.266 /  10720.266 MByte/s
+
+MPI_Wtime granularity is ok.
+message size:                            2000000
+max time :                             30.000000 secs
+latency for msg:                        0.186563 msecs
+estimation for ping pong:               1.492500 msecs
+max number of ping pong pairs       =      20100
+max client pings = max server pongs =        141
+stride for latency                  =          1
+Message Length: 2000000
+Latency   min / avg / max:   0.182152 /   0.310524 /   0.456333 msecs
+Bandwidth min / avg / max:   4382.763 /   7641.948 /  10979.853 MByte/s
+
+Message Size:                           8 Byte
+Natural Order Latency:           0.001601 msec
+Natural Order Bandwidth:         4.997469 MB/s
+Avg Random Order Latency:        0.001617 msec
+Avg Random Order Bandwidth:      4.946116 MB/s
+
+Message Size:                     2000000 Byte
+Natural Order Latency:           1.617074 msec
+Natural Order Bandwidth:      1236.801769 MB/s
+Avg Random Order Latency:        1.890822 msec
+Avg Random Order Bandwidth:   1057.741253 MB/s
+
+Execution time (wall clock)      =    11.779 sec on 64 processes
+ - for cross ping_pong latency   =     0.513 sec
+ - for cross ping_pong bandwidth =    10.428 sec
+ - for ring latency              =     0.021 sec
+ - for ring bandwidth            =     0.816 sec
+
+------------------------------------------------------------------
+Latency-Bandwidth-Benchmark R1.5.1 (c) HLRS, University of Stuttgart
+Written by Rolf Rabenseifner, Gerrit Schulz, and Michael Speck, Germany
+
+Major Benchmark results:
+------------------------
+
+Max Ping Pong Latency:                 0.001311 msecs
+Randomly Ordered Ring Latency:         0.001617 msecs
+Min Ping Pong Bandwidth:            4382.762800 MB/s
+Naturally Ordered Ring Bandwidth:   1236.801769 MB/s
+Randomly  Ordered Ring Bandwidth:   1057.741253 MB/s
+
+------------------------------------------------------------------
+
+Detailed benchmark results:
+Ping Pong:
+Latency   min / avg / max:   0.000437 /   0.000873 /   0.001311 msecs
+Bandwidth min / avg / max:   4382.763 /   7641.948 /  10979.853 MByte/s
+Ring:
+On naturally ordered ring: latency=      0.001601 msec, bandwidth=   1236.801769 MB/s
+On randomly  ordered ring: latency=      0.001617 msec, bandwidth=   1057.741253 MB/s
+
+------------------------------------------------------------------
+
+Benchmark conditions:
+ The latency   measurements were done with        8 bytes
+ The bandwidth measurements were done with  2000000 bytes
+ The ring communication was done in both directions on 64 processes
+ The Ping Pong measurements were done on 
+  -        4032 pairs of processes for latency benchmarking, and 
+  -        4032 pairs of processes for bandwidth benchmarking, 
+ out of 64*(64-1) =       4032 possible combinations on 64 processes.
+ (1 MB/s = 10**6 byte/sec)
+
+------------------------------------------------------------------
+Current time (1545212943) is Wed Dec 19 09:49:03 2018
+
+End of LatencyBandwidth section.
+Begin of HPL section.
+================================================================================
+HPLinpack 2.0  --  High-Performance Linpack benchmark  --   September 10, 2008
+Written by A. Petitet and R. Clint Whaley,  Innovative Computing Laboratory, UTK
+Modified by Piotr Luszczek, Innovative Computing Laboratory, UTK
+Modified by Julien Langou, University of Colorado Denver
+================================================================================
+
+An explanation of the input/output parameters follows:
+T/V    : Wall time / encoded variant.
+N      : The order of the coefficient matrix A.
+NB     : The partitioning blocking factor.
+P      : The number of process rows.
+Q      : The number of process columns.
+Time   : Time in seconds to solve the linear system.
+Gflops : Rate of execution for solving the linear system.
+
+The following parameter values will be used:
+
+N      :   43000 
+NB     :      80 
+PMAP   : Row-major process mapping
+P      :       2 
+Q      :       2 
+PFACT  :   Right 
+NBMIN  :       4 
+NDIV   :       2 
+RFACT  :   Crout 
+BCAST  :  1ringM 
+DEPTH  :       1 
+SWAP   : Mix (threshold = 64)
+L1     : transposed form
+U      : transposed form
+EQUIL  : yes
+ALIGN  : 8 double precision words
+
+--------------------------------------------------------------------------------
+
+- The matrix A is randomly generated for each test.
+- The following scaled residual check will be computed:
+      ||Ax-b||_oo / ( eps * ( || x ||_oo * || A ||_oo + || b ||_oo ) * N )
+- The relative machine precision (eps) is taken to be               1.110223e-16
+- Computational tests pass if scaled residuals are less than                16.0
+
+================================================================================
+T/V                N    NB     P     Q               Time                 Gflops
+--------------------------------------------------------------------------------
+WR11C2R4       43000    80     2     2            1043.94              5.078e+01
+--------------------------------------------------------------------------------
+||Ax-b||_oo/(eps*(||A||_oo*||x||_oo+||b||_oo)*N)=        0.0048264 ...... PASSED
+================================================================================
+
+Finished      1 tests with the following results:
+              1 tests completed and passed residual checks,
+              0 tests completed and failed residual checks,
+              0 tests skipped because of illegal input values.
+--------------------------------------------------------------------------------
+
+End of Tests.
+================================================================================
+Current time (1545214027) is Wed Dec 19 10:07:07 2018
+
+End of HPL section.
+Begin of Summary section.
+VersionMajor=1
+VersionMinor=5
+VersionMicro=0
+VersionRelease=f
+LANG=C
+Success=1
+sizeof_char=1
+sizeof_short=2
+sizeof_int=4
+sizeof_long=8
+sizeof_void_ptr=8
+sizeof_size_t=8
+sizeof_float=4
+sizeof_double=8
+sizeof_s64Int=8
+sizeof_u64Int=8
+sizeof_struct_double_double=16
+CommWorldProcs=64
+MPI_Wtick=1.000000e-09
+HPL_Tflops=0.0507765
+HPL_time=1043.94
+HPL_eps=1.11022e-16
+HPL_RnormI=4.17588e-10
+HPL_Anorm1=10876.1
+HPL_AnormI=10879.8
+HPL_Xnorm1=13102.2
+HPL_XnormI=1.66576
+HPL_BnormI=0.499985
+HPL_N=43000
+HPL_NB=80
+HPL_nprow=2
+HPL_npcol=2
+HPL_depth=1
+HPL_nbdiv=2
+HPL_nbmin=4
+HPL_cpfact=R
+HPL_crfact=C
+HPL_ctop=1
+HPL_order=R
+HPL_dMACH_EPS=1.110223e-16
+HPL_dMACH_SFMIN=2.225074e-308
+HPL_dMACH_BASE=2.000000e+00
+HPL_dMACH_PREC=2.220446e-16
+HPL_dMACH_MLEN=5.300000e+01
+HPL_dMACH_RND=1.000000e+00
+HPL_dMACH_EMIN=-1.021000e+03
+HPL_dMACH_RMIN=2.225074e-308
+HPL_dMACH_EMAX=1.024000e+03
+HPL_dMACH_RMAX=1.797693e+308
+HPL_sMACH_EPS=5.960464e-08
+HPL_sMACH_SFMIN=1.175494e-38
+HPL_sMACH_BASE=2.000000e+00
+HPL_sMACH_PREC=1.192093e-07
+HPL_sMACH_MLEN=2.400000e+01
+HPL_sMACH_RND=1.000000e+00
+HPL_sMACH_EMIN=-1.250000e+02
+HPL_sMACH_RMIN=1.175494e-38
+HPL_sMACH_EMAX=1.280000e+02
+HPL_sMACH_RMAX=3.402823e+38
+dweps=1.110223e-16
+sweps=5.960464e-08
+HPLMaxProcs=4
+HPLMinProcs=4
+DGEMM_N=12412
+StarDGEMM_Gflops=12.155
+SingleDGEMM_Gflops=12.1246
+PTRANS_GBs=3.61754
+PTRANS_time=0.893219
+PTRANS_residual=1
+PTRANS_n=21500
+PTRANS_nb=80
+PTRANS_nprow=2
+PTRANS_npcol=2
+MPIRandomAccess_LCG_N=17179869184
+MPIRandomAccess_LCG_time=60.1655
+MPIRandomAccess_LCG_CheckTime=2.90458
+MPIRandomAccess_LCG_Errors=0
+MPIRandomAccess_LCG_ErrorsFraction=0
+MPIRandomAccess_LCG_ExeUpdates=1690423360
+MPIRandomAccess_LCG_GUPs=0.0280962
+MPIRandomAccess_LCG_TimeBound=60
+MPIRandomAccess_LCG_Algorithm=0
+MPIRandomAccess_N=17179869184
+MPIRandomAccess_time=49.2702
+MPIRandomAccess_CheckTime=4.937
+MPIRandomAccess_Errors=0
+MPIRandomAccess_ErrorsFraction=0
+MPIRandomAccess_ExeUpdates=1262665792
+MPIRandomAccess_GUPs=0.0256274
+MPIRandomAccess_TimeBound=60
+MPIRandomAccess_Algorithm=0
+RandomAccess_LCG_N=268435456
+StarRandomAccess_LCG_GUPs=0.0284492
+SingleRandomAccess_LCG_GUPs=0.0722634
+RandomAccess_N=268435456
+StarRandomAccess_GUPs=0.0200041
+SingleRandomAccess_GUPs=0.036645
+STREAM_VectorSize=154083333
+STREAM_Threads=1
+StarSTREAM_Copy=3.44224
+StarSTREAM_Scale=3.44074
+StarSTREAM_Add=3.45174
+StarSTREAM_Triad=3.46075
+SingleSTREAM_Copy=14.1129
+SingleSTREAM_Scale=14.4352
+SingleSTREAM_Add=15.6601
+SingleSTREAM_Triad=15.5453
+FFT_N=67108864
+StarFFT_Gflops=1.24565
+SingleFFT_Gflops=2.10947
+MPIFFT_N=2147483648
+MPIFFT_Gflops=35.8473
+MPIFFT_maxErr=2.47555e-15
+MPIFFT_Procs=64
+MaxPingPongLatency_usec=1.3113
+RandomlyOrderedRingLatency_usec=1.61743
+MinPingPongBandwidth_GBytes=4.38276
+NaturallyOrderedRingBandwidth_GBytes=1.2368
+RandomlyOrderedRingBandwidth_GBytes=1.05774
+MinPingPongLatency_usec=0.437101
+AvgPingPongLatency_usec=0.872686
+MaxPingPongBandwidth_GBytes=10.9799
+AvgPingPongBandwidth_GBytes=7.64195
+NaturallyOrderedRingLatency_usec=1.60081
+FFTEnblk=16
+FFTEnp=8
+FFTEl2size=1048576
+M_OPENMP=-1
+omp_get_num_threads=0
+omp_get_max_threads=0
+omp_get_num_procs=0
+MemProc=-1
+MemSpec=-1
+MemVal=-1
+MPIFFT_time0=2.38419e-07
+MPIFFT_time1=1.1633
+MPIFFT_time2=1.35152
+MPIFFT_time3=0.599208
+MPIFFT_time4=4.52758
+MPIFFT_time5=1.49075
+MPIFFT_time6=7.15256e-07
+CPS_HPCC_FFT_235=0
+CPS_HPCC_FFTW_ESTIMATE=0
+CPS_HPCC_MEMALLCTR=0
+CPS_HPL_USE_GETPROCESSTIMES=0
+CPS_RA_SANDIA_NOPT=0
+CPS_RA_SANDIA_OPT2=0
+CPS_USING_FFTW=0
+End of Summary section.
+########################################################################
+End of HPC Challenge tests.
+Current time (1545214027) is Wed Dec 19 10:07:07 2018
+
+########################################################################
