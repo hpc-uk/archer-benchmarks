@@ -4,13 +4,16 @@ Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The
 
 <img src="img/epcc_logo.png" width="300"/>
 
+1 February 2019
+
 ## 0. Contents
 
 1. [Introduction](#introduction)
 2. [HPC Systems](#systems)
-3. [Application Benchmarks](#apps)
-4. [Summary and Conclusions](#summary)
-5. [Acknowledgements](#acknowledgements)
+3. [Performance Limits](#raw)
+4. [Application Benchmarks](#apps)
+5. [Summary and Conclusions](#summary)
+6. [Acknowledgements](#acknowledgements)
 
 <a id="introduction"></a>
 ## 1. Introduction
@@ -36,7 +39,7 @@ The benchmark applications and benchmark cases were selected with the input of t
 
 -   [UK National HPC Benchmarks (PDF)](http://www.archer.ac.uk/documentation/white-papers/benchmarks/UK_National_HPC_Benchmarks.pdf)
 
-The remainder of this paper is organised in the following way. Section 2 describes the HPC systems included in this study; Section 3 looks at the differences in performance across different application benchmarks. We conclude with a summary of the results and discussion of future work in this area in Section 4.
+The remainder of this paper is organised in the following way. Section 2 describes the HPC systems included in this study; Section 3 presents the performance limits (in terms of floating point and memory performance) for the systems; Section 4 looks at the differences in performance across different application benchmarks. We conclude with a summary of the results and discussion of future work in this area in Section 5.
 
 <a id="systems"></a>
 ## 2. HPC Systems
@@ -63,7 +66,6 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Isambard      | Marvell Arm ThunderX2       | None         | £3.0 million                      |
 | Tesseract     | Intel Xeon (Skylake Silver) | None         | N/A                             |
 
-
 <a id="tab2"></a>Table 2: Node CPU details for the HPC services used in this study
 
 | System        | Processors                            | Cores per node  | Memory per node |
@@ -75,8 +77,6 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | JADE          | Intel E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
 | Isambard      | Marvell Arm ThunderX2, 2.2 GHz        | 64 (2x 32-core) | 256 GB          |
 | Tesseract     | Intel Silver 4112 (Skylake), 2.1 GHz  | 24 (2x 16-core) | 96 GB           |
-
-
 
 <a id="tab3"></a>Table 3: Processor memory details for the HPC services used in this study
 
@@ -97,8 +97,64 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Wilkes2-GPU   | P100-SXM2-16GB    | 16 GB              |
 | JADE          | P100-SXM2-16GB    | 16 GB              |
 
+<a id="raw"></a>
+## 3. Performance Limits
+
+To help understand the benchmark performance we have calculated the theoretical peak floating point performance for 
+each of the systems and also measured the memory bandwidth using the STREAM benchmark (run within the HPC Challenge
+synthetic benchmark suite[ref]()) to measure the memory bandwidth on the different systems.
+
+[Table 5](#tab5) details the theoretical single precision (SP) floating point performance for each of the systems used in our exercise
+and [Table 6](#tab6) shows some of the processor charateristics used to compute the CPU GFLOP/s performance figures. (Double
+precision performance is half the single precision value). The 
+compute nodes with GPU accelerators have by far the highest theoretical floating point performance. Of the CPU-based systems,
+the Peta4-Skylake nodes (Intel Xeon Skylake Gold) have more than twice the theoretical floating point performance of the
+next highest performing CPU nodes (Cirrus, Intel Xeon Broadwell). The Isambard (Marvell ThunderX2) copmpute nodes have similar
+theoretical performance to the Broadwell system with the Tesseract (Intel Xeon Skylake Silver) compute nodes having lower floating point 
+performance and ARCHER (Intel Xeon Ivy Bridge) compute nodes having the lowest theoretical maximum floating point performance.
+All of these calculations assume that any processer turbo modes (that can increase the clock speed) are not employed. This 
+assumption may not hold in some use configurations but should not have a large effect on the ordering of the performance.
+
+<a id="tab5"></a>Table 5: Theoretical maximum floating point performance for different platforms. CPU FLOPS are computed as
+(number of cores used) * (single precision FLOPS per cycle) * (frequency). See [Table 10](#tab10) for values used for the different
+systems. GPU FLOPS are computed as (number of GPUs used) * (GPU single precision FLOPS reference value
+[ref](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.)
+
+| System        | Cores used | CPU SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
+|---------------|-----------:|--------------:|---------:|--------------:|---------------:|------------------------------------:|
+| Wilkes2-GPU   | 12         | 885           | 4        | 37,200        | 38,085         | 36.649                              |
+| Peta4-Skylake | 32         | 5,325         | 0        |               | 5,325          | 5.135                               |
+| Cirrus        | 36         | 2,419         | 0        |               | 2,419          | 2.326                               |
+| JADE          | 5          | 352.0         | 1        | 10,600        | 10,952         | 10.561                              |
+| Isambard      | 64         | 2,253         | 0        |               | 2,253          | 2.172                               |
+| Tesseract     | 24         | 1,613         | 0        |               | 1,613          | 1.555                               |
+| ARCHER        | 24         | 1,037         | 0        |               | 1,037          | 1.000                               |
+
+<a id="tab6"></a>Table 6: Processor charateristics used to compute CPU FLOPS.
+
+| System        | SP FLOPS per cycle | Clock speed (GHz) | Single core SP GFLOP/s |
+|---------------|-------------------:|------------------:|-----------------------:|
+| Peta4-Skylake | 64                 | 2.6               | 166.4                  | 
+| Cirrus        | 32                 | 2.1               | 67.2                   | 
+| Isambard      | 16                 | 2.2               | 35.2                   |
+| Tesseract     | 32                 | 2.1               | 67.2                   |
+| ARCHER        | 16                 | 2.7               | 43.2                   | 
+
+The results from the Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7). The two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake, Skylake Gold) show the highest per core memory bandwidth with the Marvell ThunderX2 Arm64 system (Isambard) having the 
+highest per-node memory bandwidth. 
+
+<a id="tab7"></a>Table 7: Results from HPCC StarSTREAM Triad benchmark
+
+| System        | Cores per node | Memory Channels | StarSTREAM per core (GB/s) | StarSTREAM per node (GB/s) |
+|---------------|---------------:|----------------:|---------------------------:|---------------------------:|
+| Tesseract     | 24             | 6               | 5.181                      | 124.339                    |
+| Peta4-Skylake | 32             | 6               | 4.508                      | 144.256                    |
+| Isambard      | 64             | 8               | 3.461                      | 221.485                    |
+| ARCHER        | 24             | 4               | 3.036                      | 72.864                     |
+| Cirrus        | 36             | 4               | 2.718                      | 97.848                     |
+
 <a id="apps"></a>
-## 3. Application Benchmarks
+## 4. Application Benchmarks
 
 In this initial performance comparison, we have run three benchmarks using three different applications:
 
@@ -128,9 +184,9 @@ We have measured the performance of the **Al Slab (al3x3)** benchmark that is ab
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
 
-We compare the single-node performance in [Table 5](#tab5). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3x performance improvement over ARCHER nodes, Broadwell processors give 2x performance increase a when compared to ARCHER.
+We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3x performance improvement over ARCHER nodes, Broadwell processors give 2x performance increase a when compared to ARCHER.
 
-<a id="tab5"></a>Table 5: Single node performance comparison for CASTEP Al Slab benchmark
+<a id="tab8"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark
 
 | System        | Performance (mean SCF cycles/s) | Performance relative to ARCHER node | Notes        |
 |---------------|--------------------------------:|------------------------------------:|--------------|
@@ -140,36 +196,27 @@ We compare the single-node performance in [Table 5](#tab5). The performance is m
 | Isambard      | 0.00691                         | 1.273                               | 64 MPI tasks |
 | ARCHER        | 0.00543                         | 1.000                               | 24 MPI tasks |
 
-To help understand these results, we have used the STREAM benchmark (run within the HPC Challenge synthetic benchmark suite) to measure the memory bandwidth on the different systems. The results from the Triad metric running on all cores on a compute node simultaneously are shown in [Table 6](#tab6). The major difference in measured memory bandwidth per node comes from the generation of processors (and memory) with the newest generation (Peta4-Skylake) having by far the highest memory bandwidth per node (due both the newer technology and additional memory channels available) and the oldest generation (ARCHER) having the lowest memory bandwidth per node). For the systems with the Broadwell generation on processors having more cores per node allows you to access slightly higher measured memory performance per node this actually results in lower measured memory bandwidth *per core* as the additional cores compete for memory bandwidth.
+To try and understand what characteristic of the compute nodes on the different systems is leading to the observed
+performance differences, we assess the correlation between floating point performance and the CASTEP benchmark
+performance. We also compute the correlation between the CASTEP benchmark performance and memory performance,
+both in terms of peak bandwdth and in terms of the number of memory channels. To measure the correelation we have used two different tests:
 
-<a id="tab6"></a>Table 6: Results from HPCC StarSTREAM Triad benchmark
+-   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation)
+-   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets
 
-| System        | Cores per node | StarSTREAM per core (GB/s) | StarSTREAM per node (GB/s) |
-|---------------|---------------:|---------------------------:|---------------------------:|
-| Tesseract     | 24             | 5.181                      | 124.339                    |
-| Peta4-Skylake | 32             | 4.508                      | 144.256                    |
-| Isambard      | 64             | 3.461                      | 221.485                    |
-| ARCHER        | 24             | 3.036                      | 72.864                     |
-| Cirrus        | 36             | 2.718                      | 97.848                     |
+[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 9](#tab9) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson) and in order (Spearman). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
-The two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake, Skylake Gold) show the highest per 
-core memory bandwidth (as measured by StarSTREAM Triad) with the Marvell ThunderX2 Arm64 system (Isambard) having the 
-highest per-node memory bandwidth. 
+<a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
+<img src="img/castep_corr.png" />
 
-Using the memory bandwidth data, we see that the single node CASTEP Al Slab performance is a function of both node performance (influenced by both the performance per core and the number of cores per node) and memory bandwidth per core; with higher floating-point performance and memory bandwidth leading to higher CASTEP performance. In general, the floating-point performance of the nodes seems to dominate the performance on a single node. This conclusion is supported by the following facts:
+<a id="tab9"></a>Table 9: Correlation coefficients for different aspects of systems hardware for 
+the CASTEP Al Slab benchmark
 
--   ARCHER (which has the oldest processors in the study) and joint fewest cores per node shows the worst performance per
-    node for this benchmark yet has similar memory bandwidth per core to the Cirrus system with Broadwell generation Xeon processors. The lower performance on ARCHER is due to the lower floating-point performance of a node.
--   Cirrus shows twice the performance of ARCHER even though the per-core memory bandwidth is similar to ARCHER. The increase in
-    performance is due to the stronger floating-point performance with increased vector lengths and more cores.
--   Tesseract performance is worse than Cirrus even though it has the highest per-core StarSTREAM value. The lower number of
-    cores per node reduce the floating point performance of a Tesseract node. The number of cores influences the floating
-    point performance more than the increased vector length available on the Xeon Skylake Silver processors on Tesseract.
--   Although Isambard has the most cores per node and per-core memory bandwidth higher than Cirrus, the Isambard Arm64 node
-    still has a lower floating point performance than the all the Intel Xeon nodes (apart from ARCHER). This manifests 
-    as a lower CASTEP performance than all of the Intel Xeon nodes (apart from ARCHER).
--   Peta4-Skylake shows the best overall performance for this benchmark as nodes on this system have the highest overall 
-    floating-point performance and high memory bandwidth per core.
+| Aspect                     | Pearson | Spearman |
+|----------------------------|--------:|---------:|
+| Floating Point Performance |  0.95   |  0.90    |
+| Memory Bandwidth           |  0.22   |  0.20    |
+| Memory Channels            | -0.01   |  0.05    |
 
 <a id="osbli"></a>
 ### 3.2 OpenSBLI
@@ -186,9 +233,9 @@ Although OpenSBLI does allow the use of GPU accelerators we found that, in pract
 accelerators was too small to be allow the bechmark case to run successfully on small node counts. We are investigating
 if using a larger number of GPU accelerators in parallel will allow us to run the benchmark.
 
-[Table 7](#tab7) shows the single-node performance for the benchmark on the different systems.
+[Table 10](#tab10) shows the single-node performance for the benchmark on the different systems.
 
-<a id="tab7"></a>Table 7: Single node performance comparison for OpenSBLI 512^3, Taylor-Green vortex benchmark run for
+<a id="tab10"></a>Table 10: Single node performance comparison for OpenSBLI 512^3, Taylor-Green vortex benchmark run for
 1000 iterations.
 
 | System        | Performance (iter/s) | Performance relative to ARCHER node | Notes        |
@@ -199,17 +246,32 @@ if using a larger number of GPU accelerators in parallel will allow us to run th
 | Cirrus        | 0.097                | 0.970                               | 36 MPI tasks |
 | Tesseract     | 0.097                | 0.970                               | 24 MPI tasks |
 
-The picture here is different to that for CASTEP, with the performance grouped into two distinct categories: the higher performance 
-categroy includes the Isambard Marvell ThunderX2 Arm64 nodes and the Peta4-Skylake Intel Xeon Skylake Gold nodes; the lower
-performance category includes the ARCHER Intel Xeon Ivy Bridge nodes, the Cirrus Intel Xeon Broadwell nodes and the Tesseract
-Intel Xeon Skylake Silver nodes. At first glance, it appears that node memory performance is the key metric in determining
-the performance difference with the older Xeon processors, which have 4 memory channels, having lower performance than
-the ThunderX2 Arm64 and Xeon Skylake processors, which have 8 and 6 memory channels respectively. The oddity in this 
-analysis is the performance of the Tesseract system, which has Xeon Skylake Silver processors with 6 memory channels.
-One difference between the Skylake Silver and Skylake Gold processors is the frequency of memory supported - the maximum 
-memory speed on Skylake Silver (Tesseract) is 2400 MHz whereas for the Skylake Gold (Peta4-Skylake) it is 2666 MHz. This
-difference could account for some of the difference in performance. Further investigation and profiling are needed to 
-understand the origin of this discrepency. 
+If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 11](#tab11))
+it appears that the performance is not strongly correlated to either floating point performance or memory performance.
+
+<a id="tab11"></a>Table 11: Correlation coefficients for different aspects of systems hardware for 
+the OpenSBLI 512^3, Taylor-Green vortex benchmark.
+
+| Aspect                     | Pearson | Spearman |
+|----------------------------|--------:|---------:|
+| Floating Point Performance |  0.69   |  0.60    |
+| Memory Bandwidth           | -0.06   | -0.20    |
+| Memory Channels            |  0.65   |  0.53    |
+
+However, looking at a plot of the performance data against number of memory channels available on the different processors ([Figure 2](#fig2)) it appears that if
+the Tesseract performance is ignored, there is good correlation.
+
+<a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. number of memory channels for the OpenSBLI 512^3, Taylor-Green vortex benchmark
+<img src="img/osbli_corr.png" />
+
+We have recomputed the correlation coefficients with the results for Tesseract excluded and the results can be seen in [Table 12](#tab12). This reveals a strong correlation between the OpenSBLI benchmark performance and the number of memory channels. This is what we owuld expect as the performance of this application is generally bound by random memory access performance. Investigations are ongoing as to why the Tesseract performance does not match this trend.
+
+<a id="tab12"></a>Table 12: Correlation coefficients for th enumber of memory channels for 
+the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excluded.
+
+| Aspect                     | Pearson | Spearman |
+|----------------------------|--------:|---------:|
+| Memory Channels            |  0.88   |  0.95    |
 
 <a id="gromacs"></a>
 ### 3.3 GROMACS
@@ -220,11 +282,11 @@ Details of the compile options, the full output data and analysis scripts are av
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/GROMACS>
 
-We have used the 1400k atom benchmark desgined by the High End Consortium for Biomolecular Simulation (HEC BioSim). This is a strong scaling benchmark. Benchmark details are available at the repository link above.
+We have used the 1400k atom benchmark desgined by the High End Consortium for Biomolecular Simulation (HEC BioSim). This is a strong scaling benchmark. Benchmark details are available at the repository link above. All the runs were performed using the single precision version of GROMACS.
 
-The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 8](#tab8).
+The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 13](#tab13).
 
-<a id="tab8"></a>Table 8: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
+<a id="tab13"></a>Table 13: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
 from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/jade-benchmarks). 
 
 | System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                              |
@@ -237,42 +299,42 @@ from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/
 | Tesseract     | 1.323                | 1.080                                 | 24 tasks, 2 OpenMP threads per task, 2-way SMT     |
 | ARCHER        | 1.216                | 1.000                                 | 24 tasks, 2 OpenMP threads per task, 2-way SMT     |
 
-We expect GROMACS performance to be directly correlated to floating point performance of the resources used. [Table 9](#tab9) details
-the theoretical single precision (SP) floating point performance for each of the systems used in our exercise.
+We expect GROMACS performance to be directly correlated to floating point performance of the resources used and looking at a plot of
+GROMACS performance against floating point performance ([Figure 3](#fig3)) and correlation
+coefficients ([Table 14](#tab14)) we can see that this is generally true although, perhaps surprisingly, the GROMACS benchmark performance is not as 
+strongly correlated to floating point performance as the CASTEP benchmark. As expected, there is no correlation between GROMACS benchmark
+performance and memory performance.
 
-<a id="tab9"></a>Table 9: Theoretical maximum floating point performance for different platforms. CPU FLOPS are computed as
-(number of cores used) * (single precision FLOPS per cycle) * (frequency). See [Table 10](#tab10) for values used for the different
-systems. GPU FLOPS are computed as (number of GPUs used) * (GPU single precision FLOPS reference value
-[ref](https://www.nvidia.com/en-us/data-center/tesla-p100/)). 
+<a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark.
+<img src="img/gromacs_corr.png" />
 
-| System        | Cores used | CPU SP GFLOPS | GPU used | GPU SP GFLOPS | Node SP GFLOPS | Node GFLOPS relative to ARCHER node |
-|---------------|-----------:|--------------:|---------:|--------------:|---------------:|------------------------------------:|
-| Wilkes2-GPU   | 12         | 885           | 4        | 37,200        | 38,085         | 36.649                              |
-| Peta4-Skylake | 32         | 5,325         | 0        |               | 5,325          | 5.135                               |
-| Cirrus        | 36         | 2,419         | 0        |               | 2,419          | 2.326                               |
-| JADE          | 5          | 352.0         | 1        | 10,600        | 10,952         | 10.561                              |
-| Isambard      | 64         | 2,253         | 0        |               | 2,253          | 2.172                               |
-| Tesseract     | 24         | 1,613         | 0        |               | 1,613          | 1.555                               |
-| ARCHER        | 24         | 1,037         | 0        |               | 1,037          | 1.000                               |
+<a id="tab14"></a>Table 14: Correlation coefficients for different aspects of systems hardware for 
+the GROMACS 1400k atom benchmark.
 
-<a id="tab10"></a>Table 10: Processor charateristics used to compute CPU FLOPS.
+| Aspect                     | Pearson | Spearman |
+|----------------------------|--------:|---------:|
+| Floating Point Performance |  0.88   |  0.89    |
+| Memory Bandwidth           |  0.13   |  0.00    |
+| Memory Channels            |  0.10   |  0.21    |
 
-| System        | SP FLOPS per cycle | Clock speed (GHz) | Single core SP GFLOPS |
-|---------------|-------------------:|------------------:|----------------------:|
-| Peta4-Skylake | 64                 | 2.6               | 166.4                 | 
-| Cirrus        | 32                 | 2.1               | 67.2                  | 
-| Isambard      | 16                 | 2.2               | 35.2                  |
-| Tesseract     | 32                 | 2.1               | 67.2                  |
-| ARCHER        | 16                 | 2.7               | 43.2                  |
+[Figure 3](#fig3) reveals that there are two separate correlation lines - one corresponding to CPU-only performance and one corresponding to 
+the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
+performance compared to the floating point performance of the CPU-only systems, see [Table 15](#tab15) and [Figure 4](#fig4).
 
-Comparing the ordering of the theoretical floating-point performance to the ordering of GROMACS performance, we can see that the only
-case where the theoretical performance ordering does not match the observed GROMACS performance is for the JADE system. The GROMACS
-performance on JADE is much lower than expected and this seems specific to this system as the performance on Wilkes2-GPU is correctly
-ordered. Further investigation is needed to understand the origin of this performance issue.
+<a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark on CPU-only systems.
+<img src="img/gromacs_cpu_corr.png" />
 
-It is also interesting to compare the theoretical performance ratios (relative to an ARCHER node) in [Table 9](#tab9) to the
-observed performance ratios in [Table 8](#tab8) (excluding JADE as the performance issues are currently not well understood).
-In particular, it appears that as you add more and more performance to the
+<a id="tab14"></a>Table 15: Correlation coefficients for floating point performance compared to GROMACS 1400k atom benchmark performance.
+
+| Aspect                     | Pearson | Spearman |
+|----------------------------|--------:|---------:|
+| Floating Point Performance |  0.96   |  1.00    |
+
+This comparison shows a much stronger correlation than the comparison when the 
+GPU systems are included, demonstrating that the scaling properties of performance with floating point performance is different 
+across different architectures.
+
+We also note that it appears that as you add more and more performance to the
 processor architectures - which is mostly in the form of SIMD, rather than cores or increased frequencies - it becomes more and
 more difficult for the GROMACS benchmark to extract the full performance potential from the architecture. For example, considering
 just the CPU only results, the Intel Xeon Skylake Gold processors on the Peta4-Skylake system provide over 5x the theoretical
@@ -283,22 +345,23 @@ system where there is a theoretical FLOPS increase of over 36x in the resources 
 performance increase of just 2.7x. Of course, these effects may be affected by the size of the benchmark, with a larger GROMACS
 benchmark able to make better use of the additonal SIMD performance available. However, this benchmark has been chosen by the
 biomolecular simulation research community to be representative of their use of HPC systems and so this performance comparison 
-is of direct interest 
+is of direct interest.
 
 <a id="summary"></a>
 ## 4. Summary and Conclusions
 
-We have run three different HPC application benchamrks on a number of different UK national HPC services with a variety of 
-different processor architectures. In particular, we compared the single node performance of the applications across the different
-HPC systems.
+We have run three different HPC application benchamrks on a number of different UK national HPC services with a
+variety of different processor architectures. In particular, we compared the single node performance of the
+applications across the different HPC systems.
 
-In general, we were able to broadly correlate the performance of the different applications to particular properties of the 
-compute node architecture (such as floating point performance and memory bandwidth) but there we a number of exceptions
-to these correlations that we plan to investigate further which we describe below.
+In general, we were able to broadly correlate the performance of the different applications to particular
+properties of the compute node architecture (such as floating point performance and number of memory channels)
+but there we a number of exceptions to these correlations that we plan to investigate further which we describe
+below.
 
 ### 4.1 CASTEP
 
-CASTEP performance was generally correlated to floating point performance of the compute node. However, the Isambard
+CASTEP performance is strongly correlated to floating point performance of the compute node. However, the Isambard
 (Marvell ThunderX2 Arm64) system showed lower performance than would be expected from the ordering of floating point 
 performance of the different nodes. This could be due to a number of factors, potentially including:
 
@@ -313,32 +376,43 @@ system to explore the performance of CASTEP on Arm processors further.
 
 ### 4.2 OpenSBLI
 
-As expected for a CFD application, OpenSBLI performance was seen to correlate with memory bandwidth available per
+As expected for a CFD application, OpenSBLI performance was seen to correlate with number of memory channels per
 node where the systems with higher numbers of memory channels (Isambard and Peta4-Skylake) showing higher performance
-than the older processors with lower memory channels (and hence bandwidth).
+than the older processors with lower memory channels.
 
-The exception to this correlation was the Tesseract system (with Intel Xeon Skylake Silver processors) which had a very
-high observed memory bandwidth but OpenSBLI benchmark performance similar to the systems with lower memory bandwidths.
-We plan to investigate this discrepency further using profiling tools on the different systems. 
+The exception to this correlation was the Tesseract system (with Intel Xeon Skylake Silver processors) which has the 
+same number of memory channels as the Peta4-Skylake system but OpenSBLI benchmark performance similar to the systems
+with lower numbers of memory channels. We plan to investigate this discrepency further using profiling tools on the 
+different systems. 
 
 Finally, we were unable to run the OpenSBLI benchmark on GPU-accelerated nodes due to issues with the memory capacity
-on individual GPU accelerators. We plan to follow up this issue to get a better understanding of the memory requirements
-of the benchmark.
+on individual GPU accelerators. We plan to follow up this issue to get a better understanding of the memory requirements of the benchmark.
 
 ### 4.3 GROMACS
 
-The performance of the GROMACS benchmark was correlated with the floating point performance of the compute nodes. There
-is an issue with the performance of the GROMACS benchmark on the JADE GPU-accelerated system that requires further 
-investigation - the results on the Wilkes2-GPU system with the same GPU accelerators demonstrate that good performance
-can be achieved on the hardware.
+The performance of the GROMACS benchmark was correlated with the floating point performance of the compute nodes.
+When CPU-only systems were considered the correlation with floating point performance was extremely strong
+suggesting, unsurprisingly, that the scaling properties of performance with floating point performance is
+different across different architectures. There is an issue with the performance of the GROMACS benchmark on
+the JADE GPU-accelerated system that requires further investigation - the results on the Wilkes2-GPU system with
+the same GPU accelerators demonstrate that good performance can be achieved on the hardware.
 
-While the performance of the GROMACS benchmark was correlated with the order of increasing floating point performance of
-the different compute node architectures, we also saw that the ratio of observed performance improvement did not match 
-the ratio of increased theoretical maximum floating point performance. As the increasing floating point performance 
-theoretically available on the different architectures is obtained mostly from increased SIMD, this difference in 
-performance ratios suggests that the GROMACS benchmark is less able to exploit the additional SIMD capability as 
-this is added to processors. We plan to investigate further if this is a function of the benchmark or the GROMACS
-application.
+### 4.4 Future Plans
+
+This work has raised a number of issues which we plan to investigate further:
+
+   - The unexpected poor performance of the OpenSBLI benchmark on the Tesseract (Intel Xeon Skylake Silver) system
+     which does not match the performance trends seen for the other systems where performance is strongly correlated
+     to the number of memory channels.
+   - The inability to run the OpenSBLI benchmark on GPU systems - seeming due to lack of memory.
+   - The poor performance of GROMACS on the JADE GPU system. This performance result was produced by the HEC BioSim
+     and we are already in contact with them to discuss coordinating benchmarking efforts going forwards.
+
+Other plans for future work include:
+
+   - Comapring multinode performance across UK HPC systems with different architectures
+   - Publishing performance profile reports for all of the benchmark applications across the different architectures
+   - Working on adding machine learning benchmarks to the set of application benchmarks
 
 <a id="acknowledgements"></a>
 ## 5. Acknowledgements
