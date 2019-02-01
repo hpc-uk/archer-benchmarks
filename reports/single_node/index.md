@@ -116,9 +116,8 @@ All of these calculations assume that any processer turbo modes (that can increa
 assumption may not hold in some use configurations but should not have a large effect on the ordering of the performance.
 
 <a id="tab5"></a>Table 5: Theoretical maximum floating point performance for different platforms. CPU FLOPS are computed as
-(number of cores used) * (single precision FLOPS per cycle) * (frequency). See [Table 10](#tab10) for values used for the different
-systems. GPU FLOPS are computed as (number of GPUs used) * (GPU single precision FLOPS reference value
-[ref](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.)
+(number of cores used) &times; (single precision FLOPS per cycle) &times; (frequency). See [Table 10](#tab10) for values used for the different
+systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.)
 
 | System        | Cores used | CPU SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
 |---------------|-----------:|--------------:|---------:|--------------:|---------------:|------------------------------------:|
@@ -140,7 +139,7 @@ systems. GPU FLOPS are computed as (number of GPUs used) * (GPU single precision
 | Tesseract     | 32                 | 2.1               | 67.2                   |
 | ARCHER        | 16                 | 2.7               | 43.2                   | 
 
-The results from the Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7). The two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake, Skylake Gold) show the highest per core memory bandwidth with the Marvell ThunderX2 Arm64 system (Isambard) having the 
+The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7). The two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake, Skylake Gold) show the highest per core memory bandwidth with the Marvell ThunderX2 Arm64 system (Isambard) having the 
 highest per-node memory bandwidth. 
 
 <a id="tab7"></a>Table 7: Results from HPCC StarSTREAM Triad benchmark
@@ -173,6 +172,12 @@ A Python notebook with the analysis used to produce the perfomance data reported
 
 [CASTEP](http://www.castep.org) is a general-purpose, DFT-based, materials science application. Written in Fortran with MPI and OpenMP parallelism.
 
+<a id="tab8"></a>Table 8: Summary of CASTEP compile options on different platforms
+
+| System        | Compiler | Compile Options | Libraries        |
+|---------------|--------------------------------:|------------------------------------:|--------------|
+| ARCHER        | GCC 6.1 | ``-O3 -funroll-loops -ftree-loop-distribution -g -fbacktrace -fconvert=big-endian -fno-realloc-lhs -fopenmp -fPIC`` | Intel MKL 17.0.0.098, FFTW 3.3.4.11, Cray MPT 7.5.5 |
+
 Details of the compile options, job submission scripts, the full output data and analysis scripts are available on GitHub at:
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/CASTEP>
@@ -204,7 +209,7 @@ both in terms of peak bandwdth and in terms of the number of memory channels. To
 -   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation)
 -   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets
 
-[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 9](#tab9) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson) and in order (Spearman). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
+[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 9](#tab9) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson: 0.95) and in order (Spearman: 0.90). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
 <a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
 <img src="img/castep_corr.png" />
@@ -259,12 +264,12 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 | Memory Channels            |  0.65   |  0.53    |
 
 However, looking at a plot of the performance data against number of memory channels available on the different processors ([Figure 2](#fig2)) it appears that if
-the Tesseract performance is ignored, there is good correlation.
+the Tesseract performance is ignored, there is reasonable correlation.
 
 <a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. number of memory channels for the OpenSBLI 512^3, Taylor-Green vortex benchmark
 <img src="img/osbli_corr.png" />
 
-We have recomputed the correlation coefficients with the results for Tesseract excluded and the results can be seen in [Table 12](#tab12). This reveals a strong correlation between the OpenSBLI benchmark performance and the number of memory channels. This is what we owuld expect as the performance of this application is generally bound by random memory access performance. Investigations are ongoing as to why the Tesseract performance does not match this trend.
+We have recomputed the correlation coefficients with the results for Tesseract excluded and the results can be seen in [Table 12](#tab12). This reveals a strong correlation between the OpenSBLI benchmark performance and the number of memory channels. This is what we wo3uld expect as the performance of this application is generally bound by random memory access performance. Investigations are ongoing as to why the Tesseract performance does not match this trend.
 
 <a id="tab12"></a>Table 12: Correlation coefficients for th enumber of memory channels for 
 the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excluded.
