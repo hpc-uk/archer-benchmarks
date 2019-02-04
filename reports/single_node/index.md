@@ -4,7 +4,7 @@ Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The
 
 <img src="img/epcc_logo.png" width="300"/>
 
-1 February 2019
+4 February 2019
 
 ## 0. Contents
 
@@ -101,8 +101,10 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 ## 3. Performance Limits
 
 To help understand the benchmark performance we have calculated the theoretical peak floating point performance for 
-each of the systems and also measured the memory bandwidth using the STREAM benchmark (run within the HPC Challenge
-synthetic benchmark suite[ref]()) to measure the memory bandwidth on the different systems.
+each of the systems and also measured the memory bandwidth using the STREAM benchmark (run within the [HPC Challenge
+synthetic benchmark suite](https://icl.utk.edu/hpcc/)) to measure the memory bandwidth on the different systems. STREAM
+is a simple synthetic benchmark program that measures sustainable memory bandwidth (in GB/s) and the corresponding
+computation rate for simple vector kernel.
 
 [Table 5](#tab5) details the theoretical single precision (SP) floating point performance for each of the systems used in our exercise
 and [Table 6](#tab6) shows some of the processor charateristics used to compute the CPU GFLOP/s performance figures. (Double
@@ -139,10 +141,21 @@ systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single pr
 | Tesseract     | 32                 | 2.1               | 67.2                   |
 | ARCHER        | 16                 | 2.7               | 43.2                   | 
 
-The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7). The two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake, Skylake Gold) show the highest per core memory bandwidth with the Marvell ThunderX2 Arm64 system (Isambard) having the 
+The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7).
+The Triad metric is the most complex kernel within STREAM and is considered the most relevant for HPC. The STREAM Triad kernel
+corresponds to:
+
+```
+for (i =0; i<N; i++) { 
+    a[i] = b[i] + c[i] * SCALAR;
+}
+```
+
+For the StarSTREAM Triad benchmark, the two Intel Xeon Skylake systems (Tesseract, Skylake Silver, and Peta4-Skylake,
+Skylake Gold) show the highest per core memory bandwidth with the Marvell ThunderX2 Arm64 system (Isambard) having the
 highest per-node memory bandwidth. 
 
-<a id="tab7"></a>Table 7: Results from HPCC StarSTREAM Triad benchmark
+<a id="tab7"></a>Table 7: Results from HPCC StarSTREAM Triad benchmark. Results from best performing run.
 
 | System        | Cores per node | Memory Channels | StarSTREAM per core (GB/s) | StarSTREAM per node (GB/s) |
 |---------------|---------------:|----------------:|---------------------------:|---------------------------:|
@@ -168,30 +181,34 @@ A Python notebook with the analysis used to produce the perfomance data reported
 -   <https://github.com/hpc-uk/archer-benchmarks/blob/master/analysis/Single_Node_Performance_Comparison.ipynb>
 
 <a id="castep"></a>
-### 3.1 CASTEP
+### 4.1 CASTEP
 
 [CASTEP](http://www.castep.org) is a general-purpose, DFT-based, materials science application. Written in Fortran with MPI and OpenMP parallelism.
 
 <a id="tab8"></a>Table 8: Summary of CASTEP compile options on different platforms
 
-| System        | Compiler | Compile Options | Libraries        |
-|---------------|--------------------------------:|------------------------------------:|--------------|
-| ARCHER        | GCC 6.1 | ``-O3 -funroll-loops -ftree-loop-distribution -g -fbacktrace -fconvert=big-endian -fno-realloc-lhs -fopenmp -fPIC`` | Intel MKL 17.0.0.098, FFTW 3.3.4.11, Cray MPT 7.5.5 |
+| System        | Compiler         | Libraries                                           |
+|---------------|------------------|-----------------------------------------------------|
+| ARCHER        | GCC 6.1          | Intel MKL 17.0.0.098, FFTW 3.3.4.11, Cray MPT 7.5.5 |
+| Cirrus        | Intel 17.0.2.174 | Intel MKL 17.0.2.174, SGI MPT 2.16                  |
+| Peta4-Skylake | Intel 17.4       | Intel MKL 17.4, FFTW 3.3.6, Intel MPI 17.4          |
+| Isambard      | Cray 8.7.0.5323  | Cray LibSci 17.09.1.2, FFTW 3.3.6.3, MPICH 3.2.0.4  |
+| Tesseract     | | | |
 
-Details of the compile options, job submission scripts, the full output data and analysis scripts are available on GitHub at:
+Full details of the compile options, job submission scripts, the full output data and analysis scripts are available on GitHub at:
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/CASTEP>
 
 The CASTEP application does not currently support execution on GPU accelerators (although this functionality is currently
 under development by the CASTEP team) so we only include results for CPU-based systems.
 
-We have measured the performance of the **Al Slab (al3x3)** benchmark that is able to run on small node counts. We expect the performance of this benchmark to depend on the memory-bandwidth and floating-point performance of the processors. This is a strong scaling benchmark.
+We have measured the performance of the **Al Slab (al3x3)** benchmark that is able to run on small node counts. We expect the performance of this benchmark to depend on the memory-bandwidth and floating-point performance of the processors. This is a strong scaling benchmark. This benchmark uses double precision floating point operations (as is used in practice by users).
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
 
-We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3x performance improvement over ARCHER nodes, Broadwell processors give 2x performance increase a when compared to ARCHER.
+We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3&times; performance improvement over ARCHER nodes, Broadwell processors give a 2&times; performance increase a when compared to ARCHER.
 
-<a id="tab8"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark
+<a id="tab8"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark. Results from best performing run.
 
 | System        | Performance (mean SCF cycles/s) | Performance relative to ARCHER node | Notes        |
 |---------------|--------------------------------:|------------------------------------:|--------------|
@@ -224,24 +241,34 @@ the CASTEP Al Slab benchmark
 | Memory Channels            | -0.01   |  0.05    |
 
 <a id="osbli"></a>
-### 3.2 OpenSBLI
+### 4.2 OpenSBLI
 
-[OpenSBLI](https://opensbli.github.io/) is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU).
+[OpenSBLI](https://opensbli.github.io/) is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU). This benchmark uses double precision floating point operations (as is used in practice by users).
 
 The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium. We expect this benchmark to be bound primarily by memory bandwidth. This is a strong scaling benchmark.
 
-Details of the compile options, source code for the benchmark, the full output data and analysis scripts are available on GitHub at:
+<a id="tab8"></a>Table 8: Summary of OpenSBLI compile options on different platforms
+
+| System        | Compiler         | Libraries                     |
+|---------------|------------------|-------------------------------|
+| ARCHER        | Cray 8.5.8       | HDF5 1.10.0.1, Cray MPT 7.5.2 |
+| Cirrus        | Intel 17.0.2.174 | HDF5 1.10.1, SGI MPT 2.16     |
+| Peta4-Skylake | Intel 17.4       | HDF5 1.10.1, Intel MPI 17.4   |
+| Isambard      | Cray 8.7.0.5323  | HDF5 1.10.2, MPICH 3.2.0.4    |
+| Tesseract     | | | |
+
+Full details of the compile options, source code for the benchmark, the full output data and analysis scripts are available on GitHub at:
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/OpenSBLI>
 
 Although OpenSBLI does allow the use of GPU accelerators we found that, in practice, the memory available on the GPU 
-accelerators was too small to be allow the bechmark case to run successfully on small node counts. We are investigating
+accelerators was too small to allow the bechmark case to run successfully on small node counts. We are investigating
 if using a larger number of GPU accelerators in parallel will allow us to run the benchmark.
 
 [Table 10](#tab10) shows the single-node performance for the benchmark on the different systems.
 
 <a id="tab10"></a>Table 10: Single node performance comparison for OpenSBLI 512^3, Taylor-Green vortex benchmark run for
-1000 iterations.
+1000 iterations. Results from best performing run.
 
 | System        | Performance (iter/s) | Performance relative to ARCHER node | Notes        |
 |---------------|---------------------:|------------------------------------:|--------------|
@@ -279,30 +306,42 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excl
 | Memory Channels            |  0.88   |  0.95    |
 
 <a id="gromacs"></a>
-### 3.3 GROMACS
+### 4.3 GROMACS
 
 [GROMACS](http://www.gromacs.org) is a classical molecular mechanics-based biomolecular simulation application written in C/C++ with MPI and OpenMP parallelism. It also supports GPGPU (implemented in CUDA) and Xeon Phi (Knights Landing variant) versions.
 
-Details of the compile options, the full output data and analysis scripts are available on GitHub at:
+<a id="tab8"></a>Table 8: Summary of GROMACS compile options on different platforms
+
+| System        | Compiler         | Libraries                      |
+|---------------|------------------|--------------------------------|
+| ARCHER        | GCC 6.3.0        | FFTW 3.3.8, Cray MPT 7.5.5     |
+| Cirrus        | Intel 17.0.2.174 | FFTW 3.3.5, SGI MPT 2.16       |
+| Peta4-Skylake | Intel 17.4       | Intel MKL 17.4, Intel MPI 17.4 |
+| Isambard      | Cray 8.7.0.5323  | FFTW 3.3.6.3, GROMACS Thread MPI |
+| Tesseract     | | | |
+
+Full details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/GROMACS>
 
-We have used the 1400k atom benchmark desgined by the High End Consortium for Biomolecular Simulation (HEC BioSim). This is a strong scaling benchmark. Benchmark details are available at the repository link above. All the runs were performed using the single precision version of GROMACS.
+We have used the 1400k atom benchmark desgined by the High End Consortium for Biomolecular Simulation (HEC BioSim). This is a
+strong scaling benchmark. Benchmark details are available at the repository link above. All the runs were performed using the
+single precision version of GROMACS (as is used in practice by most users).
 
 The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 13](#tab13).
 
 <a id="tab13"></a>Table 13: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
-from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/jade-benchmarks). 
+from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/jade-benchmarks). Results from best performing run.
 
-| System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                              |
-|---------------|---------------------:|--------------------------------------:|----------------------------------------------------|
-| Wilkes2-GPU   | 2.744                | 2.257                                 | 4 MPI tasks, 3 OMP per task, 4 GPU                 |
-| Peta4-Skylake | 2.082                | 1.712                                 | 32 MPI tasks, 1 OpenMP thread per task             |
-| Cirrus        | 1.699                | 1.397                                 | 36 MPI tasks, 2 OpenMP threads per task, 2-way SMT |
-| JADE          | 1.647                | 1.354                                 | 1 MPI task, 5 OpenMP thread per task, 1 GPU        |
-| Isambard      | 1.471                | 1.210                                 | 128 tasks, 2 OpenMP threads per task, 4-way SMT    |
-| Tesseract     | 1.323                | 1.080                                 | 24 tasks, 2 OpenMP threads per task, 2-way SMT     |
-| ARCHER        | 1.216                | 1.000                                 | 24 tasks, 2 OpenMP threads per task, 2-way SMT     |
+| System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                               |
+|---------------|---------------------:|--------------------------------------:|-----------------------------------------------------|
+| Wilkes2-GPU   | 2.744                | 2.257                                 | 4 MPI tasks, 3 OpenMP per task, 4 GPU               |
+| Peta4-Skylake | 2.082                | 1.712                                 | 32 MPI tasks, 1 OpenMP thread per task              |
+| Cirrus        | 1.699                | 1.397                                 | 36 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| JADE          | 1.647                | 1.354                                 | 1 MPI task, 5 OpenMP thread per task, 1 GPU         |
+| Isambard      | 1.471                | 1.210                                 | 128 MPI tasks, 2 OpenMP threads per task, 4-way SMT |
+| Tesseract     | 1.323                | 1.080                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| ARCHER        | 1.216                | 1.000                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
 
 We expect GROMACS performance to be directly correlated to floating point performance of the resources used and looking at a plot of
 GROMACS performance against floating point performance ([Figure 3](#fig3)) and correlation
@@ -326,7 +365,8 @@ the GROMACS 1400k atom benchmark.
 the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
 performance compared to the floating point performance of the CPU-only systems, see [Table 15](#tab15) and [Figure 4](#fig4).
 
-<a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark on CPU-only systems.
+<a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark on
+CPU-only systems.
 <img src="img/gromacs_cpu_corr.png" />
 
 <a id="tab14"></a>Table 15: Correlation coefficients for floating point performance compared to GROMACS 1400k atom benchmark performance.
@@ -353,7 +393,7 @@ biomolecular simulation research community to be representative of their use of 
 is of direct interest.
 
 <a id="summary"></a>
-## 4. Summary and Conclusions
+## 5. Summary and Conclusions
 
 We have run three different HPC application benchamrks on a number of different UK national HPC services with a
 variety of different processor architectures. In particular, we compared the single node performance of the
@@ -364,7 +404,7 @@ properties of the compute node architecture (such as floating point performance 
 but there we a number of exceptions to these correlations that we plan to investigate further which we describe
 below.
 
-### 4.1 CASTEP
+### 5.1 CASTEP
 
 CASTEP performance is strongly correlated to floating point performance of the compute node. However, the Isambard
 (Marvell ThunderX2 Arm64) system showed lower performance than would be expected from the ordering of floating point 
@@ -379,7 +419,7 @@ We have recently gained access to one of the [HPE Catalyst UK](https://news.hpe.
 systems with the general availability version of the Marvell ThuderX2 Arm64 processors and will repeat the benchmark runs on this
 system to explore the performance of CASTEP on Arm processors further.
 
-### 4.2 OpenSBLI
+### 5.2 OpenSBLI
 
 As expected for a CFD application, OpenSBLI performance was seen to correlate with number of memory channels per
 node where the systems with higher numbers of memory channels (Isambard and Peta4-Skylake) showing higher performance
@@ -393,7 +433,7 @@ different systems.
 Finally, we were unable to run the OpenSBLI benchmark on GPU-accelerated nodes due to issues with the memory capacity
 on individual GPU accelerators. We plan to follow up this issue to get a better understanding of the memory requirements of the benchmark.
 
-### 4.3 GROMACS
+### 5.3 GROMACS
 
 The performance of the GROMACS benchmark was correlated with the floating point performance of the compute nodes.
 When CPU-only systems were considered the correlation with floating point performance was extremely strong
@@ -402,7 +442,7 @@ different across different architectures. There is an issue with the performance
 the JADE GPU-accelerated system that requires further investigation - the results on the Wilkes2-GPU system with
 the same GPU accelerators demonstrate that good performance can be achieved on the hardware.
 
-### 4.4 Future Plans
+### 5.4 Future Plans
 
 This work has raised a number of issues which we plan to investigate further:
 
@@ -420,7 +460,7 @@ Other plans for future work include:
    - Working on adding machine learning benchmarks to the set of application benchmarks
 
 <a id="acknowledgements"></a>
-## 5. Acknowledgements
+## 6. Acknowledgements
 
 Thanks to all of the HPC systems involved in this study for providing access and resources to be able to run the benchmarks. 
 Their explicit acknowledgement statements are included below.
