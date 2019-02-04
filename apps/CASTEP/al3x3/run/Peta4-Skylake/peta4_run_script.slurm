@@ -1,0 +1,70 @@
+#!/bin/bash
+#
+#SBATCH -J al3x3
+#SBATCH -A T2BENCH-SL2-CPU
+#SBATCH --nodes=2
+#SBATCH --ntasks=64
+#SBATCH --time=1:0:0
+#SBATCH --no-requeue
+#SBATCH -p skylake
+
+
+#####################################################################
+# Modules needed for the run
+#####################################################################
+. /etc/profile.d/modules.sh
+module purge
+module load rhel7/default-peta4
+module load fftw/intel/64/3.3.3
+
+#####################################################################
+# Set the benchmark run parameters
+#####################################################################
+#
+#  nodes: Total number of compute nodes to use
+#  sockets: Processor sockets per compute node
+#  cpersocket: Number of cores per socket
+#  smt: Number of hardware threads to use per core
+#  threads: Number of OpenMP threads to use per MPI process (must be a factor of cpersocket * smt)
+#  castep_exe_cmd: Command for CASTEP
+#
+nodes=2
+sockets=2
+cpersocket=16
+smt=1
+threads=1
+castep_exe_cmd='/home/user/software/CASTEP-18.1/obj/linux_x86_64_ifort17-IMPI/castep.mpi'
+
+#####################################################################
+# Other variables (should not need to be changed)
+#####################################################################
+casename="al3x3"
+timestamp=$(date '+%Y%m%d%H%M')
+lcpersocket=$(( cpersocket * smt ))
+rankpersocket=$(( lcpersocket / threads ))
+rankpernode=$(( rankpersocket * sockets ))
+totrank=$(( rankpernode * nodes ))
+
+#####################################################################
+# Move to working directory, copy input and launch job
+#####################################################################
+if [ ! -d "results_${nodes}nodes_${timestamp}" ]
+then 
+   mkdir results_${nodes}nodes_${timestamp}
+fi
+cd results_${nodes}nodes_${timestamp}
+cp ../input/* .
+export OMP_NUM_THREADS=${threads}
+
+#####################################################################
+# Set the parallel launch command
+#####################################################################
+parrun="mpirun -n ${totrank} -ppn ${rankpernode}"
+echo "Parallel launch command:"
+echo "${parrun} ${castep_exe_cmd} ${casename}"
+
+#####################################################################
+# Run the benchmark
+#####################################################################
+${parrun} ${castep_exe_cmd} ${casename}
+

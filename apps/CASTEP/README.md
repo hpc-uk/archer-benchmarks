@@ -16,16 +16,17 @@ Data from the benchmark can be found in this repository:
 * [Output from CASTEP DNA benchmark runs](DNA/results)
 
 
-## Small benchmark: Al3x3
+## Small benchmark: al3x3
 
-The input for the small Al3x3 benchmark can be found at:
+The input for the small al3x3 benchmark can be found at:
 
 * http://www.castep.org/CASTEP/Al3x3
 
 Data from the benchmark can be found in this repository:
 
-* [Analysis of CASTEP Al3x3 benchmark results](analysis/CASTEP_al3x3_perf_analysis.ipynb)
-* [Output from CASTEP Al3x3 benchmark runs](al3x3/results)
+* [Analysis of CASTEP al3x3 benchmark results](analysis/CASTEP_al3x3_perf_analysis.ipynb)
+* [Output from CASTEP al3x3 benchmark runs](al3x3/results)
+* [Job submission scripts for CASTEP al3x3 benchmark runs](al3x3/run)
 
 # Build instructions
 
@@ -36,6 +37,8 @@ The build process followed for CASTEP on each of the systems benchmarked (if ava
 * [Athena (HPC Mid+)](https://github.com/hpc-uk/build-instructions/blob/master/CASTEP/Athena_18.1.0_gcc6_IMPI.md)
 * Thomas (MMMHub) - Central installation of CASTEP 17.2 used
 * [CSD3-Skylake](https://github.com/hpc-uk/build-instructions/blob/master/CASTEP/CSD3Skylake_17.2.1_intel17_IMPI.md)
+* [Isambard](https://github.com/hpc-uk/build-instructions/blob/master/CASTEP/Isambard_18.1.0_cce8_mpich3.md)
+* [Tesseract]()
 
 
 
