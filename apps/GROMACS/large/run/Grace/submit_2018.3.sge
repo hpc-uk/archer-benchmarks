@@ -41,6 +41,9 @@ export OMP_NUM_THREADS=$[($CORES_PER_CHIP*$HTHREADS_PER_CORE)/$TASKS_PER_CHIP]
 #total number of tasks is calculated
 tasks=$[$NUM_NODES*$CHIPS_PER_NODE*$TASKS_PER_CHIP]
 
+#number of PME ranks - a major source of load imbalance!
+NPME=32
+
 rm -rf $WORKDIR
 mkdir -p $WORKDIR
 cd $WORKDIR
@@ -48,7 +51,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -tunepme yes
+gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -npme $NPME
 date
 
 echo
