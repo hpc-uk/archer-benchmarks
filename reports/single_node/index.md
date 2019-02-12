@@ -96,7 +96,7 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 
 | System        | Accelerator Model | Accelerator Memory |
 |---------------|-------------------|-------------------:|
-| Wilkes2-GPU   | P100-SXM2-16GB    | 16 GB              |
+| Wilkes2-GPU   | P100-PCIE-16GB    | 16 GB              |
 | JADE          | P100-SXM2-16GB    | 16 GB              |
 
 <a id="raw"></a>
