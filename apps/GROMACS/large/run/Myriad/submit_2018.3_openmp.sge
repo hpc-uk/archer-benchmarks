@@ -26,13 +26,6 @@ TPRFILE=nsteps800.tpr
 WORKDIR=`pwd`/Scratch
 
 
-#number of OpenMP threads per task is calculated 
-export OMP_NUM_THREADS=36
-
-
-#number of PME ranks - a major source of load imbalance!
-#NPME=42
-
 rm -rf $WORKDIR
 mkdir -p $WORKDIR
 cd $WORKDIR
@@ -40,7 +33,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-gmx mdrun -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -npme $NPME
+gmx mdrun -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
 date
 
 echo

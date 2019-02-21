@@ -51,7 +51,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -npme $NPME
+gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -
 date
 
 echo
