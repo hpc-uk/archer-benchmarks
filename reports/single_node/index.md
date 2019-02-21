@@ -4,7 +4,7 @@ Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The
 
 <img src="img/epcc_logo.png" width="300"/>
 
-4 February 2019
+8 February 2019
 
 ## 0. Contents
 
@@ -19,7 +19,7 @@ Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The
 ## 1. Introduction
 
 In a [previous report](https://github.com/hpc-uk/archer-benchmarks/blob/master/reports/initial_comparison/index.md) we
-compared the performance of a number of different Intel Xeon UK national HPC systems using a range of different benchmarks;
+compared the performance of a number of different Intel Xeon-based UK national HPC systems using a range of different benchmarks;
 including both application benchmarks and synthetic benchmarks. In this report we broaden the study to compare the 
 performance of different processor architectures for the application benchmarks. To reduce the complexity of the comparisons,
 we restrict the results in this report to single node only. This allows us to compare the performance of the different
@@ -44,13 +44,15 @@ The remainder of this paper is organised in the following way. Section 2 describ
 <a id="systems"></a>
 ## 2. HPC Systems
 
-This initial benchmarking exercise covered five UK national HPC systems:
+This initial benchmarking exercise covered seven UK national HPC systems:
 
 -   ARCHER: The UK national supercomputing service, <http://www.archer.ac.uk>
 -   Cirrus: Tier2 HPC system provided by EPCC, <http://www.cirrus.ac.uk>
--   Athena: Tier2 HPC system provided by HPC Midlands Plus, <http://www.hpc-midlands-plus.ac.uk/>
--   Thomas: Tier2 HPC system provided by the Materials and Molecular Modelling Hub, <https://mmmhub.ac.uk/>
--   Peta4-Skylake: One component of the CSD3 Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
+-   Peta4-Skylake: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
+-   Wilkes2-GPU: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
+-   JADE: Tier2 system provided by the University of Oxford, <http://www.jade.ac.uk>
+-   Isambard: Tier2 system provided by the GW4 consortium, <http://www.gw4.ac.uk/isambard>
+-   Tesseract: The Extreme Scaling component of the DiRAC UK national HPC resource at The University of Edinburgh, <http://www.dirac.ac.uk>
 
 The tables below provide further technical details on the systems. [Table 1](#tab1) provides information on the size of the system and the interconnect; [Table 2](#tab2) provides information on the compute node layout, [Table 3](#tab3) provides information on the processor memory hierarchy; and [Table 4](#tab4) provides information on the parallel file systems.
 
@@ -62,21 +64,21 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Cirrus        | Intel Xeon (Broadwell)      | None         | £2.4 million                    |
 | Peta4-Skylake | Intel Xeon (Skylake Gold)   | None         | £5.0 million as part of Cumulus |
 | Wilkes2-GPU   | Intel Xeon (Broadwell)      | NVidia P100  | £5.0 million as part of Cumulus |
-| JADE          | Intel Xeon (Broadwell)      | NVidia P100  | £3.0 million                      |
-| Isambard      | Marvell Arm ThunderX2       | None         | £3.0 million                      |
+| JADE          | Intel Xeon (Broadwell)      | NVidia P100  | £3.0 million                    |
+| Isambard      | Marvell Arm ThunderX2       | None         | £3.0 million                    |
 | Tesseract     | Intel Xeon (Skylake Silver) | None         | N/A                             |
 
 <a id="tab2"></a>Table 2: Node CPU details for the HPC services used in this study
 
-| System        | Processors                            | Cores per node  | Memory per node |
-|---------------|---------------------------------------|-----------------|-----------------|
-| ARCHER        | Intel E5-2697v2 (Ivy Bridge), 2.7 GHz | 24 (2x 12-core) | 64/128 GB       |
-| Cirrus        | Intel E5-2695v4 (Broadwell), 2.1 GHz  | 36 (2x 18-core) | 256 GB          |
-| Peta4-Skylake | Intel Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 192/384 GB      |
-| Wilkes2-GPU   | Intel E5-2660v4 (Broadwell), 2.2 GHz  | 12 (1x 12-core) | 192/384 GB      |
-| JADE          | Intel E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
-| Isambard      | Marvell Arm ThunderX2, 2.2 GHz        | 64 (2x 32-core) | 256 GB          |
-| Tesseract     | Intel Silver 4112 (Skylake), 2.1 GHz  | 24 (2x 16-core) | 96 GB           |
+| System        | Processors                                 | Cores per node  | Memory per node |
+|---------------|--------------------------------------------|-----------------|-----------------|
+| ARCHER        | Intel Xeon E5-2697v2 (Ivy Bridge), 2.7 GHz | 24 (2x 12-core) | 64/128 GB       |
+| Cirrus        | Intel Xeon E5-2695v4 (Broadwell), 2.1 GHz  | 36 (2x 18-core) | 256 GB          |
+| Peta4-Skylake | Intel Xeon Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 192/384 GB      |
+| Wilkes2-GPU   | Intel Xeon E5-2660v4 (Broadwell), 2.2 GHz  | 12 (1x 12-core) | 192/384 GB      |
+| JADE          | Intel Xeon E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
+| Isambard      | Marvell Arm ThunderX2, 2.2 GHz             | 64 (2x 32-core) | 256 GB          |
+| Tesseract     | Intel Xeon Silver 4112 (Skylake), 2.1 GHz  | 24 (2x 16-core) | 96 GB           |
 
 <a id="tab3"></a>Table 3: Processor memory details for the HPC services used in this study
 
@@ -94,7 +96,7 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 
 | System        | Accelerator Model | Accelerator Memory |
 |---------------|-------------------|-------------------:|
-| Wilkes2-GPU   | P100-SXM2-16GB    | 16 GB              |
+| Wilkes2-GPU   | P100-PCIE-16GB    | 16 GB              |
 | JADE          | P100-SXM2-16GB    | 16 GB              |
 
 <a id="raw"></a>
@@ -102,9 +104,8 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 
 To help understand the benchmark performance we have calculated the theoretical peak floating point performance for 
 each of the systems and also measured the memory bandwidth using the STREAM benchmark (run within the [HPC Challenge
-synthetic benchmark suite](https://icl.utk.edu/hpcc/)) to measure the memory bandwidth on the different systems. STREAM
-is a simple synthetic benchmark program that measures sustainable memory bandwidth (in GB/s) and the corresponding
-computation rate for simple vector kernel.
+synthetic benchmark suite](https://icl.utk.edu/hpcc/)). STREAM is a simple synthetic benchmark program that measures
+sustainable memory bandwidth.
 
 [Table 5](#tab5) details the theoretical single precision (SP) floating point performance for each of the systems used in our exercise
 and [Table 6](#tab6) shows some of the processor charateristics used to compute the CPU GFLOP/s performance figures. (Double
@@ -176,7 +177,7 @@ In this initial performance comparison, we have run three benchmarks using three
 
 More details on these benchmarks are found in the individual sections below.
 
-A Python notebook with the analysis used to produce the perfomance data reported below can be found on GitHub at:
+A rendered Python notebook with the analysis used to produce the perfomance data reported below can be found on GitHub at:
 
 -   <https://github.com/hpc-uk/archer-benchmarks/blob/master/analysis/Single_Node_Performance_Comparison.ipynb>
 
@@ -202,11 +203,11 @@ Full details of the compile options, job submission scripts, the full output dat
 The CASTEP application does not currently support execution on GPU accelerators (although this functionality is currently
 under development by the CASTEP team) so we only include results for CPU-based systems.
 
-We have measured the performance of the **Al Slab (al3x3)** benchmark that is able to run on small node counts. We expect the performance of this benchmark to depend on the memory-bandwidth and floating-point performance of the processors. This is a strong scaling benchmark. This benchmark uses double precision floating point operations (as is used in practice by users).
+We have measured the performance of the **Al Slab (al3x3)** benchmark that is able to run on small node counts. We expect the single-node performance of this benchmark to depend on the floating-point performance of the processors. This is a strong scaling benchmark. This benchmark uses double precision floating point operations (as is used in practice by users).
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
 
-We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above. The single node performance comparison reveals that the nodes with the latest generation of Intel Xeon processors (Pet4-Skylake) give a 3&times; performance improvement over ARCHER nodes, Broadwell processors give a 2&times; performance increase a when compared to ARCHER.
+We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above.
 
 <a id="tab8"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark. Results from best performing run.
 
@@ -223,15 +224,15 @@ performance differences, we assess the correlation between floating point perfor
 performance. We also compute the correlation between the CASTEP benchmark performance and memory performance,
 both in terms of peak bandwdth and in terms of the number of memory channels. To measure the correelation we have used two different tests:
 
--   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation)
--   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets
+-   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
+-   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets. As for Pearson, this value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 
 [Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 9](#tab9) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson: 0.95) and in order (Spearman: 0.90). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
 <a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
 <img src="img/castep_corr.png" />
 
-<a id="tab9"></a>Table 9: Correlation coefficients for different aspects of systems hardware for 
+<a id="tab9"></a>Table 9: Correlation coefficients for different aspects of systems hardware correlated to performance of 
 the CASTEP Al Slab benchmark
 
 | Aspect                     | Pearson | Spearman |
@@ -245,7 +246,7 @@ the CASTEP Al Slab benchmark
 
 [OpenSBLI](https://opensbli.github.io/) is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU). This benchmark uses double precision floating point operations (as is used in practice by users).
 
-The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium. We expect this benchmark to be bound primarily by memory bandwidth. This is a strong scaling benchmark.
+The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium. We expect this benchmark to be bound primarily by memory performance. This is a strong scaling benchmark.
 
 <a id="tab8"></a>Table 8: Summary of OpenSBLI compile options on different platforms
 
@@ -281,7 +282,7 @@ if using a larger number of GPU accelerators in parallel will allow us to run th
 If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 11](#tab11))
 it appears that the performance is not strongly correlated to either floating point performance or memory performance.
 
-<a id="tab11"></a>Table 11: Correlation coefficients for different aspects of systems hardware for 
+<a id="tab11"></a>Table 11: Correlation coefficients for different aspects of systems hardware correlated to performance of
 the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 
 | Aspect                     | Pearson | Spearman |
@@ -298,7 +299,7 @@ the Tesseract performance is ignored, there is reasonable correlation.
 
 We have recomputed the correlation coefficients with the results for Tesseract excluded and the results can be seen in [Table 12](#tab12). This reveals a strong correlation between the OpenSBLI benchmark performance and the number of memory channels. This is what we wo3uld expect as the performance of this application is generally bound by random memory access performance. Investigations are ongoing as to why the Tesseract performance does not match this trend.
 
-<a id="tab12"></a>Table 12: Correlation coefficients for th enumber of memory channels for 
+<a id="tab12"></a>Table 12: Correlation coefficients for the number of memory channels for 
 the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excluded.
 
 | Aspect                     | Pearson | Spearman |
@@ -312,13 +313,15 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excl
 
 <a id="tab8"></a>Table 8: Summary of GROMACS compile options on different platforms
 
-| System        | Compiler         | Libraries                      |
-|---------------|------------------|--------------------------------|
-| ARCHER        | GCC 6.3.0        | FFTW 3.3.8, Cray MPT 7.5.5     |
-| Cirrus        | Intel 17.0.2.174 | FFTW 3.3.5, SGI MPT 2.16       |
-| Peta4-Skylake | Intel 17.4       | Intel MKL 17.4, Intel MPI 17.4 |
-| Isambard      | Cray 8.7.0.5323  | FFTW 3.3.6.3, GROMACS Thread MPI |
+| System        | Compiler                    | Libraries                        |
+|---------------|-----------------------------|----------------------------------|
+| ARCHER        | GCC 6.3.0                   | FFTW 3.3.8, Cray MPT 7.5.5       |
+| Cirrus        | Intel 17.0.2.174            | FFTW 3.3.5, SGI MPT 2.16         |
+| Peta4-Skylake | Intel 17.4                  | Intel MKL 17.4, Intel MPI 17.4   |
+| Isambard      | Cray 8.7.0.5323             | FFTW 3.3.6.3, GROMACS Thread MPI |
 | Tesseract     | | | |
+| JADE          | Not published by HEC BioSim | Not published by HEC BioSim      |
+| Wilkes2-GPU   | GCC 5.4.0, CUDA 8.0         | FFTW 3.3.8, OpenMPI 1.10.7       |
 
 Full details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -335,10 +338,10 @@ from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/
 
 | System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                               |
 |---------------|---------------------:|--------------------------------------:|-----------------------------------------------------|
-| Wilkes2-GPU   | 2.744                | 2.257                                 | 4 MPI tasks, 3 OpenMP per task, 4 GPU               |
-| Peta4-Skylake | 2.082                | 1.712                                 | 32 MPI tasks, 1 OpenMP thread per task              |
+| Wilkes2-GPU   | 2.744                | 2.257                                 | 4 MPI tasks, 3 OpenMP per task, no SMT, 4 GPU       |
+| Peta4-Skylake | 2.082                | 1.712                                 | 32 MPI tasks, 1 OpenMP thread per task, no SMT      |
 | Cirrus        | 1.699                | 1.397                                 | 36 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
-| JADE          | 1.647                | 1.354                                 | 1 MPI task, 5 OpenMP thread per task, 1 GPU         |
+| JADE          | 1.647                | 1.354                                 | 1 MPI task, 5 OpenMP thread per task, no SMT, 1 GPU |
 | Isambard      | 1.471                | 1.210                                 | 128 MPI tasks, 2 OpenMP threads per task, 4-way SMT |
 | Tesseract     | 1.323                | 1.080                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
 | ARCHER        | 1.216                | 1.000                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
@@ -352,7 +355,7 @@ performance and memory performance.
 <a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark.
 <img src="img/gromacs_corr.png" />
 
-<a id="tab14"></a>Table 14: Correlation coefficients for different aspects of systems hardware for 
+<a id="tab14"></a>Table 14: Correlation coefficients for different aspects of systems hardware correlated to performance of
 the GROMACS 1400k atom benchmark.
 
 | Aspect                     | Pearson | Spearman |
@@ -401,8 +404,8 @@ applications across the different HPC systems.
 
 In general, we were able to broadly correlate the performance of the different applications to particular
 properties of the compute node architecture (such as floating point performance and number of memory channels)
-but there we a number of exceptions to these correlations that we plan to investigate further which we describe
-below.
+but there we a number of exceptions to these correlations that we plan to investigate further, we describe
+these below.
 
 ### 5.1 CASTEP
 
@@ -412,7 +415,7 @@ performance of the different nodes. This could be due to a number of factors, po
 
 -   The fact that this was run on pre-general availability hardware.
 -   Less mature compilers and performance libraries for the relatively new Arm64 HPC architecture.
--   The high core count on the Isambard nodes (64 cores per node) leading to more memory access contention.
+-   The high core count on the Isambard nodes (64 cores per node) leading to more memory access contention or MPI intra-node overheads.
 -   Process and thread pinning not functioning as expected.
 
 We have recently gained access to one of the [HPE Catalyst UK](https://news.hpe.com/academia-and-industry-collaborate-to-drive-uk-supercomputer-adoption/)
@@ -471,7 +474,7 @@ This work used the DiRAC Extreme Scaling UK National HPC Service at The Universi
 
 This work used the Cirrus UK National Tier-2 HPC Service at EPCC (<http://www.cirrus.ac.uk>).
 
-This work used the CSD3 UK National Tier-2 HPC Service at the University of Cambridge (<https://www.csd3.cam.ac.uk/services/csd3-platform>).
+This work used the Cumulus UK National Tier-2 HPC Service at the University of Cambridge (<https://www.csd3.cam.ac.uk/services/csd3-platform>).
 
 This work used the JADE UK National Tier-2 HPC Service at the University of Oxford (<http://www.jade.ac.uk>).
 
