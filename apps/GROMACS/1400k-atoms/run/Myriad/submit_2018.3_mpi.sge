@@ -29,7 +29,7 @@ WORKDIR=`pwd`/Scratch.MPI.$NSLOTS
 
 
 #number of OpenMP threads per task is calculated 
-#export OMP_NUM_THREADS=36
+export OMP_NUM_THREADS=1
 
 
 #number of PME ranks - a major source of load imbalance!
