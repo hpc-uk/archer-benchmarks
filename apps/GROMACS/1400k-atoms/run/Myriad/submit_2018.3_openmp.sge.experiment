@@ -1,0 +1,47 @@
+#!/bin/bash --login
+#$ -S /bin/bash
+#$ -l h_rt=12:0:0
+#$ -N ompGromacsBench
+#$ -pe smp 4
+#$ -cwd
+#$ -l mem=3700M
+#$ -t 1-10
+
+set -e
+
+cat $0
+
+NUM_NODES=1
+
+BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
+
+module load default-modules/2018
+module load gromacs/2018.3/intel-2018
+
+MDRUN="mdrun_mpi"
+
+casename=nc2-cubic-md
+timestamp=$(date '+%Y%m%d%H%M')
+
+INPUTDIR=$BENCHDIR/run
+TPRFILE=benchmark.tpr
+
+WORKDIR=`pwd`/Scratch.OpenMP.${OMP_NUM_THREADS}.${SGE_TASK_ID}
+
+rm -rf $WORKDIR
+mkdir -p $WORKDIR
+cd $WORKDIR
+
+cp $INPUTDIR/$TPRFILE .
+
+date
+mpirun -np 1 $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+date
+
+echo
+echo $casename.log
+echo "------------"
+resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
+mv $casename.log ${BENCHDIR}/run/openmp.${OMP_NUM_THREADS}.${SGE_TASK_ID}.log
+
+
