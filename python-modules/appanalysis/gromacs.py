@@ -14,7 +14,13 @@ def create_df_list(filelist, cpn):
     """
     df_list = []
     for file in filelist:
-        resdict = get_perf_dict(file, cpn)
+        if 'smt' in file:
+            # Need to recompute cpn based on SMT
+            i = file.find('smt')
+            smt = int(file[i-1])
+        else:
+            smt = 1
+        resdict = get_perf_dict(file, cpn*smt)
         if resdict is not None:
             df_list.append(resdict) 
     return df_list 
@@ -71,19 +77,21 @@ def get_perf_dict(filename, cpn):
         return resdict
 
     resdict['Cores'] = resdict['Processes'] * resdict['Threads']
-    resdict['Nodes'] = int(resdict['Cores'] / cpn)
+    resdict['Nodes'] = max(1, int(resdict['Cores'] / cpn))
     resdict['Count'] = 1
 
     return resdict
 
-def get_perf_stats(df, threads, stat, writestats=False):
-    query = '(Threads == {0})'.format(threads)
-    df_q = df.query(query)
-    df_num = df_q.drop(['File', 'Date'], 1)
+def get_perf_stats(df, stat, threads=None, writestats=False):
+    if threads is not None:
+       query = '(Threads == {0})'.format(threads)
+       df = df.query(query)
+    df_num = df.drop(['File', 'Date'], 1)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores','Threads']).agg(groupf)
     if writestats:
         print(df_group)
+    df_group = df_num.sort_values(by='Nodes').groupby('Nodes').agg(groupf)
     perf = df_group['Perf',stat].tolist()
     nodes = df_group.index.get_level_values(0).tolist()
     return nodes, perf

@@ -4,9 +4,10 @@ ARCHER:
   Org: EPCC, The University of Edinburgh
   PModel: Intel Xeon E5-2697v2
   PGen: Ivy Bridge
-  PFreq: 2.7GHz
+  PFreq: 2.7
   PCores: 12
   PPerNode: 2
+  FLOPS: 16
   MType: DDR3
   MFreq: ?MHz
   MTot: 64/128GB
@@ -23,15 +24,17 @@ ARCHER:
   FSLayout: 1xMDT, 48xOST
   AModel:
   APerNode:
+  AFLOPs:
 Cirrus:
   Name: Cirrus
   URL: http://www.cirrus.ac.uk
   Org: EPCC, The University of Edinburgh
   PModel: Intel Xeon E5-2695v4
   PGen: Broadwell
-  PFreq: 2.1GHz
+  PFreq: 2.1
   PCores: 18
   PPerNode: 2
+  FLOPS: 32
   MType: DDR4
   MFreq: ?MHz
   MTot: 256GB
@@ -48,15 +51,17 @@ Cirrus:
   FSLayout: 1xMDT, 14xOST
   AModel:
   APerNode:
+  AFLOPs:
 Athena:
   Name: Athena
   URL: http://www.hpc-midlands-plus.ac.uk/
   Org: HPC Midlands+
   PModel: Intel Xeon E5-2680v4
   PGen: Broadwell
-  PFreq: 2.4GHz
+  PFreq: 2.4
   PCores: 14
   PPerNode: 2
+  FLOPS: 32
   MType: DDR4
   MFreq: ?MHz
   MTot: 128GB
@@ -73,15 +78,17 @@ Athena:
   FSLayout: NA
   AModel:
   APerNode:
+  AFLOPs:
 Thomas:
   Name: Thomas
   URL: https://wiki.rc.ucl.ac.uk/wiki/Thomas
   Org: MMM Hub
   PModel: Intel Xeon E5-2650v4
   PGen: Broadwell
-  PFreq: 2.1GHz
+  PFreq: 2.1
   PCores: 12
   PPerNode: 2
+  FLOPS: 32
   MType: DDR4
   MFreq: ?MHz
   MTot: 128GB
@@ -98,15 +105,17 @@ Thomas:
   FSLayout: 4xMDT, 10xOST
   AModel:
   APerNode:
+  AFLOPs:
 CSD3-Skylake:
   Name: Peta4-Skylake
   URL: https://www.csd3.cam.ac.uk/
   Org: CSD3, University of Cambridge
   PModel: Intel Xeon 6142
   PGen: Skylake Gold
-  PFreq: 2.6GHz
+  PFreq: 2.6
   PCores: 16
   PPerNode: 2
+  FLOPS: 64
   MType: DDR4
   MFreq: ?MHz
   MTot: 196GB
@@ -123,14 +132,16 @@ CSD3-Skylake:
   FSLayout: 1xMDT, 24xOST
   AModel:
   APerNode:
+  AFLOPs:
 Tesseract:
   Name: Tesseract
   URL: http://tesseract-dirac.readthedocs.io
   PModel: Intel Xeon 4116
   PGen: Skylake Silver
-  PFreq: 2.1GHz
+  PFreq: 2.1
   PCores: 12
   PPerNode: 2
+  FLOPS: 32
   MType: DDR4
   MFreq: 2666MHz
   MTot: 96GB
@@ -147,15 +158,17 @@ Tesseract:
   FSLayout: 2xMDS, 32xOST
   AModel:
   APerNode:
+  AFLOPs:
 Isambard:
   Name: Isambard
   URL: http://gw4.ac.uk/isambard/
   Org: GW4
   PModel: Cavium ThunderX2
   PGen: N/A
-  PFreq: 2.2GHz
+  PFreq: 2.2
   PCores: 32
   PPerNode: 2
+  FLOPS: 16
   MType: DDR4
   MFreq: ?MHz
   MTot: 256GB
@@ -172,15 +185,17 @@ Isambard:
   FSLayout: NA
   AModel:
   APerNode:
+  AFLOPs:
 CSD3-GPU:
   Name: Wilkes2-GPU
   URL: https://www.csd3.cam.ac.uk/
   Org: CSD3, University of Cambridge
   PModel: Intel Xeon E5-2660v4
   PGen: Broadwell
-  PFreq: 2.2GHz
+  PFreq: 2.2
   PCores: 12
   PPerNode: 1
+  FLOPS: 32
   MType: DDR4
   MFreq: ?MHz
   MTot: 192/384GB
@@ -197,15 +212,17 @@ CSD3-GPU:
   FSLayout: 1xMDT, 24xOST
   AModel: NVidia P100-PCIE-16GB
   APerNode: 4
+  AFLOPs: 9300
 JADE:
   Name: JADE
   URL: http://www.jade.ac.uk
   Org: University of Oxford
   PModel: Intel Xeon E5-2698v4
   PGen: Broadwell
-  PFreq: 2.4GHz
+  PFreq: 2.4
   PCores: 20
   PPerNode: 2
+  FLOPS: 32
   MType: DDR4
   MFreq: ?MHz
   MTot: 96GB
@@ -222,3 +239,4 @@ JADE:
   FSLayout: 
   AModel: NVidia P100-SXM2-16GB
   APerNode: 8
+  AFLOPs: 10600
