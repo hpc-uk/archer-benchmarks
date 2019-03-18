@@ -43,6 +43,9 @@ def get_perf_dict(filename, cpn):
     resdict['File'] = os.path.abspath(filename)
     # Use to catch if we are missing data
     resdict['Perf'] = False
+    # Processes and Threads default to 1
+    resdict['Processes'] = 1
+    resdict['Threads'] = 1
     for line in infile:
         if re.search('Performance:', line):
             line = line.strip()

@@ -1,9 +1,17 @@
 import yaml
 
+def getdetails(infile):
+    """Return a dictionary of dictionaries with the system details"""
+    input = open(infile, "r")
+    systems = yaml.load(input)
+    input.close()
+    return systems
+
 def procinfo(infile):
    """Print table with processor details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
+   input.close()
    formath = '{:>15s} {:>25s} {:>15s} {:>15s} {:>10s} {:>10s}'
    formatp = '{:>15s} {:>25s} {:>15s} {:>15s} {:>10d} {:>10d}'
    print(formath.format('System','Model','Generation','Freq. / GHz','Cores','Processors'))
@@ -15,6 +23,7 @@ def meminfo(infile):
    """Print table with memory details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
+   input.close()
    formath = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>10s}'
    formatp = '{:>15s} {:>15s} {:>15s} {:>15d} {:>10s} {:>10s}'
    print(formath.format('System','Type','BW','Channels','Frequency','Capacity'))
@@ -26,6 +35,7 @@ def fsinfo(infile):
    """Print table with parallel file system  details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
+   input.close()
    formath = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
    formatp = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
    print(formath.format('System','Type','Vendor','Client','Server','Layout'))
@@ -39,6 +49,7 @@ def nodesinfo(infile):
    """Print table with node details for benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
+   input.close()
    formath = '{:>15s} {:>10s} {:>6s} {:>7s} {:>13s} {:}'
    formatp = '{:>15s} {:>10s} {:6d} {:7d} {:>13s} {:}'
    print(formath.format('System','Vendor','Nodes','Cores','Interconnect','Topology'))
@@ -52,6 +63,7 @@ def furtherinfo(infile):
    """Print table with links to more information on benchmark systems."""
    input = open("systems.yaml", "r")
    systems = yaml.load(input)
+   input.close()
    formath = '{:>15s} {:}'
    formatp = '{:>15s} {:}'
    print(formath.format('System','Website'))

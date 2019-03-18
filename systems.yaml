@@ -1,4 +1,5 @@
 ARCHER:
+  Name: ARCHER
   URL: http://www.archer.ac.uk
   Org: EPCC, The University of Edinburgh
   PModel: Intel Xeon E5-2697v2
@@ -23,6 +24,7 @@ ARCHER:
   AModel:
   APerNode:
 Cirrus:
+  Name: Cirrus
   URL: http://www.cirrus.ac.uk
   Org: EPCC, The University of Edinburgh
   PModel: Intel Xeon E5-2695v4
@@ -47,6 +49,7 @@ Cirrus:
   AModel:
   APerNode:
 Athena:
+  Name: Athena
   URL: http://www.hpc-midlands-plus.ac.uk/
   Org: HPC Midlands+
   PModel: Intel Xeon E5-2680v4
@@ -71,6 +74,7 @@ Athena:
   AModel:
   APerNode:
 Thomas:
+  Name: Thomas
   URL: https://wiki.rc.ucl.ac.uk/wiki/Thomas
   Org: MMM Hub
   PModel: Intel Xeon E5-2650v4
@@ -94,7 +98,8 @@ Thomas:
   FSLayout: 4xMDT, 10xOST
   AModel:
   APerNode:
-Peta4-Skylake:
+CSD3-Skylake:
+  Name: Peta4-Skylake
   URL: https://www.csd3.cam.ac.uk/
   Org: CSD3, University of Cambridge
   PModel: Intel Xeon 6142
@@ -119,6 +124,7 @@ Peta4-Skylake:
   AModel:
   APerNode:
 Tesseract:
+  Name: Tesseract
   URL: http://tesseract-dirac.readthedocs.io
   PModel: Intel Xeon 4116
   PGen: Skylake Silver
@@ -142,6 +148,7 @@ Tesseract:
   AModel:
   APerNode:
 Isambard:
+  Name: Isambard
   URL: http://gw4.ac.uk/isambard/
   Org: GW4
   PModel: Cavium ThunderX2
@@ -165,3 +172,53 @@ Isambard:
   FSLayout: NA
   AModel:
   APerNode:
+CSD3-GPU:
+  Name: Wilkes2-GPU
+  URL: https://www.csd3.cam.ac.uk/
+  Org: CSD3, University of Cambridge
+  PModel: Intel Xeon E5-2660v4
+  PGen: Broadwell
+  PFreq: 2.2GHz
+  PCores: 12
+  PPerNode: 1
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 192/384GB
+  MChannels: 4
+  MBW: 76.8GB/s
+  Vendor: Dell
+  Nodes: 
+  Interconnect: FDR
+  Topology: Fat Tree
+  FS: Lustre
+  FSVendor: Intel
+  FSClientV: 2.7
+  FSServerV: 2.7
+  FSLayout: 1xMDT, 24xOST
+  AModel: NVidia P100-PCIE-16GB
+  APerNode: 4
+JADE:
+  Name: JADE
+  URL: http://www.jade.ac.uk
+  Org: University of Oxford
+  PModel: Intel Xeon E5-2698v4
+  PGen: Broadwell
+  PFreq: 2.4GHz
+  PCores: 20
+  PPerNode: 2
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 96GB
+  MChannels: 4
+  MBW: 153.6GB/s
+  Vendor: NVidia
+  Nodes: 
+  Interconnect: 
+  Topology: 
+  FS: Lustre
+  FSVendor: 
+  FSClientV: 2.7
+  FSServerV: 2.7
+  FSLayout: 
+  AModel: NVidia P100-SXM2-16GB
+  APerNode: 8
