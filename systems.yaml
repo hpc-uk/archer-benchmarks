@@ -8,6 +8,7 @@ ARCHER:
   PCores: 12
   PPerNode: 2
   FLOPS: 16
+  VWidth: 128
   MType: DDR3
   MFreq: ?MHz
   MTot: 64/128GB
@@ -35,6 +36,7 @@ Cirrus:
   PCores: 18
   PPerNode: 2
   FLOPS: 32
+  VWidth: 256
   MType: DDR4
   MFreq: ?MHz
   MTot: 256GB
@@ -62,6 +64,7 @@ Athena:
   PCores: 14
   PPerNode: 2
   FLOPS: 32
+  VWidth: 256
   MType: DDR4
   MFreq: ?MHz
   MTot: 128GB
@@ -89,6 +92,7 @@ Thomas:
   PCores: 12
   PPerNode: 2
   FLOPS: 32
+  VWidth: 256
   MType: DDR4
   MFreq: ?MHz
   MTot: 128GB
@@ -116,6 +120,7 @@ CSD3-Skylake:
   PCores: 16
   PPerNode: 2
   FLOPS: 64
+  VWidth: 512
   MType: DDR4
   MFreq: ?MHz
   MTot: 196GB
@@ -142,6 +147,7 @@ Tesseract:
   PCores: 12
   PPerNode: 2
   FLOPS: 32
+  VWidth: 512
   MType: DDR4
   MFreq: 2666MHz
   MTot: 96GB
@@ -169,6 +175,7 @@ Isambard:
   PCores: 32
   PPerNode: 2
   FLOPS: 16
+  VWidth: 128
   MType: DDR4
   MFreq: ?MHz
   MTot: 256GB
@@ -196,6 +203,7 @@ CSD3-GPU:
   PCores: 12
   PPerNode: 1
   FLOPS: 32
+  VWidth: 256
   MType: DDR4
   MFreq: ?MHz
   MTot: 192/384GB
@@ -223,6 +231,7 @@ JADE:
   PCores: 20
   PPerNode: 2
   FLOPS: 32
+  VWidth: 256
   MType: DDR4
   MFreq: ?MHz
   MTot: 96GB

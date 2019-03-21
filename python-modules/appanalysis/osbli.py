@@ -56,7 +56,10 @@ def get_perf_dict(filename, cpn):
 
     # Get number of nodes from filename
     tokens = filename.split('_')
-    nodestring = tokens[-2]
+    nodestring = None
+    for token in tokens:
+        if 'nodes' in token:
+            nodestring = token
     resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # If we do not have enough SCF cycle data then exit and return None

@@ -47,12 +47,14 @@ The remainder of this paper is organised in the following way. Section 2 describ
 This initial benchmarking exercise covered seven UK national HPC systems:
 
 -   ARCHER: The UK national supercomputing service, <http://www.archer.ac.uk>
+-   Athena: Tier2 HPC system provided by the HPC Midlands+ consortium, <http://www.hpc-midlands-plus.ac.uk/>
 -   Cirrus: Tier2 HPC system provided by EPCC, <http://www.cirrus.ac.uk>
--   Peta4-Skylake: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
--   Wilkes2-GPU: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
--   JADE: Tier2 system provided by the University of Oxford, <http://www.jade.ac.uk>
 -   Isambard: Tier2 system provided by the GW4 consortium, <http://www.gw4.ac.uk/isambard>
+-   JADE: Tier2 system provided by the University of Oxford, <http://www.jade.ac.uk>
+-   Peta4-Skylake: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
 -   Tesseract: The Extreme Scaling component of the DiRAC UK national HPC resource at The University of Edinburgh, <http://www.dirac.ac.uk>
+-   Thomas: Tier2 HPC system provided by the Materials and Molecular Modelling Hub, <https://mmmhub.ac.uk/>
+-   Wilkes2-GPU: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
 
 The tables below provide further technical details on the systems. [Table 1](#tab1) provides information on the size of the system and the interconnect; [Table 2](#tab2) provides information on the compute node layout, [Table 3](#tab3) provides information on the processor memory hierarchy; and [Table 4](#tab4) provides information on the parallel file systems.
 
@@ -61,36 +63,42 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | System        | CPU                         | Accelerator  | EPSRC Tier2 Grant Award         |
 |---------------|-----------------------------|--------------|---------------------------------|
 | ARCHER        | Intel Xeon (Ivy Bridge)     | None         | N/A                             |
+| Athena        | Intel Xeon (Broadwell)      | None         | £3.2 million                    |
 | Cirrus        | Intel Xeon (Broadwell)      | None         | £2.4 million                    |
-| Peta4-Skylake | Intel Xeon (Skylake Gold)   | None         | £5.0 million as part of Cumulus |
-| Wilkes2-GPU   | Intel Xeon (Broadwell)      | NVidia P100  | £5.0 million as part of Cumulus |
-| JADE          | Intel Xeon (Broadwell)      | NVidia P100  | £3.0 million                    |
 | Isambard      | Marvell Arm ThunderX2       | None         | £3.0 million                    |
+| JADE          | Intel Xeon (Broadwell)      | NVidia P100  | £3.0 million                    |
+| Peta4-Skylake | Intel Xeon (Skylake Gold)   | None         | £5.0 million as part of Cumulus |
 | Tesseract     | Intel Xeon (Skylake Silver) | None         | N/A                             |
+| Thomas        | Intel Xeon (Broadwell)      | None         | £4.0 million                    |
+| Wilkes2-GPU   | Intel Xeon (Broadwell)      | NVidia P100  | £5.0 million as part of Cumulus |
 
 <a id="tab2"></a>Table 2: Node CPU details for the HPC services used in this study
 
 | System        | Processors                                 | Cores per node  | Memory per node |
 |---------------|--------------------------------------------|-----------------|-----------------|
 | ARCHER        | Intel Xeon E5-2697v2 (Ivy Bridge), 2.7 GHz | 24 (2x 12-core) | 64/128 GB       |
+| Athena        | Intel E5-2680v4 (Broadwell), 2.4 GHz       | 28 (2x 14-core) | 128 GB          |
 | Cirrus        | Intel Xeon E5-2695v4 (Broadwell), 2.1 GHz  | 36 (2x 18-core) | 256 GB          |
-| Peta4-Skylake | Intel Xeon Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 192/384 GB      |
-| Wilkes2-GPU   | Intel Xeon E5-2660v4 (Broadwell), 2.2 GHz  | 12 (1x 12-core) | 192/384 GB      |
-| JADE          | Intel Xeon E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
 | Isambard      | Marvell Arm ThunderX2, 2.2 GHz             | 64 (2x 32-core) | 256 GB          |
+| JADE          | Intel Xeon E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
+| Peta4-Skylake | Intel Xeon Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 192/384 GB      |
 | Tesseract     | Intel Xeon Silver 4112 (Skylake), 2.1 GHz  | 24 (2x 16-core) | 96 GB           |
+| Thomas        | Intel E5-2650v4 (Broadwell), 2.1 GHz       | 24 (2x 12-core) | 128 GB          |
+| Wilkes2-GPU   | Intel Xeon E5-2660v4 (Broadwell), 2.2 GHz  | 12 (1x 12-core) | 192/384 GB      |
 
 <a id="tab3"></a>Table 3: Processor memory details for the HPC services used in this study
 
 | System        | L1 data cache (per core) | L2 cache (per core) | L3 cache (shared) | Memory channels per socket | Published memory bandwidth per socket (node) |
 |---------------|-------------------------:|--------------------:|------------------:|---------------------------:|---------------------------------------------:|
 | ARCHER        | 32 KiB                   | 256 KiB             | 30 MiB            | 4                          | 59.7 (119.4) GB/s                            |
+| Athena        | 32 KiB                   | 256 KiB             | 45 MiB            | 4                          | 76.8 (153.6) GB/s                            |
 | Cirrus        | 32 KiB                   | 256 KiB             | 45 MiB            | 4                          | 76.8 (153.6) GB/s                            |
+| Isambard      | 32 KiB                   | 256 KiB             | 32 MiB            | 8                          | 160.0 (320.0) GB/s                           |
+| JADE          | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
 | Peta4-Skylake | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
-| Wilkes2-GPU | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
-| JADE| 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
-| Isambard | 32 KiB                   | 256 KiB            | 32 MiB            | 8                          | 160.0 (320.0) GB/s                           |
-| Tesseract | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
+| Tesseract     | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
+| Thomas        | 32 KiB                   | 256 KiB             | 45 MiB            | 4                          | 76.8 (153.6) GB/s                            |
+| Wilkes2-GPU   | 32 KiB                   | 1024 KiB            | 22 MiB            | 6                          | 119.2 (238.4) GB/s                           |
 
 <a id="tab4"></a>Table 4: Node accelerator details for the HPC services used in this study
 
@@ -123,23 +131,27 @@ assumption may not hold in some use configurations but should not have a large e
 systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.)
 
 | System        | Cores used | CPU SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
-|---------------|-----------:|--------------:|---------:|--------------:|---------------:|------------------------------------:|
-| Wilkes2-GPU   | 12         | 885           | 4        | 37,200        | 38,085         | 36.649                              |
-| Peta4-Skylake | 32         | 5,325         | 0        |               | 5,325          | 5.135                               |
-| Cirrus        | 36         | 2,419         | 0        |               | 2,419          | 2.326                               |
-| JADE          | 5          | 352.0         | 1        | 10,600        | 10,952         | 10.561                              |
-| Isambard      | 64         | 2,253         | 0        |               | 2,253          | 2.172                               |
-| Tesseract     | 24         | 1,613         | 0        |               | 1,613          | 1.555                               |
-| ARCHER        | 24         | 1,037         | 0        |               | 1,037          | 1.000                               |
+|---------------|-----------:|---------------:|---------:|---------------:|----------------:|-------------------------------------------:|
+| Wilkes2-GPU   | 12         | 885            | 4        | 37,200         | 38,085          | 36.649                                     |
+| JADE          | 5          | 352.0          | 1        | 10,600         | 10,952          | 10.561                                     |
+| Peta4-Skylake | 32         | 5,325          | 0        |                | 5,325           | 5.135                                      |
+| Cirrus        | 36         | 2,419          | 0        |                | 2,419           | 2.326                                      |
+| Isambard      | 64         | 2,253          | 0        |                | 2,253           | 2.172                                      |
+| Athena        | 28         | 2,150          | 0        |                | 2,150           | 2.074                                      |
+| Tesseract     | 24         | 1,613          | 0        |                | 1,613           | 1.555                                      |
+| Thomas        | 24         | 1,613          | 0        |                | 1,613           | 1.555                                      |
+| ARCHER        | 24         | 1,037          | 0        |                | 1,037           | 1.000                                      |
 
 <a id="tab6"></a>Table 6: Processor charateristics used to compute CPU FLOPS.
 
 | System        | SP FLOPS per cycle | Clock speed (GHz) | Single core SP GFLOP/s |
 |---------------|-------------------:|------------------:|-----------------------:|
 | Peta4-Skylake | 64                 | 2.6               | 166.4                  | 
-| Cirrus        | 32                 | 2.1               | 67.2                   | 
-| Isambard      | 16                 | 2.2               | 35.2                   |
+| Athena        | 32                 | 2.4               | 76.8                   | 
+| Cirrus        | 32                 | 2.1               | 67.2                   |
 | Tesseract     | 32                 | 2.1               | 67.2                   |
+| Thomas        | 32                 | 2.1               | 67.2                   |
+| Isambard      | 16                 | 2.2               | 35.2                   |
 | ARCHER        | 16                 | 2.7               | 43.2                   | 
 
 The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7).
@@ -162,7 +174,9 @@ highest per-node memory bandwidth.
 |---------------|---------------:|----------------:|---------------------------:|---------------------------:|
 | Tesseract     | 24             | 6               | 5.181                      | 124.339                    |
 | Peta4-Skylake | 32             | 6               | 4.508                      | 144.256                    |
+| Thomas        | 24             | 4               | 3.694                      | 88.656                     |
 | Isambard      | 64             | 8               | 3.461                      | 221.485                    |
+| Athena        | 28             | 4               | 3.304                      | 92.512                     |
 | ARCHER        | 24             | 4               | 3.036                      | 72.864                     |
 | Cirrus        | 36             | 4               | 2.718                      | 97.848                     |
 
@@ -190,11 +204,13 @@ A rendered Python notebook with the analysis used to produce the perfomance data
 
 | System        | Compiler         | Libraries                                           |
 |---------------|------------------|-----------------------------------------------------|
-| ARCHER        | GCC 6.1          | Intel MKL 17.0.0.098, FFTW 3.3.4.11, Cray MPT 7.5.5 |
-| Cirrus        | Intel 17.0.2.174 | Intel MKL 17.0.2.174, SGI MPT 2.16                  |
-| Peta4-Skylake | Intel 17.4       | Intel MKL 17.4, FFTW 3.3.6, Intel MPI 17.4          |
+| ARCHER        | GCC 6.1          | Intel MKL 17.0.098, FFTW 3.3.4.11, Cray MPT 7.5.5   |
+| Athena        | GCC 6.3          | Intel MKL 17.2.174, Intel MPI 17.2.174              |
+| Cirrus        | Intel 17.2.174   | Intel MKL 17.2.174, SGI MPT 2.16                    |
 | Isambard      | Cray 8.7.0.5323  | Cray LibSci 17.09.1.2, FFTW 3.3.6.3, MPICH 3.2.0.4  |
-| Tesseract     | | | |
+| Peta4-Skylake | Intel 17.4       | Intel MKL 17.4, FFTW 3.3.6, Intel MPI 17.4          |
+| Tesseract     | GCC 7.3          | Intel MKL 18.1.163, Intel MPI 18.1.163              |
+| Thomas        | Intel 18.3       | Intel MKL 18.3, Intel MPI 18.3                      |
 
 Full details of the compile options, job submission scripts, the full output data and analysis scripts are available on GitHub at:
 
@@ -213,10 +229,12 @@ We compare the single-node performance in [Table 8](#tab8). The performance is m
 
 | System        | Performance (mean SCF cycles/s) | Performance relative to ARCHER node | Notes        |
 |---------------|--------------------------------:|------------------------------------:|--------------|
-| Peta4-Skylake | 0.01641                         | 3.023                               | 32 MPI tasks |
-| Cirrus        | 0.01109                         | 2.043                               | 36 MPI tasks |
-| Tesseract     | 0.00728                         | 1.341                               | 24 MPI tasks |
-| Isambard      | 0.00691                         | 1.273                               | 64 MPI tasks |
+| Peta4-Skylake | 0.01643                         | 3.026                               | 32 MPI tasks |
+| Cirrus        | 0.01086                         | 2.001                               | 36 MPI tasks |
+| Athena        | 0.00995                         | 1.832                               | 28 MPI tasks |
+| Athena        | 0.00946                         | 1.742                               | 24 MPI tasks |
+| Isambard      | 0.00873                         | 1.608                               | 64 MPI tasks |
+| Tesseract     | 0.00731                         | 1.346                               | 24 MPI tasks |
 | ARCHER        | 0.00543                         | 1.000                               | 24 MPI tasks |
 
 To try and understand what characteristic of the compute nodes on the different systems is leading to the observed
@@ -237,9 +255,9 @@ the CASTEP Al Slab benchmark
 
 | Aspect                     | Pearson | Spearman |
 |----------------------------|--------:|---------:|
-| Floating Point Performance |  0.95   |  0.90    |
-| Memory Bandwidth           |  0.22   |  0.20    |
-| Memory Channels            | -0.01   |  0.05    |
+| Floating Point Performance |  0.96   |  0.87    |
+| Memory Bandwidth           |  0.21   | -0.04    |
+| Memory Channels            |  0.14   | -0.06    |
 
 <a id="osbli"></a>
 ### 4.2 OpenSBLI
@@ -250,13 +268,15 @@ The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbule
 
 <a id="tab8"></a>Table 8: Summary of OpenSBLI compile options on different platforms
 
-| System        | Compiler         | Libraries                     |
-|---------------|------------------|-------------------------------|
-| ARCHER        | Cray 8.5.8       | HDF5 1.10.0.1, Cray MPT 7.5.2 |
-| Cirrus        | Intel 17.0.2.174 | HDF5 1.10.1, SGI MPT 2.16     |
-| Peta4-Skylake | Intel 17.4       | HDF5 1.10.1, Intel MPI 17.4   |
-| Isambard      | Cray 8.7.0.5323  | HDF5 1.10.2, MPICH 3.2.0.4    |
-| Tesseract     | | | |
+| System        | Compiler         | Libraries                       |
+|---------------|------------------|---------------------------------|
+| ARCHER        | Cray 8.5.8       | HDF5 1.10.0.1, Cray MPT 7.5.2   |
+| Athena        | Intel 17.2.174   | HDF5 1.10.1, Intel MPI 17.2.174 |
+| Cirrus        | Intel 17.2.174   | HDF5 1.10.1, SGI MPT 2.16       |
+| Isambard      | Cray 8.7.0.5323  | HDF5 1.10.2, MPICH 3.2.0.4      |
+| Peta4-Skylake | Intel 17.4       | HDF5 1.10.1, Intel MPI 17.4     |
+| Tesseract     | Intel 18.1.163   | HDF5 1.10.1, Intel MPI 18.1.163 |
+| Thomas        | Intel 18.3       | HDF5 1.10.1, Intel MPI 18.3     |
 
 Full details of the compile options, source code for the benchmark, the full output data and analysis scripts are available on GitHub at:
 
@@ -273,11 +293,13 @@ if using a larger number of GPU accelerators in parallel will allow us to run th
 
 | System        | Performance (iter/s) | Performance relative to ARCHER node | Notes        |
 |---------------|---------------------:|------------------------------------:|--------------|
-| Isambard      | 0.178                | 1.777                               | 64 MPI tasks |
-| Peta4-Skylake | 0.170                | 1.700                               | 32 MPI tasks |
+| Peta4-Skylake | 0.197                | 1.975                               | 32 MPI tasks |
+| Isambard      | 0.191                | 1.911                               | 64 MPI tasks |
+| Cirrus        | 0.135                | 1.353                               | 36 MPI tasks |
+| Athena        | 0.104                | 1.044                               | 28 MPI tasks |
 | ARCHER        | 0.100                | 1.000                               | 24 MPI tasks |
-| Cirrus        | 0.097                | 0.970                               | 36 MPI tasks |
 | Tesseract     | 0.097                | 0.970                               | 24 MPI tasks |
+| Thomas        | 0.065                | 0.654                               | 24 MPI tasks |
 
 If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 11](#tab11))
 it appears that the performance is not strongly correlated to either floating point performance or memory performance.
@@ -287,24 +309,15 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 
 | Aspect                     | Pearson | Spearman |
 |----------------------------|--------:|---------:|
-| Floating Point Performance |  0.69   |  0.60    |
-| Memory Bandwidth           | -0.06   | -0.20    |
-| Memory Channels            |  0.65   |  0.53    |
+| Floating Point Performance |  0.74   |  0.85    |
+| Memory Bandwidth           |  0.06   | -0.14    |
+| Memory Channels            |  0.71   |  0.48    |
 
 However, looking at a plot of the performance data against number of memory channels available on the different processors ([Figure 2](#fig2)) it appears that if
 the Tesseract performance is ignored, there is reasonable correlation.
 
 <a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. number of memory channels for the OpenSBLI 512^3, Taylor-Green vortex benchmark
 <img src="img/osbli_corr.png" />
-
-We have recomputed the correlation coefficients with the results for Tesseract excluded and the results can be seen in [Table 12](#tab12). This reveals a strong correlation between the OpenSBLI benchmark performance and the number of memory channels. This is what we wo3uld expect as the performance of this application is generally bound by random memory access performance. Investigations are ongoing as to why the Tesseract performance does not match this trend.
-
-<a id="tab12"></a>Table 12: Correlation coefficients for the number of memory channels for 
-the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excluded.
-
-| Aspect                     | Pearson | Spearman |
-|----------------------------|--------:|---------:|
-| Memory Channels            |  0.88   |  0.95    |
 
 <a id="gromacs"></a>
 ### 4.3 GROMACS
@@ -316,12 +329,14 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark with the Tesseract system excl
 | System        | Compiler                    | Libraries                        |
 |---------------|-----------------------------|----------------------------------|
 | ARCHER        | GCC 6.3.0                   | FFTW 3.3.8, Cray MPT 7.5.5       |
-| Cirrus        | Intel 17.0.2.174            | FFTW 3.3.5, SGI MPT 2.16         |
-| Peta4-Skylake | Intel 17.4                  | Intel MKL 17.4, Intel MPI 17.4   |
-| Isambard      | Cray 8.7.0.5323             | FFTW 3.3.6.3, GROMACS Thread MPI |
-| Tesseract     | | | |
+| Athena        | GCC 6.3.0                   | FFTW 3.3.8, Intel MPI 17.2.174   |
+| Cirrus        | Intel 17.2.174              | FFTW 3.3.5, SGI MPT 2.16         |
+| Isambard      | GCC 8.2.0                   | FFTW 3.3.8, Cray MPT             |
 | JADE          | Not published by HEC BioSim | Not published by HEC BioSim      |
+| Peta4-Skylake | Intel 17.4                  | Intel MKL 17.4, Intel MPI 17.4   |
+| Tesseract     | GCC 7.3.0                   | FFTW 3.3.5, Intel MPI 18.1.163   |
 | Wilkes2-GPU   | GCC 5.4.0, CUDA 8.0         | FFTW 3.3.8, OpenMPI 1.10.7       |
+| Thomas        | Intel 18.3                  | Intel MKL 18.3, Intel MPI 18.3   |
 
 Full details of the compile options, the full output data and analysis scripts are available on GitHub at:
 
@@ -338,12 +353,14 @@ from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/
 
 | System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                               |
 |---------------|---------------------:|--------------------------------------:|-----------------------------------------------------|
-| Wilkes2-GPU   | 2.744                | 2.257                                 | 4 MPI tasks, 3 OpenMP per task, no SMT, 4 GPU       |
-| Peta4-Skylake | 2.082                | 1.712                                 | 32 MPI tasks, 1 OpenMP thread per task, no SMT      |
-| Cirrus        | 1.699                | 1.397                                 | 36 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| Wilkes2-GPU   | 2.963                | 2.437                                 | 4 MPI tasks, 3 OpenMP per task, no SMT, 4 GPU       |
+| Peta4-Skylake | 2.503                | 2.058                                 | 32 MPI tasks, 1 OpenMP thread per task, no SMT      |
+| Cirrus        | 1.899                | 1.562                                 | 36 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| Athena        | 1.530                | 1.258                                 | 28 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
 | JADE          | 1.647                | 1.354                                 | 1 MPI task, 5 OpenMP thread per task, no SMT, 1 GPU |
-| Isambard      | 1.471                | 1.210                                 | 128 MPI tasks, 2 OpenMP threads per task, 4-way SMT |
-| Tesseract     | 1.323                | 1.080                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| Tesseract     | 1.326                | 1.090                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
+| Isambard      | 1.250                | 1.028                                 | 64 MPI tasks, 4 OpenMP threads per task, 4-way SMT  |
+| Thomas        | 1.237                | 1.017                                 | 24 MPI tasks, 1 OpenMP thread per task, no SMT      |
 | ARCHER        | 1.216                | 1.000                                 | 24 MPI tasks, 2 OpenMP threads per task, 2-way SMT  |
 
 We expect GROMACS performance to be directly correlated to floating point performance of the resources used and looking at a plot of
@@ -360,9 +377,9 @@ the GROMACS 1400k atom benchmark.
 
 | Aspect                     | Pearson | Spearman |
 |----------------------------|--------:|---------:|
-| Floating Point Performance |  0.88   |  0.89    |
-| Memory Bandwidth           |  0.13   |  0.00    |
-| Memory Channels            |  0.10   |  0.21    |
+| Floating Point Performance |  0.78   |  0.89    |
+| Memory Bandwidth           |  0.16   |  0.11    |
+| Memory Channels            |  0.03   |  0.18    |
 
 [Figure 3](#fig3) reveals that there are two separate correlation lines - one corresponding to CPU-only performance and one corresponding to 
 the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
@@ -376,7 +393,7 @@ CPU-only systems.
 
 | Aspect                     | Pearson | Spearman |
 |----------------------------|--------:|---------:|
-| Floating Point Performance |  0.96   |  1.00    |
+| Floating Point Performance |  0.93   |  0.87    |
 
 This comparison shows a much stronger correlation than the comparison when the 
 GPU systems are included, demonstrating that the scaling properties of performance with floating point performance is different 
@@ -474,7 +491,7 @@ This work used the DiRAC Extreme Scaling UK National HPC Service at The Universi
 
 This work used the Cirrus UK National Tier-2 HPC Service at EPCC (<http://www.cirrus.ac.uk>).
 
-This work used the Cumulus UK National Tier-2 HPC Service at the University of Cambridge (<https://www.csd3.cam.ac.uk/services/csd3-platform>).
+This work has been performed using resources provided by the "Cambridge Service for Data Driven Discovery" (CSD3, http://csd3.cam.ac.uk) system operated by the University of Cambridge Research Computing Service (http://www.hpc.cam.ac.uk) funded by EPSRC Tier-2 capital grant EP/P020259/1. The CSD£ system is also part of the DiRAC Data Intrensive UK National HPC Service (<http://www.dirac.ac.uk>).
 
 This work used the JADE UK National Tier-2 HPC Service at the University of Oxford (<http://www.jade.ac.uk>).
 
