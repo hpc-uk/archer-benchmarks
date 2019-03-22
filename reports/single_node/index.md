@@ -128,7 +128,7 @@ assumption may not hold in some use configurations but should not have a large e
 
 <a id="tab5"></a>Table 5: Theoretical maximum floating point performance for different platforms. CPU FLOPS are computed as
 (number of cores used) &times; (single precision FLOPS per cycle) &times; (frequency). See [Table 10](#tab10) for values used for the different
-systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.)
+systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.) Each P100 GPU has 56 Streaming Multiprocessors each of which gives 128 SP FLOPS/cycle, leading to 7168 SP FLOPS/cycle per GPU.
 
 | System        | Cores used | CPU SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
 |---------------|-----------:|---------------:|---------:|---------------:|----------------:|-------------------------------------------:|
@@ -142,7 +142,7 @@ systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single pr
 | Thomas        | 24         | 1,613          | 0        |                | 1,613           | 1.555                                      |
 | ARCHER        | 24         | 1,037          | 0        |                | 1,037           | 1.000                                      |
 
-<a id="tab6"></a>Table 6: Processor charateristics used to compute CPU FLOPS.
+<a id="tab6"></a>Table 6: Processor charateristics used to compute CPU GFLOP/s.
 
 | System        | SP FLOPS per cycle | Clock speed (GHz) | Single core SP GFLOP/s |
 |---------------|-------------------:|------------------:|-----------------------:|
@@ -223,16 +223,16 @@ We have measured the performance of the **Al Slab (al3x3)** benchmark that is ab
 
 **Note:** *Strong scaling* is where the number of parallel processes/threads is increased while the problem size is kept the same. This generally leads to each process/thread having less computational work as the number of processes/threads is increased.
 
-We compare the single-node performance in [Table 8](#tab8). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above.
+We compare the single-node performance in [Table 9](#tab9). The performance is measured in mean SCF cycles per second (i.e. 1 / mean SCF cycle time). All the raw data for the table can be found in the repository linked above.
 
-<a id="tab8"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark. Results from best performing run.
+<a id="tab9"></a>Table 8: Single node performance comparison for CASTEP Al Slab benchmark. Results from best performing run.
 
 | System        | Performance (mean SCF cycles/s) | Performance relative to ARCHER node | Notes        |
 |---------------|--------------------------------:|------------------------------------:|--------------|
 | Peta4-Skylake | 0.01643                         | 3.026                               | 32 MPI tasks |
 | Cirrus        | 0.01086                         | 2.001                               | 36 MPI tasks |
 | Athena        | 0.00995                         | 1.832                               | 28 MPI tasks |
-| Athena        | 0.00946                         | 1.742                               | 24 MPI tasks |
+| Thomas        | 0.00946                         | 1.742                               | 24 MPI tasks |
 | Isambard      | 0.00873                         | 1.608                               | 64 MPI tasks |
 | Tesseract     | 0.00731                         | 1.346                               | 24 MPI tasks |
 | ARCHER        | 0.00543                         | 1.000                               | 24 MPI tasks |
@@ -245,19 +245,20 @@ both in terms of peak bandwdth and in terms of the number of memory channels. To
 -   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 -   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets. As for Pearson, this value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 
-[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 9](#tab9) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson: 0.95) and in order (Spearman: 0.90). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
+[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 10](#tab10) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson: 0.95) and in order (Spearman: 0.90). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
 <a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
-<img src="img/castep_corr.png" />
+<img src="img/castep_corr_fp.png" />
 
-<a id="tab9"></a>Table 9: Correlation coefficients for different aspects of systems hardware correlated to performance of 
+<a id="tab10"></a>Table 10: Correlation coefficients for different aspects of systems hardware correlated to performance of 
 the CASTEP Al Slab benchmark
 
-| Aspect                     | Pearson | Spearman |
-|----------------------------|--------:|---------:|
-| Floating Point Performance |  0.96   |  0.87    |
-| Memory Bandwidth           |  0.21   | -0.04    |
-| Memory Channels            |  0.14   | -0.06    |
+| Aspect                                     | Pearson | Spearman |
+|--------------------------------------------|--------:|---------:|
+| Floating Point Performance (SP GLOP/s)     |  0.96   |  0.87    |
+| Floating Point Performance (SP FLOP/cycle) |  0.90   |  0.78    |
+| Memory Bandwidth                           |  0.21   | -0.04    |
+| Memory Channels                            |  0.14   | -0.06    |
 
 <a id="osbli"></a>
 ### 4.2 OpenSBLI
@@ -266,7 +267,7 @@ the CASTEP Al Slab benchmark
 
 The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium. We expect this benchmark to be bound primarily by memory performance. This is a strong scaling benchmark.
 
-<a id="tab8"></a>Table 8: Summary of OpenSBLI compile options on different platforms
+<a id="tab11"></a>Table 11: Summary of OpenSBLI compile options on different platforms
 
 | System        | Compiler         | Libraries                       |
 |---------------|------------------|---------------------------------|
@@ -286,9 +287,9 @@ Although OpenSBLI does allow the use of GPU accelerators we found that, in pract
 accelerators was too small to allow the bechmark case to run successfully on small node counts. We are investigating
 if using a larger number of GPU accelerators in parallel will allow us to run the benchmark.
 
-[Table 10](#tab10) shows the single-node performance for the benchmark on the different systems.
+[Table 12](#tab12) shows the single-node performance for the benchmark on the different systems.
 
-<a id="tab10"></a>Table 10: Single node performance comparison for OpenSBLI 512^3, Taylor-Green vortex benchmark run for
+<a id="tab12"></a>Table 12: Single node performance comparison for OpenSBLI 512^3, Taylor-Green vortex benchmark run for
 1000 iterations. Results from best performing run.
 
 | System        | Performance (iter/s) | Performance relative to ARCHER node | Notes        |
@@ -301,30 +302,52 @@ if using a larger number of GPU accelerators in parallel will allow us to run th
 | Tesseract     | 0.097                | 0.970                               | 24 MPI tasks |
 | Thomas        | 0.065                | 0.654                               | 24 MPI tasks |
 
-If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 11](#tab11))
-it appears that the performance is not strongly correlated to either floating point performance or memory performance.
+If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 13](#tab13))
+it appears that the performance is not strongly correlated to either floating point performance or memory performance although there are
+possible correlations to floating point performance (in terms of GFLOP/s) and number of memory channels.
 
-<a id="tab11"></a>Table 11: Correlation coefficients for different aspects of systems hardware correlated to performance of
+<a id="tab13"></a>Table 13: Correlation coefficients for different aspects of systems hardware correlated to performance of
 the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 
-| Aspect                     | Pearson | Spearman |
-|----------------------------|--------:|---------:|
-| Floating Point Performance |  0.74   |  0.85    |
-| Memory Bandwidth           |  0.06   | -0.14    |
-| Memory Channels            |  0.71   |  0.48    |
+| Aspect                                     | Pearson | Spearman |
+|--------------------------------------------|--------:|---------:|
+| Floating Point Performance (SP GLOP/s)     |  0.74   |  0.85    |
+| Floating Point Performance (SP FLOP/cycle) |  0.35   |  0.18    |
+| Memory Bandwidth                           |  0.06   | -0.14    |
+| Memory Channels                            |  0.71   |  0.48    |
 
-However, looking at a plot of the performance data against number of memory channels available on the different processors ([Figure 2](#fig2)) it appears that if
-the Tesseract performance is ignored, there is reasonable correlation.
+However, looking at a plot of the performance data against floating point performance for the different processors ([Figure 2](#fig2)) we can
+see that there are two clear outliers:
+
+- the Isambard system which sees much greater OpenSBLI performance than we would expect based on its floating point performance alone;
+- the Thomas system which sees much poorer peformance than we would expect based on its floating point performance alone.
 
 <a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. number of memory channels for the OpenSBLI 512^3, Taylor-Green vortex benchmark
-<img src="img/osbli_corr.png" />
+<img src="img/osbli_corr_fp.png" />
+
+Removing these outliers and repeating the correlation analysis leads shows strong correlation between OpenSBLI performance and nodes floating
+point performance ([Table 14](#tab14))
+
+<a id="tab14"></a>Table 14: Correlation coefficients for floating point performance  correlated to performance of
+the OpenSBLI 512^3, Taylor-Green vortex benchmark for subset of systems (without Isambard or Thomas).
+
+| Aspect                                     | Pearson | Spearman |
+|--------------------------------------------|--------:|---------:|
+| Floating Point Performance (SP GLOP/s)     |  0.97   |  0.90    |
+| Floating Point Performance (SP FLOP/cycle) |  0.91   |  0.67    |
+
+The Isambard performance, which is higher than expected based on floating point performance alone, could potentially be explained by the 
+additional memory performance available on this architecture (mre memory channels, more potential for cache reuse as more cores share L3 cache,
+more memory bandwidth available per node) that allow the floating point units to be used more effectivly. The Thomas performance, which is lower
+than would be expected based on floating point performance alone, is not understood at the moment. For both of these outliers further investigation
+is required to understand the performance differences.
 
 <a id="gromacs"></a>
 ### 4.3 GROMACS
 
 [GROMACS](http://www.gromacs.org) is a classical molecular mechanics-based biomolecular simulation application written in C/C++ with MPI and OpenMP parallelism. It also supports GPGPU (implemented in CUDA) and Xeon Phi (Knights Landing variant) versions.
 
-<a id="tab8"></a>Table 8: Summary of GROMACS compile options on different platforms
+<a id="tab15"></a>Table 15: Summary of GROMACS compile options on different platforms
 
 | System        | Compiler                    | Libraries                        |
 |---------------|-----------------------------|----------------------------------|
@@ -346,9 +369,9 @@ We have used the 1400k atom benchmark desgined by the High End Consortium for Bi
 strong scaling benchmark. Benchmark details are available at the repository link above. All the runs were performed using the
 single precision version of GROMACS (as is used in practice by most users).
 
-The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 13](#tab13).
+The single-node performance results for the GROMACS benchmark run using the single precision version of GROMACS are shown in [Table 16](#tab16).
 
-<a id="tab13"></a>Table 13: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
+<a id="tab16"></a>Table 16: Single node performance comparison for GROMACS 1400k atom benchmark. Note that the data for JADE are taken
 from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/jade-benchmarks). Results from best performing run.
 
 | System        | Performance (ns/day) | Performance relative to ARCHER node   | Notes                                               |
@@ -365,35 +388,37 @@ from the [HEC BioSim performance comparison webpage](http://www.hecbiosim.ac.uk/
 
 We expect GROMACS performance to be directly correlated to floating point performance of the resources used and looking at a plot of
 GROMACS performance against floating point performance ([Figure 3](#fig3)) and correlation
-coefficients ([Table 14](#tab14)) we can see that this is generally true although, perhaps surprisingly, the GROMACS benchmark performance is not as 
+coefficients ([Table 17](#tab17)) we can see that this is generally true although, perhaps surprisingly, the GROMACS benchmark performance is not as 
 strongly correlated to floating point performance as the CASTEP benchmark. As expected, there is no correlation between GROMACS benchmark
 performance and memory performance.
 
 <a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark.
-<img src="img/gromacs_corr.png" />
+<img src="img/gromacs_corr_fp.png" />
 
-<a id="tab14"></a>Table 14: Correlation coefficients for different aspects of systems hardware correlated to performance of
+<a id="tab17"></a>Table 17: Correlation coefficients for different aspects of systems hardware correlated to performance of
 the GROMACS 1400k atom benchmark.
 
-| Aspect                     | Pearson | Spearman |
-|----------------------------|--------:|---------:|
-| Floating Point Performance |  0.78   |  0.89    |
-| Memory Bandwidth           |  0.16   |  0.11    |
-| Memory Channels            |  0.03   |  0.18    |
+| Aspect                                     | Pearson | Spearman |
+|--------------------------------------------|--------:|---------:|
+| Floating Point Performance (SP GLOP/s)     |  0.78   |  0.89    |
+| Floating Point Performance (SP FLOP/cycle) |  0.73   |  0.82    |
+| Memory Bandwidth                           |  0.16   |  0.11    |
+| Memory Channels                            |  0.03   |  0.18    |
 
 [Figure 3](#fig3) reveals that there are two separate correlation lines - one corresponding to CPU-only performance and one corresponding to 
 the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
-performance compared to the floating point performance of the CPU-only systems, see [Table 15](#tab15) and [Figure 4](#fig4).
+performance compared to the floating point performance of the CPU-only systems, see [Table 18](#tab18) and [Figure 4](#fig4).
 
-<a id="fig3"></a>Figure 3: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark on
+<a id="fig4"></a>Figure 4: Scatter plot of GROMACS performance vs. node floating point performance for the GROMACS 1400k atom benchmark on
 CPU-only systems.
-<img src="img/gromacs_cpu_corr.png" />
+<img src="img/gromacs_corr_fp_cpu.png" />
 
-<a id="tab14"></a>Table 15: Correlation coefficients for floating point performance compared to GROMACS 1400k atom benchmark performance.
+<a id="tab18"></a>Table 18: Correlation coefficients for floating point performance compared to GROMACS 1400k atom benchmark performance.
 
-| Aspect                     | Pearson | Spearman |
-|----------------------------|--------:|---------:|
-| Floating Point Performance |  0.93   |  0.87    |
+| Aspect                                     | Pearson | Spearman |
+|--------------------------------------------|--------:|---------:|
+| Floating Point Performance (SP GLOP/s)     |  0.93   |  0.87    |
+| Floating Point Performance (SP FLOP/cycle) |  0.88   |  0.78    |
 
 This comparison shows a much stronger correlation than the comparison when the 
 GPU systems are included, demonstrating that the scaling properties of performance with floating point performance is different 
