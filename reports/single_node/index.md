@@ -4,7 +4,7 @@ Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The
 
 <img src="img/epcc_logo.png" width="300"/>
 
-8 February 2019
+22 March 2019
 
 ## 0. Contents
 
@@ -56,7 +56,7 @@ This initial benchmarking exercise covered seven UK national HPC systems:
 -   Thomas: Tier2 HPC system provided by the Materials and Molecular Modelling Hub, <https://mmmhub.ac.uk/>
 -   Wilkes2-GPU: One component of the Cumulus Tier2 HPC system provided by the University of Cambridge, <http://www.csd3.cam.ac.uk>
 
-The tables below provide further technical details on the systems. [Table 1](#tab1) provides information on the size of the system and the interconnect; [Table 2](#tab2) provides information on the compute node layout, [Table 3](#tab3) provides information on the processor memory hierarchy; and [Table 4](#tab4) provides information on the parallel file systems.
+The tables below provide further technical details on the systems. [Table 1](#tab1) provides an overview of each system; [Table 2](#tab2) provides information on the compute node layout, [Table 3](#tab3) provides information on the processor memory hierarchy; and [Table 4](#tab4) provides information on GPU accelerators available on the different systems.
 
 <a id="tab1"></a>Table 1: System details for the HPC services used in this study
 
@@ -102,10 +102,10 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 
 <a id="tab4"></a>Table 4: Node accelerator details for the HPC services used in this study
 
-| System        | Accelerator Model | Accelerator Memory |
-|---------------|-------------------|-------------------:|
-| Wilkes2-GPU   | P100-PCIE-16GB    | 16 GB              |
-| JADE          | P100-SXM2-16GB    | 16 GB              |
+| System        | Accelerator Model | Accelerator Memory | Number of accelerators per node |
+|---------------|-------------------|-------------------:|--------------------------------:|
+| Wilkes2-GPU   | P100-PCIE-16GB    | 16 GB              | 4                               |
+| JADE          | P100-SXM2-16GB    | 16 GB              | 8                               |
 
 <a id="raw"></a>
 ## 3. Performance Limits
@@ -121,7 +121,8 @@ precision performance is half the single precision value). The
 compute nodes with GPU accelerators have by far the highest theoretical floating point performance. Of the CPU-based systems,
 the Peta4-Skylake nodes (Intel Xeon Skylake Gold) have more than twice the theoretical floating point performance of the
 next highest performing CPU nodes (Cirrus, Intel Xeon Broadwell). The Isambard (Marvell ThunderX2) copmpute nodes have similar
-theoretical performance to the Broadwell system with the Tesseract (Intel Xeon Skylake Silver) compute nodes having lower floating point 
+theoretical performance to the Cirrus and Athena Broadwell systems with the Tesseract (Intel Xeon Skylake Silver) and 
+Thomas (Intel Xeon Broadwell) compute nodes having lower floating point 
 performance and ARCHER (Intel Xeon Ivy Bridge) compute nodes having the lowest theoretical maximum floating point performance.
 All of these calculations assume that any processer turbo modes (that can increase the clock speed) are not employed. This 
 assumption may not hold in some use configurations but should not have a large effect on the ordering of the performance.
@@ -245,7 +246,7 @@ both in terms of peak bandwdth and in terms of the number of memory channels. To
 -   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 -   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets. As for Pearson, this value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 
-[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 10](#tab10) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance - both quantitatively (Pearson: 0.95) and in order (Spearman: 0.90). This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
+[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 10](#tab10) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance (particularly GFLOP/s) - both quantitatively and in rank order. This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
 <a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
 <img src="img/castep_corr_fp.png" />
@@ -265,7 +266,7 @@ the CASTEP Al Slab benchmark
 
 [OpenSBLI](https://opensbli.github.io/) is a high-level framework for finite-difference based models, particularly for CFD simulations. It uses a Python-based Domain Specific Language (DSL) which can then generate C++ source code with (optionally) OpenMP, CUDA, OpenCL or OpenACC components for a variety of computer architectures (e.g. CPU, GPGPU). This benchmark uses double precision floating point operations (as is used in practice by users).
 
-The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium. We expect this benchmark to be bound primarily by memory performance. This is a strong scaling benchmark.
+The OpenSBLI 512^3, Taylor-Green vortex benchmark was supplied by the UK Turbulence Consortium.
 
 <a id="tab11"></a>Table 11: Summary of OpenSBLI compile options on different platforms
 
@@ -283,9 +284,7 @@ Full details of the compile options, source code for the benchmark, the full out
 
 -   <https://github.com/hpc-uk/archer-benchmarks/tree/master/apps/OpenSBLI>
 
-Although OpenSBLI does allow the use of GPU accelerators we found that, in practice, the memory available on the GPU 
-accelerators was too small to allow the bechmark case to run successfully on small node counts. We are investigating
-if using a larger number of GPU accelerators in parallel will allow us to run the benchmark.
+We are currently working to get the GPU version of OpenSBLI running correctly on GPU nodes.
 
 [Table 12](#tab12) shows the single-node performance for the benchmark on the different systems.
 
@@ -304,7 +303,8 @@ if using a larger number of GPU accelerators in parallel will allow us to run th
 
 If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 13](#tab13))
 it appears that the performance is not strongly correlated to either floating point performance or memory performance although there are
-possible correlations to floating point performance (in terms of GFLOP/s) and number of memory channels.
+possible correlations to floating point performance (in terms of GFLOP/s) and number of memory channels suggesting that both these aspects
+of the systems may be important for the performance of this benchmark.
 
 <a id="tab13"></a>Table 13: Correlation coefficients for different aspects of systems hardware correlated to performance of
 the OpenSBLI 512^3, Taylor-Green vortex benchmark.
@@ -316,17 +316,17 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 | Memory Bandwidth                           |  0.06   | -0.14    |
 | Memory Channels                            |  0.71   |  0.48    |
 
-However, looking at a plot of the performance data against floating point performance for the different processors ([Figure 2](#fig2)) we can
+Looking at a plot of the performance data against floating point performance for the different processors ([Figure 2](#fig2)) we can
 see that there are two clear outliers:
 
 - the Isambard system which sees much greater OpenSBLI performance than we would expect based on its floating point performance alone;
 - the Thomas system which sees much poorer peformance than we would expect based on its floating point performance alone.
 
-<a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. number of memory channels for the OpenSBLI 512^3, Taylor-Green vortex benchmark
+<a id="fig2"></a>Figure 2: Scatter plot of OpenSBLI performance vs. floating point performance for the OpenSBLI 512^3, Taylor-Green vortex benchmark
 <img src="img/osbli_corr_fp.png" />
 
-Removing these outliers and repeating the correlation analysis leads shows strong correlation between OpenSBLI performance and nodes floating
-point performance ([Table 14](#tab14))
+Removing these outliers and repeating the correlation analysis reveals strong correlation between OpenSBLI performance and nodes floating
+point performance ([Table 14](#tab14)) for the remaining systems.
 
 <a id="tab14"></a>Table 14: Correlation coefficients for floating point performance  correlated to performance of
 the OpenSBLI 512^3, Taylor-Green vortex benchmark for subset of systems (without Isambard or Thomas).
@@ -445,9 +445,8 @@ variety of different processor architectures. In particular, we compared the sin
 applications across the different HPC systems.
 
 In general, we were able to broadly correlate the performance of the different applications to particular
-properties of the compute node architecture (such as floating point performance and number of memory channels)
-but there we a number of exceptions to these correlations that we plan to investigate further, we describe
-these below.
+properties of the compute node architecture but there we a number of exceptions to these correlations that we plan
+to investigate further, we describe these below.
 
 ### 5.1 CASTEP
 
@@ -455,28 +454,32 @@ CASTEP performance is strongly correlated to floating point performance of the c
 (Marvell ThunderX2 Arm64) system showed lower performance than would be expected from the ordering of floating point 
 performance of the different nodes. This could be due to a number of factors, potentially including:
 
--   The fact that this was run on pre-general availability hardware.
 -   Less mature compilers and performance libraries for the relatively new Arm64 HPC architecture.
 -   The high core count on the Isambard nodes (64 cores per node) leading to more memory access contention or MPI intra-node overheads.
 -   Process and thread pinning not functioning as expected.
 
 We have recently gained access to one of the [HPE Catalyst UK](https://news.hpe.com/academia-and-industry-collaborate-to-drive-uk-supercomputer-adoption/)
-systems with the general availability version of the Marvell ThuderX2 Arm64 processors and will repeat the benchmark runs on this
+systems with the Marvell ThuderX2 Arm64 processors and will repeat the benchmark runs on this
 system to explore the performance of CASTEP on Arm processors further.
 
 ### 5.2 OpenSBLI
 
-As expected for a CFD application, OpenSBLI performance was seen to correlate with number of memory channels per
-node where the systems with higher numbers of memory channels (Isambard and Peta4-Skylake) showing higher performance
-than the older processors with lower memory channels.
+Perhaps surprisingly for a CFD benchmark, the performance of the OpenSBLI benchmark was found to be strongly
+correlated to the floating point performance of the nodes rather than the memory performance (as is often
+thought to be the case for CFD applications).
 
-The exception to this correlation was the Tesseract system (with Intel Xeon Skylake Silver processors) which has the 
-same number of memory channels as the Peta4-Skylake system but OpenSBLI benchmark performance similar to the systems
-with lower numbers of memory channels. We plan to investigate this discrepency further using profiling tools on the 
-different systems. 
+Two of the systems studied showed performance charateristics that did not map onto this general trend:
 
-Finally, we were unable to run the OpenSBLI benchmark on GPU-accelerated nodes due to issues with the memory capacity
-on individual GPU accelerators. We plan to follow up this issue to get a better understanding of the memory requirements of the benchmark.
+-   Isambard (Marvell ThunderX2 Arm64) showed much better performance than would be expected from its 
+    peak floating point performance.
+-   Thomas (Intel Xeon Broadwell) showed much worse performance than expected based on its peak floating
+    point performance.
+
+We have further investigations planned to explore these discrepencies and understand the performance differences
+including detailed profiling of the benchmark running across different platforms.
+
+We also plan to run the OpenSBLI benchmark on systems with GPU accelerators to gain further insights into 
+performance differences.
 
 ### 5.3 GROMACS
 
@@ -491,10 +494,8 @@ the same GPU accelerators demonstrate that good performance can be achieved on t
 
 This work has raised a number of issues which we plan to investigate further:
 
-   - The unexpected poor performance of the OpenSBLI benchmark on the Tesseract (Intel Xeon Skylake Silver) system
-     which does not match the performance trends seen for the other systems where performance is strongly correlated
-     to the number of memory channels.
-   - The inability to run the OpenSBLI benchmark on GPU systems - seeming due to lack of memory.
+   - The performance of the OpenSBLI benchmark on the Isambard (better than expected) and Thomas (worse than expected)
+     systems.
    - The poor performance of GROMACS on the JADE GPU system. This performance result was produced by the HEC BioSim
      and we are already in contact with them to discuss coordinating benchmarking efforts going forwards.
 
