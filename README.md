@@ -27,7 +27,8 @@ This repository is work in progress and not all information is available yet.
 
 # Reports
 
--   **29 March 2019** [Performance of HPC Application Benchmarks across UK National HPC services: single node performance](reports/single_node/index.md): Report comparing the single-node performance of different application benchmarks across different architecutres in UK HPC systems. Includes performance results, analysis and conclusions comparing three generations of Intel Xeon CPUs, Marvell Arm ThunderX2 CPUs and NVidia GPUs. [![DOI](https://zenodo.org/badge/100923634.svg)](https://zenodo.org/badge/latestdoi/100923634)
+-   **29 March 2019** [Performance of HPC Application Benchmarks across UK National HPC services: single node performance](reports/single_node/index.md): Report comparing the single-node performance of different application benchmarks across different architecutres in UK HPC systems. Includes performance results, analysis and conclusions comparing three generations of Intel Xeon CPUs, Marvell Arm ThunderX2 CPUs and NVidia GPUs. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2616549.svg)](https://doi.org/10.5281/zenodo.2616549)
+
 
 -   **13 June 2018** [Performance of HPC Benchmarks across UK National HPC services](reports/initial_comparison/index.md): Report comparing performance of different application benchmarks across CPU-based UK HPC systems. Includes advice for users on picking the appropriate service for their research along with performance results, analysis and conclusions. [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1288378.svg)](https://doi.org/10.5281/zenodo.1288378)
 
