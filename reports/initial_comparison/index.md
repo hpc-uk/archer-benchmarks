@@ -1,6 +1,6 @@
 # Performance of HPC Benchmarks across UK National HPC services
 
-[![DOI](https://zenodo.org/badge/100923634.svg)](https://zenodo.org/badge/latestdoi/100923634)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1288378.svg)](https://doi.org/10.5281/zenodo.1288378)
 
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
 

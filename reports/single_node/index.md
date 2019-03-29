@@ -1,5 +1,7 @@
 # Performance of HPC Application Benchmarks across UK National HPC services: single node performance
 
+[![DOI](https://zenodo.org/badge/100923634.svg)](https://zenodo.org/badge/latestdoi/100923634)
+
 Andy Turner ([a.turner@epcc.ed.ac.uk](mailto:a.turner@epcc.ed.ac.uk)), EPCC, The University of Edinburgh
 
 <img src="img/epcc_logo.png" width="300"/>
