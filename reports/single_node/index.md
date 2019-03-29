@@ -145,15 +145,15 @@ systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single pr
 
 <a id="tab6"></a>Table 6: Processor charateristics used to compute CPU GFLOP/s.
 
-| System        | SP FLOPS per cycle | Clock speed (GHz) | Single core SP GFLOP/s |
-|---------------|-------------------:|------------------:|-----------------------:|
-| Peta4-Skylake | 64                 | 2.6               | 166.4                  | 
-| Athena        | 32                 | 2.4               | 76.8                   | 
-| Cirrus        | 32                 | 2.1               | 67.2                   |
-| Tesseract     | 32                 | 2.1               | 67.2                   |
-| Thomas        | 32                 | 2.1               | 67.2                   |
-| Isambard      | 16                 | 2.2               | 35.2                   |
-| ARCHER        | 16                 | 2.7               | 43.2                   | 
+| System        | SP FLOPS per cycle per core | Clock speed (GHz) | Single core SP GFLOP/s |
+|---------------|----------------------------:|------------------:|-----------------------:|
+| Peta4-Skylake | 64                          | 2.6               | 166.4                  | 
+| Athena        | 32                          | 2.4               | 76.8                   | 
+| Cirrus        | 32                          | 2.1               | 67.2                   |
+| Tesseract     | 32                          | 2.1               | 67.2                   |
+| Thomas        | 32                          | 2.1               | 67.2                   |
+| Isambard      | 16                          | 2.2               | 35.2                   |
+| ARCHER        | 16                          | 2.7               | 43.2                   | 
 
 The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7).
 The Triad metric is the most complex kernel within STREAM and is considered the most relevant for HPC. The STREAM Triad kernel
@@ -402,8 +402,8 @@ the GROMACS 1400k atom benchmark.
 |--------------------------------------------|--------:|---------:|
 | Floating Point Performance (SP GLOP/s)     |  0.78   |  0.89    |
 | Floating Point Performance (SP FLOP/cycle) |  0.73   |  0.82    |
-| Memory Bandwidth                           |  0.16   |  0.11    |
-| Memory Channels                            |  0.03   |  0.18    |
+| Memory Bandwidth                           |  0.15   |  0.11    |
+| Memory Channels                            |  0.02   |  0.18    |
 
 [Figure 3](#fig3) reveals that there are two separate correlation lines - one corresponding to CPU-only performance and one corresponding to 
 the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
@@ -508,17 +508,23 @@ Other plans for future work include:
 <a id="acknowledgements"></a>
 ## 6. Acknowledgements
 
+Particular thanks to Jeffrey Salmond at the University of Cambridge for helpful discussions and suggestions.
+
 Thanks to all of the HPC systems involved in this study for providing access and resources to be able to run the benchmarks. 
 Their explicit acknowledgement statements are included below.
 
 This work used the ARCHER UK National Supercomputing Service (<http://www.archer.ac.uk>).
 
-This work used the DiRAC Extreme Scaling UK National HPC Service at The University of Edinburgh (<http://www.dirac.ac.uk>).
+We acknowledge the use of Athena at HPC Midlands+, which was funded by the EPSRC on grant EP/P020232/1, in this work.
 
-This work used the Cirrus UK National Tier-2 HPC Service at EPCC (<http://www.cirrus.ac.uk>).
+This work used the Cirrus UK National Tier-2 HPC Service at EPCC (http://www.cirrus.ac.uk) funded by the University of Edinburgh and EPSRC (EP/P020267/1).
 
 This work has been performed using resources provided by the "Cambridge Service for Data Driven Discovery" (CSD3, http://csd3.cam.ac.uk) system operated by the University of Cambridge Research Computing Service (http://www.hpc.cam.ac.uk) funded by EPSRC Tier-2 capital grant EP/P020259/1. The CSD£ system is also part of the DiRAC Data Intrensive UK National HPC Service (<http://www.dirac.ac.uk>).
 
+This work used the Isambard UK National Tier-2 HPC Service at GW4 (<http://www.gw4.ac.uk/isambard>).
+
 This work used the JADE UK National Tier-2 HPC Service at the University of Oxford (<http://www.jade.ac.uk>).
 
-This work used the Isambard UK National Tier-2 HPC Service at GW4 (<http://www.gw4.ac.uk/isambard>).
+This work used the DiRAC Extreme Scaling UK National HPC Service at The University of Edinburgh (<http://www.dirac.ac.uk>).
+
+We are grateful to the UK Materials and Molecular Modelling Hub for computational resources, which is partially funded by EPSRC (EP/P020194/1).
