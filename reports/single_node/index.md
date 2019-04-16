@@ -84,7 +84,7 @@ The tables below provide further technical details on the systems. [Table 1](#ta
 | Isambard      | Marvell Arm ThunderX2, 2.2 GHz             | 64 (2x 32-core) | 256 GB          |
 | JADE          | Intel Xeon E5-2698v4 (Broadwell), 2.2 GHz  | 40 (2x 20-core) | 96 GB           |
 | Peta4-Skylake | Intel Xeon Gold 6142 (Skylake), 2.6 GHz    | 32 (2x 16-core) | 192/384 GB      |
-| Tesseract     | Intel Xeon Silver 4112 (Skylake), 2.1 GHz  | 24 (2x 16-core) | 96 GB           |
+| Tesseract     | Intel Xeon Silver 4116 (Skylake), 2.1 GHz  | 24 (2x 12-core) | 96 GB           |
 | Thomas        | Intel E5-2650v4 (Broadwell), 2.1 GHz       | 24 (2x 12-core) | 128 GB          |
 | Wilkes2-GPU   | Intel Xeon E5-2660v4 (Broadwell), 2.2 GHz  | 12 (1x 12-core) | 192/384 GB      |
 
