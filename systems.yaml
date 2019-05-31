@@ -5,6 +5,7 @@ ARCHER:
   PModel: Intel Xeon E5-2697v2
   PGen: Ivy Bridge
   PFreq: 2.7
+  FPFreq: [2.7]
   PCores: 12
   PPerNode: 2
   FLOPS: 16
@@ -33,6 +34,7 @@ Cirrus:
   PModel: Intel Xeon E5-2695v4
   PGen: Broadwell
   PFreq: 2.1
+  FPFreq: [1.7]
   PCores: 18
   PPerNode: 2
   FLOPS: 32
@@ -61,6 +63,7 @@ Athena:
   PModel: Intel Xeon E5-2680v4
   PGen: Broadwell
   PFreq: 2.4
+  FPFreq: [1.9]
   PCores: 14
   PPerNode: 2
   FLOPS: 32
@@ -89,6 +92,7 @@ Thomas:
   PModel: Intel Xeon E5-2650v4
   PGen: Broadwell
   PFreq: 2.1
+  FPFreq: [1.8]
   PCores: 12
   PPerNode: 2
   FLOPS: 32
@@ -117,6 +121,7 @@ CSD3-Skylake:
   PModel: Intel Xeon 6142
   PGen: Skylake Gold
   PFreq: 2.6
+  FPFreq: [2.2, 1.6]
   PCores: 16
   PPerNode: 2
   FLOPS: 64
@@ -144,6 +149,7 @@ Tesseract:
   PModel: Intel Xeon 4116
   PGen: Skylake Silver
   PFreq: 2.1
+  FPFreq: [1.7, 1.1]
   PCores: 12
   PPerNode: 2
   FLOPS: 32
@@ -172,6 +178,7 @@ Isambard:
   PModel: Cavium ThunderX2
   PGen: N/A
   PFreq: 2.2
+  FPFreq: [2.2]
   PCores: 32
   PPerNode: 2
   FLOPS: 16
@@ -200,6 +207,7 @@ CSD3-GPU:
   PModel: Intel Xeon E5-2660v4
   PGen: Broadwell
   PFreq: 2.2
+  FPFreq: [1.7]
   PCores: 12
   PPerNode: 1
   FLOPS: 32
@@ -228,6 +236,7 @@ JADE:
   PModel: Intel Xeon E5-2698v4
   PGen: Broadwell
   PFreq: 2.4
+  FPFreq: [1.8]
   PCores: 20
   PPerNode: 2
   FLOPS: 32
