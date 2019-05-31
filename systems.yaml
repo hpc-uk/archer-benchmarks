@@ -14,7 +14,7 @@ ARCHER:
   MFreq: ?MHz
   MTot: 64/128GB
   MChannels: 4
-  MBW: 119.4GB/s
+  MBW: 119.4
   Vendor: Cray
   Nodes: 4920
   Interconnect: Cray Aries
@@ -43,7 +43,7 @@ Cirrus:
   MFreq: ?MHz
   MTot: 256GB
   MChannels: 4
-  MBW: 153.6GB/s
+  MBW: 153.6
   Vendor: HPE
   Nodes: 280
   Interconnect: FDR
@@ -72,7 +72,7 @@ Athena:
   MFreq: ?MHz
   MTot: 128GB
   MChannels: 4
-  MBW: 153.6GB/s
+  MBW: 153.6
   Vendor: Huawei
   Nodes: 512
   Interconnect: EDR
@@ -101,7 +101,7 @@ Thomas:
   MFreq: ?MHz
   MTot: 128GB
   MChannels: 4
-  MBW: 153.6GB/s
+  MBW: 153.6
   Vendor: Lenovo
   Nodes: 720
   Interconnect: OPA
@@ -130,7 +130,7 @@ CSD3-Skylake:
   MFreq: ?MHz
   MTot: 196GB
   MChannels: 6
-  MBW: 238.4GB/s
+  MBW: 238.4
   Vendor: Dell
   Nodes: 768
   Interconnect: OPA
@@ -158,7 +158,7 @@ Tesseract:
   MFreq: 2666MHz
   MTot: 96GB
   MChannels: 6
-  MBW: 238.4GB/s
+  MBW: 238.4
   Vendor: HPE
   Nodes: 800
   Interconnect: OPA
@@ -187,7 +187,7 @@ Isambard:
   MFreq: ?MHz
   MTot: 256GB
   MChannels: 8
-  MBW: 320GB/s
+  MBW: 320
   Vendor: Cray
   Nodes: 0
   Interconnect: None
@@ -216,7 +216,7 @@ CSD3-GPU:
   MFreq: ?MHz
   MTot: 192/384GB
   MChannels: 4
-  MBW: 76.8GB/s
+  MBW: 76.8
   Vendor: Dell
   Nodes: 
   Interconnect: FDR
@@ -245,7 +245,7 @@ JADE:
   MFreq: ?MHz
   MTot: 96GB
   MChannels: 4
-  MBW: 153.6GB/s
+  MBW: 153.6
   Vendor: NVidia
   Nodes: 
   Interconnect: 
