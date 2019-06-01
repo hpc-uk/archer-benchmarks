@@ -133,29 +133,29 @@ assumption may not hold in some use configurations but should not have a large e
 (number of cores used) &times; (single precision FLOPS per cycle) &times; (frequency). See [Table 10](#tab10) for values used for the different
 systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.) Each P100 GPU has 56 Streaming Multiprocessors each of which gives 128 SP FLOPS/cycle, leading to 7168 SP FLOPS/cycle per GPU.
 
-| System        | Cores used | CPU SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
-|---------------|-----------:|---------------:|---------:|---------------:|----------------:|-------------------------------------------:|
-| Wilkes2-GPU   | 12         | 885            | 4        | 37,200         | 38,085          | 36.649                                     |
-| JADE          | 5          | 352.0          | 1        | 10,600         | 10,952          | 10.561                                     |
-| Peta4-Skylake | 32         | 5,325          | 0        |                | 5,325           | 5.135                                      |
-| Cirrus        | 36         | 2,419          | 0        |                | 2,419           | 2.326                                      |
-| Isambard      | 64         | 2,253          | 0        |                | 2,253           | 2.172                                      |
-| Athena        | 28         | 2,150          | 0        |                | 2,150           | 2.074                                      |
-| Tesseract     | 24         | 1,613          | 0        |                | 1,613           | 1.555                                      |
-| Thomas        | 24         | 1,613          | 0        |                | 1,613           | 1.555                                      |
-| ARCHER        | 24         | 1,037          | 0        |                | 1,037           | 1.000                                      |
+| System        | Cores used | CPU vector base SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
+|---------------|-----------:|---------------------------:|---------:|---------------:|----------------:|-------------------------------------------:|
+| Wilkes2-GPU   | 12         | 288                        | 4        | 37,200         | 37,488          | 36.150                                     |
+| JADE          | 5          | 352                        | 1        | 10,600         | 10,952          | 10.561                                     |
+| Peta4-Skylake | 32         | 3,277                      | 0        |                | 3,277           | 3.160                                      |
+| Isambard      | 64         | 2,253                      | 0        |                | 2,253           | 2.172                                      |
+| Cirrus        | 36         | 1,958                      | 0        |                | 1,958           | 1.888                                      |
+| Athena        | 28         | 1,702                      | 0        |                | 1,702           | 1.641                                      |
+| Thomas        | 24         | 1,382                      | 0        |                | 1,382           | 1.333                                      |
+| ARCHER        | 24         | 1,037                      | 0        |                | 1,037           | 1.000                                      |
+| Tesseract     | 24         | 845                        | 0        |                | 845             | 0.815                                      |
 
 <a id="tab6"></a>Table 6: Processor charateristics used to compute CPU GFLOP/s.
 
-| System        | SP FLOPS per cycle per core | Clock speed (GHz) | Single core SP GFLOP/s |
-|---------------|----------------------------:|------------------:|-----------------------:|
-| Peta4-Skylake | 64                          | 2.6               | 166.4                  | 
-| Athena        | 32                          | 2.4               | 76.8                   | 
-| Cirrus        | 32                          | 2.1               | 67.2                   |
-| Tesseract     | 32                          | 2.1               | 67.2                   |
-| Thomas        | 32                          | 2.1               | 67.2                   |
-| Isambard      | 16                          | 2.2               | 35.2                   |
-| ARCHER        | 16                          | 2.7               | 43.2                   | 
+| System        | SP FLOPS per cycle per core | FP vector unit base clock speed (GHz) | Single core vector base SP GFLOP/s |
+|---------------|----------------------------:|--------------------------------------:|-----------------------------------:|
+| Peta4-Skylake | 64                          | 1.6 (AVX512)                          | 102.4                              | 
+| Athena        | 32                          | 1.9 (AVX2)                            | 60.8                               | 
+| Cirrus        | 32                          | 1.7 (AVX2)                            | 54.4                               |
+| Thomas        | 32                          | 1.8 (AVX2)                            | 57.6                               |
+| ARCHER        | 16                          | 2.7 (AVX)                             | 43.2                               | 
+| Isambard      | 16                          | 2.2 (Neon)                            | 35.2                               |
+| Tesseract     | 32                          | 1.1 (AVX512)                          | 35.2                               |
 
 The results from the STREAM Triad metric running on all cores on a compute node simultaneously (StarSTREAM) are shown in [Table 7](#tab7).
 The Triad metric is the most complex kernel within STREAM and is considered the most relevant for HPC. The STREAM Triad kernel
@@ -175,13 +175,13 @@ highest per-node memory bandwidth.
 
 | System        | Cores per node | Memory Channels | StarSTREAM per core (GB/s) | StarSTREAM per node (GB/s) |
 |---------------|---------------:|----------------:|---------------------------:|---------------------------:|
-| Tesseract     | 24             | 6               | 5.181                      | 124.339                    |
-| Peta4-Skylake | 32             | 6               | 4.508                      | 144.256                    |
-| Thomas        | 24             | 4               | 3.694                      | 88.656                     |
 | Isambard      | 64             | 8               | 3.461                      | 221.485                    |
-| Athena        | 28             | 4               | 3.304                      | 92.512                     |
-| ARCHER        | 24             | 4               | 3.036                      | 72.864                     |
+| Peta4-Skylake | 32             | 6               | 4.508                      | 144.256                    |
+| Tesseract     | 24             | 6               | 5.181                      | 124.339                    |
 | Cirrus        | 36             | 4               | 2.718                      | 97.848                     |
+| Athena        | 28             | 4               | 3.304                      | 92.512                     |
+| Thomas        | 24             | 4               | 3.694                      | 88.656                     |
+| ARCHER        | 24             | 4               | 3.036                      | 72.864                     |
 
 <a id="apps"></a>
 ## 4. Application Benchmarks
@@ -258,9 +258,9 @@ the CASTEP Al Slab benchmark
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.96   |  0.87    |
+| Floating Point Performance (SP GLOP/s)     |  0.90   |  0.75    |
 | Floating Point Performance (SP FLOP/cycle) |  0.90   |  0.78    |
-| Memory Bandwidth                           |  0.21   | -0.04    |
+| Memory Bandwidth                           |  0.22   |  0.32    |
 | Memory Channels                            |  0.14   | -0.06    |
 
 <a id="osbli"></a>
@@ -313,9 +313,9 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.74   |  0.85    |
+| Floating Point Performance (SP GLOP/s)     |  0.85   |  0.89    |
 | Floating Point Performance (SP FLOP/cycle) |  0.35   |  0.18    |
-| Memory Bandwidth                           |  0.06   | -0.14    |
+| Memory Bandwidth                           |  0.77   |  0.68    |
 | Memory Channels                            |  0.71   |  0.48    |
 
 Looking at a plot of the performance data against floating point performance for the different processors ([Figure 2](#fig2)) we can
@@ -335,7 +335,7 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark for subset of systems (without
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.97   |  0.90    |
+| Floating Point Performance (SP GLOP/s)     |  0.96   |  1.00    |
 | Floating Point Performance (SP FLOP/cycle) |  0.91   |  0.67    |
 
 The Isambard performance, which is higher than expected based on floating point performance alone, could potentially be explained by the 
@@ -402,10 +402,10 @@ the GROMACS 1400k atom benchmark.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.78   |  0.89    |
+| Floating Point Performance (SP GLOP/s)     |  0.75   |  0.75    |
 | Floating Point Performance (SP FLOP/cycle) |  0.73   |  0.82    |
-| Memory Bandwidth                           |  0.15   |  0.11    |
-| Memory Channels                            |  0.02   |  0.18    |
+| Memory Bandwidth                           | -0.37   |  0.09    |
+| Memory Channels                            | -0.17   | -0.06    |
 
 [Figure 3](#fig3) reveals that there are two separate correlation lines - one corresponding to CPU-only performance and one corresponding to 
 the systems with GPU-accelerators. By removing the GPU-enabled systems we can compute the correlation coefficients for the GROMACS benchmark
@@ -419,7 +419,7 @@ CPU-only systems.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.93   |  0.87    |
+| Floating Point Performance (SP GLOP/s)     |  0.81   |  0.61    |
 | Floating Point Performance (SP FLOP/cycle) |  0.88   |  0.78    |
 
 This comparison shows a much stronger correlation than the comparison when the 
