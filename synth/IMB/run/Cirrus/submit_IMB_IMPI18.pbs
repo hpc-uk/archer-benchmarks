@@ -1,0 +1,28 @@
+#!/bin/bash --login
+#
+#PBS -N IMB
+#PBS -l select=2:ncpus=36:mpiprocs=36
+#PBS -l walltime=1:0:0
+#PBS -l place=scatter:excl
+#PBS -A z04
+
+cd $PBS_O_WORKDIR
+
+module load intel-compilers-18
+module load intel-mpi-18
+
+export IMBDIR="/lustre/home/z04/aturner/benchmark/imb/mpi-benchmarks/bin_IMPI18"
+
+nodes=2
+cpn=36
+tests="PingPong Sendrecv Allgather Alltoall Allgatherv Alltoallv"
+mpilib="IMPI18"
+
+timestamp=$(date '+%Y%m%d%H%M')
+cores=$(( nodes * cpn ))
+
+for test in $tests
+do
+   mpirun -n $cores -ppn ${cpn} ${IMBDIR}/IMB-MPI1 -mem 1.4 -npmin ${cores} ${test} > IMB_${test}_${nodes}nodes_${mpilib}_${timestamp}.out
+done
+
