@@ -1,0 +1,28 @@
+#!/bin/bash --login
+#
+#PBS -N IMB
+#PBS -l select=32:ncpus=64:mpiprocs=64
+#PBS -l walltime=12:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+module load Generic-AArch64/SUSE/12/gcc/8.2.0
+module load mpi/openmpi/gnu-8.2/4.0.0_opt
+
+export IMBDIR="/home/fh01/fh01/aturner/benchmark/mpi-benchmarks_ompi"
+
+nodes=32
+cpn=64
+tests="PingPong Sendrecv Allgather Alltoall Allgatherv Alltoallv"
+mpilib="OMPI4"
+
+timestamp=$(date '+%Y%m%d%H%M')
+cores=$(( nodes * cpn ))
+
+for test in $tests
+do
+   MPIEXEC="mpiexec -n ${cores} -npernode ${cpn} --bind-to core -x UCX_TLS=ud,shm --mca opal_common_ucx_opal_mem_hooks 1 -x UCX_MEM_MMAP_HOOK_MODE=none"
+   $MPIEXEC ${IMBDIR}/IMB-MPI1 -mem 1.4 -npmin ${cores} ${test} > IMB_${test}_${nodes}nodes_${mpilib}_${timestamp}.out
+done
+
