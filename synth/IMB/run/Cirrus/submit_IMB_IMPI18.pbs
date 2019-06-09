@@ -8,8 +8,8 @@
 
 cd $PBS_O_WORKDIR
 
-module load intel-compilers-18
-module load intel-mpi-18
+module load intel-compilers-18/18.0.5.274
+module load intel-mpi-18/18.0.5.274
 
 export IMBDIR="/lustre/home/z04/aturner/benchmark/imb/mpi-benchmarks/bin_IMPI18"
 
