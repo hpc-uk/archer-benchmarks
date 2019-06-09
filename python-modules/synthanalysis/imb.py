@@ -58,9 +58,16 @@ def analyse_perf_matrix(baseline, systems, nodelist, sizelist, perfdict, invert=
 
     return ratiodict
 
-def get_scaling(nodelist, size, sysdict):
+def get_node_scaling(nodelist, size, sysdict):
     perflist = []
     for nodes in nodelist:
+        key = (nodes,size)
+        perflist.append(sysdict.get(key, None))
+    return perflist
+
+def get_size_scaling(sizelist, nodes, sysdict):
+    perflist = []
+    for size in sizelist:
         key = (nodes,size)
         perflist.append(sysdict.get(key, None))
     return perflist
