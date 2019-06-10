@@ -1,0 +1,30 @@
+#!/bin/bash --login
+#
+#PBS -N IMB
+#PBS -l select=32:ncpus=24:mpiprocs=24
+#PBS -l walltime=2:0:0
+#PBS -l place=scatter:excl
+#PBS -A z01
+
+cd $PBS_O_WORKDIR
+
+module load intel-cc-18/18.1.163
+module load intel-mpi-18/18.1.163
+
+export IMBDIR="/home/z01/z01/dc-turn1/benchmark/mpi-benchmarks"
+
+nodes=32
+cpn=24
+tests="PingPong Sendrecv Allgather Alltoall Allgatherv Alltoallv"
+mpilib="IMPI18"
+
+timestamp=$(date '+%Y%m%d%H%M')
+cores=$(( nodes * cpn ))
+
+cat $PBS_NODEFILE
+
+for test in $tests
+do
+   mpirun -f $PBS_NODEFILE -n $cores -ppn ${cpn} ${IMBDIR}/IMB-MPI1 -mem 1.4 -npmin ${cores} ${test} > IMB_${test}_${nodes}nodes_${mpilib}_${timestamp}.out
+done
+
