@@ -46,12 +46,15 @@ def analyse_perf_matrix(baseline, systems, nodelist, sizelist, perfdict, invert=
                         ratio = 0.0
                         tdict[key] = None
                 else:
-                    if baseperf is not None:
-                        ratio = perf/baseperf
-                        tdict[key] = ratio
-                    else:
+                    if (baseperf is None) or (abs(baseperf) < 0.0001):
                         ratio = 0.0
                         tdict[key] = None
+                    elif perf is None:
+                        ratio = 0.0
+                        tdict[key] = None
+                    else:
+                        ratio = perf/baseperf
+                        tdict[key] = ratio
                 outstring = outstring + "{:>10.2f}".format(ratio)
             print(outstring)
         ratiodict[system] = tdict
