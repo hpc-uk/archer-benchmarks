@@ -1,0 +1,58 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Thu Jun 13 08:25:20 2019
+# Machine               : aarch64
+# System                : Linux
+# Release               : 4.4.156-94.64-default
+# Version               : #1 SMP Fri Oct 19 07:43:21 UTC 2018 (31f2eb8)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /home/fh01/fh01/aturner/benchmark/mpi-benchmarks_hmpt/IMB-MPI1 -mem 1.4 -npmin 1024 Alltoallv 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Alltoallv
+
+#----------------------------------------------------------------
+# Benchmarking Alltoallv 
+# #processes = 1024 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0         1000        23.90        24.82        24.22
+            1          949     10322.47     11654.70     11393.82
+            2          862     10322.25     11664.49     11401.76
+            4          827     10487.19     11974.81     11625.27
+            8          827     10389.56     11754.89     11499.57
+           16          827     10157.34     11498.14     11233.34
+           32          827     10318.38     11677.40     11385.63
+           64          827     10729.84     11959.39     11804.57
+          128          770     11489.50     13087.57     12855.82
+          256          691     12989.53     14603.58     14397.62
+          512          523     16448.75     18532.59     18205.02
+         1024          379     23566.31     26445.64     25966.28
+         2048          214     42123.48     46734.73     45908.96
+         4096          122     77440.48     83425.15     82378.80
+         8192           66    142029.03    150952.29    149596.14
+        16384           36    265948.01    284336.03    281054.89
+        32768           17    582373.82    610507.04    602170.70
+        65536           10    951461.27   1020013.78   1006781.08
+       131072            6   1917861.48   2024189.95   2001327.21
+       262144 time-out.; Time limit (secs_per_sample * msg_sizes_list_len) is over; use "-time X" or SECS_PER_SAMPLE=X (IMB_settings.h) to increase time limit.
+
+
+# All processes entering MPI_Finalize
+
