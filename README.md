@@ -52,6 +52,7 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * [HPC Challenge (HPCC)](synth/HPCC) - HPC Challenge: tests of floating-point, memory and interconnect performance
 * [benchio](synth/benchio) - Test of parallel I/O write bandwidth using MPI-IO
 * [mdtest](synth/mdtest) - Test of parallel file system metadata server (MDS) performance
+* [Intel MPI Benchmarks (IMB)](synth/IMB) - Tests of MPI/interconnect performance, collective and point-to-point operation
 
 ## Application Benchmarks
 

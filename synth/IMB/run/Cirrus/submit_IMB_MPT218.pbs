@@ -8,7 +8,7 @@
 
 cd $PBS_O_WORKDIR
 
-module load gcc
+module load gcc/6.3.0
 module load mpt/2.18
 
 export IMBDIR="/lustre/home/z04/aturner/benchmark/imb/mpi-benchmarks/bin_MPT218"
