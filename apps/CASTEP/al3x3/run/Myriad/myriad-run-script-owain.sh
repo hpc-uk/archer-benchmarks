@@ -11,8 +11,8 @@
 # Modules needed for the run
 #####################################################################
 module load default-modules/2018
-#module load castep/intel-2018-owain
-module load castep/17.21/intel-2017
+module load castep/intel-2018-owain
+#module load castep/17.21/intel-2017
 
 #####################################################################
 # Set the benchmark run parameters
