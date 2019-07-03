@@ -30,7 +30,7 @@ module load castep/intel-2017-owain
 #  threads: Number of OpenMP threads to use per MPI process (must be a factor of cpersocket * smt)
 #  castep_exe_cmd: Command for CASTEP
 #
-nodes=1
+nodes=36
 casename="DNA"
 timestamp=$(date '+%Y%m%d%H%M')
 castep_exe_cmd='castep.mpi'
