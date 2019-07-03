@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 #$ -pe mpi 864
-#$ -l h_rt=24:00:00
+#$ -l h_rt=12:00:00
 #$ -l mem=4G
 #$ -cwd
 
