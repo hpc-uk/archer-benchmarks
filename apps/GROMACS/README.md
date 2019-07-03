@@ -7,7 +7,7 @@ with GPU-based systems.
 
 ## Large Benchmark
 
-### Run options
+### Run options
 
 In all cases, the following options were specified to `mdrun`:
 
@@ -50,7 +50,7 @@ Example job scripts can be found in this repository:
 
 ## Small benchmark: 1400k-atom (pair of hEGFR Dimers of 1IVO and 1NQL)
 
-### Run options
+### Run options
 
 In all cases, the following options were specified to `mdrun`:
 
