@@ -65,10 +65,10 @@ def get_perf_dict(filename, cpn):
             line = line.strip()
             tokens = line.split()
             resdict['Threads'] = int(tokens[1])
-        elif re.search('Log file opened', line):
+        elif re.search('Finished mdrun on', line):
             line = line.strip()
             tokens = line.split()
-            resdict['Date'] = " ".join(tokens[4:])         
+            resdict['Date'] = " ".join(tokens[5:])         
     infile.close()
 
     # If we do not have enough SCF cycle data then exit and return None
