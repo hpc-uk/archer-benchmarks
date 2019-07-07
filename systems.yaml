@@ -128,7 +128,7 @@ CSD3-Skylake:
   VWidth: 512
   MType: DDR4
   MFreq: ?MHz
-  MTot: 196GB
+  MTot: 192GB
   MChannels: 6
   MBW: 238.4
   Vendor: Dell
@@ -146,6 +146,7 @@ CSD3-Skylake:
 Tesseract:
   Name: Tesseract
   URL: http://tesseract-dirac.readthedocs.io
+  Org: EPCC, The University of Edinburgh
   PModel: Intel Xeon 4116
   PGen: Skylake Silver
   PFreq: 2.1
@@ -258,3 +259,32 @@ JADE:
   AModel: NVidia P100-SXM2-16GB
   APerNode: 8
   AFLOPs: 10600
+EPCC-CascadeLake:
+  Name: EPCC-CascadeLake
+  URL: 
+  Org: EPCC, The University of Edinburgh
+  PModel: Intel Xeon 8260
+  PGen: CascadeLake Platinum
+  PFreq: 2.4
+  FPFreq: [1.9, 1.5]
+  PCores: 24
+  PPerNode: 2
+  FLOPS: 64
+  VWidth: 512
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 192GB
+  MChannels: 6
+  MBW: 
+  Vendor: Intel
+  Nodes: 34
+  Interconnect: OPA
+  Topology: Fat Tree
+  FS: Lustre
+  FSVendor: Intel
+  FSClientV: 
+  FSServerV: 
+  FSLayout: 1xMDT, 6xOST
+  AModel:
+  APerNode:
+  AFLOPs:
