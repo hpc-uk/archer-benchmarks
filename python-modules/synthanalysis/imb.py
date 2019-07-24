@@ -39,7 +39,10 @@ def analyse_perf_matrix(baseline, systems, nodelist, sizelist, perfdict, invert=
                 baseperf = basedict.get(key, None)
                 perf = sysdict.get(key, None)
                 if invert:
-                    if perf is not None:
+                    if baseperf is None:
+                        ratio = 0.0
+                        tdict[key] = None
+                    elif perf is not None:
                         ratio = baseperf/perf
                         tdict[key] = ratio
                     else:
