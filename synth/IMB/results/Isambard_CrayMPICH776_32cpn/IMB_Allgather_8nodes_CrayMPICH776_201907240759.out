@@ -1,0 +1,63 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 1, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Jul 24 07:59:28 2019
+# Machine               : aarch64
+# System                : Linux
+# Release               : 4.12.14-25.22_5.0.70-cray_ari_c
+# Version               : #1 SMP Tue Mar 5 00:08:48 UTC 2019 (bc16c54)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /home/brx-aturner/benchmark/mpi-benchmarks/IMB-MPI1 -mem 1.4 -npmin 256 Allgather 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Allgather
+
+#----------------------------------------------------------------
+# Benchmarking Allgather 
+# #processes = 256 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0         1000         0.27         0.35         0.28
+            1         1000        17.62        22.30        20.33
+            2         1000        18.06        23.04        20.91
+            4         1000        19.40        25.58        22.87
+            8         1000        21.24        28.65        25.47
+           16         1000        25.78        36.91        32.01
+           32         1000        30.07        56.86        42.62
+           64         1000        37.78        71.96        54.66
+          128         1000        55.74        99.83        78.06
+          256         1000       107.57       153.16       128.35
+          512         1000       171.80       253.75       208.62
+         1024         1000       291.63       437.69       358.74
+         2048         1000       975.76      1103.50      1035.77
+         4096         1000      1273.89      1430.47      1349.21
+         8192          847     11077.26     11813.81     11436.89
+        16384          757     12238.69     13109.13     12685.29
+        32768          627     14535.96     15441.52     14976.21
+        65536          486     19315.32     20512.31     19904.13
+       131072          320     27802.95     30140.38     28941.29
+       262144          160     45219.37     48900.37     47195.24
+       524288           80     85849.91     94503.28     90084.21
+      1048576           12    162942.67    180606.54    173252.64
+      2097152            6    317588.61    373864.85    347744.14
+      4194304            3   3849640.37   4203980.53   4058692.91
+
+
+# All processes entering MPI_Finalize
+
+Application 1150804 resources: utime ~24715s, stime ~5608s, Rss ~1086160, inblocks ~0, outblocks ~0
