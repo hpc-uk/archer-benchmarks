@@ -1,0 +1,18 @@
+#!/bin/bash --login
+#
+#$ -S /bin/bash
+#$ -l h_rt=1:0:0
+#$ -N OSBLI_Bench
+#$ -pe mpi 72
+#$ -wd /home/uccaoke/Source/archer-benchmarks/apps/OpenSBLI/source/Benchmark
+
+#$ -P Free 
+#$ -A Test
+
+module load compilers/intel/2019
+module load mpi/intel/2019
+module load hdf/5-1.8.15-p1-impi/intel-2019-update4
+
+
+timestamp=$(date '+%Y%m%d%H%M')
+gerun ./OpenSBLI_mpi > output_${nodes}nodes_${timestamp}.txt 2> stderr.txt
