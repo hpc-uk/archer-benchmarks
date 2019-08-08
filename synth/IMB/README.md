@@ -15,7 +15,7 @@ The following benchmarks were run:
 * Allgather
 * Allgatherv
 
-## Analysis
+## Analysis
 
 Results are analysed in a series of Jupyter notebooks:
 
