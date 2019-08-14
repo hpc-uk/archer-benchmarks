@@ -19,7 +19,7 @@ BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
 module load cuda/10.0.130/gnu-4.9.2
 module load gromacs/2019.3/cuda-10
 
-MDRUN="gmx_gpu mdrun"
+MDRUN="gmx_cuda mdrun"
 
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
