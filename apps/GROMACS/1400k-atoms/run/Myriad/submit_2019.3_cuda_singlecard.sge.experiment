@@ -27,7 +27,7 @@ timestamp=$(date '+%Y%m%d%H%M')
 INPUTDIR=$BENCHDIR/run
 TPRFILE=benchmark.tpr
 
-WORKDIR=`pwd`/Scratch.MPI.${NSLOTS}.${SGE_TASK_ID}
+WORKDIR=`pwd`/Scratch.GPU.${NSLOTS}.${SGE_TASK_ID}
 
 
 #number of OpenMP threads per task is calculated 
