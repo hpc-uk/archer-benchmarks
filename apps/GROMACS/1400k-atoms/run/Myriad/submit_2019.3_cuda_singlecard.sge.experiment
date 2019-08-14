@@ -1,0 +1,56 @@
+#!/bin/bash --login
+#$ -S /bin/bash
+#$ -l h_rt=6:0:0
+#$ -N mpiGromacsBench
+#$ -pe smp 36
+#$ -cwd
+#$ -l mem=4000M
+#$ -t 1-10
+#$ -l gpu=1
+
+set -e
+
+cat $0
+
+NUM_NODES=1
+
+BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
+
+module load cuda/10.0.130/gnu-4.9.2
+module load gromacs/2019.3/cuda-10
+
+MDRUN="gmx_gpu mdrun"
+
+casename=nc2-cubic-md
+timestamp=$(date '+%Y%m%d%H%M')
+
+INPUTDIR=$BENCHDIR/run
+TPRFILE=benchmark.tpr
+
+WORKDIR=`pwd`/Scratch.MPI.${NSLOTS}.${SGE_TASK_ID}
+
+
+#number of OpenMP threads per task is calculated 
+export OMP_NUM_THREADS=36
+
+
+#number of PME ranks - a major source of load imbalance!
+#NPME=42
+
+rm -rf $WORKDIR
+mkdir -p $WORKDIR
+cd $WORKDIR
+
+cp $INPUTDIR/$TPRFILE .
+
+date
+$MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -npme 1  -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+date
+
+echo
+echo $casename.log
+echo "------------"
+resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
+mv $casename.log ${BENCHDIR}/run/mpi.${NSLOTS}.${SGE_TASK_ID}.log
+
+
