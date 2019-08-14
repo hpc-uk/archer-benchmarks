@@ -1,7 +1,7 @@
 #!/bin/bash --login
 #$ -S /bin/bash
 #$ -l h_rt=6:0:0
-#$ -N mpiGromacsBench
+#$ -N 2gpuGromacsBench
 #$ -pe smp 36
 #$ -cwd
 #$ -l mem=4000M
@@ -51,6 +51,6 @@ echo
 echo $casename.log
 echo "------------"
 resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
-mv $casename.log ${BENCHDIR}/run/mpi.${NSLOTS}.${SGE_TASK_ID}.log
+mv $casename.log ${BENCHDIR}/run/2gpu.${NSLOTS}.${SGE_TASK_ID}.log
 
 
