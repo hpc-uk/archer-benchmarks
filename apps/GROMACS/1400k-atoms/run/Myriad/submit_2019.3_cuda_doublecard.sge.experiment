@@ -44,7 +44,7 @@ cd $WORKDIR
 cp $INPUTDIR/$TPRFILE .
 
 date
-$MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -npme 1  -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+$MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
 date
 
 echo
