@@ -16,6 +16,7 @@ NUM_NODES=1
 
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
 
+module load compilers/gnu/4.9.2
 module load cuda/10.0.130/gnu-4.9.2
 module load mpi/openmpi/3.1.4/gnu-4.9.2
 module load gromacs/2019.3/cuda-10
