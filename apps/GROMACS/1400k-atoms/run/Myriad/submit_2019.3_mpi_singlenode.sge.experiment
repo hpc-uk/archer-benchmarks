@@ -15,6 +15,7 @@ NUM_NODES=1
 
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
 
+module purge
 module load default-modules/2018
 module load gromacs/2019.3/intel-2018
 
