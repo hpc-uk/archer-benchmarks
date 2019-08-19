@@ -28,7 +28,7 @@ timestamp=$(date '+%Y%m%d%H%M')
 INPUTDIR=$BENCHDIR/run
 TPRFILE=benchmark.tpr
 
-WORKDIR=`pwd`/Scratch.GPU.${NSLOTS}.${SGE_TASK_ID}
+WORKDIR=`pwd`/Scratch.18.GPU.${NSLOTS}.${SGE_TASK_ID}
 
 
 #number of OpenMP threads per task is calculated 
@@ -52,6 +52,6 @@ echo
 echo $casename.log
 echo "------------"
 resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
-mv $casename.log ${BENCHDIR}/run/gpu.${NSLOTS}.${SGE_TASK_ID}.log
+mv $casename.log ${BENCHDIR}/run/gpu.18.${NSLOTS}.${SGE_TASK_ID}.log
 
 
