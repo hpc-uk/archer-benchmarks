@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -l h_rt=6:0:0
 #$ -N twogpuGromacsBench
-#$ -pe mpi 36
+#$ -pe smp 36
 #$ -cwd
 #$ -l mem=4000M
 #$ -t 1-10
@@ -17,12 +17,10 @@ NUM_NODES=1
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
 
 module load rcps-core
-module load compilers/gnu/4.9.2
 module load cuda/10.0.130/gnu-4.9.2
-module load mpi/openmpi/3.1.4/gnu-4.9.2
 module load gromacs/2018.3/cuda-10
 
-MDRUN="mdrun_cuda_mpi"
+MDRUN="gmx_cuda mdrun"
 
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
@@ -30,7 +28,7 @@ timestamp=$(date '+%Y%m%d%H%M')
 INPUTDIR=$BENCHDIR/run
 TPRFILE=benchmark.tpr
 
-WORKDIR=`pwd`/Scratch.mpi.2GPU.${NSLOTS}.${SGE_TASK_ID}
+WORKDIR=`pwd`/Scratch.2GPU.${NSLOTS}.${SGE_TASK_ID}
 
 
 #number of OpenMP threads per task is calculated 
@@ -46,16 +44,14 @@ cd $WORKDIR
 
 cp $INPUTDIR/$TPRFILE .
 
-export OMP_NUM_THREADS=18
-
 date
-gerun $MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+$MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
 date
 
 echo
 echo $casename.log
 echo "------------"
 resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
-mv $casename.log ${BENCHDIR}/run/mpi.2gpu.${NSLOTS}.${SGE_TASK_ID}.log
+mv $casename.log ${BENCHDIR}/run/2gpu.${NSLOTS}.${SGE_TASK_ID}.log
 
 
