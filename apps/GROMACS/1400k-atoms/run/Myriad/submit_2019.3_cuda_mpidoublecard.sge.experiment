@@ -50,7 +50,7 @@ cp $INPUTDIR/$TPRFILE .
 export OMP_NUM_THREADS=18
 
 date
-gerun $MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+gerun $MDRUN -s $TPRFILE -deffnm $casename -nb gpu -pme gpu -pmefft gpu -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -npme 1
 date
 
 echo
