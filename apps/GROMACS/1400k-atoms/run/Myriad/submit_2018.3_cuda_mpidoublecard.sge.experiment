@@ -22,7 +22,7 @@ module load cuda/10.0.130/gnu-4.9.2
 module load mpi/openmpi/3.1.4/gnu-4.9.2
 module load gromacs/2018.3/cuda-10
 
-MDRUN="mdrun_cuda_mpi"
+MDRUN="mdrun_cuda"
 
 casename=nc2-cubic-md
 timestamp=$(date '+%Y%m%d%H%M')
