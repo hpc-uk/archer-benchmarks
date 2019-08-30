@@ -27,10 +27,10 @@ as published by the Free Software Foundation; either version 2.1
 of the License, or (at your option) any later version.
 
 GROMACS:      gmx mdrun, version 2019.3
-Executable:   /home/uccaoke/Applications/GROMACS/2019.3/gpu/bin/gmx_cuda
-Data prefix:  /home/uccaoke/Applications/GROMACS/2019.3/gpu
+Executable:   /shared/ucl/apps/gromacs/2019.3/intel-2018/gpu/bin/gmx_cuda
+Data prefix:  /shared/ucl/apps/gromacs/2019.3/intel-2018/gpu
 Working dir:  /lustre/scratch/scratch/uccaoke/archer-benchmarks/apps/GROMACS/1400k-atoms/run/Myriad/Scratch.GPU.36.7
-Process ID:   53935
+Process ID:   22821
 Command line:
   gmx_cuda mdrun -s benchmark.tpr -deffnm nc2-cubic-md -nb gpu -pme gpu -pmefft gpu -ntomp 36 -noconfout -dlb yes
 
@@ -356,7 +356,7 @@ J. Chem. Phys. 81 (1984) pp. 3684-3690
 
 There are: 1403180 Atoms
 
-Started mdrun on rank 0 Thu Aug 15 13:14:43 2019
+Started mdrun on rank 0 Fri Aug 30 14:06:14 2019
 
            Step           Time
               0        0.00000
@@ -369,43 +369,42 @@ Started mdrun on rank 0 Thu Aug 15 13:14:43 2019
       Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
    -1.57137e+07    3.64374e+06   -1.20700e+07   -1.20700e+07    3.00093e+02
  Pressure (bar)   Constr. rmsd
-   -1.20915e+01    6.02034e-06
+   -1.20971e+01    6.02034e-06
 
-step  200: timed with pme grid 160 280 208, coulomb cutoff 1.200: 15174.7 M-cycles
-step  400: timed with pme grid 144 256 192, coulomb cutoff 1.264: 15878.3 M-cycles
-step  600: timed with pme grid 128 224 192, coulomb cutoff 1.429: 18034.0 M-cycles
-step  800: timed with pme grid 144 240 192, coulomb cutoff 1.333: 16685.4 M-cycles
-step 1000: timed with pme grid 144 256 192, coulomb cutoff 1.264: 15865.9 M-cycles
-step 1200: timed with pme grid 160 256 192, coulomb cutoff 1.254: 15765.8 M-cycles
-step 1400: timed with pme grid 160 256 200, coulomb cutoff 1.250: 16929.2 M-cycles
-step 1600: timed with pme grid 160 280 200, coulomb cutoff 1.204: 15145.0 M-cycles
-step 1800: timed with pme grid 160 280 208, coulomb cutoff 1.200: 14943.7 M-cycles
-              optimal pme grid 160 280 208, coulomb cutoff 1.200
+step  200: timed with pme grid 160 280 208, coulomb cutoff 1.200: 10274.4 M-cycles
+step  400: timed with pme grid 144 256 192, coulomb cutoff 1.264: 9589.7 M-cycles
+step  600: timed with pme grid 128 224 192, coulomb cutoff 1.429: 11511.9 M-cycles
+step  800: timed with pme grid 144 240 192, coulomb cutoff 1.333: 11602.2 M-cycles
+step 1000: timed with pme grid 144 256 192, coulomb cutoff 1.264: 9486.9 M-cycles
+step 1200: timed with pme grid 160 256 192, coulomb cutoff 1.254: 9431.5 M-cycles
+step 1400: timed with pme grid 160 256 200, coulomb cutoff 1.250: 9367.7 M-cycles
+step 1600: timed with pme grid 160 280 200, coulomb cutoff 1.204: 8965.1 M-cycles
+              optimal pme grid 160 280 200, coulomb cutoff 1.204
            Step           Time
            5000       10.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.35475e+05    6.75067e+05    3.12074e+05    1.01313e+04   -1.64497e+04
+    1.37117e+05    6.71984e+05    3.12456e+05    1.04284e+04   -1.65118e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.42751e+04   -6.84295e+05    1.83245e+06   -1.81339e+07    6.47101e+04
+    9.43507e+04   -6.85261e+05    1.84288e+06   -1.81445e+07    6.36547e+04
       Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
-   -1.57104e+07    3.64107e+06   -1.20693e+07   -1.20671e+07    2.99873e+02
+   -1.57134e+07    3.64304e+06   -1.20704e+07   -1.20673e+07    3.00035e+02
  Pressure (bar)   Constr. rmsd
-   -2.06821e+01    6.05929e-06
+    9.18847e-01    6.06480e-06
 
            Step           Time
           10000       20.00000
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.35943e+05    6.74386e+05    3.11672e+05    1.03389e+04   -1.64456e+04
+    1.36036e+05    6.73399e+05    3.12572e+05    1.00450e+04   -1.65050e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.46534e+04   -6.82627e+05    1.84538e+06   -1.81484e+07    6.46981e+04
+    9.49687e+04   -6.83225e+05    1.83971e+06   -1.81454e+07    6.39300e+04
       Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
-   -1.57104e+07    3.63679e+06   -1.20736e+07   -1.20640e+07    2.99520e+02
+   -1.57145e+07    3.64118e+06   -1.20733e+07   -1.20640e+07    2.99882e+02
  Pressure (bar)   Constr. rmsd
-   -2.21284e+01    6.06046e-06
+    4.89107e+00    6.06488e-06
 
 	<======  ###############  ==>
 	<====  A V E R A G E S  ====>
@@ -415,26 +414,37 @@ step 1800: timed with pme grid 160 280 208, coulomb cutoff 1.200: 14943.7 M-cycl
 
    Energies (kJ/mol)
            Bond            U-B    Proper Dih.  Improper Dih.      CMAP Dih.
-    1.36236e+05    6.73751e+05    3.12225e+05    1.01028e+04   -1.65505e+04
+    1.36263e+05    6.73189e+05    3.12884e+05    1.00930e+04   -1.65528e+04
           LJ-14     Coulomb-14        LJ (SR)   Coulomb (SR)   Coul. recip.
-    9.46351e+04   -6.84300e+05    1.84132e+06   -1.81442e+07    6.29224e+04
+    9.45866e+04   -6.84269e+05    1.84317e+06   -1.81462e+07    6.23517e+04
       Potential    Kinetic En.   Total Energy  Conserved En.    Temperature
-   -1.57139e+07    3.64288e+06   -1.20710e+07   -1.20671e+07    3.00022e+02
+   -1.57145e+07    3.64310e+06   -1.20714e+07   -1.20672e+07    3.00040e+02
  Pressure (bar)   Constr. rmsd
-   -3.21022e+00    0.00000e+00
+   -4.50266e+00    0.00000e+00
 
           Box-X          Box-Y          Box-Z
-    1.82000e+01    3.20000e+01    2.40762e+01
+    1.82000e+01    3.20000e+01    2.40818e+01
 
    Total Virial (kJ/mol)
-    1.21186e+06   -2.52508e+02   -1.03701e+03
-   -2.79367e+02    1.20835e+06    1.07178e+03
-   -1.17133e+03    9.69545e+02    1.22673e+06
+    1.21122e+06   -1.49655e+03   -1.00766e+03
+   -1.65381e+03    1.21186e+06   -3.33046e+02
+   -9.38084e+02   -8.50409e+01    1.22572e+06
 
    Pressure (bar)
-   -1.20524e+01    5.49022e-01    1.22094e+00
-    6.12668e-01   -2.35812e+00   -2.74569e+00
-    1.53907e+00   -2.50354e+00    4.77985e+00
+   -9.97707e+00    4.04275e+00    1.42539e+00
+    4.41508e+00   -1.05838e+01    1.08574e+00
+    1.26064e+00    4.98491e-01    7.05288e+00
+
+
+       P P   -   P M E   L O A D   B A L A N C I N G
+
+ PP/PME load balancing changed the cut-off and PME settings:
+           particle-particle                    PME
+            rcoulomb  rlist            grid      spacing   1/beta
+   initial  1.200 nm  1.203 nm     160 280 208   0.116 nm  0.384 nm
+   final    1.204 nm  1.207 nm     160 280 200   0.120 nm  0.385 nm
+ cost-ratio           1.01             0.96
+ (note that these numbers concern only part of the total PP and PME load)
 
 
 	M E G A - F L O P S   A C C O U N T I N G
@@ -446,9 +456,9 @@ step 1800: timed with pme grid 160 280 208, coulomb cutoff 1.200: 14943.7 M-cycl
 
  Computing:                               M-Number         M-Flops  % Flops
 -----------------------------------------------------------------------------
- Pair Search distance check           17046.891600      153422.024     0.0
- NxN Ewald Elec. + LJ [F]          15999876.078912  1247990334.155    97.9
- NxN Ewald Elec. + LJ [V&F]          163360.942336    21073561.561     1.7
+ Pair Search distance check           17070.918576      153638.267     0.0
+ NxN Ewald Elec. + LJ [F]          16091825.384448  1255162379.987    97.9
+ NxN Ewald Elec. + LJ [V&F]          164300.217856    21194728.103     1.7
  1,4 nonbonded interactions            7402.700196      666243.018     0.1
  Shift-X                                141.721180         850.327     0.0
  Bonds                                 1121.572146       66172.757     0.0
@@ -466,7 +476,7 @@ step 1800: timed with pme grid 160 280 208, coulomb cutoff 1.200: 14943.7 M-cycl
  CMAP                                    28.342834       48182.818     0.0
  Urey-Bradley                          5292.309178      968492.580     0.1
 -----------------------------------------------------------------------------
- Total                                              1274422336.132   100.0
+ Total                                              1281715764.749   100.0
 -----------------------------------------------------------------------------
 
 
@@ -477,24 +487,24 @@ On 1 MPI rank, each using 36 OpenMP threads
  Computing:          Num   Num      Call    Wall time         Giga-Cycles
                      Ranks Threads  Count      (s)         total sum    %
 -----------------------------------------------------------------------------
- Neighbor search        1   36        101       6.513        538.029   0.9
- Launch GPU ops.        1   36      20002       2.847        235.193   0.4
- Force                  1   36      10001      42.844       3539.186   6.2
- Wait PME GPU gather    1   36      10001      87.780       7251.128  12.6
- Reduce GPU PME F       1   36      10001       7.237        597.798   1.0
- Wait GPU NB local      1   36      10001     467.216      38594.642  67.1
- NB X/F buffer ops.     1   36      19901      23.179       1914.731   3.3
- Write traj.            1   36          3       0.482         39.837   0.1
- Update                 1   36      10001       9.325        770.329   1.3
- Constraints            1   36      10001       9.446        780.282   1.4
- Rest                                          39.641       3274.583   5.7
+ Neighbor search        1   36        101       5.666        468.044   1.3
+ Launch GPU ops.        1   36      20002       2.446        202.086   0.6
+ Force                  1   36      10001      34.110       2817.661   7.9
+ Wait PME GPU gather    1   36      10001      44.379       3665.972  10.2
+ Reduce GPU PME F       1   36      10001       5.504        454.675   1.3
+ Wait GPU NB local      1   36      10001     265.423      21925.476  61.2
+ NB X/F buffer ops.     1   36      19901      21.304       1759.833   4.9
+ Write traj.            1   36          3       0.482         39.777   0.1
+ Update                 1   36      10001       9.417        777.887   2.2
+ Constraints            1   36      10001       9.297        767.950   2.1
+ Rest                                          35.696       2948.714   8.2
 -----------------------------------------------------------------------------
- Total                                        696.512      57535.738 100.0
+ Total                                        433.724      35828.076 100.0
 -----------------------------------------------------------------------------
 
                Core t (s)   Wall t (s)        (%)
-       Time:    25071.154      696.512     3599.5
+       Time:    15613.923      433.724     3600.0
                  (ns/day)    (hour/ns)
-Performance:        2.481        9.673
-Finished mdrun on rank 0 Thu Aug 15 13:26:20 2019
+Performance:        3.985        6.023
+Finished mdrun on rank 0 Fri Aug 30 14:13:28 2019
 
