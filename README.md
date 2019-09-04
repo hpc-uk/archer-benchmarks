@@ -17,6 +17,7 @@ support provided by the organisations running UK HPC systems, including:
 * GW4 Consortium
 * MMM Hub, UCL
 * The University of Oxford
+* DiRAC
 
 This repositiory contains:
 
@@ -63,7 +64,7 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * [HadGEM3](apps/HadGEM3) (Met Office Unified Model coupled to NEMO ocean model using the OASIS coupling framework)
 
 # Systems Included
-i
+
 The Jupyter notebook linked below provides a list of systems that have been benchmarked along with basic
 information on their configuration.
 
