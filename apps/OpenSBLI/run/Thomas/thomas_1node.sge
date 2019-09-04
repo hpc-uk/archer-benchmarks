@@ -19,5 +19,4 @@ module load mpi/intel/2017/update1/intel
 module load hdf/5-1.8.15-p1-impi/intel-2015-update2
 
 
-timestamp=$(date '+%Y%m%d%H%M')
-gerun ./OpenSBLI_mpi > output_1node_${SGE_TASK_ID}.txt 2> stderr.txt
+gerun ./OpenSBLI_mpi > output_1node_${SGE_TASK_ID}.txt 2> stderr.${SGE_TASK_ID}.txt
