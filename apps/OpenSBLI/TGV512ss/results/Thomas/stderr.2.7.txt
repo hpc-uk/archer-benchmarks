@@ -1,0 +1,67 @@
+GERun: 
+GERun: Note: Lines like this one prefixed with "GERun:" are for debugging
+GERun:       purposes only and you do not need to report them to rc-support
+GERun:       unless your job fails for other reasons.
+GERun: 
+GERun: 
+GERun: Grid Engine parallel launcher abstraction layer version iv (public)
+GERun: Dr Owain Kenway, RCAS, RITS, ISD, UCL, 7th of February, 2018
+GERun: 
+GERun: For licensing terms, see LICENSE.txt
+GERun: 
+GERun: Using environment: intel
+GERun: Running on 48 slots:
+GERun:    48 MPI tasks
+GERun:     1 threads per task
+GERun: TMPDIR=/tmpdir/job/861016.7
+GERun: 
+GERun: Contents of machinefile:
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98f-007
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: node-k98n-012
+GERun: 

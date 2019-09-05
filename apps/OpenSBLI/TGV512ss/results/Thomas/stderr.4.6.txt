@@ -1,0 +1,120 @@
+GERun: 
+GERun: Note: Lines like this one prefixed with "GERun:" are for debugging
+GERun:       purposes only and you do not need to report them to rc-support
+GERun:       unless your job fails for other reasons.
+GERun: 
+GERun: 
+GERun: Grid Engine parallel launcher abstraction layer version iv (public)
+GERun: Dr Owain Kenway, RCAS, RITS, ISD, UCL, 7th of February, 2018
+GERun: 
+GERun: For licensing terms, see LICENSE.txt
+GERun: 
+GERun: Using environment: intel
+GERun: Running on 96 slots:
+GERun:    96 MPI tasks
+GERun:     1 threads per task
+GERun: TMPDIR=/tmpdir/job/861023.6
+GERun: 
+GERun: Contents of machinefile:
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98f-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98p-004
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98j-006
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: node-k98q-007
+GERun: 
+error: executing task of job 861023 failed: failed sending task to execd@node-k98j-006: can't resolve host name
+[mpiexec@node-k98f-004] control_cb (../../pm/pmiserv/pmiserv_cb.c:781): connection to proxy 2 at host node-k98p-004 failed
+[mpiexec@node-k98f-004] HYDT_dmxu_poll_wait_for_event (../../tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@node-k98f-004] HYD_pmci_wait_for_completion (../../pm/pmiserv/pmiserv_pmci.c:501): error waiting for event
+[mpiexec@node-k98f-004] main (../../ui/mpich/mpiexec.c:1147): process manager error waiting for completion
