@@ -26,15 +26,15 @@ export HDF5_INSTALL_PATH=/shared/ucl/apps/hdf5/1.8.15-p1-impi/intel-2015-update2
 Build the OPS library:
 
 ```bash
-make clean
-make mpi
+make -f Makefile.ucl clean
+make -f Makefile.ucl mpi
 ```
 
 ## Build the OpenSBLI benchmark
 
 ```bash
 cd ../../../Benchmark
-make clean
-make OpenSBLI_mpi
+make -f Makefile.ucl clean
+make -f Makefile.ucl OpenSBLI_mpi
 ```
 

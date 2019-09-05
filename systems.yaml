@@ -114,6 +114,64 @@ Thomas:
   AModel:
   APerNode:
   AFLOPs:
+Grace:
+  Name: Grace
+  URL: https://wiki.rc.ucl.ac.uk/wiki/RC_Systems#Grace
+  Org: UCL
+  PModel: Intel Xeon E5-2630v3
+  PGen: Haswell
+  PFreq: 2.4
+  FPFreq: [?]
+  PCores: 8
+  PPerNode: 2
+  FLOPS: 32
+  VWidth: 256
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 64GB
+  MChannels: 4
+  MBW: ?
+  Vendor: Lenovo
+  Nodes: 684
+  Interconnect: Intel QDR IB
+  Topology: Fat Tree, 1:1 Non-blocking
+  FS: Lustre
+  FSVendor: DDN
+  FSClientV: 
+  FSServerV: 
+  FSLayout: 
+  AModel:
+  APerNode:
+  AFLOPs:
+Myriad:
+  Name: Grace
+  URL: https://wiki.rc.ucl.ac.uk/wiki/RC_Systems#Myriad
+  Org: UCL
+  PModel: Intel Xeon Gold 6140
+  PGen: Skylake
+  PFreq: 2.3
+  FPFreq: [?]
+  PCores: 18
+  PPerNode: 2
+  FLOPS: 64
+  VWidth: 512
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 192GB/1.5TB
+  MChannels: 6
+  MBW: ?
+  Vendor: Lenovo
+  Nodes: 62
+  Interconnect: Mellanox EDR IB
+  Topology: Fat Tree, storage optimised (no inter node communication)
+  FS: Lustre
+  FSVendor: Lenovo
+  FSClientV: 
+  FSServerV: 
+  FSLayout: 
+  AModel:
+  APerNode:
+  AFLOPs:
 CSD3-Skylake:
   Name: Peta4-Skylake
   URL: https://www.csd3.cam.ac.uk/
