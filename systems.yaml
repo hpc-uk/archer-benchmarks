@@ -11,7 +11,7 @@ ARCHER:
   FLOPS: 16
   VWidth: 128
   MType: DDR3
-  MFreq: ?MHz
+  MFreq: MHz
   MTot: 64/128GB
   MChannels: 4
   MBW: 119.4
@@ -40,7 +40,7 @@ Cirrus:
   FLOPS: 32
   VWidth: 256
   MType: DDR4
-  MFreq: ?MHz
+  MFreq: MHz
   MTot: 256GB
   MChannels: 4
   MBW: 153.6
@@ -69,7 +69,7 @@ Athena:
   FLOPS: 32
   VWidth: 256
   MType: DDR4
-  MFreq: ?MHz
+  MFreq: MHz
   MTot: 128GB
   MChannels: 4
   MBW: 153.6
@@ -81,7 +81,7 @@ Athena:
   FSVendor: IBM
   FSClientV: 4.2.3-6
   FSServerV: 4.2.3-6
-  FSLayout: NA
+  FSLayout: Unknown
   AModel:
   APerNode:
   AFLOPs:
@@ -98,7 +98,7 @@ Thomas:
   FLOPS: 32
   VWidth: 256
   MType: DDR4
-  MFreq: ?MHz
+  MFreq: MHz
   MTot: 128GB
   MChannels: 4
   MBW: 153.6
@@ -121,7 +121,7 @@ Grace:
   PModel: Intel Xeon E5-2630v3
   PGen: Haswell
   PFreq: 2.4
-  FPFreq: [?]
+  FPFreq: 
   PCores: 8
   PPerNode: 2
   FLOPS: 32
@@ -130,7 +130,7 @@ Grace:
   MFreq: ?MHz
   MTot: 64GB
   MChannels: 4
-  MBW: ?
+  MBW: 0.0
   Vendor: Lenovo
   Nodes: 684
   Interconnect: Intel QDR IB
@@ -139,7 +139,7 @@ Grace:
   FSVendor: DDN
   FSClientV: 
   FSServerV: 
-  FSLayout: 
+  FSLayout: Unknown
   AModel:
   APerNode:
   AFLOPs:
@@ -159,7 +159,7 @@ Myriad:
   MFreq: ?MHz
   MTot: 192GB/1.5TB
   MChannels: 6
-  MBW: ?
+  MBW: 0.0
   Vendor: Lenovo
   Nodes: 62
   Interconnect: Mellanox EDR IB
@@ -168,7 +168,7 @@ Myriad:
   FSVendor: Lenovo
   FSClientV: 
   FSServerV: 
-  FSLayout: 
+  FSLayout: Unknown
   AModel:
   APerNode:
   AFLOPs:
@@ -255,7 +255,7 @@ Isambard:
   FSVendor: NA
   FSClientV: NA
   FSServerV: NA
-  FSLayout: NA
+  FSLayout: Unknown
   AModel:
   APerNode:
   AFLOPs:
@@ -277,7 +277,7 @@ CSD3-GPU:
   MChannels: 4
   MBW: 76.8
   Vendor: Dell
-  Nodes: 
+  Nodes: 90
   Interconnect: FDR
   Topology: Fat Tree
   FS: Lustre
@@ -306,14 +306,14 @@ JADE:
   MChannels: 4
   MBW: 153.6
   Vendor: NVidia
-  Nodes: 
-  Interconnect: 
-  Topology: 
+  Nodes: 0
+  Interconnect: Unknown
+  Topology: Unknown
   FS: Lustre
-  FSVendor: 
+  FSVendor: Unknown
   FSClientV: 2.7
   FSServerV: 2.7
-  FSLayout: 
+  FSLayout: Unknown
   AModel: NVidia P100-SXM2-16GB
   APerNode: 8
   AFLOPs: 10600
@@ -333,7 +333,7 @@ EPCC-CascadeLake:
   MFreq: ?MHz
   MTot: 192GB
   MChannels: 6
-  MBW: 
+  MBW: 0.0
   Vendor: Intel
   Nodes: 34
   Interconnect: OPA
@@ -346,3 +346,33 @@ EPCC-CascadeLake:
   AModel:
   APerNode:
   AFLOPs:
+AMD_Rome:
+  Name: AMD-Rome
+  URL:
+  Org: 
+  PModel: AMD 7502
+  PGen: Rome
+  PFreq: 2.5
+  FPFreq: 
+  PCores: 32
+  PPerNode: 2
+  FLOPS: 64
+  VWidth: 256
+  MType: DDR4
+  MFreq: ?MHz
+  MTot: 256GiB
+  MChannels: 8
+  MBW: 0.0
+  Vendor: Unknown
+  Nodes: 4
+  Interconnect: EDR
+  Topology: Fat Tree
+  FS: Lustre
+  FSVendor: Unknown
+  FSClientV:
+  FSServerV:
+  FSLayout: Unknown
+  AModel:
+  APerNode:
+  AFLOPs:
+
