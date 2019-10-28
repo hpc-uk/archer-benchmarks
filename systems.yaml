@@ -346,33 +346,4 @@ EPCC-CascadeLake:
   AModel:
   APerNode:
   AFLOPs:
-AMD_Rome:
-  Name: AMD-Rome
-  URL:
-  Org: 
-  PModel: AMD 7502
-  PGen: Rome
-  PFreq: 2.5
-  FPFreq: 
-  PCores: 32
-  PPerNode: 2
-  FLOPS: 64
-  VWidth: 256
-  MType: DDR4
-  MFreq: ?MHz
-  MTot: 256GiB
-  MChannels: 8
-  MBW: 0.0
-  Vendor: Unknown
-  Nodes: 4
-  Interconnect: EDR
-  Topology: Fat Tree
-  FS: Lustre
-  FSVendor: Unknown
-  FSClientV:
-  FSServerV:
-  FSLayout: Unknown
-  AModel:
-  APerNode:
-  AFLOPs:
-
+  
