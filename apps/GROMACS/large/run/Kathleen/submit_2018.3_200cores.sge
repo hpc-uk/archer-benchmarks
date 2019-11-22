@@ -4,7 +4,7 @@
 #$ -N GromacsBench
 #$ -pe mpi 200
 #$ -cwd
-#$ -l mem=3700M
+#$ -l mem=1000M
 
 cat $0
 
