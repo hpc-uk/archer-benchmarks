@@ -42,7 +42,7 @@ export OMP_NUM_THREADS=$[($CORES_PER_CHIP*$HTHREADS_PER_CORE)/$TASKS_PER_CHIP]
 tasks=$[$NUM_NODES*$CHIPS_PER_NODE*$TASKS_PER_CHIP]
 
 #number of PME ranks - a major source of load imbalance!
-NPME=42
+NPME=50
 
 rm -rf $WORKDIR
 mkdir -p $WORKDIR
