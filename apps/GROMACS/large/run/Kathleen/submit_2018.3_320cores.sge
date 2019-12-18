@@ -2,7 +2,7 @@
 #$ -S /bin/bash
 #$ -l h_rt=1:0:0
 #$ -N GromacsBench
-#$ -pe mpi 640
+#$ -pe mpi 320
 #$ -cwd
 #$ -l mem=2000M
 #$ -l threads=1
@@ -34,10 +34,10 @@ CORES_PER_CHIP=20
 TASKS_PER_CHIP=20
 
 #choose number of hyperthreads per core
-HTHREADS_PER_CORE=2 
+HTHREADS_PER_CORE=1
 
 #number of OpenMP threads per task is calculated 
-export OMP_NUM_THREADS=2
+export OMP_NUM_THREADS=1
 
 #total number of tasks is calculated
 tasks=$[$NUM_NODES*$CHIPS_PER_NODE*$TASKS_PER_CHIP]
