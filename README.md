@@ -1,7 +1,7 @@
 # UK HPC Benchmarking
 
 This repository contains information, results and analysis of running a selection
-of application and synthetic benchmarks on UK HPC systems. The list of systems
+of application and synthetic benchmarks on UK HPC systems. The full list of systems
 included to date is provided below.
 
 This is an open source initiative and is keen to accept contributions from the
