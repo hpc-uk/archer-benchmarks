@@ -6,7 +6,7 @@
 #$ -cwd
 #$ -l mem=1000M
 #$ -l threads=1
-
+set -e
 cat $0
 
 NUM_NODES=5
@@ -14,6 +14,7 @@ NUM_NODES=5
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/large
 
 module purge
+module load beta-modules
 module load gcc-libs/7.3.0
 module load gerun
 module load compilers/intel/2020/release mpi/intel/2019/update6/intel 
