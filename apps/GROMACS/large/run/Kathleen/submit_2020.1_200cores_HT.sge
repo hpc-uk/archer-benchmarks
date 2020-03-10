@@ -1,0 +1,66 @@
+#!/bin/bash --login
+#$ -S /bin/bash
+#$ -l h_rt=1:0:0
+#$ -N GromacsBench
+#$ -pe mpi 400
+#$ -cwd
+#$ -l mem=1000M
+#$ -l threads=1
+
+cat $0
+
+NUM_NODES=5
+
+BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/large
+
+module remove gcc-libs
+module load gcc-libs/7.3.0
+module load compilers/intel/2020/release mpi/intel/2019/update6/intel 
+module load gromacs/2020.1/intel-2020
+
+MDRUN="mdrun_mpi"
+
+casename=nc2-cubic-md
+timestamp=$(date '+%Y%m%d%H%M')
+
+INPUTDIR=$BENCHDIR/run
+TPRFILE=nsteps800.tpr
+
+WORKDIR=`pwd`/Scratch
+
+#hardware specific settings
+CHIPS_PER_NODE=2
+CORES_PER_CHIP=20
+
+#choose number of MPI tasks per chip
+TASKS_PER_CHIP=20
+
+#choose number of hyperthreads per core
+HTHREADS_PER_CORE=2 
+
+#number of OpenMP threads per task is calculated 
+export OMP_NUM_THREADS=2
+
+#total number of tasks is calculated
+tasks=$[$NUM_NODES*$CHIPS_PER_NODE*$TASKS_PER_CHIP]
+
+#number of PME ranks - a major source of load imbalance!
+NPME=50
+
+rm -rf $WORKDIR
+mkdir -p $WORKDIR
+cd $WORKDIR
+
+cp $INPUTDIR/$TPRFILE .
+
+date
+gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes -npme $NPME
+date
+
+echo
+echo $casename.log
+echo "------------"
+resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
+mv $casename.log ${BENCHDIR}/run/${resfile}
+
+
