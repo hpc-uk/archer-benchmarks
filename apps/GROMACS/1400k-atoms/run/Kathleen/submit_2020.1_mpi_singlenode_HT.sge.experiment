@@ -16,8 +16,9 @@ NUM_NODES=1
 
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
 
-module remove gcc-libs
+module purge
 module load gcc-libs/7.3.0
+module load gerun
 module load compilers/intel/2020/release mpi/intel/2019/update6/intel 
 module load gromacs/2020.1/intel-2020
 
