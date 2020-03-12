@@ -1,0 +1,62 @@
+#!/bin/bash --login
+#$ -S /bin/bash
+#$ -l h_rt=6:0:0
+#$ -N mpiGromacsBench
+#$ -pe mpi 36
+#$ -cwd
+#$ -l mem=4000M
+#$ -t 1-10
+
+#$ -ac allow=BDE
+
+
+
+set -e
+
+cat $0
+
+NUM_NODES=1
+
+BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/1400k-atoms
+
+odule purge
+module load rcps-core beta-modules
+module load compilers/intel/2020/release
+module load mpi/intel/2019/update6/intel
+module load gromacs/2020.1/intel-2020
+
+MDRUN="mdrun_mpi"
+
+casename=nc2-cubic-md
+timestamp=$(date '+%Y%m%d%H%M')
+
+INPUTDIR=$BENCHDIR/run
+TPRFILE=benchmark.tpr
+
+WORKDIR=`pwd`/Scratch.MPI.${NSLOTS}.${SGE_TASK_ID}
+
+
+#number of OpenMP threads per task is calculated 
+export OMP_NUM_THREADS=1
+
+
+#number of PME ranks - a major source of load imbalance!
+#NPME=42
+
+rm -rf $WORKDIR
+mkdir -p $WORKDIR
+cd $WORKDIR
+
+cp $INPUTDIR/$TPRFILE .
+
+date
+gerun $MDRUN -s $TPRFILE -deffnm $casename -ntomp $OMP_NUM_THREADS -noconfout -dlb yes 
+date
+
+echo
+echo $casename.log
+echo "------------"
+resfile="${casename}_${NUM_NODES}nodes_${timestamp}.log"
+mv $casename.log ${BENCHDIR}/run/mpi.${NSLOTS}.${SGE_TASK_ID}.log
+
+
