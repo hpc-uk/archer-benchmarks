@@ -1,0 +1,994 @@
+ +-------------------------------------------------+
+ |                                                 |
+ |      CCC   AA    SSS  TTTTT  EEEEE  PPPP        |
+ |     C     A  A  S       T    E      P   P       |
+ |     C     AAAA   SS     T    EEE    PPPP        |
+ |     C     A  A     S    T    E      P           |
+ |      CCC  A  A  SSS     T    EEEEE  P           |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Academic Release CASTEP version 18.1 |          
+ | Ab Initio Total Energy Program                  |
+ |                                                 |
+ | Authors:                                        |
+ | M. Segall, M. Probert, C. Pickard, P. Hasnip,   |
+ | S. Clark, K. Refson, J. R. Yates, M. Payne      |
+ |                                                 |
+ | Contributors:                                   |
+ | P. Lindan, P. Haynes, J. White, V. Milman,      |
+ | N. Govind, M. Gibson, P. Tulip, V. Cocula,      |
+ | B. Montanari, D. Quigley, M. Glover,            |
+ | L. Bernasconi, A. Perlov, M. Plummer,           |
+ | E. McNellis, J. Meyer, J. Gale, D. Jochym       |
+ | J. Aarons, B. Walker, R. Gillen, D. Jones       |
+ | T. Green, I. J. Bush, C. J. Armstrong,          |
+ | E. J. Higgins, E. L. Brown, M. S. McFly,        |
+ | J. Wilkins, B-C. Shih, P. J. P. Byrne           |
+ |                                                 |
+ | Copyright (c) 2000 - 2017                       |
+ |                                                 |
+ |     Distributed under the terms of an           |
+ |     Agreement between the United Kingdom        |
+ |     Car-Parrinello (UKCP) Consortium,           |
+ |     Daresbury Laboratory and Accelrys, Inc.     |
+ |                                                 |
+ | Please cite                                     |
+ |                                                 |
+ |     "First principles methods using CASTEP"     |
+ |                                                 |
+ |         Zeitschrift fuer Kristallographie       |
+ |           220(5-6) pp. 567-570 (2005)           |
+ |                                                 |
+ | S. J. Clark, M. D. Segall, C. J. Pickard,       |
+ | P. J. Hasnip, M. J. Probert, K. Refson,         |
+ | M. C. Payne                                     |
+ |                                                 |
+ |       in all publications arising from          |
+ |              your use of CASTEP                 |
+ |                                                 |
+ +-------------------------------------------------+
+ 
+ 
+ Compiled for linux_x86_64_ifort17 on Tue, 29 May 2018 22:20:28 +0100
+ from code version baee3ec33e17+  Mon, 11 Dec 2017 11:05:17 +0000
+ Compiler: Intel Fortran 17.0.2.174; Optimisation: fast
+ MATHLIBS: Intel MKL(2017.0.2) (LAPACK version 3.7.0)
+ FFT Lib : mkl
+ Fundamental constants values: CODATA 2014
+ 
+ Run started: Mon, 16 Mar 2020 19:42:07 +0000
+ 
+ Pseudo atomic calculation performed for H 1s1
+ 
+ Converged in 13 iterations to a total energy of -12.4698 eV
+ 
+ 
+ Pseudo atomic calculation performed for N 2s2 2p3
+ 
+ Converged in 20 iterations to a total energy of -263.6512 eV
+ 
+ 
+ Pseudo atomic calculation performed for Ti 3s2 3p6 3d2 4s2
+ 
+ Converged in 32 iterations to a total energy of -1598.5955 eV
+ 
+ Calculation parallelised over 32 processes.
+ Data is distributed by G-vector(4-way) and k-point(8-way)
+
+ ************************************ Title ************************************
+ 
+
+ ***************************** General Parameters ******************************
+  
+ output verbosity                               : normal  (1)
+ write checkpoint data to                       : TiN-mp.check
+ type of calculation                            : single point energy
+ stress calculation                             : on
+ density difference calculation                 : off
+ electron localisation func (ELF) calculation   : off
+ Hirshfeld analysis                             : off
+ unlimited duration calculation
+ timing information                             : on
+ memory usage estimate                          : on
+ write extra output files                       : on
+ write final potential to formatted file        : off
+ write final density to formatted file          : off
+ write BibTeX reference list                    : on
+ write OTFG pseudopotential files               : on
+ write electrostatic potential file             : on
+ write bands file                               : on
+ checkpoint writing                             : both castep_bin and check files
+  
+ output         length unit                     : A
+ output           mass unit                     : amu
+ output           time unit                     : ps
+ output         charge unit                     : e
+ output           spin unit                     : hbar/2
+ output         energy unit                     : eV
+ output          force unit                     : eV/A
+ output       velocity unit                     : A/ps
+ output       pressure unit                     : GPa
+ output     inv_length unit                     : 1/A
+ output      frequency unit                     : cm-1
+ output force constant unit                     : eV/A**2
+ output         volume unit                     : A**3
+ output   IR intensity unit                     : (D/A)**2/amu
+ output         dipole unit                     : D
+ output         efield unit                     : eV/A/e
+ output        entropy unit                     : J/mol/K
+  
+ wavefunctions paging                           : none
+ random number generator seed                   :          1
+ data distribution                              : optimal for this architecture
+ optimization strategy                          : maximize speed(+++)
+
+ *********************** Exchange-Correlation Parameters ***********************
+  
+ using functional                               : Perdew Wang (1991)
+ relativistic treatment                         : Koelling-Harmon
+ DFT+D: Semi-empirical dispersion correction    : off
+
+ ************************* Pseudopotential Parameters **************************
+  
+ pseudopotential representation                 : reciprocal space
+ <beta|phi> representation                      : reciprocal space
+ spin-orbit coupling                            : off
+
+ **************************** Basis Set Parameters *****************************
+  
+ plane wave basis set cut-off                   :   380.0000   eV
+ size of standard grid                          :     1.7500
+ size of   fine   gmax                          :    17.4771   1/A
+ finite basis set correction                    : none
+
+ **************************** Electronic Parameters ****************************
+  
+ number of  electrons                           :  273.0    
+ net charge of system                           :  0.000    
+ net spin   of system                           :  1.000    
+ number of  up  spins                           :  137.0    
+ number of down spins                           :  136.0    
+ treating system as spin-polarized
+ number of bands                                :        164
+
+ ********************* Electronic Minimization Parameters **********************
+  
+ Method: Treating system as metallic with density mixing treatment of electrons,
+         and number of  SD  steps               :          1
+         and number of  CG  steps               :          4
+  
+ total energy / atom convergence tol.           : 0.1000E-04   eV
+ eigen-energy convergence tolerance             : 0.1000E-05   eV
+ max force / atom convergence tol.              : ignored
+ convergence tolerance window                   :          3   cycles
+ max. number of SCF cycles                      :         40
+ smearing scheme                                : Gaussian
+ smearing width                                 : 0.1000       eV
+ Fermi energy convergence tolerance             : 0.2721E-13   eV
+ periodic dipole correction                     : NONE
+
+ ************************** Density Mixing Parameters **************************
+  
+ density-mixing scheme                          : Pulay
+ max. length of mixing history                  :         20
+ charge density mixing amplitude                : 0.8000    
+   spin density mixing amplitude                :  2.000    
+ cut-off energy for mixing                      :  380.0       eV
+
+ *********************** Population Analysis Parameters ************************
+  
+ Population analysis with cutoff                :  3.000       A
+ Population analysis output                     : summary and pdos components
+
+ *******************************************************************************
+  
+ 
+                           -------------------------------
+                                      Unit Cell
+                           -------------------------------
+        Real Lattice(A)                      Reciprocal Lattice(1/A)
+     5.9906087     0.0000000     0.0000000        1.048839221   0.000000000   0.000000000
+     0.0000000     5.9906090     0.0000000        0.000000000   1.048839159   0.000000000
+     0.0000000     0.0000000    18.2180000        0.000000000   0.000000000   0.344888863
+ 
+                       Lattice parameters(A)       Cell Angles
+                    a =      5.990609          alpha =   90.000000
+                    b =      5.990609          beta  =   90.000000
+                    c =     18.218000          gamma =   90.000000
+ 
+                       Current cell volume =           653.796546       A**3
+                                   density =             1.515743   AMU/A**3
+                                           =             2.516951     g/cm^3
+ 
+                           -------------------------------
+                                     Cell Contents
+                           -------------------------------
+                         Total number of ions in cell =   33
+                      Total number of species in cell =    3
+                        Max number of any one species =   16
+ 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            x  Element    Atom        Fractional coordinates of atoms  x
+            x            Number           u          v          w      x
+            x----------------------------------------------------------x
+            x  H            1         0.499999   0.467398   0.779668   x 
+            x  N            1         0.000000   0.000000   0.329564   x 
+            x  N            2         0.000000   0.500000   0.329564   x 
+            x  N            3         0.500000   0.000000   0.329564   x 
+            x  N            4         0.500000   0.500000   0.329564   x 
+            x  N            5         0.000000   0.000000   0.563937   x 
+            x  N            6         0.000000   0.500000   0.563937   x 
+            x  N            7         0.500000   0.000000   0.563937   x 
+            x  N            8         0.500000   0.500000   0.563937   x 
+            x  N            9         0.250000   0.250000   0.444297   x 
+            x  N           10         0.250000   0.750000   0.444297   x 
+            x  N           11         0.750000   0.250000   0.444297   x 
+            x  N           12         0.750000   0.750000   0.444297   x 
+            x  N           13         0.250000   0.250000   0.680849   x 
+            x  N           14         0.250000   0.750000   0.680849   x 
+            x  N           15         0.750000   0.250000   0.680849   x 
+            x  N           16         0.750000   0.750000   0.680849   x 
+            x  Ti           1         0.000000   0.000000   0.449044   x 
+            x  Ti           2         0.000000   0.500000   0.449044   x 
+            x  Ti           3         0.500000   0.000000   0.449044   x 
+            x  Ti           4         0.500000   0.500000   0.449044   x 
+            x  Ti           5         0.000000   0.000000   0.670851   x 
+            x  Ti           6         0.000000   0.500000   0.670851   x 
+            x  Ti           7         0.500000   0.000000   0.670851   x 
+            x  Ti           8         0.500000   0.500000   0.670851   x 
+            x  Ti           9         0.250000   0.250000   0.329564   x 
+            x  Ti          10         0.250000   0.750000   0.329564   x 
+            x  Ti          11         0.750000   0.250000   0.329564   x 
+            x  Ti          12         0.750000   0.750000   0.329564   x 
+            x  Ti          13         0.250000   0.250000   0.560360   x 
+            x  Ti          14         0.250000   0.750000   0.560360   x 
+            x  Ti          15         0.750000   0.250000   0.560360   x 
+            x  Ti          16         0.750000   0.750000   0.560360   x 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ 
+ 
+                         No user defined ionic velocities
+ 
+                           -------------------------------
+                                   Details of Species
+                           -------------------------------
+ 
+                               Mass of species in AMU
+                                    H    1.0079400
+                                    N   14.0067400
+                                    Ti   47.8670000
+ 
+                          Electric Quadrupole Moment (Barn)
+                                    H    0.0028600 Isotope  2
+                                    N    0.0204400 Isotope 14
+                                    Ti    0.3020000 Isotope 47
+ 
+                          Files used for pseudopotentials:
+                                    H H_01.usp
+                                    N N_00.usp
+                                    Ti Ti_00.usp
+ 
+                           -------------------------------
+                              k-Points For BZ Sampling
+                           -------------------------------
+                       MP grid size for SCF calculation is  4  4  1
+                            with an offset of   0.000  0.000  0.000
+                       Number of kpoints used =             8
+ 
+                           -------------------------------
+                               Symmetry and Constraints
+                           -------------------------------
+ 
+                      Maximum deviation from symmetry =  0.00000         ANG
+ 
+                      Number of symmetry operations   =           1
+                      Number of ionic constraints     =           3
+                      Point group of crystal =     1: C1, 1, 1
+                      Space group of crystal =     6: Pm, P -2y
+ 
+             Set iprint > 1 for details on symmetry rotations/translations
+ 
+                         Centre of mass is constrained
+             Set iprint > 1 for details of linear ionic constraints
+ 
+                         Number of cell constraints= 0
+                         Cell constraints are:  1 2 3 4 5 6
+ 
+                         External pressure/stress (GPa)
+                          0.00000   0.00000   0.00000
+                                    0.00000   0.00000
+                                              0.00000
+  
++---------------- MEMORY AND SCRATCH DISK ESTIMATES PER PROCESS --------------+
+|                                                     Memory          Disk    |
+| Baseline code, static data and system overhead   260161.0 MB         0.0 MB |
+| BLAS internal memory storage                          0.0 MB         0.0 MB |
+| Model and support data                              161.6 MB         0.0 MB |
+| Electronic energy minimisation requirements          64.9 MB         0.0 MB |
+| Force calculation requirements                        9.0 MB         0.0 MB |
+| Stress calculation requirements                      10.1 MB         0.0 MB |
+|                                               ----------------------------- |
+| Approx. total storage required per process       260387.5 MB         0.0 MB |
+|                                                                             |
+| Requirements will fluctuate during execution and may exceed these estimates |
++-----------------------------------------------------------------------------+
+Calculating total energy with cut-off of  380.000 eV.
+------------------------------------------------------------------------ <-- SCF
+SCF loop      Energy           Fermi           Energy gain       Timer   <-- SCF
+                               energy          per atom          (sec)   <-- SCF
+------------------------------------------------------------------------ <-- SCF
+Initial  -2.59379601E+004  0.00000000E+000                         2.53  <-- SCF
+      1  -2.91099292E+004  2.80096065E+000   9.61202753E+001      11.44  <-- SCF
+      2  -3.01274247E+004  2.29906120E+000   3.08331970E+001      17.38  <-- SCF
+      3  -3.01718548E+004  1.62683664E+000   1.34636685E+000      24.42  <-- SCF
+      4  -3.02714797E+004 -5.98576478E-001   3.01893790E+000      34.12  <-- SCF
+      5  -3.02835325E+004 -6.47604512E-001   3.65235233E-001      42.06  <-- SCF
+      6  -3.01472585E+004  1.15885707E+000  -4.12951552E+000      51.38  <-- SCF
+      7  -3.01517806E+004  1.11831031E+000   1.37033503E-001      58.59  <-- SCF
+      8  -3.01333458E+004  2.04739700E+000  -5.58630417E-001      67.93  <-- SCF
+      9  -3.01311346E+004  1.94563819E+000  -6.70045461E-002      77.34  <-- SCF
+     10  -3.01288368E+004  1.99245440E+000  -6.96316101E-002      86.90  <-- SCF
+     11  -3.01276748E+004  2.01579386E+000  -3.52126643E-002      96.30  <-- SCF
+     12  -3.01273973E+004  2.08171752E+000  -8.40766806E-003     105.84  <-- SCF
+     13  -3.01271302E+004  2.21796695E+000  -8.09536519E-003     115.46  <-- SCF
+     14  -3.01270037E+004  2.32901597E+000  -3.83094222E-003     124.89  <-- SCF
+     15  -3.01269284E+004  2.41302541E+000  -2.28451022E-003     134.27  <-- SCF
+     16  -3.01267949E+004  2.59599052E+000  -4.04307959E-003     143.72  <-- SCF
+     17  -3.01267124E+004  2.84039123E+000  -2.49981042E-003     153.21  <-- SCF
+     18  -3.01264861E+004  3.04333779E+000  -6.85925858E-003     162.52  <-- SCF
+     19  -3.01264128E+004  3.16149270E+000  -2.22004458E-003     172.06  <-- SCF
+     20  -3.01263756E+004  3.22271768E+000  -1.12903423E-003     181.40  <-- SCF
+     21  -3.01263748E+004  3.30880057E+000  -2.19872506E-005     190.87  <-- SCF
+     22  -3.01263721E+004  3.42037004E+000  -8.43931759E-005     200.29  <-- SCF
+     23  -3.01263920E+004  3.48908519E+000   6.03509400E-004     209.48  <-- SCF
+     24  -3.01264007E+004  3.51449551E+000   2.63276210E-004     218.67  <-- SCF
+     25  -3.01264130E+004  3.53765205E+000   3.74407385E-004     227.56  <-- SCF
+     26  -3.01264181E+004  3.54926428E+000   1.53278466E-004     235.77  <-- SCF
+     27  -3.01264265E+004  3.56031717E+000   2.53747520E-004     242.78  <-- SCF
+     28  -3.01264297E+004  3.56054093E+000   9.94256463E-005     249.73  <-- SCF
+     29  -3.01264312E+004  3.56097869E+000   4.30380797E-005     256.58  <-- SCF
+     30  -3.01264320E+004  3.55926860E+000   2.66572836E-005     262.91  <-- SCF
+     31  -3.01264323E+004  3.55735963E+000   6.79202654E-006     269.18  <-- SCF
+     32  -3.01264322E+004  3.55844305E+000  -2.60157628E-006     275.64  <-- SCF
+------------------------------------------------------------------------ <-- SCF
+ 
+Integrated Spin Density     =     1.00000     hbar/2                        
+Integrated |Spin Density|   =     1.03416     hbar/2                        
+ 
+Final energy, E             =  -30126.30915372     eV
+Final free energy (E-TS)    =  -30126.43216948     eV
+(energies not corrected for finite basis set)
+ 
+NB est. 0K energy (E-0.5TS)      =  -30126.37066160     eV
+ 
+
+Writing analysis data to TiN-mp.castep_bin
+
+Writing model to TiN-mp.check
+ 
+ ************************** Forces **************************
+ *                                                          *
+ *               Cartesian components (eV/A)                *
+ * -------------------------------------------------------- *
+ *                         x            y            z      *
+ *                                                          *
+ * H               1     -0.00002      0.22160     -0.88122 *
+ * N               1     -0.00177     -0.00682     -1.09157 *
+ * N               2     -0.00179     -0.00073     -1.03122 *
+ * N               3      0.00177      0.00280     -1.03719 *
+ * N               4      0.00164      0.00958     -1.22392 *
+ * N               5     -0.00010      0.00863     -0.32271 *
+ * N               6     -0.00006     -0.00178     -0.34349 *
+ * N               7     -0.00003     -0.00099     -0.34755 *
+ * N               8      0.00001     -0.02381     -1.25024 *
+ * N               9     -0.00949     -0.00373     -0.68280 *
+ * N              10     -0.00617      0.00086     -0.68830 *
+ * N              11      0.00935     -0.00385     -0.68352 *
+ * N              12      0.00626      0.00084     -0.69078 *
+ * N              13     -0.35076     -0.31199     -0.92215 *
+ * N              14     -0.24149      0.25125     -0.76069 *
+ * N              15      0.35081     -0.31203     -0.92190 *
+ * N              16      0.24147      0.25109     -0.76168 *
+ * Ti              1     -0.00048     -0.00809     -0.52858 *
+ * Ti              2     -0.00046     -0.00454     -0.42897 *
+ * Ti              3      0.00045      0.00433     -0.43226 *
+ * Ti              4      0.00046     -0.01115     -0.54382 *
+ * Ti              5     -0.00015      0.04670      0.76645 *
+ * Ti              6     -0.00010     -0.03795      0.93306 *
+ * Ti              7      0.00015      0.03863      0.94841 *
+ * Ti              8      0.00014     -0.12836      3.88949 *
+ * Ti              9      0.03280      0.03542      2.06563 *
+ * Ti             10      0.03712     -0.03515      2.07103 *
+ * Ti             11     -0.03275      0.03513      2.06710 *
+ * Ti             12     -0.03702     -0.03514      2.07133 *
+ * Ti             13      0.09459      0.11106      0.21408 *
+ * Ti             14      0.10783     -0.10142      0.16742 *
+ * Ti             15     -0.09442      0.11103      0.21359 *
+ * Ti             16     -0.10777     -0.10142      0.16697 *
+ *                                                          *
+ ************************************************************
+ 
+ ***************** Stress Tensor *****************
+ *                                               *
+ *          Cartesian components (GPa)           *
+ * --------------------------------------------- *
+ *             x             y             z     *
+ *                                               *
+ *  x      4.818756      0.000160      0.000054  *
+ *  y      0.000160      4.846715     -0.115641  *
+ *  z      0.000054     -0.115641      1.232595  *
+ *                                               *
+ *  Pressure:   -3.6327                          *
+ *                                               *
+ *************************************************
+ 
+ Pseudo atomic calculation performed for H 1s1
+ 
+ Converged in 13 iterations to a total energy of -12.4698 eV
+ 
+ 
+ Pseudo atomic calculation performed for N 2s2 2p3
+ 
+ Converged in 20 iterations to a total energy of -263.6512 eV
+ 
+ 
+ Pseudo atomic calculation performed for Ti 3s2 3p6 3d2 4s2
+ 
+ Converged in 32 iterations to a total energy of -1598.5955 eV
+ 
+Charge spilling parameter for spin component 1 = 0.13%
+Charge spilling parameter for spin component 2 = 0.13%
+ 
+                   Orbital Populations                  
+  ---------------------------------------------------------------
+     Ion    Atom   Orbital              Up        Down      Spin
+  ---------------------------------------------------------------
+      H     1      S                    0.622     0.621     0.001
+      N     1      S                    0.857     0.858    -0.001
+      N     1      Px                   0.685     0.687    -0.002
+      N     1      Py                   0.685     0.687    -0.002
+      N     1      Pz                   0.669     0.671    -0.002
+      N     2      S                    0.857     0.858    -0.001
+      N     2      Px                   0.685     0.688    -0.002
+      N     2      Py                   0.685     0.688    -0.002
+      N     2      Pz                   0.669     0.672    -0.003
+      N     3      S                    0.857     0.858    -0.001
+      N     3      Px                   0.685     0.688    -0.002
+      N     3      Py                   0.685     0.688    -0.002
+      N     3      Pz                   0.669     0.672    -0.003
+      N     4      S                    0.857     0.858    -0.001
+      N     4      Px                   0.685     0.687    -0.002
+      N     4      Py                   0.685     0.687    -0.002
+      N     4      Pz                   0.668     0.670    -0.002
+      N     5      S                    0.835     0.835    -0.000
+      N     5      Px                   0.679     0.677     0.002
+      N     5      Py                   0.679     0.677     0.002
+      N     5      Pz                   0.682     0.681     0.001
+      N     6      S                    0.835     0.835    -0.000
+      N     6      Px                   0.679     0.677     0.002
+      N     6      Py                   0.679     0.677     0.002
+      N     6      Pz                   0.682     0.681     0.000
+      N     7      S                    0.835     0.835    -0.000
+      N     7      Px                   0.679     0.677     0.002
+      N     7      Py                   0.679     0.677     0.002
+      N     7      Pz                   0.682     0.682     0.000
+      N     8      S                    0.836     0.836    -0.000
+      N     8      Px                   0.678     0.676     0.002
+      N     8      Py                   0.678     0.676     0.002
+      N     8      Pz                   0.685     0.683     0.002
+      N     9      S                    0.838     0.838    -0.000
+      N     9      Px                   0.682     0.679     0.003
+      N     9      Py                   0.682     0.679     0.003
+      N     9      Pz                   0.672     0.673    -0.001
+      N    10      S                    0.838     0.838    -0.000
+      N    10      Px                   0.682     0.679     0.003
+      N    10      Py                   0.682     0.679     0.003
+      N    10      Pz                   0.672     0.673    -0.001
+      N    11      S                    0.838     0.838    -0.000
+      N    11      Px                   0.682     0.679     0.003
+      N    11      Py                   0.682     0.679     0.003
+      N    11      Pz                   0.672     0.673    -0.001
+      N    12      S                    0.838     0.838    -0.000
+      N    12      Px                   0.682     0.679     0.003
+      N    12      Py                   0.682     0.679     0.003
+      N    12      Pz                   0.672     0.673    -0.001
+      N    13      S                    0.864     0.865    -0.000
+      N    13      Px                   0.678     0.677     0.000
+      N    13      Py                   0.678     0.678     0.000
+      N    13      Pz                   0.662     0.661     0.001
+      N    14      S                    0.864     0.864    -0.000
+      N    14      Px                   0.679     0.679     0.000
+      N    14      Py                   0.679     0.679     0.000
+      N    14      Pz                   0.664     0.663     0.001
+      N    15      S                    0.864     0.865    -0.000
+      N    15      Px                   0.678     0.677     0.000
+      N    15      Py                   0.678     0.678     0.000
+      N    15      Pz                   0.662     0.661     0.001
+      N    16      S                    0.864     0.864    -0.000
+      N    16      Px                   0.679     0.679     0.000
+      N    16      Py                   0.679     0.679     0.000
+      N    16      Pz                   0.664     0.663     0.001
+     Ti     1      S                    1.002     1.002    -0.000
+     Ti     1      Px                   1.003     1.003    -0.000
+     Ti     1      Py                   1.003     1.003    -0.000
+     Ti     1      Pz                   1.002     1.002    -0.000
+     Ti     1      S                    0.083     0.083    -0.000
+     Ti     1      Dzz                  0.243     0.241     0.002
+     Ti     1      Dzy                  0.286     0.275     0.011
+     Ti     1      Dzx                  0.286     0.275     0.011
+     Ti     1      Dxx-yy               0.262     0.251     0.011
+     Ti     1      Dxy                  0.240     0.238     0.001
+     Ti     1      Px                   0.081     0.081    -0.000
+     Ti     1      Py                   0.081     0.081    -0.000
+     Ti     1      Pz                   0.073     0.074    -0.000
+     Ti     2      S                    1.002     1.002    -0.000
+     Ti     2      Px                   1.003     1.003    -0.000
+     Ti     2      Py                   1.003     1.003    -0.000
+     Ti     2      Pz                   1.002     1.002    -0.000
+     Ti     2      S                    0.084     0.084    -0.000
+     Ti     2      Dzz                  0.244     0.242     0.002
+     Ti     2      Dzy                  0.286     0.275     0.011
+     Ti     2      Dzx                  0.286     0.272     0.014
+     Ti     2      Dxx-yy               0.262     0.251     0.011
+     Ti     2      Dxy                  0.240     0.238     0.002
+     Ti     2      Px                   0.082     0.082     0.000
+     Ti     2      Py                   0.081     0.081     0.000
+     Ti     2      Pz                   0.074     0.074    -0.000
+     Ti     3      S                    1.002     1.002    -0.000
+     Ti     3      Px                   1.003     1.003    -0.000
+     Ti     3      Py                   1.003     1.003    -0.000
+     Ti     3      Pz                   1.002     1.002    -0.000
+     Ti     3      S                    0.084     0.084    -0.000
+     Ti     3      Dzz                  0.244     0.242     0.002
+     Ti     3      Dzy                  0.286     0.271     0.014
+     Ti     3      Dzx                  0.286     0.274     0.011
+     Ti     3      Dxx-yy               0.262     0.250     0.011
+     Ti     3      Dxy                  0.240     0.238     0.002
+     Ti     3      Px                   0.081     0.081     0.000
+     Ti     3      Py                   0.082     0.081     0.000
+     Ti     3      Pz                   0.074     0.074    -0.000
+     Ti     4      S                    1.002     1.002    -0.000
+     Ti     4      Px                   1.003     1.003    -0.000
+     Ti     4      Py                   1.003     1.003    -0.000
+     Ti     4      Pz                   1.003     1.003    -0.000
+     Ti     4      S                    0.084     0.085    -0.000
+     Ti     4      Dzz                  0.253     0.252     0.001
+     Ti     4      Dzy                  0.284     0.275     0.009
+     Ti     4      Dzx                  0.284     0.275     0.009
+     Ti     4      Dxx-yy               0.256     0.246     0.010
+     Ti     4      Dxy                  0.238     0.237     0.001
+     Ti     4      Px                   0.080     0.080    -0.000
+     Ti     4      Py                   0.080     0.081    -0.000
+     Ti     4      Pz                   0.076     0.076    -0.001
+     Ti     5      S                    0.999     0.999    -0.000
+     Ti     5      Px                   1.000     1.000    -0.000
+     Ti     5      Py                   1.000     1.000    -0.000
+     Ti     5      Pz                   0.999     0.999    -0.000
+     Ti     5      S                    0.144     0.142     0.002
+     Ti     5      Dzz                  0.236     0.232     0.004
+     Ti     5      Dzy                  0.260     0.244     0.016
+     Ti     5      Dzx                  0.260     0.244     0.016
+     Ti     5      Dxx-yy               0.245     0.237     0.008
+     Ti     5      Dxy                  0.279     0.278     0.001
+     Ti     5      Px                   0.080     0.080    -0.000
+     Ti     5      Py                   0.080     0.080    -0.000
+     Ti     5      Pz                   0.014     0.014     0.000
+     Ti     6      S                    0.999     0.999    -0.000
+     Ti     6      Px                   1.000     1.000    -0.000
+     Ti     6      Py                   1.000     1.000    -0.000
+     Ti     6      Pz                   0.999     0.999    -0.000
+     Ti     6      S                    0.144     0.142     0.002
+     Ti     6      Dzz                  0.233     0.230     0.004
+     Ti     6      Dzy                  0.260     0.245     0.014
+     Ti     6      Dzx                  0.263     0.245     0.018
+     Ti     6      Dxx-yy               0.243     0.236     0.007
+     Ti     6      Dxy                  0.275     0.274     0.001
+     Ti     6      Px                   0.070     0.069     0.001
+     Ti     6      Py                   0.079     0.079    -0.000
+     Ti     6      Pz                   0.005     0.005     0.000
+     Ti     7      S                    0.999     0.999    -0.000
+     Ti     7      Px                   1.000     1.000    -0.000
+     Ti     7      Py                   1.000     1.000    -0.000
+     Ti     7      Pz                   0.999     0.999    -0.000
+     Ti     7      S                    0.144     0.142     0.002
+     Ti     7      Dzz                  0.233     0.230     0.004
+     Ti     7      Dzy                  0.262     0.244     0.018
+     Ti     7      Dzx                  0.259     0.245     0.014
+     Ti     7      Dxx-yy               0.243     0.236     0.007
+     Ti     7      Dxy                  0.275     0.274     0.001
+     Ti     7      Px                   0.079     0.079    -0.000
+     Ti     7      Py                   0.069     0.069     0.001
+     Ti     7      Pz                   0.005     0.005     0.000
+     Ti     8      S                    0.999     0.999    -0.000
+     Ti     8      Px                   1.000     1.000    -0.000
+     Ti     8      Py                   1.000     1.000    -0.000
+     Ti     8      Pz                   0.998     0.998     0.000
+     Ti     8      S                    0.183     0.182     0.000
+     Ti     8      Dzz                  0.344     0.343     0.001
+     Ti     8      Dzy                  0.219     0.206     0.012
+     Ti     8      Dzx                  0.218     0.205     0.013
+     Ti     8      Dxx-yy               0.223     0.217     0.005
+     Ti     8      Dxy                  0.266     0.265     0.001
+     Ti     8      Px                   0.072     0.072    -0.000
+     Ti     8      Py                   0.073     0.073    -0.000
+     Ti     8      Pz                   0.090     0.090    -0.000
+     Ti     9      S                    0.999     1.000    -0.000
+     Ti     9      Px                   1.000     1.000    -0.000
+     Ti     9      Py                   1.000     1.000    -0.000
+     Ti     9      Pz                   0.999     0.999    -0.000
+     Ti     9      S                    0.153     0.147     0.005
+     Ti     9      Dzz                  0.230     0.218     0.012
+     Ti     9      Dzy                  0.272     0.226     0.046
+     Ti     9      Dzx                  0.271     0.226     0.045
+     Ti     9      Dxx-yy               0.271     0.253     0.018
+     Ti     9      Dxy                  0.278     0.273     0.004
+     Ti     9      Px                   0.082     0.081     0.001
+     Ti     9      Py                   0.082     0.081     0.001
+     Ti     9      Pz                   0.026     0.023     0.003
+     Ti    10      S                    0.999     1.000    -0.000
+     Ti    10      Px                   1.000     1.000    -0.000
+     Ti    10      Py                   1.000     1.000    -0.000
+     Ti    10      Pz                   0.999     0.999    -0.000
+     Ti    10      S                    0.153     0.147     0.005
+     Ti    10      Dzz                  0.230     0.218     0.012
+     Ti    10      Dzy                  0.270     0.227     0.043
+     Ti    10      Dzx                  0.271     0.226     0.045
+     Ti    10      Dxx-yy               0.271     0.253     0.017
+     Ti    10      Dxy                  0.278     0.274     0.004
+     Ti    10      Px                   0.082     0.081     0.001
+     Ti    10      Py                   0.082     0.081     0.001
+     Ti    10      Pz                   0.026     0.023     0.003
+     Ti    11      S                    0.999     1.000    -0.000
+     Ti    11      Px                   1.000     1.000    -0.000
+     Ti    11      Py                   1.000     1.000    -0.000
+     Ti    11      Pz                   0.999     0.999    -0.000
+     Ti    11      S                    0.153     0.147     0.005
+     Ti    11      Dzz                  0.230     0.218     0.012
+     Ti    11      Dzy                  0.272     0.226     0.046
+     Ti    11      Dzx                  0.272     0.226     0.045
+     Ti    11      Dxx-yy               0.271     0.253     0.018
+     Ti    11      Dxy                  0.278     0.273     0.004
+     Ti    11      Px                   0.082     0.081     0.001
+     Ti    11      Py                   0.082     0.081     0.001
+     Ti    11      Pz                   0.026     0.023     0.003
+     Ti    12      S                    0.999     0.999    -0.000
+     Ti    12      Px                   1.000     1.000    -0.000
+     Ti    12      Py                   1.000     1.000    -0.000
+     Ti    12      Pz                   0.999     0.999    -0.000
+     Ti    12      S                    0.153     0.147     0.005
+     Ti    12      Dzz                  0.230     0.218     0.012
+     Ti    12      Dzy                  0.271     0.227     0.043
+     Ti    12      Dzx                  0.271     0.227     0.045
+     Ti    12      Dxx-yy               0.271     0.254     0.017
+     Ti    12      Dxy                  0.278     0.274     0.004
+     Ti    12      Px                   0.082     0.081     0.001
+     Ti    12      Py                   0.082     0.081     0.001
+     Ti    12      Pz                   0.026     0.023     0.003
+     Ti    13      S                    1.002     1.002    -0.000
+     Ti    13      Px                   1.004     1.004    -0.000
+     Ti    13      Py                   1.004     1.004    -0.000
+     Ti    13      Pz                   1.004     1.004    -0.000
+     Ti    13      S                    0.077     0.077     0.000
+     Ti    13      Dzz                  0.252     0.250     0.001
+     Ti    13      Dzy                  0.300     0.287     0.012
+     Ti    13      Dzx                  0.299     0.287     0.013
+     Ti    13      Dxx-yy               0.254     0.248     0.006
+     Ti    13      Dxy                  0.228     0.227     0.001
+     Ti    13      Px                   0.075     0.076    -0.000
+     Ti    13      Py                   0.076     0.076    -0.000
+     Ti    13      Pz                   0.080     0.080    -0.000
+     Ti    14      S                    1.002     1.002    -0.000
+     Ti    14      Px                   1.004     1.004    -0.000
+     Ti    14      Py                   1.004     1.004    -0.000
+     Ti    14      Pz                   1.004     1.004    -0.000
+     Ti    14      S                    0.077     0.077     0.000
+     Ti    14      Dzz                  0.249     0.248     0.001
+     Ti    14      Dzy                  0.301     0.287     0.014
+     Ti    14      Dzx                  0.301     0.288     0.014
+     Ti    14      Dxx-yy               0.253     0.247     0.006
+     Ti    14      Dxy                  0.228     0.227     0.001
+     Ti    14      Px                   0.075     0.075    -0.000
+     Ti    14      Py                   0.075     0.075    -0.000
+     Ti    14      Pz                   0.078     0.078    -0.000
+     Ti    15      S                    1.002     1.002    -0.000
+     Ti    15      Px                   1.004     1.004    -0.000
+     Ti    15      Py                   1.004     1.004    -0.000
+     Ti    15      Pz                   1.004     1.004    -0.000
+     Ti    15      S                    0.077     0.077     0.000
+     Ti    15      Dzz                  0.252     0.250     0.001
+     Ti    15      Dzy                  0.300     0.287     0.012
+     Ti    15      Dzx                  0.299     0.286     0.013
+     Ti    15      Dxx-yy               0.254     0.248     0.006
+     Ti    15      Dxy                  0.228     0.227     0.001
+     Ti    15      Px                   0.075     0.076    -0.000
+     Ti    15      Py                   0.076     0.076    -0.000
+     Ti    15      Pz                   0.080     0.080    -0.000
+     Ti    16      S                    1.002     1.002    -0.000
+     Ti    16      Px                   1.004     1.004    -0.000
+     Ti    16      Py                   1.004     1.004    -0.000
+     Ti    16      Pz                   1.004     1.004    -0.000
+     Ti    16      S                    0.077     0.077     0.000
+     Ti    16      Dzz                  0.249     0.248     0.001
+     Ti    16      Dzy                  0.301     0.287     0.014
+     Ti    16      Dzx                  0.301     0.288     0.014
+     Ti    16      Dxx-yy               0.253     0.247     0.006
+     Ti    16      Dxy                  0.228     0.227     0.001
+     Ti    16      Px                   0.075     0.076    -0.000
+     Ti    16      Py                   0.075     0.075    -0.000
+     Ti    16      Pz                   0.078     0.078    -0.000
+  ---------------------------------------------------------------
+                           Total:     137.000   136.000     1.000
+  ---------------------------------------------------------------
+ 
+     Atomic Populations (Mulliken)
+     -----------------------------
+Species          Ion Spin      s      p      d      f     Total  Charge(e)   Spin(hbar/2)
+=========================================================================================
+  H               1   up:     0.62   0.00   0.00   0.00   0.62    -0.24        0.00
+                  1   dn:     0.62   0.00   0.00   0.00   0.62
+  N               1   up:     0.86   2.04   0.00   0.00   2.90    -0.80       -0.01
+                  1   dn:     0.86   2.05   0.00   0.00   2.90
+  N               2   up:     0.86   2.04   0.00   0.00   2.90    -0.80       -0.01
+                  2   dn:     0.86   2.05   0.00   0.00   2.91
+  N               3   up:     0.86   2.04   0.00   0.00   2.90    -0.80       -0.01
+                  3   dn:     0.86   2.05   0.00   0.00   2.90
+  N               4   up:     0.86   2.04   0.00   0.00   2.90    -0.80       -0.01
+                  4   dn:     0.86   2.05   0.00   0.00   2.90
+  N               5   up:     0.83   2.04   0.00   0.00   2.87    -0.75        0.00
+                  5   dn:     0.83   2.04   0.00   0.00   2.87
+  N               6   up:     0.83   2.04   0.00   0.00   2.87    -0.74        0.00
+                  6   dn:     0.83   2.04   0.00   0.00   2.87
+  N               7   up:     0.83   2.04   0.00   0.00   2.87    -0.74        0.00
+                  7   dn:     0.83   2.04   0.00   0.00   2.87
+  N               8   up:     0.84   2.04   0.00   0.00   2.88    -0.75        0.01
+                  8   dn:     0.84   2.04   0.00   0.00   2.87
+  N               9   up:     0.84   2.04   0.00   0.00   2.87    -0.74        0.00
+                  9   dn:     0.84   2.03   0.00   0.00   2.87
+  N              10   up:     0.84   2.04   0.00   0.00   2.87    -0.74        0.00
+                 10   dn:     0.84   2.03   0.00   0.00   2.87
+  N              11   up:     0.84   2.04   0.00   0.00   2.87    -0.74        0.00
+                 11   dn:     0.84   2.03   0.00   0.00   2.87
+  N              12   up:     0.84   2.04   0.00   0.00   2.87    -0.74        0.01
+                 12   dn:     0.84   2.03   0.00   0.00   2.87
+  N              13   up:     0.86   2.02   0.00   0.00   2.88    -0.76        0.00
+                 13   dn:     0.86   2.02   0.00   0.00   2.88
+  N              14   up:     0.86   2.02   0.00   0.00   2.89    -0.77        0.00
+                 14   dn:     0.86   2.02   0.00   0.00   2.88
+  N              15   up:     0.86   2.02   0.00   0.00   2.88    -0.76        0.00
+                 15   dn:     0.86   2.02   0.00   0.00   2.88
+  N              16   up:     0.86   2.02   0.00   0.00   2.89    -0.77        0.00
+                 16   dn:     0.86   2.02   0.00   0.00   2.88
+  Ti              1   up:     1.08   3.24   1.32   0.00   5.64     0.75        0.04
+                  1   dn:     1.08   3.24   1.28   0.00   5.61
+  Ti              2   up:     1.09   3.25   1.32   0.00   5.65     0.74        0.04
+                  2   dn:     1.09   3.25   1.28   0.00   5.61
+  Ti              3   up:     1.09   3.24   1.32   0.00   5.65     0.75        0.04
+                  3   dn:     1.09   3.25   1.28   0.00   5.61
+  Ti              4   up:     1.09   3.24   1.32   0.00   5.65     0.74        0.03
+                  4   dn:     1.09   3.25   1.28   0.00   5.62
+  Ti              5   up:     1.14   3.17   1.28   0.00   5.60     0.85        0.05
+                  5   dn:     1.14   3.17   1.23   0.00   5.55
+  Ti              6   up:     1.14   3.15   1.27   0.00   5.57     0.91        0.05
+                  6   dn:     1.14   3.15   1.23   0.00   5.52
+  Ti              7   up:     1.14   3.15   1.27   0.00   5.57     0.91        0.05
+                  7   dn:     1.14   3.15   1.23   0.00   5.52
+  Ti              8   up:     1.18   3.23   1.27   0.00   5.68     0.66        0.03
+                  8   dn:     1.18   3.23   1.24   0.00   5.65
+  Ti              9   up:     1.15   3.19   1.32   0.00   5.66     0.81        0.14
+                  9   dn:     1.15   3.18   1.20   0.00   5.53
+  Ti             10   up:     1.15   3.19   1.32   0.00   5.66     0.81        0.13
+                 10   dn:     1.15   3.18   1.20   0.00   5.53
+  Ti             11   up:     1.15   3.19   1.32   0.00   5.66     0.81        0.14
+                 11   dn:     1.15   3.18   1.20   0.00   5.53
+  Ti             12   up:     1.15   3.19   1.32   0.00   5.66     0.81        0.13
+                 12   dn:     1.15   3.18   1.20   0.00   5.53
+  Ti             13   up:     1.08   3.24   1.33   0.00   5.65     0.73        0.03
+                 13   dn:     1.08   3.24   1.30   0.00   5.62
+  Ti             14   up:     1.08   3.24   1.33   0.00   5.65     0.73        0.04
+                 14   dn:     1.08   3.24   1.30   0.00   5.62
+  Ti             15   up:     1.08   3.24   1.33   0.00   5.65     0.73        0.03
+                 15   dn:     1.08   3.24   1.30   0.00   5.62
+  Ti             16   up:     1.08   3.24   1.33   0.00   5.65     0.73        0.04
+                 16   dn:     1.08   3.24   1.30   0.00   5.62
+=========================================================================================
+ 
+                 Bond                   Population        Spin       Length (A)
+================================================================================
+              N 8  -- Ti 8                   0.34        -0.00          1.94777
+              N 7  -- Ti 7                   0.39        -0.00          1.94777
+              N 6  -- Ti 6                   0.39        -0.00          1.94777
+              N 5  -- Ti 5                   0.39        -0.00          1.94777
+               H 1 -- Ti 8                   0.71        -0.00          1.99203
+              N 12 -- Ti 12                  0.33        -0.00          2.09021
+              N 11 -- Ti 11                  0.33        -0.00          2.09021
+              N 10 -- Ti 10                  0.33        -0.00          2.09021
+              N 9  -- Ti 9                   0.33        -0.00          2.09021
+              N 8  -- Ti 4                   0.27        -0.00          2.09311
+              N 7  -- Ti 3                   0.28        -0.00          2.09311
+              N 6  -- Ti 2                   0.28        -0.00          2.09311
+              N 5  -- Ti 1                   0.28        -0.00          2.09311
+              N 12 -- Ti 16                  0.26        -0.00          2.11443
+              N 11 -- Ti 15                  0.26        -0.00          2.11443
+              N 10 -- Ti 14                  0.26        -0.00          2.11443
+              N 9  -- Ti 13                  0.26        -0.00          2.11443
+              N 4  -- Ti 12                  0.36         0.00          2.11800
+              N 4  -- Ti 11                  0.36         0.00          2.11800
+              N 4  -- Ti 10                  0.36         0.00          2.11800
+              N 4  -- Ti 9                   0.36         0.00          2.11800
+              N 3  -- Ti 11                  0.36         0.00          2.11800
+              N 3  -- Ti 9                   0.36         0.00          2.11800
+              N 2  -- Ti 12                  0.36         0.00          2.11800
+              N 2  -- Ti 11                  0.36         0.00          2.11800
+              N 2  -- Ti 10                  0.36         0.00          2.11800
+              N 2  -- Ti 9                   0.36         0.00          2.11800
+              N 1  -- Ti 11                  0.36         0.00          2.11800
+              N 1  -- Ti 9                   0.36         0.00          2.11800
+              N 3  -- Ti 12                  0.36         0.00          2.11800
+              N 3  -- Ti 10                  0.36         0.00          2.11800
+              N 1  -- Ti 12                  0.36         0.00          2.11800
+              N 1  -- Ti 10                  0.36         0.00          2.11800
+              N 8  -- Ti 16                  0.30        -0.00          2.11900
+              N 8  -- Ti 15                  0.30        -0.00          2.11900
+              N 8  -- Ti 14                  0.30        -0.00          2.11900
+              N 8  -- Ti 13                  0.30        -0.00          2.11900
+              N 7  -- Ti 15                  0.28        -0.00          2.11900
+              N 7  -- Ti 13                  0.28        -0.00          2.11900
+              N 6  -- Ti 16                  0.28        -0.00          2.11900
+              N 6  -- Ti 15                  0.28        -0.00          2.11900
+              N 6  -- Ti 14                  0.28        -0.00          2.11900
+              N 6  -- Ti 13                  0.28        -0.00          2.11900
+              N 5  -- Ti 15                  0.28        -0.00          2.11900
+              N 5  -- Ti 13                  0.28        -0.00          2.11900
+              N 7  -- Ti 16                  0.28        -0.00          2.11900
+              N 7  -- Ti 14                  0.28        -0.00          2.11900
+              N 5  -- Ti 16                  0.28        -0.00          2.11900
+              N 5  -- Ti 14                  0.28        -0.00          2.11900
+              N 12 -- Ti 4                   0.31        -0.00          2.11976
+              N 12 -- Ti 2                   0.32        -0.00          2.11976
+              N 11 -- Ti 4                   0.31        -0.00          2.11976
+              N 11 -- Ti 3                   0.32        -0.00          2.11976
+              N 11 -- Ti 2                   0.32        -0.00          2.11976
+              N 11 -- Ti 1                   0.32        -0.00          2.11976
+              N 10 -- Ti 4                   0.31        -0.00          2.11976
+              N 10 -- Ti 2                   0.32        -0.00          2.11976
+              N 9  -- Ti 4                   0.31        -0.00          2.11976
+              N 9  -- Ti 3                   0.32        -0.00          2.11976
+              N 9  -- Ti 2                   0.32        -0.00          2.11976
+              N 9  -- Ti 1                   0.32        -0.00          2.11976
+              N 12 -- Ti 3                   0.32        -0.00          2.11976
+              N 12 -- Ti 1                   0.32        -0.00          2.11976
+              N 10 -- Ti 3                   0.32        -0.00          2.11976
+              N 10 -- Ti 1                   0.32        -0.00          2.11976
+              N 16 -- Ti 8                   0.31        -0.00          2.12582
+              N 16 -- Ti 6                   0.37        -0.00          2.12582
+              N 15 -- Ti 8                   0.30        -0.00          2.12582
+              N 15 -- Ti 7                   0.37        -0.00          2.12582
+              N 15 -- Ti 6                   0.37        -0.00          2.12582
+              N 15 -- Ti 5                   0.38        -0.00          2.12582
+              N 14 -- Ti 8                   0.31        -0.00          2.12582
+              N 14 -- Ti 6                   0.37        -0.00          2.12582
+              N 13 -- Ti 8                   0.30        -0.00          2.12582
+              N 13 -- Ti 7                   0.37        -0.00          2.12582
+              N 13 -- Ti 6                   0.37        -0.00          2.12582
+              N 13 -- Ti 5                   0.38        -0.00          2.12582
+              N 16 -- Ti 7                   0.37        -0.00          2.12582
+              N 16 -- Ti 5                   0.38        -0.00          2.12582
+              N 14 -- Ti 7                   0.37        -0.00          2.12582
+              N 14 -- Ti 5                   0.38        -0.00          2.12582
+              N 4  -- Ti 4                   0.27        -0.00          2.17668
+              N 3  -- Ti 3                   0.28         0.00          2.17668
+              N 2  -- Ti 2                   0.28         0.00          2.17668
+              N 1  -- Ti 1                   0.28         0.00          2.17668
+              N 16 -- Ti 16                  0.29        -0.00          2.19505
+              N 15 -- Ti 15                  0.30         0.00          2.19505
+              N 14 -- Ti 14                  0.29         0.00          2.19505
+              N 13 -- Ti 13                  0.30         0.00          2.19505
+               H 1 -- N 13                  -0.01        -0.00          2.67958
+               H 1 -- N 15                  -0.01        -0.00          2.67958
+               H 1 -- N 14                  -0.00        -0.00          2.88966
+               H 1 -- N 16                  -0.00        -0.00          2.88966
+             Ti 8  -- Ti 16                 -0.15         0.00          2.92195
+             Ti 8  -- Ti 15                 -0.14         0.00          2.92195
+             Ti 8  -- Ti 14                 -0.15         0.00          2.92195
+             Ti 8  -- Ti 13                 -0.14         0.00          2.92195
+             Ti 7  -- Ti 15                 -0.16        -0.00          2.92195
+             Ti 7  -- Ti 13                 -0.16        -0.00          2.92195
+             Ti 6  -- Ti 16                 -0.16        -0.00          2.92195
+             Ti 6  -- Ti 15                 -0.16        -0.00          2.92195
+             Ti 6  -- Ti 14                 -0.16        -0.00          2.92195
+             Ti 6  -- Ti 13                 -0.16        -0.00          2.92195
+             Ti 5  -- Ti 15                 -0.17        -0.00          2.92195
+             Ti 5  -- Ti 13                 -0.17        -0.00          2.92195
+             Ti 7  -- Ti 16                 -0.16        -0.00          2.92195
+             Ti 7  -- Ti 14                 -0.16        -0.00          2.92195
+             Ti 5  -- Ti 16                 -0.17         0.00          2.92195
+             Ti 5  -- Ti 14                 -0.17         0.00          2.92195
+             Ti 4  -- Ti 16                 -0.07        -0.00          2.93233
+             Ti 4  -- Ti 15                 -0.07        -0.00          2.93233
+             Ti 4  -- Ti 14                 -0.07        -0.00          2.93233
+             Ti 4  -- Ti 13                 -0.07        -0.00          2.93233
+             Ti 3  -- Ti 15                 -0.05        -0.00          2.93233
+             Ti 3  -- Ti 13                 -0.05        -0.00          2.93233
+             Ti 2  -- Ti 16                 -0.05        -0.00          2.93233
+             Ti 2  -- Ti 15                 -0.06        -0.00          2.93233
+             Ti 2  -- Ti 14                 -0.05        -0.00          2.93233
+             Ti 2  -- Ti 13                 -0.06        -0.00          2.93233
+             Ti 1  -- Ti 15                 -0.05        -0.00          2.93233
+             Ti 1  -- Ti 13                 -0.05        -0.00          2.93233
+             Ti 3  -- Ti 16                 -0.05        -0.00          2.93233
+             Ti 3  -- Ti 14                 -0.05        -0.00          2.93233
+             Ti 1  -- Ti 16                 -0.05        -0.00          2.93233
+             Ti 1  -- Ti 14                 -0.05        -0.00          2.93233
+              N 4  -- N 12                  -0.03         0.00          2.97572
+              N 4  -- N 11                  -0.03         0.00          2.97572
+              N 4  -- N 10                  -0.03         0.00          2.97572
+              N 4  -- N 9                   -0.03         0.00          2.97572
+              N 3  -- N 11                  -0.03         0.00          2.97572
+              N 3  -- N 9                   -0.03         0.00          2.97572
+              N 2  -- N 12                  -0.03         0.00          2.97572
+              N 2  -- N 11                  -0.03         0.00          2.97572
+              N 2  -- N 10                  -0.03         0.00          2.97572
+              N 2  -- N 9                   -0.03         0.00          2.97572
+              N 1  -- N 11                  -0.03         0.00          2.97572
+              N 1  -- N 9                   -0.03         0.00          2.97572
+              N 3  -- N 12                  -0.03         0.00          2.97572
+              N 3  -- N 10                  -0.03         0.00          2.97572
+              N 1  -- N 12                  -0.03         0.00          2.97572
+              N 1  -- N 10                  -0.03         0.00          2.97572
+             Ti 15 -- Ti 16                 -0.03        -0.00          2.99530
+             Ti 13 -- Ti 14                 -0.03        -0.00          2.99530
+             Ti 11 -- Ti 12                  0.15         0.00          2.99530
+             Ti 9  -- Ti 10                  0.15         0.00          2.99530
+             Ti 7  -- Ti 8                   0.09        -0.00          2.99530
+             Ti 5  -- Ti 6                   0.16        -0.00          2.99530
+             Ti 3  -- Ti 4                  -0.04        -0.00          2.99530
+             Ti 1  -- Ti 2                  -0.05         0.00          2.99530
+              N 15 -- N 16                  -0.05        -0.00          2.99530
+              N 13 -- N 14                  -0.05        -0.00          2.99530
+              N 11 -- N 12                  -0.05         0.00          2.99530
+              N 9  -- N 10                  -0.05         0.00          2.99530
+              N 7  -- N 8                   -0.05         0.00          2.99530
+              N 5  -- N 6                   -0.05         0.00          2.99530
+              N 3  -- N 4                   -0.05        -0.00          2.99530
+              N 1  -- N 2                   -0.05        -0.00          2.99530
+             Ti 14 -- Ti 16                 -0.03        -0.00          2.99530
+             Ti 13 -- Ti 15                 -0.03        -0.00          2.99530
+             Ti 10 -- Ti 12                  0.14         0.00          2.99530
+             Ti 9  -- Ti 11                  0.15         0.00          2.99530
+             Ti 6  -- Ti 8                   0.09        -0.00          2.99530
+             Ti 5  -- Ti 7                   0.16        -0.00          2.99530
+             Ti 2  -- Ti 4                  -0.04        -0.00          2.99530
+             Ti 1  -- Ti 3                  -0.05         0.00          2.99530
+              N 14 -- N 16                  -0.05        -0.00          2.99530
+              N 13 -- N 15                  -0.05        -0.00          2.99530
+              N 10 -- N 12                  -0.05         0.00          2.99530
+              N 9  -- N 11                  -0.05         0.00          2.99530
+              N 6  -- N 8                   -0.05         0.00          2.99530
+              N 5  -- N 7                   -0.05         0.00          2.99530
+              N 2  -- N 4                   -0.05        -0.00          2.99530
+              N 1  -- N 3                   -0.05        -0.00          2.99530
+================================================================================
+ 
+
+Writing analysis data to TiN-mp.castep_bin
+
+Writing model to TiN-mp.check
+ 
+ A BibTeX formatted list of references used in this run has been written to 
+ TiN-mp.bib
+ 
+Initialisation time =      1.35 s
+Calculation time    =    313.33 s
+Finalisation time   =      1.13 s
+Total time          =    315.80 s
+Peak Memory Use     = 266774104 kB
+  
+Overall parallel efficiency rating: Good (76%)                                  
+  
+Data was distributed by:-
+G-vector (4-way); efficiency rating: Good (77%)                                 
+k-point (8-way); efficiency rating: Excellent (99%)                             
+  
+Parallel notes:
+1) Calculation only took 314.8 s, so efficiency estimates may be inaccurate.    
