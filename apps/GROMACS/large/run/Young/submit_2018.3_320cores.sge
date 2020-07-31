@@ -9,7 +9,7 @@
 
 cat $0
 
-NUM_NODES=5
+NUM_NODES=8
 
 BENCHDIR=/home/uccaoke/Scratch/archer-benchmarks/apps/GROMACS/large
 
