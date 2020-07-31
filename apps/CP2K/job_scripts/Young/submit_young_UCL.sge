@@ -1,0 +1,23 @@
+#!/bin/bash --login
+
+# Job submission script for Grace system at UCL
+# SGE job submission system
+
+#$ -S /bin/bash
+#$ -l h_rt=3:0:0
+#$ -l mem=3700M
+#$ -N cp2k_lih
+#$ -pe mpi 320
+#$ -cwd 
+
+#$ -P Free
+#$ -A Test_allocation
+
+module unload compilers 
+module unload mpi
+module load compilers/gnu/4.9.2
+module load mpi/openmpi/3.0.0/gnu-4.9.2
+module load cp2k/5.1/ompi/gnu-4.9.2
+
+gerun cp2k.popt input_bulk_B88_3.inp > stdout.txt 2> stderr.txt
+
