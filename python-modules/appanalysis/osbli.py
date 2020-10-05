@@ -100,17 +100,20 @@ def gettiming(filename):
     infile.close()
     return timing
 
-def calcperf(filedict, cpn):
-    nodeslist = []
+def calcperf(filedict, cpn, plot_cores=False):
+    plotlist = []
     timelist = []
     perflist = []
     print("{:>15s} {:>15s} {:>15s} {:>20s}".format('Nodes', 'Cores', 'Time (s)', 'Performance (iter/s)'))
     print("{:>15s} {:>15s} {:>15s} {:>20s}".format('=====', '=====', '========', '===================='))
     for nodes, filename in sorted(filedict.items()):
-        nodeslist.append(nodes)
+        if plot_cores:
+            plotlist.append(nodes*cpn)
+        else:
+            plotlist.append(nodes)
         t = gettiming(filename)
         timelist.append(t)
         perf = 1.0/t
         perflist.append(perf)
         print("{:>15d} {:>15d} {:>15.1f} {:>20.3f}".format(nodes, nodes*cpn, t, perf))
-    return nodeslist, timelist, perflist
+    return plotlist, timelist, perflist
