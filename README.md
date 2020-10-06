@@ -63,6 +63,13 @@ The selection of the benchmarks is described in an ARCHER white paper:
 * [OpenSBLI](apps/OpenSBLI) 
 * [HadGEM3](apps/HadGEM3) (Met Office Unified Model coupled to NEMO ocean model using the OASIS coupling framework)
 
+## Other Benchmarks
+
+These are benchmarks that there is data for in the repository but which are not part of the set
+chosen by the ARCHER selection exercise.
+
+* [NWChem](others/NWChem)
+
 # Systems Included
 
 The Jupyter notebook linked below provides a list of systems that have been benchmarked along with basic
