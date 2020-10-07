@@ -94,7 +94,7 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, threads=None, writestats=False, plotby='Nodes'):
+def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
     if threads is not None:
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
@@ -103,10 +103,10 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plotby='Nodes'):
     if writestats:
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads']).agg(groupf)
         print(df_group)
-    if plotby == 'Nodes':
-        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
-    else:
+    if plot_cores:
         df_group = df_num.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+    else:
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     if writestats:
         print(df_group)
     perf = df_group['Perf',stat].tolist()

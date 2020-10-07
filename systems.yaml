@@ -346,4 +346,32 @@ EPCC-CascadeLake:
   AModel:
   APerNode:
   AFLOPs:
-  
+ARCHER2:
+  Name: ARCHER2
+  URL:
+  Org: 
+  PModel: AMD 7742
+  PGen: Rome
+  PFreq: 2.25
+  FPFreq: 
+  PCores: 64
+  PPerNode: 2
+  FLOPS: 64
+  VWidth: 256
+  MType: DDR4
+  MFreq: 3400MHz
+  MTot: 256GiB
+  MChannels: 8
+  MBW: 0.0
+  Vendor: Unknown
+  Nodes: 4
+  Interconnect: Slingshot
+  Topology: Dragonfly
+  FS: Lustre
+  FSVendor: Cray
+  FSClientV:
+  FSServerV:
+  FSLayout: Unknown
+  AModel:
+  APerNode:
+  AFLOPs:
