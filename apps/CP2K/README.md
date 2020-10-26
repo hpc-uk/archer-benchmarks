@@ -24,9 +24,9 @@ Results from this benchmark can be found in the results directory of this reposi
 
 ## Running the benchmark
 
-### ARCHER
+### ARCHER
 
-#### Setup Calculation
+#### Setup Calculation
 
 In order to run the benchmark, first a setup calculation must be performed to produce an input wave function file. This setup calculation can be carried out on 8 nodes, taking around 3 minutes.
 
