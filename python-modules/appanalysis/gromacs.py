@@ -82,7 +82,7 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, threads=None, writestats=False):
+def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
     if threads is not None:
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
@@ -91,10 +91,15 @@ def get_perf_stats(df, stat, threads=None, writestats=False):
     df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores','Threads']).agg(groupf)
     if writestats:
         print(df_group)
-    df_group = df_num.sort_values(by='Nodes').groupby('Nodes').agg(groupf)
+    if plot_cores:
+        df_group = df_num.sort_values(by='Cores').groupby(['Cores']).agg(groupf)
+    else:
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    if writestats:
+        print(df_group)
     perf = df_group['Perf',stat].tolist()
-    nodes = df_group.index.get_level_values(0).tolist()
-    return nodes, perf
+    count = df_group.index.get_level_values(0).tolist()
+    return count, perf
 
 def getperf(filename):
     infile = open(filename, 'r')

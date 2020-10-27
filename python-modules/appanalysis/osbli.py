@@ -55,7 +55,12 @@ def get_perf_dict(filename, cpn):
     infile.close()
 
     # Get number of nodes from filename
-    tokens = filename.split('_')
+    tokens = filename.split('.')
+    filestem = ''
+    for token in tokens:
+        if 'nodes' in token:
+            filestem = token
+    tokens = filestem.split('_')
     nodestring = None
     for token in tokens:
         if 'nodes' in token:
@@ -78,15 +83,19 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, writestats=False):
-    df_num = df.drop(['File', 'Date'], 1)
+def get_perf_stats(df, stat, writestats=False, plotcores=False):
+    # df_num = df.drop(['File', 'Date'], 1)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     if writestats:
         print(df_group)
+    if plotcores:
+        df_group = df.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+    else:
+        df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     perf = df_group['Perf',stat].tolist()
-    nodes = df_group.index.get_level_values(0).tolist()
-    return nodes, perf
+    count = df_group.index.get_level_values(0).tolist()
+    return count, perf
 
 
 def gettiming(filename):

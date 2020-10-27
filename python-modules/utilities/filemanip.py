@@ -25,7 +25,8 @@ def get_filelist_ext(wdir, extension):
 
     files = []
     if os.path.exists(wdir):
-        files = glob(os.path.join(wdir, '*' + extension ))
+        print(wdir + '/*.' + extension)
+        files = glob(wdir + '/*.' + extension)
         files.sort()
     else:
         print(wdir)
