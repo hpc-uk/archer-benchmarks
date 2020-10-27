@@ -1,0 +1,45 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Oct 14 13:48:13 2020
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.12.14-197.51_9.1.42-cray_shasta_c
+# Version               : #1 SMP Thu Sep 10 00:55:34 UTC 2020 (abfe5b7)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /lus/cls01095/work/z19/z19/aturner/benchmarks/mpi-benchmarks-IMB-v2019.6/IMB-MPI1 -npmin 4096 Alltoallv 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Alltoallv
+
+#----------------------------------------------------------------
+# Benchmarking Alltoallv 
+# #processes = 4096 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0          864      5524.34      8275.86      5781.30
+            1            1     73957.44     74219.23     74071.39
+            2            1     57785.75     58040.14     57881.76
+            4            1     59124.23     59435.37     59224.04
+            8            1     56060.79     56415.08     56174.82
+           16            1     56456.57     56683.54     56545.50
+           32 time-out.; Time limit (secs_per_sample * msg_sizes_list_len) is over; use "-time X" or SECS_PER_SAMPLE=X (IMB_settings.h) to increase time limit.
+
+
+# All processes entering MPI_Finalize
+

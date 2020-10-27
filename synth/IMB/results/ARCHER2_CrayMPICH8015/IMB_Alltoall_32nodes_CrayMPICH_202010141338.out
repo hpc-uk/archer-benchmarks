@@ -1,0 +1,49 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Oct 14 13:41:40 2020
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.12.14-197.51_9.1.42-cray_shasta_c
+# Version               : #1 SMP Thu Sep 10 00:55:34 UTC 2020 (abfe5b7)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /lus/cls01095/work/z19/z19/aturner/benchmarks/mpi-benchmarks-IMB-v2019.6/IMB-MPI1 -npmin 4096 Alltoall 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Alltoall
+
+#----------------------------------------------------------------
+# Benchmarking Alltoall 
+# #processes = 4096 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0         1000         0.04         0.24         0.05
+            1         1000      1134.48      1211.93      1176.79
+            2         1000      1189.00      1286.51      1241.25
+            4         1000      1310.73      1387.31      1346.83
+            8         1000      1405.71      1519.04      1479.50
+           16         1000      1742.96      2001.94      1917.23
+           32         1000      2712.74      3257.71      3064.09
+           64         1000      3904.43      6780.82      6069.42
+          128          695      7363.33     13684.90     12215.42
+          256          355     14675.01     26076.17     23161.33
+          512 time-out.; Time limit (secs_per_sample * msg_sizes_list_len) is over; use "-time X" or SECS_PER_SAMPLE=X (IMB_settings.h) to increase time limit.
+
+
+# All processes entering MPI_Finalize
+
