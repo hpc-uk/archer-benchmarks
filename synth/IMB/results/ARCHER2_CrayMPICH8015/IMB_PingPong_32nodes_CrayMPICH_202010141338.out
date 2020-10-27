@@ -1,0 +1,63 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Oct 14 13:38:27 2020
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.12.14-197.51_9.1.42-cray_shasta_c
+# Version               : #1 SMP Thu Sep 10 00:55:34 UTC 2020 (abfe5b7)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /lus/cls01095/work/z19/z19/aturner/benchmarks/mpi-benchmarks-IMB-v2019.6/IMB-MPI1 -npmin 4096 PingPong 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# PingPong
+
+#---------------------------------------------------
+# Benchmarking PingPong 
+# #processes = 2 
+# ( 4094 additional processes waiting in MPI_Barrier)
+#---------------------------------------------------
+       #bytes #repetitions      t[usec]   Mbytes/sec
+            0         1000         0.77         0.00
+            1         1000         0.75         1.33
+            2         1000         0.71         2.84
+            4         1000         0.81         4.94
+            8         1000         0.75        10.67
+           16         1000         0.75        21.42
+           32         1000         0.76        41.94
+           64         1000         0.81        79.25
+          128         1000         0.80       159.52
+          256         1000         0.83       310.02
+          512         1000         0.85       602.63
+         1024         1000         0.92      1108.38
+         2048         1000         1.10      1857.48
+         4096         1000         1.84      2223.64
+         8192         1000         1.46      5626.75
+        16384         1000         2.32      7067.00
+        32768         1000         2.73     12000.26
+        65536          640         3.32     19765.39
+       131072          320         4.67     28053.24
+       262144          160         8.14     32208.32
+       524288           80        19.18     27336.16
+      1048576           40        39.89     26286.42
+      2097152           20        77.87     26930.25
+      4194304           10       154.33     27177.79
+
+
+# All processes entering MPI_Finalize
+
