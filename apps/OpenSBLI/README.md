@@ -53,13 +53,5 @@ These options indicate:
 - `100` - 100 iterations
 - `0` - Do not write HDF5 output
 
-# Example job submission scripts
-
-- ARCHER
-- Cirrus
-- Athena
-- Thomas
-- Peta4 Skylake
-- Isambard
 
 
