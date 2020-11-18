@@ -75,8 +75,11 @@ def get_perf_dict(filename, cpn):
         resdict = None
         return resdict
 
+    resdict['Processes'] = resdict.get('Processes', 1)
     resdict['Cores'] = resdict['Processes'] * resdict['Threads']
     resdict['Nodes'] = int(resdict['Cores'] / cpn)
+    if resdict['Nodes'] == 0:
+        resdict['Nodes'] = 1
 
     # Compute the SCF cycle times and remove extreme values
     deltat = []
@@ -91,18 +94,24 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, threads=None, writestats=False):
+def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
     if threads is not None:
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
     df_num = df.drop(['File', 'Date'], 1)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    if writestats:
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads']).agg(groupf)
+        print(df_group)
+    if plot_cores:
+        df_group = df_num.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+    else:
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     if writestats:
         print(df_group)
     perf = df_group['Perf',stat].tolist()
-    nodes = df_group.index.get_level_values(0).tolist()
-    return nodes, perf
+    count = df_group.index.get_level_values(0).tolist()
+    return count, perf
 
 def getmeancycle(castepfilename):
     """Extract the mean SCF cycle time from CASTEP output. Max and min values are removed."""

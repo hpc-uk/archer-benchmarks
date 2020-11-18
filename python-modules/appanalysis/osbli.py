@@ -55,7 +55,12 @@ def get_perf_dict(filename, cpn):
     infile.close()
 
     # Get number of nodes from filename
-    tokens = filename.split('_')
+    tokens = filename.split('.')
+    filestem = ''
+    for token in tokens:
+        if 'nodes' in token:
+            filestem = token
+    tokens = filestem.split('_')
     nodestring = None
     for token in tokens:
         if 'nodes' in token:
@@ -78,15 +83,19 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, writestats=False):
-    df_num = df.drop(['File', 'Date'], 1)
+def get_perf_stats(df, stat, writestats=False, plotcores=False):
+    # df_num = df.drop(['File', 'Date'], 1)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     if writestats:
         print(df_group)
+    if plotcores:
+        df_group = df.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+    else:
+        df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
     perf = df_group['Perf',stat].tolist()
-    nodes = df_group.index.get_level_values(0).tolist()
-    return nodes, perf
+    count = df_group.index.get_level_values(0).tolist()
+    return count, perf
 
 
 def gettiming(filename):
@@ -100,17 +109,20 @@ def gettiming(filename):
     infile.close()
     return timing
 
-def calcperf(filedict, cpn):
-    nodeslist = []
+def calcperf(filedict, cpn, plot_cores=False):
+    plotlist = []
     timelist = []
     perflist = []
     print("{:>15s} {:>15s} {:>15s} {:>20s}".format('Nodes', 'Cores', 'Time (s)', 'Performance (iter/s)'))
     print("{:>15s} {:>15s} {:>15s} {:>20s}".format('=====', '=====', '========', '===================='))
     for nodes, filename in sorted(filedict.items()):
-        nodeslist.append(nodes)
+        if plot_cores:
+            plotlist.append(nodes*cpn)
+        else:
+            plotlist.append(nodes)
         t = gettiming(filename)
         timelist.append(t)
         perf = 1.0/t
         perflist.append(perf)
         print("{:>15d} {:>15d} {:>15.1f} {:>20.3f}".format(nodes, nodes*cpn, t, perf))
-    return nodeslist, timelist, perflist
+    return plotlist, timelist, perflist

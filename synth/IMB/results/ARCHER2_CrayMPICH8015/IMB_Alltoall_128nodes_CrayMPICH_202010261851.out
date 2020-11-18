@@ -1,0 +1,50 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Mon Oct 26 19:07:11 2020
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.12.14-197.51_9.1.42-cray_shasta_c
+# Version               : #1 SMP Thu Sep 10 00:55:34 UTC 2020 (abfe5b7)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /lus/cls01095/work/z19/z19/aturner/benchmarks/mpi-benchmarks-IMB-v2019.6/IMB-MPI1 -time 100 -npmin 16384 Alltoall 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Alltoall
+
+#----------------------------------------------------------------
+# Benchmarking Alltoall 
+# #processes = 16384 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0         1000         0.04         0.40         0.05
+            1          118      5827.74      6682.96      6108.30
+            2          118      6032.73      7504.76      6264.31
+            4          118      6052.17      7214.74      6385.35
+            8          118      6730.19      8114.04      7431.03
+           16          118      9114.93     11810.00     10664.43
+           32          118     14139.04     21017.69     17986.67
+           64          118     25817.28     40565.11     33543.09
+          128          118     57403.96     85357.80     75041.06
+          256          118    140648.35    186756.47    166646.69
+          512            1    391130.21    391477.11    391273.51
+         1024            1    439203.74    439564.70    439384.81
+         2048            1    751185.18    751590.01    751428.34
+         4096            1   1345759.63   1346303.46   1346121.43
+         8192            1   2364014.39   2364905.83   2364658.92
+        16384            1   4307881.59   4309870.72   4309284.27

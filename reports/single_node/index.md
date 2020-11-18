@@ -118,7 +118,7 @@ synthetic benchmark suite](https://icl.utk.edu/hpcc/)). STREAM is a simple synth
 sustainable memory bandwidth.
 
 [Table 5](#tab5) details the theoretical single precision (SP) floating point performance for each of the systems used in our exercise
-and [Table 6](#tab6) shows some of the processor charateristics used to compute the CPU GFLOP/s performance figures. (Double
+and [Table 6](#tab6) shows some of the processor charateristics used to compute the CPU GFlop/s performance figures. (Double
 precision performance is half the single precision value). The 
 compute nodes with GPU accelerators have by far the highest theoretical floating point performance. Of the CPU-based systems,
 the Peta4-Skylake nodes (Intel Xeon Skylake Gold) have more than twice the theoretical floating point performance of the
@@ -129,11 +129,11 @@ performance and ARCHER (Intel Xeon Ivy Bridge) compute nodes having the lowest t
 All of these calculations assume that any processer turbo modes (that can increase the clock speed) are not employed. This 
 assumption may not hold in some use configurations but should not have a large effect on the ordering of the performance.
 
-<a id="tab5"></a>Table 5: Theoretical maximum floating point performance for different platforms. CPU FLOPS are computed as
-(number of cores used) &times; (single precision FLOPS per cycle) &times; (frequency). See [Table 10](#tab10) for values used for the different
-systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single precision FLOPS reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.) Each P100 GPU has 56 Streaming Multiprocessors each of which gives 128 SP FLOPS/cycle, leading to 7168 SP FLOPS/cycle per GPU.
+<a id="tab5"></a>Table 5: Theoretical maximum floating point performance for different platforms. CPU Flop/s are computed as
+(number of cores used) &times; (single precision Flop per cycle) &times; (frequency). See [Table 10](#tab10) for values used for the different
+systems. GPU Flop/s are computed as (number of GPUs used) &times; ([GPU single precision Flop/s reference value](https://www.nvidia.com/en-us/data-center/tesla-p100/)). (Assuming base clock frequency without turbo mode.) Each P100 GPU has 56 Streaming Multiprocessors each of which gives 128 SP Flop/cycle, leading to 7168 SP Flop/cycle per GPU.
 
-| System        | Cores used | CPU vector base SP GFLOP/s | GPU used | GPU SP GFLOP/s | Node SP GFLOP/s | Node SP performace relative to ARCHER node |
+| System        | Cores used | CPU vector base SP GFlop/s | GPU used | GPU SP GFlop/s | Node SP GFlop/s | Node SP performace relative to ARCHER node |
 |---------------|-----------:|---------------------------:|---------:|---------------:|----------------:|-------------------------------------------:|
 | Wilkes2-GPU   | 12         | 288                        | 4        | 37,200         | 37,488          | 36.150                                     |
 | JADE          | 5          | 352                        | 1        | 10,600         | 10,952          | 10.561                                     |
@@ -147,7 +147,7 @@ systems. GPU FLOPS are computed as (number of GPUs used) &times; ([GPU single pr
 
 <a id="tab6"></a>Table 6: Processor charateristics used to compute CPU GFLOP/s.
 
-| System        | SP FLOPS per cycle per core | FP vector unit base clock speed (GHz) | Single core vector base SP GFLOP/s |
+| System        | SP Flop per cycle per core | FP vector unit base clock speed (GHz) | Single core vector base SP GFlop/s |
 |---------------|----------------------------:|--------------------------------------:|-----------------------------------:|
 | Peta4-Skylake | 64                          | 1.6 (AVX512)                          | 102.4                              | 
 | Athena        | 32                          | 1.9 (AVX2)                            | 60.8                               | 
@@ -248,7 +248,7 @@ both in terms of peak bandwdth and in terms of the number of memory channels. To
 -   Pearson correlation test: this assesses the level of correlation between the values from two datasets. This value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 -   Spearman rank-order correlation test: this assesses the level of correlation between the ordering of the values from two datasets. As for Pearson, this value varies between -1 (absolute negative correlation) and +1 (absolute postive correlation).
 
-[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 10](#tab10) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance (particularly GFLOP/s) - both quantitatively and in rank order. This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
+[Figure 1](#fig1) plots the CASTEP performance against node floating point performance for the different systems studied and [Table 10](#tab10) shows the correlation coeffients for the CASTEP benchmark with different aspects of the compute nodes. CASTEP benchmark performance is very strongly correlated to floating point performance (particularly GFlop/s) - both quantitatively and in rank order. This is due to the fact that, on a single node, most of the time for this CASTEP benchmark is spent in LAPACK numerical routines which are well-optimised to exploit the maximum floating point performance from the processors. Conversely, there is effectively no correlation between CASTEP benchmark performance and the memory aspects of the compute nodes. The scatter plot also shows that the system furthest from the correlation line is Isambard (Marvell Arm ThunderX2) impying that this system is not exploiting the floating point performance as well as the other systems.
 
 <a id="fig1"></a>Figure 1: Scatter plot of CASTEP performance vs. floating point performance for the CASTEP Al Slab benchmark
 <img src="img/castep_corr_fp.png" />
@@ -258,8 +258,8 @@ the CASTEP Al Slab benchmark
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.90   |  0.75    |
-| Floating Point Performance (SP FLOP/cycle) |  0.90   |  0.78    |
+| Floating Point Performance (SP GFlop/s)     |  0.90   |  0.75    |
+| Floating Point Performance (SP Flop/cycle) |  0.90   |  0.78    |
 | Memory Bandwidth                           |  0.22   |  0.32    |
 | Memory Channels                            |  0.14   | -0.06    |
 
@@ -305,7 +305,7 @@ We are currently working to get the GPU version of OpenSBLI running correctly on
 
 If we look at the correlation coefficients for OpenSBLI benchmark performance compared to the different system aspects ([Table 13](#tab13))
 it appears that the performance is not strongly correlated to either floating point performance or memory performance although there are
-possible correlations to floating point performance (in terms of GFLOP/s) and number of memory channels suggesting that both these aspects
+possible correlations to floating point performance (in terms of GFlop/s) and number of memory channels suggesting that both these aspects
 of the systems may be important for the performance of this benchmark.
 
 <a id="tab13"></a>Table 13: Correlation coefficients for different aspects of systems hardware correlated to performance of
@@ -313,8 +313,8 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.85   |  0.89    |
-| Floating Point Performance (SP FLOP/cycle) |  0.35   |  0.18    |
+| Floating Point Performance (SP GFlop/s)     |  0.85   |  0.89    |
+| Floating Point Performance (SP Flop/cycle) |  0.35   |  0.18    |
 | Memory Bandwidth                           |  0.77   |  0.68    |
 | Memory Channels                            |  0.71   |  0.48    |
 
@@ -335,8 +335,8 @@ the OpenSBLI 512^3, Taylor-Green vortex benchmark for subset of systems (without
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.96   |  1.00    |
-| Floating Point Performance (SP FLOP/cycle) |  0.91   |  0.67    |
+| Floating Point Performance (SP GFlop/s)     |  0.96   |  1.00    |
+| Floating Point Performance (SP Flop/cycle) |  0.91   |  0.67    |
 
 The Isambard performance, which is higher than expected based on floating point performance alone, could potentially be explained by the 
 additional memory performance available on this architecture (mre memory channels, more potential for cache reuse as more cores share L3 cache,
@@ -402,8 +402,8 @@ the GROMACS 1400k atom benchmark.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.75   |  0.75    |
-| Floating Point Performance (SP FLOP/cycle) |  0.73   |  0.82    |
+| Floating Point Performance (SP GFlop/s)     |  0.75   |  0.75    |
+| Floating Point Performance (SP Flop/cycle) |  0.73   |  0.82    |
 | Memory Bandwidth                           | -0.37   |  0.09    |
 | Memory Channels                            | -0.17   | -0.06    |
 
@@ -419,8 +419,8 @@ CPU-only systems.
 
 | Aspect                                     | Pearson | Spearman |
 |--------------------------------------------|--------:|---------:|
-| Floating Point Performance (SP GLOP/s)     |  0.81   |  0.61    |
-| Floating Point Performance (SP FLOP/cycle) |  0.88   |  0.78    |
+| Floating Point Performance (SP GFlop/s)     |  0.81   |  0.61    |
+| Floating Point Performance (SP Flop/cycle) |  0.88   |  0.78    |
 
 This comparison shows a much stronger correlation than the comparison when the 
 GPU systems are included, demonstrating that the scaling properties of performance with floating point performance is different 
