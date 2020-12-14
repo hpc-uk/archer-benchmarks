@@ -61,7 +61,11 @@ def get_perf_dict(filename, cpn, perftype="mean"):
         if re.search('LOOP:', line):
             line = line.strip()
             tokens = line.split()
-            tvals.append(float(tokens[6]))
+            if len(tokens) > 6:
+                tvals.append(float(tokens[6]))
+            else:
+                t = tokens[4].replace("time","")
+                tvals.append(float(t))
         elif re.search('running on ', line):
             line = line.strip()
             tokens = line.split()
@@ -91,9 +95,18 @@ def get_perf_dict(filename, cpn, perftype="mean"):
 
     resdict['Processes'] = resdict.get('Processes', 1)
     resdict['Cores'] = resdict['Processes'] * resdict['Threads']
-    resdict['Nodes'] = int(resdict['Cores'] / cpn)
-    if resdict['Nodes'] == 0:
-        resdict['Nodes'] = 1
+    # Get number of nodes from filename
+    tokens = filename.split('.')
+    filestem = ''
+    for token in tokens:
+        if 'nodes' in token:
+            filestem = token
+    tokens = filestem.split('_')
+    nodestring = None
+    for token in tokens:
+        if 'nodes' in token:
+            nodestring = token
+    resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # Compute the SCF cycle times and remove extreme values
     resdict['SCF'] = 0.0
@@ -116,7 +129,7 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
     df_num = df.drop(['File', 'Date'], 1)
-    groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
+    groupf = {'Perf':['min','median','max','mean'], 'SCF':['min','median','max','mean'], 'Count':'sum'}
     if writestats:
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads','NPAR','KPAR']).agg(groupf)
         print(df_group)

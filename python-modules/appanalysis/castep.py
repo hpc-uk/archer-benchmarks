@@ -50,6 +50,7 @@ def get_perf_dict(filename, cpn):
     resdict['File'] = os.path.abspath(filename)
     # Default to 1 thread as CASTEP only reports threads if > 1
     resdict['Threads'] = 1
+    resdict['nSMP'] = 1
     for line in infile:
         if re.search('<-- SCF', line):
             line = line.strip()
@@ -63,11 +64,21 @@ def get_perf_dict(filename, cpn):
         elif re.search('Each process may', line):
             line = line.strip()
             tokens = line.split()
-            resdict['Threads'] = int(tokens[6])
+            resdict['Threads'] = int(tokens[6])   
+        elif re.search('G-vector communication optimised', line):
+            line = line.strip()
+            tokens = line.split()
+            temp = tokens[6]
+            tokens = temp.split('-')
+            resdict['nSMP'] = int(tokens[0])
         elif re.search('Run started:', line):
             line = line.strip()
             tokens = line.split(',')
-            resdict['Date'] = tokens[1].strip()         
+            resdict['Date'] = tokens[1].strip()    
+        elif re.search('Calculation time', line):
+            line = line.strip()
+            tokens = line.split()
+            resdict['Tcalc'] = float(tokens[3].strip())     
     infile.close()
 
     # If we do not have enough SCF cycle data then exit and return None
@@ -77,9 +88,23 @@ def get_perf_dict(filename, cpn):
 
     resdict['Processes'] = resdict.get('Processes', 1)
     resdict['Cores'] = resdict['Processes'] * resdict['Threads']
-    resdict['Nodes'] = int(resdict['Cores'] / cpn)
-    if resdict['Nodes'] == 0:
-        resdict['Nodes'] = 1
+    # Get number of nodes and potentially pinning type from filename
+    tokens = filename.split('.')
+    filestem = ''
+    resdict['Pinning'] = 'unknown'
+    for token in tokens:
+        if 'nodes' in token:
+            filestem = token
+    tokens = filestem.split('_')
+    nodestring = None
+    for token in tokens:
+        if 'nodes' in token:
+            nodestring = token
+        elif token == 'rank':
+            resdict['Pinning'] = 'rank'
+        elif token == 'cores':
+            resdict['Pinning'] = 'cores'
+    resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # Compute the SCF cycle times and remove extreme values
     deltat = []
@@ -99,14 +124,14 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
     df_num = df.drop(['File', 'Date'], 1)
-    groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
+    groupf = {'Perf':['min','median','max','mean'], 'Tcalc':['min','median','max','mean'], 'Count':'sum'}
     if writestats:
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads']).agg(groupf)
         print(df_group)
     if plot_cores:
-        df_group = df_num.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+        df_group = df_num.sort_values(by='Cores').groupby(['Cores']).agg(groupf)
     else:
-        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes']).agg(groupf)
     if writestats:
         print(df_group)
     perf = df_group['Perf',stat].tolist()
