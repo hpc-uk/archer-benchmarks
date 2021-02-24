@@ -1,0 +1,62 @@
+#------------------------------------------------------------
+#    Intel(R) MPI Benchmarks 2019 Update 6, MPI-1 part    
+#------------------------------------------------------------
+# Date                  : Wed Feb 24 08:15:42 2021
+# Machine               : x86_64
+# System                : Linux
+# Release               : 4.12.14-197.56_9.1.44-cray_shasta_c
+# Version               : #1 SMP Fri Oct 9 22:00:11 UTC 2020 (6d7e380)
+# MPI Version           : 3.1
+# MPI Thread Environment: 
+
+
+# Calling sequence was: 
+
+# /lus/cls01095/work/z19/z19/aturner/benchmarks/mpi-benchmarks-IMB-v2019.6/IMB-MPI1 -time 100 -npmin 512 Allgatherv 
+
+# Minimum message length in bytes:   0
+# Maximum message length in bytes:   4194304
+#
+# MPI_Datatype                   :   MPI_BYTE 
+# MPI_Datatype for reductions    :   MPI_FLOAT 
+# MPI_Op                         :   MPI_SUM  
+# 
+# 
+
+# List of Benchmarks to run:
+
+# Allgatherv
+
+#----------------------------------------------------------------
+# Benchmarking Allgatherv 
+# #processes = 512 
+#----------------------------------------------------------------
+       #bytes #repetitions  t_min[usec]  t_max[usec]  t_avg[usec]
+            0         1000         0.85         1.17         0.88
+            1         1000        29.36        37.91        33.22
+            2         1000        30.37        40.26        34.49
+            4         1000        32.81        43.45        37.42
+            8         1000        35.13        47.13        40.42
+           16         1000        69.06        90.16        78.76
+           32         1000        84.71       107.07        92.85
+           64         1000       119.43       146.58       129.39
+          128         1000       134.18       202.63       168.18
+          256         1000       200.57       312.94       258.25
+          512         1000       258.62       503.67       409.81
+         1024         1000       494.13       740.92       646.97
+         2048         1000       592.52       711.85       652.49
+         4096         1000      1075.29      1226.13      1145.49
+         8192         1000      3221.02      3583.84      3401.99
+        16384         1000      8222.26      8931.91      8536.55
+        32768         1000     16282.88     17782.32     17007.14
+        65536          640     32834.47     36300.15     34541.52
+       131072          320     65601.39     73093.29     69396.50
+       262144          160    130434.31    145003.80    137780.18
+       524288           80    259801.31    286959.83    274055.12
+      1048576           40    533234.11    591307.90    563347.35
+      2097152 out-of-mem.; needed X=   1.003 GB; use flag "-mem X" or MAX_MEM_USAGE>=X (IMB_mem_info.h)
+      4194304 out-of-mem.; needed X=   2.005 GB; use flag "-mem X" or MAX_MEM_USAGE>=X (IMB_mem_info.h)
+
+
+# All processes entering MPI_Finalize
+
