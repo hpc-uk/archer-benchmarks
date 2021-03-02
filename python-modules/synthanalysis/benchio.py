@@ -88,7 +88,7 @@ def get_perf_dict(filename, cpn):
     return resframe_proto
 
 def get_perf_stats(df, striping, localsize, stat, writestats=False):
-    query = '(Striping == {0} & (LocalSize == {1}))'.format(striping, localsize)
+    query = '(Striping == {0}) & (LocalSize == {1}))'.format(striping, localsize)
     df_q = df.query(query)
     df_q = df_q.query('(Clients > 0)')
     df_num = df_q.drop(['File', 'GlobalSize', 'TotData'], 1)
