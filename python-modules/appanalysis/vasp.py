@@ -2,7 +2,7 @@
 import re
 import os
 
-def create_df_list(filelist, cpn, perftype="mean"):
+def create_df_list(filelist, cpn, perftype="mean", printfilename=False):
     """Create a list of dictionaries from multiple log files which can
     then be used to create a Pandas dataframe.
 
@@ -15,6 +15,8 @@ def create_df_list(filelist, cpn, perftype="mean"):
     """
     df_list = []
     for file in filelist:
+        if printfilename:
+            print(file)
         resdict = get_perf_dict(file, cpn, perftype=perftype)
         if resdict is not None:
             df_list.append(resdict) 
