@@ -1,0 +1,17 @@
+Iteration is 9400 
+Iteration is 9500 
+Iteration is 9600 
+Iteration is 9700 
+Iteration is 9800 
+Iteration is 9900 
+End of time iteration loop 
+performed 10000 iterations
+
+---------------------------------------------------------------------------
+
+Timings are:
+------------------Simulation time-----------------------------------------
+Total Wall time of the time iteration loop for 10000 iterations, 1340.560938
+Time taken for 1 iteration, 0.134056
+
+Not performing file I/O as write HDF5 is set to False
