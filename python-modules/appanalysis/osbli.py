@@ -54,7 +54,9 @@ def get_perf_dict(filename, cpn):
             resdict['Date'] = " ".join(tokens[4:])         
     infile.close()
 
-    # Get number of nodes from filename
+    # Get number of nodes and possibly threads from filename
+    # Default is 1 thread
+    resdict['Threads'] = 1
     tokens = filename.split('.')
     filestem = ''
     for token in tokens:
@@ -65,6 +67,8 @@ def get_perf_dict(filename, cpn):
     for token in tokens:
         if 'nodes' in token:
             nodestring = token
+        elif 'threads' in token:
+            resdict['Threads'] = int(token.replace('threads',''))
     resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # If we do not have enough SCF cycle data then exit and return None
@@ -83,20 +87,21 @@ def get_perf_dict(filename, cpn):
 
     return resdict
 
-def get_perf_stats(df, stat, writestats=False, plotcores=False):
-    # df_num = df.drop(['File', 'Date'], 1)
+def get_perf_stats(df, stat, threads=None, writestats=False, plotcores=False):
+    if threads is not None:
+       query = '(Threads == {0})'.format(threads)
+       df = df.query(query)
     groupf = {'Perf':['min','median','max','mean'], 'Count':'sum'}
-    df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+    df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores','Threads']).agg(groupf)
     if writestats:
         print(df_group)
     if plotcores:
-        df_group = df.sort_values(by='Cores').groupby(['Cores','Nodes']).agg(groupf)
+        df_group = df.sort_values(by='Cores').groupby(['Cores']).agg(groupf)
     else:
-        df_group = df.sort_values(by='Nodes').groupby(['Nodes','Cores']).agg(groupf)
+        df_group = df.sort_values(by='Nodes').groupby(['Nodes']).agg(groupf)
     perf = df_group['Perf',stat].tolist()
     count = df_group.index.get_level_values(0).tolist()
     return count, perf
-
 
 def gettiming(filename):
     infile = open(filename, 'r')
