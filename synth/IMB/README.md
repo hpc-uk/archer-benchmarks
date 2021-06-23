@@ -14,6 +14,7 @@ The following benchmarks were run:
 * Alltoallv
 * Allgather
 * Allgatherv
+* Allreduce
 
 ## Analysis
 
