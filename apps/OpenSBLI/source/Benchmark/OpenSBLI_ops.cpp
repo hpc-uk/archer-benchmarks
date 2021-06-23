@@ -197,17 +197,17 @@ int main (int argc, char **argv)
     int number_of_processes, grid_points, number_of_iters;
     FILE *inputfile;
     inputfile = fopen("input", "r");
-    printf("\n---------------------------------------------------------------------------\n");
+//    ops_printf("\n---------------------------------------------------------------------------\n");
 
 
-    printf("This is the benchmark application developed for the CFD application of the \nUK HPC benchmark suite. The compressible Navier-Stokes equations are solved\non a Cartesian mesh using fourth order central finite difference scheme\nand three stage Runge-Kutta time stepping scheme.\n\n    Authors Dr. Satya P Jammy and Prof. Neil Sandham\n");
-    printf("\n---------------------------------------------------------------------------\n");
-    printf("Some simulation information \n");
+//    printf("This is the benchmark application developed for the CFD application of the \nUK HPC benchmark suite. The compressible Navier-Stokes equations are solved\non a Cartesian mesh using fourth order central finite difference scheme\nand three stage Runge-Kutta time stepping scheme.\n\n    Authors Dr. Satya P Jammy and Prof. Neil Sandham\n");
+//    ops_printf("\n---------------------------------------------------------------------------\n");
+//    ops_printf("Some simulation information \n");
     if (inputfile) {
         fscanf(inputfile, "%s %d %d %d %s", type_of_simulation, &grid_points, &number_of_iters, &number_of_processes, HDF5op);
     }
     if (strcmp(type_of_simulation,"va") == 0){
-        printf("The simulation performed is the validation simulation \n");
+        ops_printf("The simulation performed is the validation simulation \n");
 
         nx0 = 128;
         nx1 = 128;
@@ -220,10 +220,10 @@ int main (int argc, char **argv)
 
         deltat = 0.000846250000000000;
         deltat = deltat*2.0;
-        printf("The number of grid points used per direction are %d\nThe total number of grid points are %d\n",nx0, nx0*nx1*nx2);
+        ops_printf("The number of grid points used per direction are %d\nThe total number of grid points are %d\n",nx0, nx0*nx1*nx2);
     }
     else if (strcmp(type_of_simulation,"ss") == 0){
-        printf("The simulation is performed is the strong scaling simulation \n");
+//        ops_printf("The simulation is performed is the strong scaling simulation \n");
 
         nx0 = grid_points;
         nx1 = grid_points;
@@ -235,10 +235,10 @@ int main (int argc, char **argv)
         niter = number_of_iters;
 
         deltat = 0.000846250000000000*256/grid_points;
-        printf("The number of grid points used per direction are %d\nThe total number of grid points are %d\n",nx0, nx0*nx1*nx2);
+ //       ops_printf("The number of grid points used per direction are %d\nThe total number of grid points are %d\n",nx0, nx0*nx1*nx2);
     }
     else if (strcmp(type_of_simulation,"ws") == 0){
-        printf("The simulation is performed is the weak scaling simulation on %d number of processes using %d grid points per process \n",number_of_processes, grid_points);
+        ops_printf("The simulation is performed is the weak scaling simulation on %d number of processes using %d grid points per process \n",number_of_processes, grid_points);
         nx0 = grid_points*number_of_processes;
         nx1 = grid_points*number_of_processes;
         nx2 = grid_points*number_of_processes;
@@ -249,11 +249,11 @@ int main (int argc, char **argv)
         niter = number_of_iters;
 
         deltat = 0.000846250000000000*256/grid_points;
-        printf("The total number of grid points are %d\n",nx0*nx1*nx2);
+        ops_printf("The total number of grid points are %d\n",nx0*nx1*nx2);
     }
     else{
-        printf("The simulation name is invalid \nThe simulation name provided is %s\nit should be one of the following\nva, ss or ws\n",type_of_simulation);
-        printf("aborting the simulation\n");
+        ops_printf("The simulation name is invalid \nThe simulation name provided is %s\nit should be one of the following\nva, ss or ws\n",type_of_simulation);
+        ops_printf("aborting the simulation\n");
         exit(0);
     }
 
@@ -511,8 +511,8 @@ int main (int argc, char **argv)
 
    ops_partition("");
 
-   ops_printf("End of the simulation information\n");
-   ops_printf("---------------------------------------------------------------------------\n");
+//   ops_printf("End of the simulation information\n");
+//   ops_printf("---------------------------------------------------------------------------\n");
 
    int iter_range16[] = {-2, nx0 + 2, -2, nx1 + 2, -2, nx2 + 2};
    ops_par_loop_taylor_green_vortex_block0_16_kernel("Initialisation", taylor_green_vortex_block, 3, iter_range16,
@@ -732,7 +732,7 @@ int main (int argc, char **argv)
 
    double cpu_end, elapsed_end;
   ops_timers(&cpu_end, &elapsed_end);
-   ops_timing_output(stdout);
+   ops_timing_output(stderr);
    ops_printf("\nTimings are:\n");
    ops_printf("------------------Simulation time-----------------------------------------\n");
    ops_printf("Total Wall time of the time iteration loop for %d iterations, %lf\n",niter, elapsed_end-elapsed_start);
@@ -748,7 +748,7 @@ int main (int argc, char **argv)
     ops_fetch_dat_hdf5_file(rhoE, "solution.h5");
     double tend;
     ops_timers(&cpu, &tend);
-    ops_timing_output(stdout);
+    ops_timing_output(stderr);
     ops_printf("--------------HDF5 I/O selected and the timings are------------------------\n");
     ops_printf("Time taken for writing HDF5 File is %lf\n",tend-tstart);
    }

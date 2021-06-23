@@ -816,21 +816,23 @@ void ops_partition(const char *routine) {
 
     // decompose dats defined on this block
     ops_decomp_dats(sb);
+    /*
     if (sb->owned) {
-      printf(" ================================================================"
-             "===========\n");
-      printf(" rank %d (", ops_my_global_rank);
-      for (int n = 0; n < sb->ndim; n++)
-        printf("%d ", sb->coords[n]);
-      printf(")\n");
-      printf(" ------------------------------\n");
-      printf(" %5s  :  %9s  :  %9s  :  %5s  :  %5s  :  %5s  :  %5s\n", "dim",
-             "prev_rank", "next_rank", "disp", "size", "start", "end");
-      for (int n = 0; n < sb->ndim; n++)
-        printf(" %5d  :  %9d  :  %9d  :  %5d  :  %5d\n", n, sb->id_m[n],
-               sb->id_p[n], sb->decomp_disp[n], sb->decomp_size[n]);
-      printf("\n");
+        printf(" ================================================================"
+               "===========\n");
+        printf(" rank %d (", ops_my_global_rank);
+        for (int n = 0; n < sb->ndim; n++)
+          printf("%d ", sb->coords[n]);
+        printf(")\n");
+        printf(" ------------------------------\n");
+        printf(" %5s  :  %9s  :  %9s  :  %5s  :  %5s  :  %5s  :  %5s\n", "dim",
+               "prev_rank", "next_rank", "disp", "size", "start", "end");
+        for (int n = 0; n < sb->ndim; n++)
+          printf(" %5d  :  %9d  :  %9d  :  %5d  :  %5d\n", n, sb->id_m[n],
+                 sb->id_p[n], sb->decomp_disp[n], sb->decomp_size[n]);
+        printf("\n");
     }
+    */
     max_block_dims = MAX(max_block_dims, sb->ndim);
     for (int n = 0; n < sb->ndim; n++)
       max_block_dim = MAX(max_block_dim, sb->decomp_size[n]);
