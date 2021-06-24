@@ -55,10 +55,10 @@
 
 MPI_Comm OPS_MPI_HDF5_WORLD;
 
-sub_block_list *OPS_sub_block_list; // pointer to list holding sub-block
+// sub_block_list *OPS_sub_block_list; // pointer to list holding sub-block
                                     // geometries
 
-sub_dat_list *OPS_sub_dat_list; // pointer to list holding sub-dat
+// sub_dat_list *OPS_sub_dat_list; // pointer to list holding sub-dat
                                 // details
 
 /*******************************************************************************
