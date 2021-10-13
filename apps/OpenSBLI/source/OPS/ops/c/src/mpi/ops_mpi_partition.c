@@ -497,7 +497,6 @@ void ops_partition_halos(int *processes, int *proc_offsets, int *proc_disps,
                 (proc_disp == 0 ? (sd_to->gbl_base[d] + sd_to->gbl_d_m[d]) : 0);
             // determine if target partition is at the end in the current
             // dimension
-            sub_dat *sd_to = OPS_sub_dat_list[halo->to->index];
             int zerobase_gbl_size =
               sd_to->gbl_size[d] + sd_to->gbl_d_m[d] - sd_to->gbl_d_p[d] + sd_to->gbl_base[d];
             int is_last = (proc_disp+proc_size) == zerobase_gbl_size;
@@ -622,12 +621,11 @@ void ops_partition_halos(int *processes, int *proc_offsets, int *proc_disps,
             int proc_disp = proc_disps[j * OPS_MAX_DIM + d];
             int proc_size = proc_sizes[j * OPS_MAX_DIM + d];
             int left_pad =
-                (proc_disp == 0 ? sd_to->gbl_base[d] + sd_to->gbl_d_m[d] : 0);
-            int is_last = 1;
-            for (int k = proc_offsets[halo->from->block->index];
-                 k < proc_offsets[halo->from->block->index + 1]; ++k)
-              is_last = is_last && (proc_disps[k * OPS_MAX_DIM + d] <=
-                                    proc_disps[j * OPS_MAX_DIM + d]);
+                (proc_disp == 0 ? sd_from->gbl_base[d] + sd_from->gbl_d_m[d] : 0);
+            int zerobase_gbl_size =
+              sd_from->gbl_size[d] + sd_from->gbl_d_m[d] - sd_from->gbl_d_p[d] + sd_from->gbl_base[d];
+            int is_last = (proc_disp+proc_size) == zerobase_gbl_size;
+
             int right_pad = is_last ? sd_from->gbl_d_p[d] : 0;
             int intersection_local = intersection(
                 proc_disp + left_pad, proc_disp + proc_size + right_pad,
