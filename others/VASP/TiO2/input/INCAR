@@ -1,0 +1,40 @@
+   SYSTEM =       TiO2
+ Startparameter for this Run:
+   NWRITE =     1     verbosity write-flag
+   ISTART =     0     0-new 1-cont 2-samecut job
+   ISPIN  =     1     1-no, 2-yes
+
+  Electronic Relaxation
+  PREC   =    Accurate   *  !precission: !Low/Medium/Normal/Accurate/High/
+  NELM   =    10       max. # of electronic SC steps
+  EDIFF  = 1.0e-7    stopping-criterion for electronic upd.
+  ENCUT  =   750
+
+  Ionic relaxation
+  NSW    =     0   *  # of steps for ionic update (def:0)
+
+  IBRION =     -1   *  ionic relax: -1:no move; 0-MD;1-Newton;2-CG;3-damped;4-?
+  ISYM   =    0      symmetry:0-OFF, 1-ON,2-ON+memory conserving for CD
+
+  POTIM  =   0.5   *  for MD, timestep in femtoseconds, for relaxation, a step-size scaling factor
+  IWAVPR =  0     * wavefunction is extrapolated forward to new ion positions (0=no,>10 runs in memory, <10 in temporary file, 1=simple, 2=more advanced, 3=mix of 1 and 2)
+
+  ISMEAR   =   0     *  part. occup.:-5 Blochl,-4 tet,-3,-2,-1-fermi,0-Gauss,>0MP
+  SIGMA   =    0.10   *  broadening in eV -4 tet -1-fermi 0-gauss
+
+  Electronic relaxation 2
+  IALGO  =    48    * algorithm: use only 8 (CG) or 48 (RMM-DIIS)
+  LREAL  =  .TRUE. * non-local projectors in real space+automatic optim
+  GGA    =   91    * xc-type: PB, PW (86), LM, 91 (Perdew-Wang 91),PE(PBE),RP(revPBE)
+
+  LWAVE  =  .F.     * write WAVECAR
+  LCHARG =  .F.     * write CHGCAR and CHG
+  LVTOT  =  .F.      * write the local potential LOCPOT
+  LELF   = .FALSE.   create ELFCAR file
+
+  LPLANE = .TRUE.
+  NSIM = 4
+
+NCORE=32
+
+
