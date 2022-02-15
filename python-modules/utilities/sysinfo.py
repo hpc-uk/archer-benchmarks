@@ -3,14 +3,14 @@ import yaml
 def getdetails(infile):
     """Return a dictionary of dictionaries with the system details"""
     input = open(infile, "r")
-    systems = yaml.load(input)
+    systems = yaml.safe_load(input)
     input.close()
     return systems
 
 def procinfo(infile):
    """Print table with processor details for benchmark systems."""
    input = open("systems.yaml", "r")
-   systems = yaml.load(input)
+   systems = yaml.safe_load(input)
    input.close()
    formath = '{:>15s} {:>25s} {:>15s} {:>15s} {:>10s} {:>10s}'
    formatp = '{:>15s} {:>25s} {:>15s} {:>15.1f} {:>10d} {:>10d}'
@@ -27,7 +27,7 @@ def procinfo(infile):
 def meminfo(infile):
    """Print table with memory details for benchmark systems."""
    input = open("systems.yaml", "r")
-   systems = yaml.load(input)
+   systems = yaml.safe_load(input)
    input.close()
    formath = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>10s}'
    formatp = '{:>15s} {:>15s} {:>15.1f} {:>15d} {:>10s} {:>10s}'
@@ -44,7 +44,7 @@ def meminfo(infile):
 def fsinfo(infile):
    """Print table with parallel file system  details for benchmark systems."""
    input = open("systems.yaml", "r")
-   systems = yaml.load(input)
+   systems = yaml.safe_load(input)
    input.close()
    formath = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
    formatp = '{:>15s} {:>15s} {:>15s} {:>15s} {:>10s} {:>15s}'
@@ -63,7 +63,7 @@ def fsinfo(infile):
 def nodesinfo(infile):
    """Print table with node details for benchmark systems."""
    input = open("systems.yaml", "r")
-   systems = yaml.load(input)
+   systems = yaml.safe_load(input)
    input.close()
    formath = '{:>15s} {:>10s} {:>6s} {:>7s} {:>13s} {:}'
    formatp = '{:>15s} {:>10s} {:6d} {:7d} {:>13s} {:}'
@@ -77,7 +77,7 @@ def nodesinfo(infile):
 def furtherinfo(infile):
    """Print table with links to more information on benchmark systems."""
    input = open("systems.yaml", "r")
-   systems = yaml.load(input)
+   systems = yaml.safe_load(input)
    input.close()
    formath = '{:>15s} {:}'
    formatp = '{:>15s} {:}'
