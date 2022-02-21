@@ -72,6 +72,11 @@ def get_perf_dict(filename, cpn, perftype="mean"):
             line = line.strip()
             tokens = line.split()
             resdict['Processes'] = int(tokens[2])
+        elif re.search('threads', line):
+            line = line.strip()
+            tokens = line.split()
+            resdict['Processes'] = int(tokens[1])
+            resdict['Threads'] = int(tokens[4])
         elif re.search('mpi-ranks', line):
             line = line.strip()
             tokens = line.split()
@@ -80,10 +85,6 @@ def get_perf_dict(filename, cpn, perftype="mean"):
             line = line.strip()
             tokens = line.split()
             resdict['Threads'] = int(tokens[6])
-        elif re.search('threads', line):
-            line = line.strip()
-            tokens = line.split()
-            resdict['Threads'] = int(tokens[4])
         elif re.search('executed on', line):
             line = line.strip()
             tokens = line.split()
