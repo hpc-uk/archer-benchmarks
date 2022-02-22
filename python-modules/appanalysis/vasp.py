@@ -121,18 +121,18 @@ def get_perf_dict(filename, cpn, perftype="mean"):
     resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # Compute the SCF cycle times and remove extreme values
-    resdict['SCF'] = 0.0
+    resdict['LOOP+'] = 0.0
     if perftype == "mean":
         if len(tvals) > 2:
             tvals.remove(max(tvals))
             tvals.remove(min(tvals))
-        resdict['SCF'] = sum(tvals)/len(tvals)
+        resdict['LOOP+'] = sum(tvals)/len(tvals)
     if perftype == "max":
-        resdict['SCF'] = max(tvals)
+        resdict['LOOP+'] = max(tvals)
     if perftype == "min":
-        resdict['SCF'] = min(tvals)
+        resdict['LOOP+'] = min(tvals)
 
-    resdict['Perf'] = 1.0 / resdict['SCF']
+    resdict['Perf'] = 1.0 / resdict['LOOP+']
     resdict['Count'] = 1
 
     return resdict
@@ -142,7 +142,7 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
     df_num = df.drop(['File', 'Date'], 1)
-    groupf = {'Perf':['min','median','max','mean'], 'SCF':['min','median','max','mean'], 'Count':'sum'}
+    groupf = {'Perf':['min','median','max','mean'], 'LOOP+':['min','median','max','mean'], 'Count':'sum'}
     if writestats:
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads','Cores','NCORE','NPAR','KPAR']).agg(groupf)
         print(df_group)
