@@ -1,0 +1,872 @@
+ +-------------------------------------------------+
+ |                                                 |
+ |      CCC   AA    SSS  TTTTT  EEEEE  PPPP        |
+ |     C     A  A  S       T    E      P   P       |
+ |     C     AAAA   SS     T    EEE    PPPP        |
+ |     C     A  A     S    T    E      P           |
+ |      CCC  A  A  SSS     T    EEEEE  P           |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ | Welcome to Academic Release CASTEP version 21.11|          
+ | Ab Initio Total Energy Program                  |
+ |                                                 |
+ | Authors:                                        |
+ | M. Segall, M. Probert, C. Pickard, P. Hasnip,   |
+ | S. Clark, K. Refson, J. R. Yates, M. Payne      |
+ |                                                 |
+ | Contributors:                                   |
+ | P. Lindan, P. Haynes, J. White, V. Milman,      |
+ | N. Govind, M. Gibson, P. Tulip, V. Cocula,      |
+ | B. Montanari, D. Quigley, M. Glover,            |
+ | L. Bernasconi, A. Perlov, M. Plummer,           |
+ | E. McNellis, J. Meyer, J. Gale, D. Jochym       |
+ | J. Aarons, B. Walker, R. Gillen, D. Jones       |
+ | T. Green, I. J. Bush, C. J. Armstrong,          |
+ | E. J. Higgins, E. L. Brown, M. S. McFly,        |
+ | J. Wilkins, B-C. Shih, P. J. P. Byrne,          |
+ | R. J. Maurer, J. C. Womack, J. Dziedzic,        |
+ | A. Bartok-Partay, L. LeBlanc                    |
+ |                                                 |
+ | Copyright (c) 2000 - 2021                       |
+ |                                                 |
+ |     Distributed under license from Cambridge    |
+ |     Enterprise for academic use only.           |
+ |                                                 |
+ | Please cite                                     |
+ |                                                 |
+ |     "First principles methods using CASTEP"     |
+ |                                                 |
+ |         Zeitschrift fuer Kristallographie       |
+ |           220(5-6) pp. 567-570 (2005)           |
+ |                                                 |
+ | S. J. Clark, M. D. Segall, C. J. Pickard,       |
+ | P. J. Hasnip, M. J. Probert, K. Refson,         |
+ | M. C. Payne                                     |
+ |                                                 |
+ |       in all publications arising from          |
+ |              your use of CASTEP                 |
+ |                                                 |
+ +-------------------------------------------------+
+ |                                                 |
+ |              http://www.castep.org              |
+ |                                                 |
+ +-------------------------------------------------+
+
+
+
+ Compiled for linux_x86_64_gfortran10-XT on Fri, 04 Mar 2022 18:10:53 +0000
+ from code version 7d4405a8a+  HEAD  Sat Nov 27 13:38:33 2021 +0000
+ Compiler: GNU Fortran 11.2.0; Optimisation: fast
+ MATHLIBS: aocl (LAPACK version 3.10.0)
+ FFT Lib : fftw3 version fftw-3.3.8-sse2-avx-avx2-avx2_128
+ Fundamental constants values: CODATA 2014
+
+ Run started: Fri, 04 Mar 2022 18:26:23 +0000
+
+ Pseudo atomic calculation performed for O 2s2 2p4
+
+ Converged in 13 iterations to a total energy of -430.9847 eV
+
+ Pseudo atomic calculation performed for Al 3s2 3p1
+
+ Converged in 14 iterations to a total energy of -53.3906 eV
+ Calculation parallelised over 128 processes.
+ Data is distributed by G-vector(64-way) and k-point(2-way)
+
+ ************************************ Title ************************************
+ 3x3 sapphire surface benchmark (v1.1)
+
+ ***************************** General Parameters ******************************
+  
+ output verbosity                               : normal  (1)
+ write checkpoint data to                       : al3x3.check
+ type of calculation                            : single point energy
+ stress calculation                             : off
+ density difference calculation                 : off
+ electron localisation func (ELF) calculation   : off
+ Hirshfeld analysis                             : off
+ polarisation (Berry phase) analysis            : off
+ molecular orbital projected DOS                : off
+ deltaSCF calculation                           : off
+ unlimited duration calculation
+ timing information                             : on
+ memory usage estimate                          : on
+ write extra output files                       : on
+ write final potential to formatted file        : off
+ write final density to formatted file          : off
+ write BibTeX reference list                    : on
+ write OTFG pseudopotential files               : on
+ write electrostatic potential file             : on
+ write bands file                               : on
+ checkpoint writing                             : both castep_bin and check files
+  
+ output         length unit                     : A
+ output           mass unit                     : amu
+ output           time unit                     : ps
+ output         charge unit                     : e
+ output           spin unit                     : hbar/2
+ output         energy unit                     : eV
+ output          force unit                     : eV/A
+ output       velocity unit                     : A/ps
+ output       pressure unit                     : GPa
+ output     inv_length unit                     : 1/A
+ output      frequency unit                     : cm-1
+ output force constant unit                     : eV/A**2
+ output         volume unit                     : A**3
+ output   IR intensity unit                     : (D/A)**2/amu
+ output         dipole unit                     : D
+ output         efield unit                     : eV/A/e
+ output        entropy unit                     : J/mol/K
+ output    efield chi2 unit                     : pm/V
+  
+ wavefunctions paging                           : none
+ random number generator seed                   :          1
+ data distribution                              : optimal for this architecture
+ optimization strategy                          : maximize speed(+++)
+
+ *********************** Exchange-Correlation Parameters ***********************
+  
+ using functional                               : Perdew Wang (1991)
+ relativistic treatment                         : Koelling-Harmon
+ DFT+D: Semi-empirical dispersion correction    : off
+
+ ************************* Pseudopotential Parameters **************************
+  
+ pseudopotential representation                 : reciprocal space
+ <beta|phi> representation                      : reciprocal space
+ spin-orbit coupling                            : off
+
+ **************************** Basis Set Parameters *****************************
+  
+ plane wave basis set cut-off                   :   400.0000   eV
+ size of standard grid                          :     1.7500
+ size of   fine   gmax                          :    17.9311   1/A
+ finite basis set correction                    : none
+
+ **************************** Electronic Parameters ****************************
+  
+ number of  electrons                           :  1296.    
+ net charge of system                           :  0.000    
+ treating system as non-spin-polarized
+ number of bands                                :        768
+
+ ********************* Electronic Minimization Parameters **********************
+  
+ Method: Treating system as metallic with density mixing treatment of electrons,
+         and number of  SD  steps               :          1
+         and number of  CG  steps               :          4
+  
+ total energy / atom convergence tol.           : 0.1500E-01   eV
+ eigen-energy convergence tolerance             : 0.1000E-05   eV
+ max force / atom convergence tol.              : ignored
+ convergence tolerance window                   :          3   cycles
+ max. number of SCF cycles                      :         40
+ smearing scheme                                : Gaussian
+ smearing width                                 : 0.1000       eV
+ Fermi energy convergence tolerance             : 0.2721E-13   eV
+ periodic dipole correction                     : NONE
+
+ ************************** Density Mixing Parameters **************************
+  
+ density-mixing scheme                          : Pulay
+ max. length of mixing history                  :         20
+ charge density mixing amplitude                : 0.8000    
+ cut-off energy for mixing                      :  400.0       eV
+
+ *******************************************************************************
+  
+
+                           -------------------------------
+                                      Unit Cell
+                           -------------------------------
+        Real Lattice(A)                      Reciprocal Lattice(1/A)
+    12.3642447    -7.1385000     0.0000000        0.508173808   0.000000000   0.000000000
+     0.0000000    14.2770000     0.0000000        0.254086904   0.440091427   0.000000000
+     0.0000000     0.0000000    27.5000000        0.000000000   0.000000000   0.228479466
+
+                       Lattice parameters(A)       Cell Angles
+                    a =     14.277000          alpha =   90.000000
+                    b =     14.277000          beta  =   90.000000
+                    c =     27.500000          gamma =  120.000000
+
+                       Current cell volume =          4854.418839       A**3
+                                   density =             1.134206   AMU/A**3
+                                           =             1.883393     g/cm^3
+
+                           -------------------------------
+                                     Cell Contents
+                           -------------------------------
+                         Total number of ions in cell =  270
+                      Total number of species in cell =    2
+                        Max number of any one species =  162
+
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            x  Element    Atom        Fractional coordinates of atoms  x
+            x            Number           u          v          w      x
+            x----------------------------------------------------------x
+            x  O            1         0.102000   0.000000   0.645700   x 
+            x  O            2         0.000000   0.102000   0.645700   x 
+            x  O            3         0.231333   0.231333   0.645700   x 
+            x  O            4         0.009111   0.222222   0.724433   x 
+            x  O            5         0.111111   0.120222   0.724433   x 
+            x  O            6         0.213111   0.324222   0.724433   x 
+            x  O            7         0.120222   0.111111   0.566967   x 
+            x  O            8         0.222222   0.009111   0.566967   x 
+            x  O            9         0.324222   0.213111   0.566967   x 
+            x  O           10         0.324222   0.111111   0.803167   x 
+            x  O           11         0.222222   0.213111   0.803167   x 
+            x  O           12         0.120222   0.009111   0.803167   x 
+            x  O           13         0.213111   0.222222   0.960633   x 
+            x  O           14         0.111111   0.324222   0.960633   x 
+            x  O           15         0.009111   0.120222   0.960633   x 
+            x  O           16         0.231333   0.000000   0.881900   x 
+            x  O           17         0.000000   0.231333   0.881900   x 
+            x  O           18         0.102000   0.102000   0.881900   x 
+            x  O           19         0.102000   0.333333   0.645700   x 
+            x  O           20         0.000000   0.435333   0.645700   x 
+            x  O           21         0.231333   0.564667   0.645700   x 
+            x  O           22         0.009111   0.555556   0.724433   x 
+            x  O           23         0.111111   0.453556   0.724433   x 
+            x  O           24         0.213111   0.657556   0.724433   x 
+            x  O           25         0.120222   0.444444   0.566967   x 
+            x  O           26         0.222222   0.342444   0.566967   x 
+            x  O           27         0.324222   0.546444   0.566967   x 
+            x  O           28         0.324222   0.444444   0.803167   x 
+            x  O           29         0.222222   0.546444   0.803167   x 
+            x  O           30         0.120222   0.342444   0.803167   x 
+            x  O           31         0.213111   0.555556   0.960633   x 
+            x  O           32         0.111111   0.657556   0.960633   x 
+            x  O           33         0.009111   0.453556   0.960633   x 
+            x  O           34         0.231333   0.333333   0.881900   x 
+            x  O           35         0.000000   0.564667   0.881900   x 
+            x  O           36         0.102000   0.435333   0.881900   x 
+            x  O           37         0.102000   0.666667   0.645700   x 
+            x  O           38         0.000000   0.768667   0.645700   x 
+            x  O           39         0.231333   0.898000   0.645700   x 
+            x  O           40         0.009111   0.888889   0.724433   x 
+            x  O           41         0.111111   0.786889   0.724433   x 
+            x  O           42         0.213111   0.990889   0.724433   x 
+            x  O           43         0.120222   0.777778   0.566967   x 
+            x  O           44         0.222222   0.675778   0.566967   x 
+            x  O           45         0.324222   0.879778   0.566967   x 
+            x  O           46         0.324222   0.777778   0.803167   x 
+            x  O           47         0.222222   0.879778   0.803167   x 
+            x  O           48         0.120222   0.675778   0.803167   x 
+            x  O           49         0.213111   0.888889   0.960633   x 
+            x  O           50         0.111111   0.990889   0.960633   x 
+            x  O           51         0.009111   0.786889   0.960633   x 
+            x  O           52         0.231333   0.666667   0.881900   x 
+            x  O           53         0.000000   0.898000   0.881900   x 
+            x  O           54         0.102000   0.768667   0.881900   x 
+            x  O           55         0.435333   0.000000   0.645700   x 
+            x  O           56         0.333333   0.102000   0.645700   x 
+            x  O           57         0.564667   0.231333   0.645700   x 
+            x  O           58         0.342444   0.222222   0.724433   x 
+            x  O           59         0.444444   0.120222   0.724433   x 
+            x  O           60         0.546444   0.324222   0.724433   x 
+            x  O           61         0.453556   0.111111   0.566967   x 
+            x  O           62         0.555556   0.009111   0.566967   x 
+            x  O           63         0.657556   0.213111   0.566967   x 
+            x  O           64         0.657556   0.111111   0.803167   x 
+            x  O           65         0.555556   0.213111   0.803167   x 
+            x  O           66         0.453556   0.009111   0.803167   x 
+            x  O           67         0.546444   0.222222   0.960633   x 
+            x  O           68         0.444444   0.324222   0.960633   x 
+            x  O           69         0.342444   0.120222   0.960633   x 
+            x  O           70         0.564667   0.000000   0.881900   x 
+            x  O           71         0.333333   0.231333   0.881900   x 
+            x  O           72         0.435333   0.102000   0.881900   x 
+            x  O           73         0.435333   0.333333   0.645700   x 
+            x  O           74         0.333333   0.435333   0.645700   x 
+            x  O           75         0.564667   0.564667   0.645700   x 
+            x  O           76         0.342444   0.555556   0.724433   x 
+            x  O           77         0.444444   0.453556   0.724433   x 
+            x  O           78         0.546444   0.657556   0.724433   x 
+            x  O           79         0.453556   0.444444   0.566967   x 
+            x  O           80         0.555556   0.342444   0.566967   x 
+            x  O           81         0.657556   0.546444   0.566967   x 
+            x  O           82         0.657556   0.444444   0.803167   x 
+            x  O           83         0.555556   0.546444   0.803167   x 
+            x  O           84         0.453556   0.342444   0.803167   x 
+            x  O           85         0.546444   0.555556   0.960633   x 
+            x  O           86         0.444444   0.657556   0.960633   x 
+            x  O           87         0.342444   0.453556   0.960633   x 
+            x  O           88         0.564667   0.333333   0.881900   x 
+            x  O           89         0.333333   0.564667   0.881900   x 
+            x  O           90         0.435333   0.435333   0.881900   x 
+            x  O           91         0.435333   0.666667   0.645700   x 
+            x  O           92         0.333333   0.768667   0.645700   x 
+            x  O           93         0.564667   0.898000   0.645700   x 
+            x  O           94         0.342444   0.888889   0.724433   x 
+            x  O           95         0.444444   0.786889   0.724433   x 
+            x  O           96         0.546444   0.990889   0.724433   x 
+            x  O           97         0.453556   0.777778   0.566967   x 
+            x  O           98         0.555556   0.675778   0.566967   x 
+            x  O           99         0.657556   0.879778   0.566967   x 
+            x  O          100         0.657556   0.777778   0.803167   x 
+            x  O          101         0.555556   0.879778   0.803167   x 
+            x  O          102         0.453556   0.675778   0.803167   x 
+            x  O          103         0.546444   0.888889   0.960633   x 
+            x  O          104         0.444444   0.990889   0.960633   x 
+            x  O          105         0.342444   0.786889   0.960633   x 
+            x  O          106         0.564667   0.666667   0.881900   x 
+            x  O          107         0.333333   0.898000   0.881900   x 
+            x  O          108         0.435333   0.768667   0.881900   x 
+            x  O          109         0.768667   0.000000   0.645700   x 
+            x  O          110         0.666667   0.102000   0.645700   x 
+            x  O          111         0.898000   0.231333   0.645700   x 
+            x  O          112         0.675778   0.222222   0.724433   x 
+            x  O          113         0.777778   0.120222   0.724433   x 
+            x  O          114         0.879778   0.324222   0.724433   x 
+            x  O          115         0.786889   0.111111   0.566967   x 
+            x  O          116         0.888889   0.009111   0.566967   x 
+            x  O          117         0.990889   0.213111   0.566967   x 
+            x  O          118         0.990889   0.111111   0.803167   x 
+            x  O          119         0.888889   0.213111   0.803167   x 
+            x  O          120         0.786889   0.009111   0.803167   x 
+            x  O          121         0.879778   0.222222   0.960633   x 
+            x  O          122         0.777778   0.324222   0.960633   x 
+            x  O          123         0.675778   0.120222   0.960633   x 
+            x  O          124         0.898000   0.000000   0.881900   x 
+            x  O          125         0.666667   0.231333   0.881900   x 
+            x  O          126         0.768667   0.102000   0.881900   x 
+            x  O          127         0.768667   0.333333   0.645700   x 
+            x  O          128         0.666667   0.435333   0.645700   x 
+            x  O          129         0.898000   0.564667   0.645700   x 
+            x  O          130         0.675778   0.555556   0.724433   x 
+            x  O          131         0.777778   0.453556   0.724433   x 
+            x  O          132         0.879778   0.657556   0.724433   x 
+            x  O          133         0.786889   0.444444   0.566967   x 
+            x  O          134         0.888889   0.342444   0.566967   x 
+            x  O          135         0.990889   0.546444   0.566967   x 
+            x  O          136         0.990889   0.444444   0.803167   x 
+            x  O          137         0.888889   0.546444   0.803167   x 
+            x  O          138         0.786889   0.342444   0.803167   x 
+            x  O          139         0.879778   0.555556   0.960633   x 
+            x  O          140         0.777778   0.657556   0.960633   x 
+            x  O          141         0.675778   0.453556   0.960633   x 
+            x  O          142         0.898000   0.333333   0.881900   x 
+            x  O          143         0.666667   0.564667   0.881900   x 
+            x  O          144         0.768667   0.435333   0.881900   x 
+            x  O          145         0.768667   0.666667   0.645700   x 
+            x  O          146         0.666667   0.768667   0.645700   x 
+            x  O          147         0.898000   0.898000   0.645700   x 
+            x  O          148         0.675778   0.888889   0.724433   x 
+            x  O          149         0.777778   0.786889   0.724433   x 
+            x  O          150         0.879778   0.990889   0.724433   x 
+            x  O          151         0.786889   0.777778   0.566967   x 
+            x  O          152         0.888889   0.675778   0.566967   x 
+            x  O          153         0.990889   0.879778   0.566967   x 
+            x  O          154         0.990889   0.777778   0.803167   x 
+            x  O          155         0.888889   0.879778   0.803167   x 
+            x  O          156         0.786889   0.675778   0.803167   x 
+            x  O          157         0.879778   0.888889   0.960633   x 
+            x  O          158         0.777778   0.990889   0.960633   x 
+            x  O          159         0.675778   0.786889   0.960633   x 
+            x  O          160         0.898000   0.666667   0.881900   x 
+            x  O          161         0.666667   0.898000   0.881900   x 
+            x  O          162         0.768667   0.768667   0.881900   x 
+            x  Al           1         0.000000   0.000000   0.693885   x 
+            x  Al           2         0.000000   0.000000   0.597515   x 
+            x  Al           3         0.222222   0.111111   0.615151   x 
+            x  Al           4         0.111111   0.222222   0.676249   x 
+            x  Al           5         0.222222   0.111111   0.754982   x 
+            x  Al           6         0.111111   0.222222   0.772618   x 
+            x  Al           7         0.222222   0.111111   0.991182   x 
+            x  Al           8         0.111111   0.222222   0.536418   x 
+            x  Al           9         0.000000   0.000000   0.833715   x 
+            x  Al          10         0.222222   0.111111   0.851351   x 
+            x  Al          11         0.000000   0.000000   0.930085   x 
+            x  Al          12         0.111111   0.222222   0.912449   x 
+            x  Al          13         0.000000   0.333333   0.693885   x 
+            x  Al          14         0.000000   0.333333   0.597515   x 
+            x  Al          15         0.222222   0.444444   0.615151   x 
+            x  Al          16         0.111111   0.555556   0.676249   x 
+            x  Al          17         0.222222   0.444444   0.754982   x 
+            x  Al          18         0.111111   0.555556   0.772618   x 
+            x  Al          19         0.222222   0.444444   0.991182   x 
+            x  Al          20         0.111111   0.555556   0.536418   x 
+            x  Al          21         0.000000   0.333333   0.833715   x 
+            x  Al          22         0.222222   0.444444   0.851351   x 
+            x  Al          23         0.000000   0.333333   0.930085   x 
+            x  Al          24         0.111111   0.555556   0.912449   x 
+            x  Al          25         0.000000   0.666667   0.693885   x 
+            x  Al          26         0.000000   0.666667   0.597515   x 
+            x  Al          27         0.222222   0.777778   0.615151   x 
+            x  Al          28         0.111111   0.888889   0.676249   x 
+            x  Al          29         0.222222   0.777778   0.754982   x 
+            x  Al          30         0.111111   0.888889   0.772618   x 
+            x  Al          31         0.222222   0.777778   0.991182   x 
+            x  Al          32         0.111111   0.888889   0.536418   x 
+            x  Al          33         0.000000   0.666667   0.833715   x 
+            x  Al          34         0.222222   0.777778   0.851351   x 
+            x  Al          35         0.000000   0.666667   0.930085   x 
+            x  Al          36         0.111111   0.888889   0.912449   x 
+            x  Al          37         0.333333   0.000000   0.693885   x 
+            x  Al          38         0.333333   0.000000   0.597515   x 
+            x  Al          39         0.555556   0.111111   0.615151   x 
+            x  Al          40         0.444444   0.222222   0.676249   x 
+            x  Al          41         0.555556   0.111111   0.754982   x 
+            x  Al          42         0.444444   0.222222   0.772618   x 
+            x  Al          43         0.555556   0.111111   0.991182   x 
+            x  Al          44         0.444444   0.222222   0.536418   x 
+            x  Al          45         0.333333   0.000000   0.833715   x 
+            x  Al          46         0.555556   0.111111   0.851351   x 
+            x  Al          47         0.333333   0.000000   0.930085   x 
+            x  Al          48         0.444444   0.222222   0.912449   x 
+            x  Al          49         0.333333   0.333333   0.693885   x 
+            x  Al          50         0.333333   0.333333   0.597515   x 
+            x  Al          51         0.555556   0.444444   0.615151   x 
+            x  Al          52         0.444444   0.555556   0.676249   x 
+            x  Al          53         0.555556   0.444444   0.754982   x 
+            x  Al          54         0.444444   0.555556   0.772618   x 
+            x  Al          55         0.555556   0.444444   0.991182   x 
+            x  Al          56         0.444444   0.555556   0.536418   x 
+            x  Al          57         0.333333   0.333333   0.833715   x 
+            x  Al          58         0.555556   0.444444   0.851351   x 
+            x  Al          59         0.333333   0.333333   0.930085   x 
+            x  Al          60         0.444444   0.555556   0.912449   x 
+            x  Al          61         0.333333   0.666667   0.693885   x 
+            x  Al          62         0.333333   0.666667   0.597515   x 
+            x  Al          63         0.555556   0.777778   0.615151   x 
+            x  Al          64         0.444444   0.888889   0.676249   x 
+            x  Al          65         0.555556   0.777778   0.754982   x 
+            x  Al          66         0.444444   0.888889   0.772618   x 
+            x  Al          67         0.555556   0.777778   0.991182   x 
+            x  Al          68         0.444444   0.888889   0.536418   x 
+            x  Al          69         0.333333   0.666667   0.833715   x 
+            x  Al          70         0.555556   0.777778   0.851351   x 
+            x  Al          71         0.333333   0.666667   0.930085   x 
+            x  Al          72         0.444444   0.888889   0.912449   x 
+            x  Al          73         0.666667   0.000000   0.693885   x 
+            x  Al          74         0.666667   0.000000   0.597515   x 
+            x  Al          75         0.888889   0.111111   0.615151   x 
+            x  Al          76         0.777778   0.222222   0.676249   x 
+            x  Al          77         0.888889   0.111111   0.754982   x 
+            x  Al          78         0.777778   0.222222   0.772618   x 
+            x  Al          79         0.888889   0.111111   0.991182   x 
+            x  Al          80         0.777778   0.222222   0.536418   x 
+            x  Al          81         0.666667   0.000000   0.833715   x 
+            x  Al          82         0.888889   0.111111   0.851351   x 
+            x  Al          83         0.666667   0.000000   0.930085   x 
+            x  Al          84         0.777778   0.222222   0.912449   x 
+            x  Al          85         0.666667   0.333333   0.693885   x 
+            x  Al          86         0.666667   0.333333   0.597515   x 
+            x  Al          87         0.888889   0.444444   0.615151   x 
+            x  Al          88         0.777778   0.555556   0.676249   x 
+            x  Al          89         0.888889   0.444444   0.754982   x 
+            x  Al          90         0.777778   0.555556   0.772618   x 
+            x  Al          91         0.888889   0.444444   0.991182   x 
+            x  Al          92         0.777778   0.555556   0.536418   x 
+            x  Al          93         0.666667   0.333333   0.833715   x 
+            x  Al          94         0.888889   0.444444   0.851351   x 
+            x  Al          95         0.666667   0.333333   0.930085   x 
+            x  Al          96         0.777778   0.555556   0.912449   x 
+            x  Al          97         0.666667   0.666667   0.693885   x 
+            x  Al          98         0.666667   0.666667   0.597515   x 
+            x  Al          99         0.888889   0.777778   0.615151   x 
+            x  Al         100         0.777778   0.888889   0.676249   x 
+            x  Al         101         0.888889   0.777778   0.754982   x 
+            x  Al         102         0.777778   0.888889   0.772618   x 
+            x  Al         103         0.888889   0.777778   0.991182   x 
+            x  Al         104         0.777778   0.888889   0.536418   x 
+            x  Al         105         0.666667   0.666667   0.833715   x 
+            x  Al         106         0.888889   0.777778   0.851351   x 
+            x  Al         107         0.666667   0.666667   0.930085   x 
+            x  Al         108         0.777778   0.888889   0.912449   x 
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+                         No user defined ionic velocities
+
+                           -------------------------------
+                                   Details of Species
+                           -------------------------------
+
+                               Mass of species in AMU
+                                    O   15.9994000
+                                    Al   26.9815400
+
+                          Electric Quadrupole Moment (Barn)
+                                    O   -0.0255800 Isotope 17
+                                    Al    0.1466000 Isotope 27
+
+                          Files used for pseudopotentials:
+                                    O O_00.usp
+                                    Al Al_00.usp
+
+                           -------------------------------
+                              k-Points For BZ Sampling
+                           -------------------------------
+                       MP grid size for SCF calculation is  2  2  1
+                            with an offset of   0.000  0.000  0.000
+                       Number of kpoints used =             2
+
+                           -------------------------------
+                               Symmetry and Constraints
+                           -------------------------------
+
+                      Cell is a supercell containing 9 primitive cells
+                      Maximum deviation from symmetry =  0.00000         ANG
+
+                      Number of symmetry operations   =           1
+                      Number of ionic constraints     =           3
+                      Point group of crystal =     1: C1, 1, 1
+                      Space group of crystal =   147: P-3, -P 3
+
+             Set iprint > 1 for details on symmetry rotations/translations
+
+                         Centre of mass is constrained
+             Set iprint > 1 for details of linear ionic constraints
+
+                         Number of cell constraints= 0
+                         Cell constraints are:  1 2 3 4 5 6
+
+                         External pressure/stress (GPa)
+                          0.00000   0.00000   0.00000
+                                    0.00000   0.00000
+                                              0.00000
+  
++---------------- MEMORY AND SCRATCH DISK ESTIMATES PER PROCESS --------------+
+|                                                     Memory          Disk    |
+| Baseline code, static data and system overhead      703.0 MB         0.0 MB |
+| BLAS internal memory storage                          0.0 MB         0.0 MB |
+| Model and support data                              115.9 MB         0.0 MB |
+| Electronic energy minimisation requirements          81.0 MB         0.0 MB |
+| Force calculation requirements                        3.3 MB         0.0 MB |
+|                                               ----------------------------- |
+| Approx. total storage required per process          899.9 MB         0.0 MB |
+|                                                                             |
+| Requirements will fluctuate during execution and may exceed these estimates |
++-----------------------------------------------------------------------------+
+Calculating approximate eigenstates for fixed initial Hamiltonian
+Cut-off for approx. calculation is  155.625 eV
+Improving approx. states at cut-off of  200.000 eV
+Resetting cut-off to  400.000 eV
+Calculating total energy with cut-off of  400.000 eV.
+------------------------------------------------------------------------ <-- SCF
+SCF loop      Energy           Fermi           Energy gain       Timer   <-- SCF
+                               energy          per atom          (sec)   <-- SCF
+------------------------------------------------------------------------ <-- SCF
+Initial  -7.61261727E+004  0.00000000E+000                       219.62  <-- SCF
+      1  -7.79035261E+004  1.71446089E+000   6.58279022E+000     251.58  <-- SCF
+      2  -7.79104225E+004  1.71924344E+000   2.55420963E-002     286.48  <-- SCF
+      3  -7.78188296E+004  1.84815003E+000  -3.39232964E-001     323.08  <-- SCF
+      4  -7.77199042E+004  1.30434357E+000  -3.66390309E-001     361.03  <-- SCF
+      5  -7.77148462E+004  1.11487603E+000  -1.87332528E-002     399.84  <-- SCF
+      6  -7.77125654E+004  1.04424777E+000  -8.44762092E-003     438.65  <-- SCF
+      7  -7.77102389E+004  1.02666867E+000  -8.61636742E-003     475.75  <-- SCF
+      8  -7.77081458E+004  9.90604116E-001  -7.75242131E-003     514.10  <-- SCF
+      9  -7.77060033E+004  1.09931811E+000  -7.93510850E-003     551.61  <-- SCF
+     10  -7.77051703E+004  1.16175621E+000  -3.08510073E-003     587.69  <-- SCF
+------------------------------------------------------------------------ <-- SCF
+ 
+Final energy, E             =  -77705.17032292     eV
+Final free energy (E-TS)    =  -77705.17032293     eV
+(energies not corrected for finite basis set)
+ 
+NB est. 0K energy (E-0.5TS)      =  -77705.17032292     eV
+ 
+
+Writing analysis data to al3x3.castep_bin
+
+Writing model to al3x3.check
+
+ ************************** Forces **************************
+ *                                                          *
+ *               Cartesian components (eV/A)                *
+ * -------------------------------------------------------- *
+ *                         x            y            z      *
+ *                                                          *
+ * O               1      0.16837      0.02125      0.72216 *
+ * O               2     -0.10296      0.12968      0.71824 *
+ * O               3     -0.06232     -0.15236      0.72502 *
+ * O               4     -0.10788      0.03205      0.30138 *
+ * O               5      0.01935     -0.10963      0.30304 *
+ * O               6      0.08892      0.07461      0.30202 *
+ * O               7     -1.64499      1.74391     -1.02051 *
+ * O               8     -0.68448     -2.29155     -1.03036 *
+ * O               9      2.34528      0.55372     -1.02314 *
+ * O              10      0.09016     -0.02695     -0.30868 *
+ * O              11     -0.01799      0.09078     -0.31340 *
+ * O              12     -0.06979     -0.06416     -0.30923 *
+ * O              13      1.62743     -1.73488      0.97766 *
+ * O              14      0.69567      2.28409      0.98121 *
+ * O              15     -2.33634     -0.54361      0.97584 *
+ * O              16     -0.17592     -0.01388     -0.67460 *
+ * O              17      0.09692     -0.14422     -0.66875 *
+ * O              18      0.07697      0.15441     -0.67281 *
+ * O              19      0.17092      0.02232      0.72106 *
+ * O              20     -0.10416      0.13112      0.71853 *
+ * O              21     -0.06453     -0.15429      0.72052 *
+ * O              22     -0.10636      0.03239      0.30136 *
+ * O              23      0.01959     -0.10944      0.30410 *
+ * O              24      0.08937      0.07439      0.30121 *
+ * O              25     -1.63877      1.73691     -1.02046 *
+ * O              26     -0.67438     -2.26507     -1.03728 *
+ * O              27      2.32081      0.54980     -1.02583 *
+ * O              28      0.09212     -0.02662     -0.30903 *
+ * O              29     -0.01905      0.09155     -0.31157 *
+ * O              30     -0.06984     -0.06460     -0.30888 *
+ * O              31      1.62793     -1.73852      0.97973 *
+ * O              32      0.69842      2.29358      0.97218 *
+ * O              33     -2.34310     -0.54562      0.97051 *
+ * O              34     -0.17822     -0.01338     -0.67323 *
+ * O              35      0.09728     -0.14312     -0.67006 *
+ * O              36      0.07799      0.15360     -0.67000 *
+ * O              37      0.17043      0.02133      0.72234 *
+ * O              38     -0.10171      0.13165      0.71704 *
+ * O              39     -0.06261     -0.15654      0.72193 *
+ * O              40     -0.10798      0.03237      0.30094 *
+ * O              41      0.01877     -0.10991      0.30393 *
+ * O              42      0.09070      0.07511      0.30204 *
+ * O              43     -1.63293      1.72863     -1.02399 *
+ * O              44     -0.67689     -2.26835     -1.03508 *
+ * O              45      2.30737      0.54857     -1.03663 *
+ * O              46      0.09147     -0.02549     -0.30966 *
+ * O              47     -0.01768      0.09172     -0.31174 *
+ * O              48     -0.07034     -0.06419     -0.30982 *
+ * O              49      1.63606     -1.75040      0.96799 *
+ * O              50      0.69798      2.29777      0.97110 *
+ * O              51     -2.31823     -0.54282      0.98230 *
+ * O              52     -0.17654     -0.01131     -0.67117 *
+ * O              53      0.09632     -0.14474     -0.66887 *
+ * O              54      0.07670      0.15476     -0.67028 *
+ * O              55      0.16769      0.02218      0.72335 *
+ * O              56     -0.10243      0.13044      0.72030 *
+ * O              57     -0.06271     -0.15557      0.72028 *
+ * O              58     -0.10625      0.03368      0.30229 *
+ * O              59      0.01855     -0.11119      0.30421 *
+ * O              60      0.08956      0.07614      0.30104 *
+ * O              61     -1.63284      1.73287     -1.02832 *
+ * O              62     -0.69043     -2.29850     -1.02403 *
+ * O              63      2.29826      0.54530     -1.03777 *
+ * O              64      0.09063     -0.02661     -0.30899 *
+ * O              65     -0.01741      0.09060     -0.31282 *
+ * O              66     -0.07095     -0.06350     -0.30896 *
+ * O              67      1.62933     -1.73738      0.97271 *
+ * O              68      0.68730      2.26396      0.98442 *
+ * O              69     -2.32002     -0.53854      0.97366 *
+ * O              70     -0.17790     -0.01140     -0.67472 *
+ * O              71      0.09973     -0.14481     -0.66586 *
+ * O              72      0.07587      0.15603     -0.67034 *
+ * O              73      0.17056      0.02063      0.72388 *
+ * O              74     -0.10432      0.12941      0.71967 *
+ * O              75     -0.06483     -0.15498      0.72181 *
+ * O              76     -0.10688      0.03221      0.30109 *
+ * O              77      0.01786     -0.10988      0.30330 *
+ * O              78      0.08999      0.07505      0.30111 *
+ * O              79     -1.64266      1.74096     -1.02069 *
+ * O              80     -0.68018     -2.27273     -1.03893 *
+ * O              81      2.33290      0.55156     -1.02646 *
+ * O              82      0.09114     -0.02820     -0.31029 *
+ * O              83     -0.01870      0.09209     -0.31101 *
+ * O              84     -0.07033     -0.06425     -0.30941 *
+ * O              85      1.63634     -1.74293      0.97359 *
+ * O              86      0.69284      2.27063      0.98192 *
+ * O              87     -2.35154     -0.54127      0.96427 *
+ * O              88     -0.18101     -0.01224     -0.67186 *
+ * O              89      0.09598     -0.14367     -0.66834 *
+ * O              90      0.07742      0.15411     -0.67251 *
+ * O              91      0.17094      0.02124      0.72323 *
+ * O              92     -0.10527      0.13211      0.71772 *
+ * O              93     -0.06268     -0.15728      0.72312 *
+ * O              94     -0.10826      0.03169      0.30161 *
+ * O              95      0.01778     -0.11011      0.30452 *
+ * O              96      0.09100      0.07536      0.30277 *
+ * O              97     -1.64328      1.74719     -1.01828 *
+ * O              98     -0.67185     -2.26626     -1.04137 *
+ * O              99      2.31711      0.54989     -1.03232 *
+ * O             100      0.09040     -0.02634     -0.30943 *
+ * O             101     -0.01849      0.09105     -0.31132 *
+ * O             102     -0.07034     -0.06329     -0.30900 *
+ * O             103      1.64387     -1.76054      0.96177 *
+ * O             104      0.69019      2.27291      0.98227 *
+ * O             105     -2.31560     -0.53945      0.98170 *
+ * O             106     -0.17806     -0.01157     -0.67355 *
+ * O             107      0.09812     -0.14495     -0.66740 *
+ * O             108      0.07684      0.15422     -0.67083 *
+ * O             109      0.16938      0.02059      0.72533 *
+ * O             110     -0.10303      0.13371      0.72175 *
+ * O             111     -0.06327     -0.15440      0.72262 *
+ * O             112     -0.10700      0.03305      0.30172 *
+ * O             113      0.01925     -0.11008      0.30328 *
+ * O             114      0.08872      0.07553      0.30168 *
+ * O             115     -1.64856      1.74756     -1.01863 *
+ * O             116     -0.67775     -2.27874     -1.03782 *
+ * O             117      2.32501      0.54973     -1.02727 *
+ * O             118      0.09102     -0.02700     -0.30952 *
+ * O             119     -0.01789      0.09137     -0.31295 *
+ * O             120     -0.06915     -0.06376     -0.30834 *
+ * O             121      1.63232     -1.73818      0.97491 *
+ * O             122      0.68514      2.26497      0.98375 *
+ * O             123     -2.33942     -0.54616      0.96895 *
+ * O             124     -0.17738     -0.01285     -0.67351 *
+ * O             125      0.09915     -0.14372     -0.66885 *
+ * O             126      0.07859      0.15340     -0.66937 *
+ * O             127      0.16951      0.02085      0.72166 *
+ * O             128     -0.10327      0.12925      0.71689 *
+ * O             129     -0.06436     -0.15549      0.72308 *
+ * O             130     -0.10762      0.03271      0.30283 *
+ * O             131      0.01891     -0.10982      0.30352 *
+ * O             132      0.08958      0.07554      0.30025 *
+ * O             133     -1.63843      1.73920     -1.02536 *
+ * O             134     -0.67569     -2.26935     -1.03875 *
+ * O             135      2.33441      0.55320     -1.02659 *
+ * O             136      0.09078     -0.02659     -0.31084 *
+ * O             137     -0.01743      0.09063     -0.31279 *
+ * O             138     -0.07129     -0.06455     -0.30849 *
+ * O             139      1.63003     -1.73526      0.97924 *
+ * O             140      0.69786      2.29431      0.97548 *
+ * O             141     -2.35421     -0.54466      0.96346 *
+ * O             142     -0.17720     -0.01107     -0.67067 *
+ * O             143      0.09699     -0.14345     -0.67173 *
+ * O             144      0.07945      0.15143     -0.67104 *
+ * O             145      0.17047      0.02100      0.72431 *
+ * O             146     -0.10361      0.13103      0.71732 *
+ * O             147     -0.06145     -0.15505      0.71833 *
+ * O             148     -0.10838      0.03334      0.30104 *
+ * O             149      0.01696     -0.10946      0.30435 *
+ * O             150      0.09043      0.07280      0.30200 *
+ * O             151     -1.64158      1.74360     -1.01808 *
+ * O             152     -0.68192     -2.28112     -1.03306 *
+ * O             153      2.30037      0.54755     -1.03710 *
+ * O             154      0.09103     -0.02593     -0.30847 *
+ * O             155     -0.01664      0.09145     -0.31257 *
+ * O             156     -0.06965     -0.06466     -0.30857 *
+ * O             157      1.63262     -1.74038      0.97631 *
+ * O             158      0.69530      2.29088      0.97813 *
+ * O             159     -2.33422     -0.53986      0.97722 *
+ * O             160     -0.17702     -0.01160     -0.67044 *
+ * O             161      0.09833     -0.14443     -0.67248 *
+ * O             162      0.07707      0.15333     -0.67196 *
+ * Al              1      0.00030     -0.00053     -0.04567 *
+ * Al              2     -0.00700     -0.00664     -0.86102 *
+ * Al              3     -0.00089     -0.00385     -1.95240 *
+ * Al              4      0.00063     -0.00049     -0.25337 *
+ * Al              5      0.00020     -0.00080     -0.07877 *
+ * Al              6      0.00072     -0.00019      0.08114 *
+ * Al              7      0.00491      0.00453     -7.33358 *
+ * Al              8      0.01086      0.01046      7.33376 *
+ * Al              9      0.00065     -0.00040      0.05128 *
+ * Al             10      0.00052     -0.00064      0.27310 *
+ * Al             11     -0.00398     -0.00252      0.85794 *
+ * Al             12      0.00379      0.00027      1.96599 *
+ * Al             13      0.00033     -0.00079     -0.04554 *
+ * Al             14     -0.00643      0.00408     -0.86037 *
+ * Al             15      0.00083     -0.00702     -1.96202 *
+ * Al             16      0.00063     -0.00018     -0.25321 *
+ * Al             17      0.00014     -0.00062     -0.07860 *
+ * Al             18      0.00077     -0.00032      0.08103 *
+ * Al             19     -0.00949      0.00759     -7.33219 *
+ * Al             20      0.01420      0.00376      7.33240 *
+ * Al             21      0.00078     -0.00066      0.05116 *
+ * Al             22      0.00048     -0.00059      0.27331 *
+ * Al             23     -0.00100     -0.00801      0.85802 *
+ * Al             24      0.00543     -0.00034      1.96350 *
+ * Al             25      0.00045     -0.00075     -0.04559 *
+ * Al             26     -0.00096      0.00681     -0.85754 *
+ * Al             27      0.00266     -0.00356     -1.96462 *
+ * Al             28      0.00076     -0.00029     -0.25298 *
+ * Al             29      0.00031     -0.00069     -0.07876 *
+ * Al             30      0.00075     -0.00020      0.08092 *
+ * Al             31      0.00673     -0.00407     -7.33343 *
+ * Al             32     -0.00698      0.00241      7.33406 *
+ * Al             33      0.00068     -0.00056      0.05090 *
+ * Al             34      0.00054     -0.00068      0.27309 *
+ * Al             35     -0.00348      0.00075      0.86154 *
+ * Al             36     -0.00157     -0.00189      1.96396 *
+ * Al             37      0.00038     -0.00070     -0.04552 *
+ * Al             38      0.00243     -0.00403     -0.86084 *
+ * Al             39      0.00280      0.00355     -1.96084 *
+ * Al             40      0.00058     -0.00034     -0.25343 *
+ * Al             41      0.00032     -0.00068     -0.07873 *
+ * Al             42      0.00071     -0.00038      0.08098 *
+ * Al             43     -0.01065      0.00173     -7.33348 *
+ * Al             44      0.01534     -0.00242      7.33273 *
+ * Al             45      0.00059     -0.00044      0.05109 *
+ * Al             46      0.00056     -0.00065      0.27307 *
+ * Al             47      0.00672     -0.00097      0.86167 *
+ * Al             48      0.00082      0.00359      1.97178 *
+ * Al             49      0.00045     -0.00066     -0.04576 *
+ * Al             50     -0.00980      0.01124     -0.85698 *
+ * Al             51      0.00096     -0.00635     -1.95789 *
+ * Al             52      0.00060     -0.00031     -0.25324 *
+ * Al             53      0.00023     -0.00070     -0.07881 *
+ * Al             54      0.00079     -0.00030      0.08097 *
+ * Al             55     -0.01846     -0.00044     -7.33276 *
+ * Al             56      0.01102      0.01056      7.33345 *
+ * Al             57      0.00043     -0.00049      0.05122 *
+ * Al             58      0.00051     -0.00046      0.27318 *
+ * Al             59      0.00349     -0.01513      0.86097 *
+ * Al             60      0.00490      0.00633      1.96486 *
+ * Al             61      0.00055     -0.00062     -0.04563 *
+ * Al             62     -0.00979      0.00297     -0.85874 *
+ * Al             63      0.00385     -0.00707     -1.96131 *
+ * Al             64      0.00056     -0.00028     -0.25314 *
+ * Al             65      0.00019     -0.00063     -0.07879 *
+ * Al             66      0.00060     -0.00046      0.08093 *
+ * Al             67     -0.00842     -0.01084     -7.33292 *
+ * Al             68     -0.00748      0.00553      7.33147 *
+ * Al             69      0.00065     -0.00058      0.05097 *
+ * Al             70      0.00060     -0.00060      0.27334 *
+ * Al             71      0.00334     -0.00177      0.86584 *
+ * Al             72     -0.00480      0.00317      1.96708 *
+ * Al             73      0.00046     -0.00048     -0.04580 *
+ * Al             74     -0.00327     -0.00672     -0.85387 *
+ * Al             75      0.00402     -0.00539     -1.95618 *
+ * Al             76      0.00052     -0.00061     -0.25329 *
+ * Al             77      0.00036     -0.00072     -0.07875 *
+ * Al             78      0.00069     -0.00034      0.08102 *
+ * Al             79     -0.00228      0.00374     -7.33328 *
+ * Al             80      0.00005      0.01670      7.33391 *
+ * Al             81      0.00062     -0.00060      0.05133 *
+ * Al             82      0.00059     -0.00063      0.27346 *
+ * Al             83      0.00565     -0.00333      0.85452 *
+ * Al             84      0.00411      0.00610      1.96837 *
+ * Al             85      0.00041     -0.00057     -0.04552 *
+ * Al             86     -0.00590     -0.00362     -0.86289 *
+ * Al             87     -0.00130     -0.00661     -1.95899 *
+ * Al             88      0.00065     -0.00023     -0.25328 *
+ * Al             89      0.00018     -0.00072     -0.07878 *
+ * Al             90      0.00075     -0.00041      0.08100 *
+ * Al             91     -0.01534      0.00038     -7.33485 *
+ * Al             92      0.00784      0.00159      7.33217 *
+ * Al             93      0.00062     -0.00038      0.05102 *
+ * Al             94      0.00059     -0.00059      0.27302 *
+ * Al             95      0.00509     -0.01708      0.86049 *
+ * Al             96      0.00708      0.00140      1.96181 *
+ * Al             97      0.00062     -0.00060     -0.04566 *
+ * Al             98     -0.00997      0.00677     -0.85931 *
+ * Al             99      0.00555     -0.00155     -1.96164 *
+ * Al            100      0.00070     -0.00032     -0.25316 *
+ * Al            101      0.00017     -0.00068     -0.07884 *
+ * Al            102      0.00067     -0.00040      0.08083 *
+ * Al            103      0.00360      0.00182     -7.33453 *
+ * Al            104      0.00309      0.00737      7.33303 *
+ * Al            105      0.00047     -0.00045      0.05123 *
+ * Al            106      0.00047     -0.00055      0.27317 *
+ * Al            107     -0.00082     -0.00305      0.85799 *
+ * Al            108      0.00289      0.00025      1.96474 *
+ *                                                          *
+ ************************************************************
+
+Writing analysis data to al3x3.castep_bin
+
+Writing model to al3x3.check
+ 
+ A BibTeX formatted list of references used in this run has been written to 
+ al3x3.bib
+ 
+Initialisation time =      5.78 s
+Calculation time    =    623.01 s
+Finalisation time   =     11.78 s
+Total time          =    640.57 s
+Peak Memory Use     = 1399852 kB
+  
+Overall parallel efficiency rating: Very good (80%)                             
+  
+Data was distributed by:-
+G-vector (64-way); efficiency rating: Very good (80%)                           
+k-point (2-way); efficiency rating: Excellent (99%)                             
