@@ -35,9 +35,12 @@ Data from the benchmark can be found in this repository:
 
 The build process followed for VASP on each of the systems benchmarked (if available):
 
+ARCHER2:
+
 * [ARCHER2, VASP 5.4.4.pl2](https://github.com/hpc-uk/build-instructions/blob/main/apps/VASP/build_vasp_5.4.4_ARCHER2_GCC.md)
 * [ARCHER2, VASP 6.3.1](https://github.com/hpc-uk/build-instructions/blob/main/apps/VASP/build_vasp_6.3.1_ARCHER2_GCC.md)
 
+ARCHER:
 * [ARCHER, VASP 5.4.4.pl2](https://github.com/hpc-uk/build-instructions/blob/main/apps/VASP/build_vasp_5.4.4_ARCHER_Intel.md)
 * [ARCHER, VASP 6.1.0](https://github.com/hpc-uk/build-instructions/blob/main/apps/VASP/build_vasp_6.1.0_ARCHER_Intel.md)
 
