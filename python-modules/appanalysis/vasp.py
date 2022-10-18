@@ -22,15 +22,15 @@ def create_df_list(filelist, cpn, perftype="mean", printfilename=False):
             df_list.append(resdict) 
     return df_list 
 
-def get_perf_dict(filename, cpn, perftype="mean"):
+def get_perf_dict(filename, cpn, perftype="max"):
     """Extract the details from output.
 
-    This routine calculates the time for each LOOP+ cycle in the output, once this
+    This routine calculates the time for each LOOP cycle in the output, once this
     is done, there are different options on how to transform it.
     
-    - mean (default): removes the shortest and longest values and takes the mean of the
+    - mean: removes the shortest and longest values and takes the mean of the
       remaining values. This number is considered the runtime for an SCF cycle.
-    - max: takes the maximum value from the set of SCF cycle times
+    - max (default): takes the maximum value from the set of SCF cycle times
     - min: takes the minimum value from the set of SCF cycle times
     
     The performance in 'SCF cycles per second' is also computed.
@@ -60,7 +60,7 @@ def get_perf_dict(filename, cpn, perftype="mean"):
     # Default to 1 thread
     resdict['Threads'] = 1
     for line in infile:
-        if re.search('LOOP\+:', line):
+        if re.search('LOOP:', line):
             line = line.strip()
             tokens = line.split()
             if len(tokens) > 6:
@@ -121,18 +121,18 @@ def get_perf_dict(filename, cpn, perftype="mean"):
     resdict['Nodes'] = int(nodestring.replace('nodes',''))
 
     # Compute the SCF cycle times and remove extreme values
-    resdict['LOOP+'] = 0.0
+    resdict['LOOP'] = 0.0
     if perftype == "mean":
         if len(tvals) > 2:
             tvals.remove(max(tvals))
             tvals.remove(min(tvals))
-        resdict['LOOP+'] = sum(tvals)/len(tvals)
+        resdict['LOOP'] = sum(tvals)/len(tvals)
     if perftype == "max":
-        resdict['LOOP+'] = max(tvals)
+        resdict['LOOP'] = max(tvals)
     if perftype == "min":
-        resdict['LOOP+'] = min(tvals)
+        resdict['LOOP'] = min(tvals)
 
-    resdict['Perf'] = 1.0 / resdict['LOOP+']
+    resdict['Perf'] = 1.0 / resdict['LOOP']
     resdict['Count'] = 1
 
     return resdict
@@ -141,8 +141,8 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
     if threads is not None:
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
-    df_num = df.drop(['File', 'Date'], 1)
-    groupf = {'Perf':['min','median','max','mean'], 'LOOP+':['min','median','max','mean'], 'Count':'sum'}
+    df_num = df.drop(labels=['File', 'Date'], axis=1)
+    groupf = {'Perf':['min','median','max','mean'], 'LOOP':['min','median','max','mean'], 'Count':'sum'}
     if writestats:
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads','Cores','NCORE','NPAR','KPAR']).agg(groupf)
         print(df_group)
