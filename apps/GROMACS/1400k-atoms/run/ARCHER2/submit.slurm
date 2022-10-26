@@ -1,13 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=1400k
-#SBATCH --time=3:0:0
+#SBATCH --time=1:0:0
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=128
 #SBATCH --cpus-per-task=1
-#SBATCH --exclusive
 
-module restore /lus/cls01095/work/z19/z19/aturner/.module/PrgEnv-gnu
-export MODULEPATH=/lus/cls01095/work/z19/z19/aturner/privatemodules:$MODULEPATH
+#SBATCH --partition=standard
+#SBATCH --qos=standard
+#SBATCH --account=z19
+
 module load gromacs
 
 export OMP_NUM_THREADS=1
@@ -22,7 +23,7 @@ cores=$(( nodes * cpn ))
 timestamp=$(date '+%Y%m%d%H%M')
 resfile="${casename}_${nodes}nodes_${timestamp}"
 
-MPI_LAUNCH="srun --cpu-bind=cores"
+MPI_LAUNCH="srun --hint=nomultithread --distribution=block:block"
 
 ${MPI_LAUNCH} ${mdrun} -s ${casename}.tpr -g ${resfile} -noconfout
 
