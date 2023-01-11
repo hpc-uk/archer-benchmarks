@@ -1,0 +1,36 @@
+#!/bin/bash --login
+#
+#PBS -N VASP_bench
+#PBS -l select=8
+#PBS -l walltime=6:0:0
+#PBS -A z19-cse
+
+cd $PBS_O_WORKDIR
+
+module load perftools-base
+module load perftools
+module load vasp5
+VASP_EXE=vasp_ncl
+
+nodes=8
+casename="CdTe"
+ncore=8
+kpar=2
+cpn=24
+threads=1
+
+cp INCAR.base INCAR
+echo "NCORE=${ncore}" >> INCAR
+echo "KPAR=${kpar}" >> INCAR
+
+cores=$(( nodes * cpn ))
+timestamp=$(date '+%Y%m%d%H%M')
+resfile="${casename}_${nodes}nodes_${cores}cores_${threads}threads_${ncore}NCORE_${kpar}KPAR_${timestamp}.OUTCAR"
+TMPDIR=$PWD
+
+export OMP_NUM_THREADS=${threads}
+rm WAVECAR
+aprun -n ${cores} -N ${cpn}  $VASP_EXE
+sleep 30
+
+mv OUTCAR ${resfile}
