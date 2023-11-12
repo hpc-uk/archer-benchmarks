@@ -1,0 +1,1656 @@
+ vasp.6.4.1 05Apr23 (build May 30 2023 08:55:05) complex                         
+ executed on        HPECrayEX_GCC date 2023.07.18  17:12:50
+ running 4096 mpi-ranks, with    1 threads/rank, on   32 nodes
+ distrk:  each k-point on 2048 cores,    2 groups
+ distr:  one band on NCORE=  32 cores,   64 groups
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ INCAR:
+   SYSTEM = CdTe
+   ISTART = 0
+   ICHARG = 2
+   LWAVE = .FALSE.
+   LCHARG = .FALSE.
+   NCSHMEM = 1
+   NBLOCK_FOCK = 8
+   LSCAAWARE = .TRUE.
+   NELMDL = 5
+   NELM = 7
+   ALGO = All
+   ISIF = 2
+   LHFCALC = .TRUE.
+   AEXX = 0.25
+   HFSCREEN = 0.2
+   NBANDS = 640
+   ENCUT = 450
+   PREC = Accurate
+   PRECFOCK = Fast
+   LASPH = .TRUE.
+   LREAL = .FALSE.
+   ISMEAR = 0
+   SIGMA = 0.05
+   LNONCOLLINEAR = .TRUE.
+   MAGMOM = 195*0
+   NCORE = 32
+   KPAR = 2
+
+ POTCAR:    PAW_PBE Cd 06Sep2000                  
+ POTCAR:    PAW_PBE Te 08Apr2002                  
+ POTCAR:    PAW_PBE Cd 06Sep2000                  
+   VRHFIN =Cd : s2 d10                                                                              
+   LEXCH  = PE                                                                                      
+   EATOM  =  1293.1815 eV,   95.0462 Ry                                                             
+                                                                                                    
+   TITEL  = PAW_PBE Cd 06Sep2000                                                                    
+   LULTRA =        F    use ultrasoft PP ?                                                          
+   IUNSCR =        1    unscreen: 0-lin 1-nonlin 2-no                                               
+   RPACOR =    2.000    partial core radius                                                         
+   POMASS =  112.411; ZVAL   =   12.000    mass and valenz                                          
+   RCORE  =    2.300    outmost cutoff radius                                                       
+   RWIGS  =    2.980; RWIGS  =    1.577    wigner-seitz radius (au A)                               
+   ENMAX  =  274.336; ENMIN  =  205.752 eV                                                          
+   RCLOC  =    2.054    cutoff for local pot                                                        
+   LCOR   =        T    correct aug charges                                                         
+   LPAW   =        T    paw PP                                                                      
+   EAUG   =  456.106                                                                                
+   DEXC   =    0.000                                                                                
+   RMAX   =    2.358    core radius for proj-oper                                                   
+   RAUG   =    1.300    factor for augmentation sphere                                              
+   RDEP   =    2.450    radius for radial grids                                                     
+   RDEPT  =    1.955    core radius for aug-charge                                                  
+                                                                                                    
+   Atomic configuration                                                                             
+   12 entries                                                                                       
+     n  l   j            E        occ.                                                              
+     1  0  0.50    -26519.7817   2.0000                                                             
+     2  0  0.50     -3936.9612   2.0000                                                             
+     2  1  1.50     -3532.2230   6.0000                                                             
+     3  0  0.50      -733.7908   2.0000                                                             
+     3  1  1.50      -601.0792   6.0000                                                             
+     3  2  2.50      -393.5307  10.0000                                                             
+     4  0  0.50      -105.8977   2.0000                                                             
+     4  1  1.50       -66.9488   6.0000                                                             
+     4  2  2.50       -11.7331  10.0000                                                             
+     5  0  0.50        -5.6592   2.0000                                                             
+     5  1  0.50        -1.3606   0.0000                                                             
+     4  3  2.50        -1.3606   0.0000                                                             
+   Description                                                                                      
+     l       E           TYP  RCUT    TYP  RCUT                                                     
+     2    -11.7331479     23  2.300                                                                 
+     2    -13.0937305     23  2.300                                                                 
+     0     -5.6591502     23  2.300                                                                 
+     0     -1.5561433     23  2.300                                                                 
+     1     -2.7211652     23  2.300                                                                 
+     1      8.3548275     23  2.300                                                                 
+  local pseudopotential read in
+  partial core-charges read in
+  partial kinetic energy density read in
+  atomic valenz-charges read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+    PAW grid and wavefunctions read in
+
+   number of l-projection  operators is LMAX  =           6
+   number of lm-projection operators is LMMAX =          18
+
+ POTCAR:    PAW_PBE Te 08Apr2002                  
+   VRHFIN =Te: s2p4                                                                                 
+   LEXCH  = PE                                                                                      
+   EATOM  =   223.2721 eV,   16.4100 Ry                                                             
+                                                                                                    
+   TITEL  = PAW_PBE Te 08Apr2002                                                                    
+   LULTRA =        F    use ultrasoft PP ?                                                          
+   IUNSCR =        1    unscreen: 0-lin 1-nonlin 2-no                                               
+   RPACOR =    2.200    partial core radius                                                         
+   POMASS =  127.600; ZVAL   =    6.000    mass and valenz                                          
+   RCORE  =    2.300    outmost cutoff radius                                                       
+   RWIGS  =    2.900; RWIGS  =    1.535    wigner-seitz radius (au A)                               
+   ENMAX  =  174.982; ENMIN  =  131.236 eV                                                          
+   ICORE  =        3    local potential                                                             
+   LCOR   =        T    correct aug charges                                                         
+   LPAW   =        T    paw PP                                                                      
+   EAUG   =  368.792                                                                                
+   DEXC   =    0.000                                                                                
+   RMAX   =    2.345    core radius for proj-oper                                                   
+   RAUG   =    1.300    factor for augmentation sphere                                              
+   RDEP   =    2.397    radius for radial grids                                                     
+   RDEPT  =    2.174    core radius for aug-charge                                                  
+                                                                                                    
+   Atomic configuration                                                                             
+   13 entries                                                                                       
+     n  l   j            E        occ.                                                              
+     1  0  0.50    -31621.2075   2.0000                                                             
+     2  0  0.50     -4848.7941   2.0000                                                             
+     2  1  1.50     -4352.1960   6.0000                                                             
+     3  0  0.50      -964.9612   2.0000                                                             
+     3  1  1.50      -803.6179   6.0000                                                             
+     3  2  2.50      -559.8710  10.0000                                                             
+     4  0  0.50      -164.3522   2.0000                                                             
+     4  1  1.50      -114.3756   6.0000                                                             
+     4  2  2.50       -41.6483  10.0000                                                             
+     5  0  0.50       -15.1072   2.0000                                                             
+     5  1  0.50        -5.9526   4.0000                                                             
+     5  2  1.50        -5.4423   0.0000                                                             
+     4  3  2.50        -5.4423   0.0000                                                             
+   Description                                                                                      
+     l       E           TYP  RCUT    TYP  RCUT                                                     
+     0    -15.1072389     23  2.300                                                                 
+     0    -16.4678215     23  2.300                                                                 
+     1     -5.9526306     23  2.300                                                                 
+     1     -2.4873968     23  2.300                                                                 
+     2     -5.4423304     23  2.300                                                                 
+     3     -1.3605826     23  2.300                                                                 
+  local pseudopotential read in
+  partial core-charges read in
+  partial kinetic energy density read in
+  atomic valenz-charges read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           0  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           1  read in
+    real space projection operators read in
+  non local Contribution for L=           2  read in
+    real space projection operators read in
+    PAW grid and wavefunctions read in
+
+   number of l-projection  operators is LMAX  =           5
+   number of lm-projection operators is LMMAX =          13
+
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have a (more or less) 'large supercell' and for larger cells it     |
+|     might be more efficient to use real-space projection operators.         |
+|     Therefore, try LREAL= Auto in the INCAR file.                           |
+|     Mind: For very accurate calculation, you might also keep the            |
+|     reciprocal projection scheme (i.e. LREAL=.FALSE.).                      |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+  PAW_PBE Cd 06Sep2000                  :
+ energy of atom  1       EATOM=-1293.1815
+ kinetic energy error for atom=    0.0084 (will be added to EATOM!!)
+  PAW_PBE Te 08Apr2002                  :
+ energy of atom  2       EATOM= -223.2721
+ kinetic energy error for atom=    0.0008 (will be added to EATOM!!)
+
+
+ POSCAR: Cd33 Te32
+  positions in direct lattice
+  No initial velocities read in
+ exchange correlation table for  LEXCH =        8
+   RHO(1)=    0.500       N(1)  =     2000
+   RHO(2)=  100.500       N(2)  =     4000
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ ion  position               nearest neighbor table
+   1  0.004  0.996  0.004-  44 2.79  35 2.93  54 2.93  65 2.93  33 2.94
+   2  0.001  0.999  0.497-  55 2.82  34 2.82  64 2.82  45 2.84
+   3  0.001  0.503  0.001-  63 2.82  56 2.82  37 2.82  42 2.84
+   4  1.000  0.501  0.499-  57 2.82  62 2.82  36 2.82  43 2.84
+   5  0.497  0.999  0.001-  39 2.82  50 2.82  61 2.82  48 2.84
+   6  0.499  0.000  0.499-  38 2.82  51 2.82  60 2.82  49 2.84
+   7  0.499  0.501  1.000-  41 2.82  59 2.82  52 2.82  46 2.84
+   8  0.501  0.499  0.501-  47 2.82  40 2.83  53 2.83  58 2.83
+   9  0.001  0.251  0.253-  54 2.82  34 2.82  62 2.82  42 2.84
+  10  0.004  0.254  0.746-  43 2.79  35 2.93  55 2.93  63 2.93  33 2.94
+  11  1.000  0.749  0.251-  56 2.82  64 2.82  36 2.82  44 2.84
+  12  0.001  0.747  0.749-  65 2.82  57 2.82  37 2.82  45 2.84
+  13  0.499  0.250  0.251-  38 2.82  50 2.82  58 2.82  46 2.84
+  14  0.497  0.251  0.749-  39 2.82  51 2.82  59 2.82  47 2.84
+  15  0.501  0.751  0.249-  48 2.82  40 2.83  52 2.83  60 2.83
+  16  0.499  0.749  0.750-  41 2.82  61 2.82  53 2.82  49 2.84
+  17  0.251  0.000  0.251-  34 2.82  50 2.82  60 2.82  44 2.84
+  18  0.253  0.999  0.749-  35 2.82  51 2.82  61 2.82  45 2.84
+  19  0.249  0.499  0.249-  42 2.82  36 2.83  52 2.83  58 2.83
+  20  0.251  0.501  0.750-  37 2.82  59 2.82  53 2.82  43 2.84
+  21  0.749  0.999  0.253-  54 2.82  38 2.82  64 2.82  48 2.84
+  22  0.746  0.996  0.746-  49 2.79  39 2.93  55 2.93  65 2.93  33 2.94
+  23  0.750  0.501  0.251-  56 2.82  62 2.82  40 2.82  46 2.84
+  24  0.749  0.503  0.749-  63 2.82  57 2.82  41 2.82  47 2.84
+  25  0.253  0.251  0.001-  35 2.82  50 2.82  59 2.82  42 2.84
+  26  0.251  0.250  0.499-  34 2.82  51 2.82  58 2.82  43 2.84
+  27  0.251  0.749  1.000-  37 2.82  61 2.82  52 2.82  44 2.84
+  28  0.249  0.751  0.501-  45 2.82  36 2.83  53 2.83  60 2.83
+  29  0.746  0.254  0.004-  46 2.79  39 2.93  54 2.93  63 2.93  33 2.94
+  30  0.749  0.251  0.497-  55 2.82  38 2.82  62 2.82  47 2.84
+  31  0.749  0.747  0.001-  65 2.82  56 2.82  41 2.82  48 2.84
+  32  0.750  0.749  0.499-  57 2.82  64 2.82  40 2.82  49 2.84
+  33  0.875  0.125  0.875-   1 2.94  10 2.94  22 2.94  29 2.94  35 3.37  39 3.37  54 3.37  55 3.37
+                            63 3.37  65 3.37
+  34  0.127  0.125  0.375-  17 2.82  26 2.82   2 2.82   9 2.82
+  35  0.133  0.125  0.875-  18 2.82  25 2.82  10 2.93   1 2.93  33 3.37
+  36  0.126  0.625  0.375-   4 2.82  11 2.82  19 2.83  28 2.83
+  37  0.127  0.625  0.875-  20 2.82  27 2.82   3 2.82  12 2.82
+  38  0.623  0.125  0.375-  13 2.82   6 2.82  21 2.82  30 2.82
+  39  0.617  0.125  0.875-  14 2.82   5 2.82  22 2.93  29 2.93  33 3.37
+  40  0.624  0.625  0.375-  23 2.82  32 2.82   8 2.83  15 2.83
+  41  0.623  0.625  0.875-   7 2.82  16 2.82  31 2.82  24 2.82
+  42  0.125  0.375  0.125-  19 2.82   9 2.84  25 2.84   3 2.84
+  43  0.127  0.377  0.623-  10 2.79   4 2.84  26 2.84  20 2.84
+  44  0.127  0.873  0.127-   1 2.79  11 2.84  17 2.84  27 2.84
+  45  0.125  0.875  0.625-  28 2.82  18 2.84   2 2.84  12 2.84
+  46  0.623  0.377  0.127-  29 2.79  13 2.84  23 2.84   7 2.84
+  47  0.625  0.375  0.625-   8 2.82  14 2.84  24 2.84  30 2.84
+  48  0.625  0.875  0.125-  15 2.82  21 2.84   5 2.84  31 2.84
+  49  0.623  0.873  0.623-  22 2.79  32 2.84   6 2.84  16 2.84
+  50  0.375  0.125  0.127-  17 2.82  13 2.82   5 2.82  25 2.82
+  51  0.375  0.125  0.623-   6 2.82  26 2.82  18 2.82  14 2.82
+  52  0.375  0.625  0.126-   7 2.82  27 2.82  19 2.83  15 2.83
+  53  0.375  0.625  0.624-  16 2.82  20 2.82   8 2.83  28 2.83
+  54  0.875  0.125  0.133-   9 2.82  21 2.82   1 2.93  29 2.93  33 3.37
+  55  0.875  0.125  0.617-  30 2.82   2 2.82  22 2.93  10 2.93  33 3.37
+  56  0.875  0.625  0.127-  11 2.82  23 2.82   3 2.82  31 2.82
+  57  0.875  0.625  0.623-   4 2.82  32 2.82  12 2.82  24 2.82
+  58  0.375  0.376  0.375-  26 2.82  13 2.82  19 2.83   8 2.83
+  59  0.375  0.377  0.875-   7 2.82  20 2.82  14 2.82  25 2.82
+  60  0.375  0.874  0.375-   6 2.82  17 2.82  15 2.83  28 2.83
+  61  0.375  0.873  0.875-  16 2.82  27 2.82   5 2.82  18 2.82
+  62  0.875  0.377  0.375-   4 2.82  23 2.82   9 2.82  30 2.82
+  63  0.875  0.383  0.875-  24 2.82   3 2.82  10 2.93  29 2.93  33 3.37
+  64  0.875  0.873  0.375-  11 2.82  32 2.82   2 2.82  21 2.82
+  65  0.875  0.867  0.875-  12 2.82  31 2.82   1 2.93  22 2.93  33 3.37
+
+  LATTYP: Found a simple cubic cell.
+ ALAT       =    13.0867680000
+  
+  Lattice vectors:
+  
+ A1 = (  13.0867680000,   0.0000000000,   0.0000000000)
+ A2 = (   0.0000000000,  13.0867680000,   0.0000000000)
+ A3 = (   0.0000000000,   0.0000000000,  13.0867680000)
+
+
+Analysis of symmetry for initial positions (statically):
+=====================================================================
+ Subroutine PRICEL returns:
+ Original cell was already a primitive cell.
+ 
+
+ Routine SETGRP: Setting up the symmetry group for a 
+ simple cubic supercell.
+
+
+ Subroutine GETGRP returns: Found 24 space group operations
+ (whereof  6 operations were pure point group operations)
+ out of a pool of 48 trial point group operations.
+
+
+The static configuration has the point symmetry C_3v.
+ The point group associated with its full space group is T_d .
+
+
+Analysis of symmetry for dynamics (positions and initial velocities):
+=====================================================================
+ Subroutine PRICEL returns:
+ Original cell was already a primitive cell.
+ 
+
+ Routine SETGRP: Setting up the symmetry group for a 
+ simple cubic supercell.
+
+
+ Subroutine GETGRP returns: Found 24 space group operations
+ (whereof  6 operations were pure point group operations)
+ out of a pool of 48 trial point group operations.
+
+
+The dynamic configuration has the point symmetry C_3v.
+ The point group associated with its full space group is T_d .
+
+
+Analysis of structural, dynamic, and magnetic symmetry:
+=====================================================================
+ Subroutine PRICEL returns:
+ Original cell was already a primitive cell.
+ 
+
+ Routine SETGRP: Setting up the symmetry group for a 
+ simple cubic supercell.
+
+
+ Subroutine GETGRP returns: Found 24 space group operations
+ (whereof  6 operations were pure point group operations)
+ out of a pool of 48 trial point group operations.
+
+
+The overall configuration has the point symmetry C_3v.
+ The point group associated with its full space group is T_d .
+
+
+ Subroutine INISYM returns: Found 24 space group operations
+ (whereof  6 operations are pure point group operations),
+ and found     1 'primitive' translations
+
+
+----------------------------------------------------------------------------------------
+
+                                     Primitive cell                                     
+
+  volume of cell :    2241.2856
+
+  direct lattice vectors                    reciprocal lattice vectors
+    13.086768000  0.000000000  0.000000000     0.076413061  0.000000000  0.000000000
+     0.000000000 13.086768000  0.000000000     0.000000000  0.076413061  0.000000000
+     0.000000000  0.000000000 13.086768000     0.000000000  0.000000000  0.076413061
+
+  length of vectors
+    13.086768000 13.086768000 13.086768000     0.076413061  0.076413061  0.076413061
+
+  position of ions in fractional coordinates (direct lattice)
+     0.004485000  0.995515000  0.004485000
+     0.001247000  0.998753000  0.496959000
+     0.001247000  0.503041000  0.001247000
+     0.999625000  0.501218000  0.498782000
+     0.496959000  0.998753000  0.001247000
+     0.498781000  0.000375000  0.498781000
+     0.498781000  0.501219000  0.999625000
+     0.500528000  0.499472000  0.500528000
+     0.001247000  0.251247000  0.253040000
+     0.004486000  0.254485000  0.745515000
+     0.999625000  0.748782000  0.251218000
+     0.001247000  0.746959000  0.748753000
+     0.498782000  0.249625000  0.251219000
+     0.496960000  0.251247000  0.748753000
+     0.500528000  0.750528000  0.249472000
+     0.498781000  0.748781000  0.750375000
+     0.251219000  0.000375000  0.251219000
+     0.253040000  0.998753000  0.748753000
+     0.249472000  0.499472000  0.249472000
+     0.251219000  0.501219000  0.750375000
+     0.748753000  0.998753000  0.253040000
+     0.745514000  0.995515000  0.745515000
+     0.750375000  0.501219000  0.251219000
+     0.748753000  0.503040000  0.748753000
+     0.253040000  0.251247000  0.001247000
+     0.251219000  0.249625000  0.498781000
+     0.251219000  0.748781000  0.999625000
+     0.249472000  0.750528000  0.500528000
+     0.745514000  0.254485000  0.004485000
+     0.748753000  0.251247000  0.496960000
+     0.748753000  0.746959000  0.001247000
+     0.750375000  0.748782000  0.498782000
+     0.875000000  0.125000000  0.875000000
+     0.126656000  0.125000000  0.375000000
+     0.132779000  0.125000000  0.875000000
+     0.125892000  0.625000000  0.375000000
+     0.126656000  0.625000000  0.875000000
+     0.623344000  0.125000000  0.375000000
+     0.617221000  0.125000000  0.875000000
+     0.624108000  0.625000000  0.375000000
+     0.623344000  0.625000000  0.875000000
+     0.124848000  0.374848000  0.124848000
+     0.127488000  0.377488000  0.622512000
+     0.127488000  0.872512000  0.127488000
+     0.124848000  0.875152000  0.625152000
+     0.622512000  0.377488000  0.127488000
+     0.625152000  0.374848000  0.625152000
+     0.625152000  0.875152000  0.124848000
+     0.622512000  0.872512000  0.622512000
+     0.375000000  0.125000000  0.126656000
+     0.375000000  0.125000000  0.623344000
+     0.375000000  0.625000000  0.125892000
+     0.375000000  0.625000000  0.624108000
+     0.875000000  0.125000000  0.132779000
+     0.875000000  0.125000000  0.617221000
+     0.875000000  0.625000000  0.126656000
+     0.875000000  0.625000000  0.623344000
+     0.375000000  0.375892000  0.375000000
+     0.375000000  0.376656000  0.875000000
+     0.375000000  0.874108000  0.375000000
+     0.375000000  0.873344000  0.875000000
+     0.875000000  0.376656000  0.375000000
+     0.875000000  0.382779000  0.875000000
+     0.875000000  0.873344000  0.375000000
+     0.875000000  0.867221000  0.875000000
+
+  ion indices of the primitive-cell ions
+   primitive index   ion index
+                 1           1
+                 2           2
+                 3           3
+                 4           4
+                 5           5
+                 6           6
+                 7           7
+                 8           8
+                 9           9
+                10          10
+                11          11
+                12          12
+                13          13
+                14          14
+                15          15
+                16          16
+                17          17
+                18          18
+                19          19
+                20          20
+                21          21
+                22          22
+                23          23
+                24          24
+                25          25
+                26          26
+                27          27
+                28          28
+                29          29
+                30          30
+                31          31
+                32          32
+                33          33
+                34          34
+                35          35
+                36          36
+                37          37
+                38          38
+                39          39
+                40          40
+                41          41
+                42          42
+                43          43
+                44          44
+                45          45
+                46          46
+                47          47
+                48          48
+                49          49
+                50          50
+                51          51
+                52          52
+                53          53
+                54          54
+                55          55
+                56          56
+                57          57
+                58          58
+                59          59
+                60          60
+                61          61
+                62          62
+                63          63
+                64          64
+                65          65
+
+----------------------------------------------------------------------------------------
+
+
+
+ KPOINTS: 2x2x2 Gamma                             
+
+Automatic generation of k-mesh.
+ Grid dimensions read from file:
+ generate k-points for:    2    2    2
+
+ Generating k-lattice:
+
+  Cartesian coordinates                     Fractional coordinates (reciprocal lattice)
+     0.038206530  0.000000000  0.000000000     0.500000000  0.000000000  0.000000000
+     0.000000000  0.038206530  0.000000000     0.000000000  0.500000000  0.000000000
+     0.000000000  0.000000000  0.038206530     0.000000000  0.000000000  0.500000000
+
+  Length of vectors
+     0.038206530  0.038206530  0.038206530
+
+  Shift w.r.t. Gamma in fractional coordinates (k-lattice)
+     0.500000000  0.500000000  0.500000000
+
+ 
+ Subroutine IBZKPT returns following result:
+ ===========================================
+ 
+ Found      2 irreducible k-points:
+ 
+ Following reciprocal coordinates:
+            Coordinates               Weight
+  0.250000  0.250000  0.250000      4.000000
+ -0.250000 -0.250000 -0.250000      4.000000
+ 
+ Following cartesian coordinates:
+            Coordinates               Weight
+  0.019103  0.019103  0.019103      4.000000
+ -0.019103 -0.019103 -0.019103      4.000000
+ 
+ 
+ Subroutine IBZKPT_HF returns following result:
+ ==============================================
+ 
+ Found      8 k-points in 1st BZ
+ the following      8 k-points will be used (e.g. in the exchange kernel)
+ Following reciprocal coordinates:   # in IRBZ
+  0.250000  0.250000  0.250000    0.12500000   1 t-inv F
+ -0.250000 -0.250000 -0.250000    0.12500000   2 t-inv F
+  0.250000 -0.250000 -0.250000    0.12500000   1 t-inv F
+ -0.250000 -0.250000  0.250000    0.12500000   1 t-inv F
+ -0.250000  0.250000 -0.250000    0.12500000   1 t-inv F
+ -0.250000  0.250000  0.250000    0.12500000   2 t-inv F
+  0.250000  0.250000 -0.250000    0.12500000   2 t-inv F
+  0.250000 -0.250000  0.250000    0.12500000   2 t-inv F
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+ Dimension of arrays:
+   k-points           NKPTS =      2   k-points in BZ     NKDIM =      8   number of bands    NBANDS=    640
+   number of dos      NEDOS =    301   number of ions     NIONS =     65
+   non local maximal  LDIM  =      6   non local SUM 2l+1 LMDIM =     18
+   total plane-waves  NPLWV = 884736
+   max r-space proj   IRMAX =      1   max aug-charges    IRDMAX=  23156
+   dimension x,y,z NGX =    96 NGY =   96 NGZ =   96
+   dimension x,y,z NGXF=   192 NGYF=  192 NGZF=  192
+   support grid    NGXF=   192 NGYF=  192 NGZF=  192
+   ions per type =              33  32
+   NGX,Y,Z   is equivalent  to a cutoff of  12.20, 12.20, 12.20 a.u.
+   NGXF,Y,Z  is equivalent  to a cutoff of  24.39, 24.39, 24.39 a.u.
+
+ SYSTEM =  CdTe                                    
+ POSCAR =  Cd33 Te32                               
+
+ Startparameter for this run:
+   NWRITE =      2    write-flag & timer
+   PREC   = accura    normal or accurate (medium, high low for compatibility)
+   ISTART =      0    job   : 0-new  1-cont  2-samecut
+   ICHARG =      2    charge: 1-file 2-atom 10-const
+   ISPIN  =      1    spin polarized calculation?
+   LNONCOLLINEAR =      T non collinear calculations
+   LSORBIT =      F    spin-orbit coupling
+   INIWAV =      1    electr: 0-lowe 1-rand  2-diag
+   LASPH  =      T    aspherical Exc in radial PAW
+ Electronic Relaxation 1
+   ENCUT  =  450.0 eV  33.07 Ry    5.75 a.u.  22.64 22.64 22.64*2*pi/ulx,y,z
+   ENINI  =  450.0     initial cutoff
+   ENAUG  =  456.1 eV  augmentation charge cutoff
+   NELM   =      7;   NELMIN=  2; NELMDL=  5     # of ELM steps 
+   EDIFF  = 0.1E-03   stopping-criterion for ELM
+   LREAL  =      F    real-space projection
+   NLSPLINE    = F    spline interpolate recip. space projectors
+   LCOMPAT=      F    compatible to vasp.4.4
+   GGA_COMPAT  = T    GGA compatible to vasp.4.4-vasp.4.6
+   LMAXPAW     = -100 max onsite density
+   LMAXMIX     =    2 max onsite mixed and CHGCAR
+   VOSKOWN=      0    Vosko Wilk Nusair interpolation
+   ROPT   =    0.00000   0.00000
+ Ionic relaxation
+   EDIFFG = 0.1E-02   stopping-criterion for IOM
+   NSW    =      0    number of steps for IOM
+   NBLOCK =      1;   KBLOCK =      1    inner block; outer block 
+   IBRION =     -1    ionic relax: 0-MD 1-quasi-New 2-CG
+   NFREE  =      0    steps in history (QN), initial steepest desc. (CG)
+   ISIF   =      2    stress and relaxation
+   IWAVPR =     10    prediction:  0-non 1-charg 2-wave 3-comb
+   ISYM   =      3    0-nonsym 1-usesym 2-fastsym
+   LCORR  =      T    Harris-Foulkes like correction to forces
+
+   POTIM  = 0.5000    time-step for ionic-motion
+   TEIN   =    0.0    initial temperature
+   TEBEG  =    0.0;   TEEND  =   0.0 temperature during run
+   SMASS  =  -3.00    Nose mass-parameter (am)
+   estimated Nose-frequenzy (Omega)   =  0.10E-29 period in steps = 0.13E+47 mass=  -0.391E-26a.u.
+   SCALEE = 1.0000    scale energy and forces
+   NPACO  =    256;   APACO  = 10.0  distance and # of slots for P.C.
+   PSTRESS=    0.0 pullay stress
+
+  Mass of Ions in am
+   POMASS = 112.41127.60
+  Ionic Valenz
+   ZVAL   =  12.00  6.00
+  Atomic Wigner-Seitz radii
+   RWIGS  =  -1.00 -1.00
+  virtual crystal weights 
+   VCA    =   1.00  1.00
+   NELECT =     588.0000    total number of electrons
+   NUPDOWN=      -1.0000    fix difference up-down
+
+ DOS related values:
+   EMIN   =  10.00;   EMAX   =-10.00  energy-range for DOS
+   EFERMI =   0.00;   METHOD = LEGACY      
+   ISMEAR =     0;   SIGMA  =   0.05  broadening in eV -4-tet -1-fermi 0-gaus
+
+ Electronic relaxation 2 (details)
+   IALGO  =     58    algorithm
+   LDIAG  =      T    sub-space diagonalisation (order eigenvalues)
+   LSUBROT=      F    optimize rotation matrix (better conditioning)
+   TURBO    =      0    0=normal 1=particle mesh
+   IRESTART =      0    0=no restart 2=restart with 2 vectors
+   NREBOOT  =      0    no. of reboots
+   NMIN     =      0    reboot dimension
+   EREF     =   0.00    reference energy to select bands
+   IMIX   =      4    mixing-type and parameters
+     AMIX     =   0.40;   BMIX     =  1.00
+     AMIX_MAG =   1.60;   BMIX_MAG =  1.00
+     AMIN     =   0.10
+     WC   =   100.;   INIMIX=   1;  MIXPRE=   1;  MAXMIX= -45
+
+ Intra band minimization:
+   WEIMIN = 0.0000     energy-eigenvalue tresh-hold
+   EBREAK =  0.39E-07  absolut break condition
+   DEPER  =   0.30     relativ break condition  
+
+   TIME   =   0.40     timestep for ELM
+
+  volume/ion in A,a.u.               =      34.48       232.69
+  Fermi-wavevector in a.u.,A,eV,Ry     =   1.048017  1.980464 14.943809  1.098339
+  Thomas-Fermi vector in A             =   2.182921
+
+ Write flags
+   LWAVE        =      F    write WAVECAR
+   LDOWNSAMPLE  =      F    k-point downsampling of WAVECAR
+   LCHARG       =      F    write CHGCAR
+   LVTOT        =      F    write LOCPOT, total local potential
+   LVHAR        =      F    write LOCPOT, Hartree potential only
+   LELF         =      F    write electronic localiz. function (ELF)
+   LORBIT       =      0    0 simple, 1 ext, 2 COOP (PROOUT), +10 PAW based schemes
+
+
+ Dipole corrections
+   LMONO  =      F    monopole corrections only (constant potential shift)
+   LDIPOL =      F    correct potential (dipole corrections)
+   IDIPOL =      0    1-x, 2-y, 3-z, 4-all directions 
+   EPSILON=  1.0000000 bulk dielectric constant
+
+ Exchange correlation treatment:
+   GGA     =    --    GGA type
+   LEXCH   =     8    internal setting for exchange type
+   LIBXC   =     F    Libxc                    
+   VOSKOWN =     0    Vosko Wilk Nusair interpolation
+   EXXOEP  =     0    0=HF, 1=EXX-LHF (local Hartree Fock) 2=EXX OEP
+   LHFCALC =     T    Hartree Fock is set to
+   LSYMGRAD=     F    symmetrize gradient (conserves proper symmetry)
+   PRECFOCK=fast      Normal, Fast or Accurate (Low or Medium for compatibility)
+   LRHFCALC=     F    long range Hartree Fock
+   LRSCOR  =     F    long range correlation only (use DFT for short range part)
+   LTHOMAS =     F    Thomas Fermi screening in HF
+   LMODELHF=     F    short range full HF, long range fraction AEXX
+   FOCKCORR=     1    mode to apply convergence corrections
+   LFOCKACE=     T    use Adeptively-Compressed-Exchange operator
+   ENCUT4O =  -1.0   cutoff for four orbital integrals eV
+   LMAXFOCK=     4    L truncation for augmentation on plane wave grid
+   LMAXFOCKAE=  -1    L truncation for all-electron charge restoration on plane wave grid
+   NMAXFOCKAE=   1    number of basis functions for all-electron charge restoration
+   LFOCKAEDFT=     F  apply the AE augmentation even for DFT
+   NKREDX  =     1    reduce k-point grid by
+   NKREDY  =     1    reduce k-point grid by
+   NKREDZ  =     1    reduce k-point grid by
+   SHIFTRED=     F    shift reduced grid of Gamma
+   HFKIDENT=     F    idential grid for each k-point
+   ODDONLY =     F    use only odd q-grid points
+   EVENONLY=     F    use only even q-grid points
+   HFALPHA =   -1.0000 decay constant for conv. correction
+   MCALPHA =    0.0000 extent of test-charge in conv. correction in multipole expansion
+   AEXX    =    0.2500 exact exchange contribution
+   HFSCREEN=    0.2000 screening length (either q_TF or 0.3 A-1)
+   HFSCREENC=   0.2000 screening length for correlation (either q_TF or 0.3 A-1)
+   HFRCUT  =    0.0000 spherical cutoff for potential kernel
+   ALDAX   =    0.7500 LDA exchange part
+   AGGAX   =    0.7500 GGA exchange part
+   ALDAC   =    1.0000 LDA correlation
+   AGGAC   =    1.0000 GGA correlation
+   ENCUTFOCK=  -1.0 apply spherical cutoff to Coloumb kernel
+   NBANDSGWLOW=     1    first orbital included in HF term
+   NBLOCK_FOCK=     8    blocking factor in FOCK_ACC
+
+ Linear response parameters
+   LEPSILON=     F    determine dielectric tensor
+   LRPA    =     F    only Hartree local field effects (RPA)
+   LNABLA  =     F    use nabla operator in PAW spheres
+   LVEL    =     F    velocity operator in full k-point grid
+   CSHIFT  =0.1000    complex shift for real part using Kramers Kronig
+   OMEGAMAX=  -1.0    maximum frequency
+   DEG_THRESHOLD= 0.2000000E-02 threshold for treating states as degnerate
+   RTIME   =   -0.100 relaxation time in fs
+  (WPLASMAI=    0.000 imaginary part of plasma frequency in eV, 0.658/RTIME)
+   DFIELD  = 0.0000000 0.0000000 0.0000000 field for delta impulse in time
+
+  Optional k-point grid parameters
+   LKPOINTS_OPT  =     F    use optional k-point grid
+   KPOINTS_OPT_MODE=     1    mode for optional k-point grid
+
+ Orbital magnetization related:
+   ORBITALMAG=     F  switch on orbital magnetization
+   LCHIMAG   =     F  perturbation theory with respect to B field
+   DQ        =  0.001000  dq finite difference perturbation B field
+   LLRAUG    =     F  two centre corrections for induced B field
+   LBONE     =     F  B-component reconstruction in AE one-centre
+   LVGVCALC  =     T  calculate vGv susceptibility
+   LVGVAPPL  =     F  apply vGv susceptibility instead of pGv for G=0
+
+ Random number generation:
+   RANDOM_GENERATOR = DEFAULT
+   PCG_SEED         = not used
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Static calculation
+ charge density and potential will be updated during run
+ non collinear spin polarized calculation
+ Conjugate gradient for all bands (Freysoldt, et al. PRB 79, 241103 (2009))
+ preconditioned conjugated gradient                                        
+ perform sub-space diagonalisation
+    before iterative eigenvector-optimisation
+ modified Broyden-mixing scheme, WC =      100.0
+ initial mixing is a Kerker type mixing with AMIX =  0.4000 and BMIX =      1.0000
+ Hartree-type preconditioning will be used
+ using additional bands          346
+ reciprocal scheme for non local part
+ use partial core corrections
+ no Harris-corrections to forces 
+ use gradient corrections 
+ use of overlap-Matrix (Vanderbilt PP)
+ Gauss-broadening in eV      SIGMA  =   0.05
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+  energy-cutoff  :      450.00
+  volume of cell :     2241.29
+      direct lattice vectors                 reciprocal lattice vectors
+    13.086768000  0.000000000  0.000000000     0.076413061  0.000000000  0.000000000
+     0.000000000 13.086768000  0.000000000     0.000000000  0.076413061  0.000000000
+     0.000000000  0.000000000 13.086768000     0.000000000  0.000000000  0.076413061
+
+  length of vectors
+    13.086768000 13.086768000 13.086768000     0.076413061  0.076413061  0.076413061
+
+
+
+ k-points in units of 2pi/SCALE and weight: 2x2x2 Gamma                             
+   0.01910327  0.01910327  0.01910327       0.500
+  -0.01910327 -0.01910327 -0.01910327       0.500
+
+ k-points in reciprocal lattice and weights: 2x2x2 Gamma                             
+   0.25000000  0.25000000  0.25000000       0.500
+  -0.25000000 -0.25000000 -0.25000000       0.500
+
+ position of ions in fractional coordinates (direct lattice) 
+   0.00448500  0.99551500  0.00448500
+   0.00124700  0.99875300  0.49695900
+   0.00124700  0.50304100  0.00124700
+   0.99962500  0.50121800  0.49878200
+   0.49695900  0.99875300  0.00124700
+   0.49878100  0.00037500  0.49878100
+   0.49878100  0.50121900  0.99962500
+   0.50052800  0.49947200  0.50052800
+   0.00124700  0.25124700  0.25304000
+   0.00448600  0.25448500  0.74551500
+   0.99962500  0.74878200  0.25121800
+   0.00124700  0.74695900  0.74875300
+   0.49878200  0.24962500  0.25121900
+   0.49696000  0.25124700  0.74875300
+   0.50052800  0.75052800  0.24947200
+   0.49878100  0.74878100  0.75037500
+   0.25121900  0.00037500  0.25121900
+   0.25304000  0.99875300  0.74875300
+   0.24947200  0.49947200  0.24947200
+   0.25121900  0.50121900  0.75037500
+   0.74875300  0.99875300  0.25304000
+   0.74551400  0.99551500  0.74551500
+   0.75037500  0.50121900  0.25121900
+   0.74875300  0.50304000  0.74875300
+   0.25304000  0.25124700  0.00124700
+   0.25121900  0.24962500  0.49878100
+   0.25121900  0.74878100  0.99962500
+   0.24947200  0.75052800  0.50052800
+   0.74551400  0.25448500  0.00448500
+   0.74875300  0.25124700  0.49696000
+   0.74875300  0.74695900  0.00124700
+   0.75037500  0.74878200  0.49878200
+   0.87500000  0.12500000  0.87500000
+   0.12665600  0.12500000  0.37500000
+   0.13277900  0.12500000  0.87500000
+   0.12589200  0.62500000  0.37500000
+   0.12665600  0.62500000  0.87500000
+   0.62334400  0.12500000  0.37500000
+   0.61722100  0.12500000  0.87500000
+   0.62410800  0.62500000  0.37500000
+   0.62334400  0.62500000  0.87500000
+   0.12484800  0.37484800  0.12484800
+   0.12748800  0.37748800  0.62251200
+   0.12748800  0.87251200  0.12748800
+   0.12484800  0.87515200  0.62515200
+   0.62251200  0.37748800  0.12748800
+   0.62515200  0.37484800  0.62515200
+   0.62515200  0.87515200  0.12484800
+   0.62251200  0.87251200  0.62251200
+   0.37500000  0.12500000  0.12665600
+   0.37500000  0.12500000  0.62334400
+   0.37500000  0.62500000  0.12589200
+   0.37500000  0.62500000  0.62410800
+   0.87500000  0.12500000  0.13277900
+   0.87500000  0.12500000  0.61722100
+   0.87500000  0.62500000  0.12665600
+   0.87500000  0.62500000  0.62334400
+   0.37500000  0.37589200  0.37500000
+   0.37500000  0.37665600  0.87500000
+   0.37500000  0.87410800  0.37500000
+   0.37500000  0.87334400  0.87500000
+   0.87500000  0.37665600  0.37500000
+   0.87500000  0.38277900  0.87500000
+   0.87500000  0.87334400  0.37500000
+   0.87500000  0.86722100  0.87500000
+
+ position of ions in cartesian coordinates  (Angst):
+   0.05869415 13.02807385  0.05869415
+   0.01631920 13.07044880  6.50358714
+   0.01631920  6.58318086  0.01631920
+  13.08186046  6.55932368  6.52744432
+   6.50358714 13.07044880  0.01631920
+   6.52743123  0.00490754  6.52743123
+   6.52743123  6.55933677 13.08186046
+   6.55029381  6.53647419  6.55029381
+   0.01631920  3.28801120  3.31147577
+   0.05870724  3.33038615  9.75638185
+  13.08186046  9.79913632  3.28763168
+   0.01631920  9.77527914  9.79875680
+   6.52744432  3.26678446  3.28764477
+   6.50360023  3.28801120  9.79875680
+   6.55029381  9.82198581  3.26478219
+   6.52743123  9.79912323  9.81998354
+   3.28764477  0.00490754  3.28764477
+   3.31147577 13.07044880  9.79875680
+   3.26478219  6.53647419  3.26478219
+   3.28764477  6.55933677  9.81998354
+   9.79875680 13.07044880  3.31147577
+   9.75636876 13.02807385  9.75638185
+   9.81998354  6.55933677  3.28764477
+   9.79875680  6.58316777  9.79875680
+   3.31147577  3.28801120  0.01631920
+   3.28764477  3.26678446  6.52743123
+   3.28764477  9.79912323 13.08186046
+   3.26478219  9.82198581  6.55029381
+   9.75636876  3.33038615  0.05869415
+   9.79875680  3.28801120  6.50360023
+   9.79875680  9.77527914  0.01631920
+   9.81998354  9.79913632  6.52744432
+  11.45092200  1.63584600 11.45092200
+   1.65751769  1.63584600  4.90753800
+   1.73764797  1.63584600 11.45092200
+   1.64751940  8.17923000  4.90753800
+   1.65751769  8.17923000 11.45092200
+   8.15755831  1.63584600  4.90753800
+   8.07742803  1.63584600 11.45092200
+   8.16755660  8.17923000  4.90753800
+   8.15755831  8.17923000 11.45092200
+   1.63385681  4.90554881  1.63385681
+   1.66840588  4.94009788  8.14667012
+   1.66840588 11.41836212  1.66840588
+   1.63385681 11.45291119  8.18121919
+   8.14667012  4.94009788  1.66840588
+   8.18121919  4.90554881  8.18121919
+   8.18121919 11.45291119  1.63385681
+   8.14667012 11.41836212  8.14667012
+   4.90753800  1.63584600  1.65751769
+   4.90753800  1.63584600  8.15755831
+   4.90753800  8.17923000  1.64751940
+   4.90753800  8.17923000  8.16755660
+  11.45092200  1.63584600  1.73764797
+  11.45092200  1.63584600  8.07742803
+  11.45092200  8.17923000  1.65751769
+  11.45092200  8.17923000  8.15755831
+   4.90753800  4.91921140  4.90753800
+   4.90753800  4.92920969 11.45092200
+   4.90753800 11.43924860  4.90753800
+   4.90753800 11.42925031 11.45092200
+  11.45092200  4.92920969  4.90753800
+  11.45092200  5.00933997 11.45092200
+  11.45092200 11.42925031  4.90753800
+  11.45092200 11.34912003 11.45092200
+
+ Euler angles ALPHA=     0.0000000  BETA=     0.0000000
+
+ transformation matrix from SAXIS to cartesian coordinates
+ ---------------------------------------------------------
+     1.0000000 m_x    -0.0000000 m_y     0.0000000 m_z
+     0.0000000 m_x     1.0000000 m_y     0.0000000 m_z
+    -0.0000000 m_x     0.0000000 m_y     1.0000000 m_z
+
+ transformation matrix from cartesian coordinates to SAXIS
+ ---------------------------------------------------------
+     1.0000000 m_x     0.0000000 m_y    -0.0000000 m_z
+    -0.0000000 m_x     1.0000000 m_y     0.0000000 m_z
+     0.0000000 m_x     0.0000000 m_y     1.0000000 m_z
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ k-point   1 :   0.2500 0.2500 0.2500  plane waves:   97156
+ k-point   2 :  -0.2500-0.2500-0.2500  plane waves:   97156
+
+ maximum and minimum number of plane-waves per node :      3094     2978
+
+ maximum number of plane-waves:     97156
+ maximum index in each direction: 
+   IXMAX=   22   IYMAX=   22   IZMAX=   22
+   IXMIN=  -22   IYMIN=  -22   IZMIN=  -22
+
+
+ parallel 3D FFT for wavefunctions:
+    minimum data exchange during FFTs selected (reduces bandwidth)
+ parallel 3D FFT for charge:
+    minimum data exchange during FFTs selected (reduces bandwidth)
+
+
+ FFT grid for exact exchange (Hartree Fock) 
+  NGX = 48; NGY = 48; NGZ = 48
+
+
+ Radii for the augmentation spheres in the non-local exchange
+ for species   1 augmentation radius   1.444 (default was   1.070)
+       energy cutoff for augmentation   1800.0
+ for species   2 augmentation radius   1.606 (default was   1.190)
+       energy cutoff for augmentation   1800.0
+
+ real space projection operators:
+  total allocation   :       9375.20 KBytes
+  max/ min on nodes  :        432.62        141.21
+
+ Maximum index for augmentation-charges in exchange           97
+  SETUP_FOCK is finished
+
+ total amount of memory used by VASP MPI-rank0    53655. kBytes
+=======================================================================
+
+   base      :      30000. kBytes
+   nonl-proj :       2585. kBytes
+   fftplans  :       3753. kBytes
+   grid      :      12386. kBytes
+   one-center:        186. kBytes
+   HF        :        129. kBytes
+   nonlr-proj:       1424. kBytes
+   wavefun   :       3192. kBytes
+
+     INWAV:  cpu time      0.0000: real time      0.0000
+ Broyden mixing: mesh for mixing (old mesh)
+   NGX = 45   NGY = 45   NGZ = 45
+  (NGX  =192   NGY  =192   NGZ  =192)
+  gives a total of  91125 points
+
+ initial charge density was supplied:
+ charge density of overlapping atoms calculated
+ number of electron     588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+ keeping initial charge density in first step
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ Maximum index for augmentation-charges          775 (set IRDMAX)
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+ First call to EWALD:  gamma=   0.135
+ Maximum number of real-space cells 3x 3x 3
+ Maximum number of reciprocal cells 3x 3x 3
+
+    FEWALD:  cpu time      0.0397: real time      0.0397
+
+
+--------------------------------------- Ionic step        1  -------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   1)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.6822: real time      0.6831
+    SETDIJ:  cpu time      0.6615: real time      0.6619
+    TRIAL :  cpu time    163.4229: real time    163.5015
+    CORREC:  cpu time      0.0073: real time      0.0073
+    --------------------------------------------
+      LOOP:  cpu time    164.7929: real time    164.8728
+
+ eigenvalue-minimisations  :  2560
+ total energy-change (2. order) :-0.6552692E+05  (-0.2602791E+05)
+ number of electron     588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+ augmentation part      588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =      1642.45118531
+  Ewald energy   TEWEN  =    -33940.17512420
+  -Hartree energ DENC   =    -17077.89199325
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =      -720.79451392
+  PAW double counting   =     46138.45347506  -111612.37425480
+  entropy T*S    EENTRO =        -0.02717488
+  eigenvalues    EBANDS =       294.01690693
+  atomic energy  EATOM  =     49749.42546354
+  ---------------------------------------------------
+  free energy    TOTEN  =    -65526.91603020 eV
+
+  energy without entropy =   -65526.88885532  energy(sigma->0) =   -65526.90244276
+  exchange ACFDT corr.  =         0.00000000  see jH, gK, PRB 81, 115126
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   2)  ---------------------------------------
+
+
+    TRIAL :  cpu time      1.7139: real time      1.7148
+    CORREC:  cpu time      0.0005: real time      0.0005
+    --------------------------------------------
+      LOOP:  cpu time      1.7302: real time      1.7481
+
+ eigenvalue-minimisations  :  2816
+ total energy-change (2. order) :-0.3695907E+04  (-0.3653297E+04)
+ number of electron     588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+ augmentation part      588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =      1642.45118531
+  Ewald energy   TEWEN  =    -33940.17512420
+  -Hartree energ DENC   =    -17077.89199325
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =      -720.79451392
+  PAW double counting   =     46138.45347506  -111612.37425480
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =     -3401.91741844
+  atomic energy  EATOM  =     49749.42546354
+  ---------------------------------------------------
+  free energy    TOTEN  =    -69222.82318069 eV
+
+  energy without entropy =   -69222.82318069  energy(sigma->0) =   -69222.82318069
+  exchange ACFDT corr.  =         0.00000000  see jH, gK, PRB 81, 115126
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   3)  ---------------------------------------
+
+
+    TRIAL :  cpu time      1.7797: real time      1.7802
+    CORREC:  cpu time      0.0005: real time      0.0005
+    --------------------------------------------
+      LOOP:  cpu time      1.7939: real time      1.8131
+
+ eigenvalue-minimisations  :  2816
+ total energy-change (2. order) :-0.2479756E+03  (-0.2470299E+03)
+ number of electron     588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+ augmentation part      588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =      1642.45118531
+  Ewald energy   TEWEN  =    -33940.17512420
+  -Hartree energ DENC   =    -17077.89199325
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =      -720.79451392
+  PAW double counting   =     46138.45347506  -111612.37425480
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =     -3649.89299918
+  atomic energy  EATOM  =     49749.42546354
+  ---------------------------------------------------
+  free energy    TOTEN  =    -69470.79876143 eV
+
+  energy without entropy =   -69470.79876143  energy(sigma->0) =   -69470.79876143
+  exchange ACFDT corr.  =         0.00000000  see jH, gK, PRB 81, 115126
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   4)  ---------------------------------------
+
+
+    TRIAL :  cpu time      2.1558: real time      2.1577
+    CORREC:  cpu time      0.0005: real time      0.0005
+    --------------------------------------------
+      LOOP:  cpu time      2.1702: real time      2.1912
+
+ eigenvalue-minimisations  :  3200
+ total energy-change (2. order) :-0.8669986E+01  (-0.8648674E+01)
+ number of electron     588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+ augmentation part      588.0000000 magnetization       0.0000000      0.0000000      0.0000000
+
+ Free energy of the ion-electron system (eV)
+  ---------------------------------------------------
+  alpha Z        PSCENC =      1642.45118531
+  Ewald energy   TEWEN  =    -33940.17512420
+  -Hartree energ DENC   =    -17077.89199325
+  -exchange      EXHF   =         0.00000000
+  -V(xc)+E(xc)   XCENC  =      -720.79451392
+  PAW double counting   =     46138.45347506  -111612.37425480
+  entropy T*S    EENTRO =        -0.00000000
+  eigenvalues    EBANDS =     -3658.56298511
+  atomic energy  EATOM  =     49749.42546354
+  ---------------------------------------------------
+  free energy    TOTEN  =    -69479.46874737 eV
+
+  energy without entropy =   -69479.46874737  energy(sigma->0) =   -69479.46874737
+  exchange ACFDT corr.  =         0.00000000  see jH, gK, PRB 81, 115126
+
+
+--------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------- Iteration      1(   5)  ---------------------------------------
+
+
+    POTLOK:  cpu time      0.6094: real time      0.6096
+    SETDIJ:  cpu time      1.8203: real time      1.8211
+ -----------------------------------------------------------------------------
+|                                                                             |
+|     EEEEEEE  RRRRRR   RRRRRR   OOOOOOO  RRRRRR      ###     ###     ###     |
+|     E        R     R  R     R  O     O  R     R     ###     ###     ###     |
+|     E        R     R  R     R  O     O  R     R     ###     ###     ###     |
+|     EEEEE    RRRRRR   RRRRRR   O     O  RRRRRR       #       #       #      |
+|     E        R   R    R   R    O     O  R   R                               |
+|     E        R    R   R    R   O     O  R    R      ###     ###     ###     |
+|     EEEEEEE  R     R  R     R  OOOOOOO  R     R     ###     ###     ###     |
+|                                                                             |
+|     Error EDDDAV: Call to ZHEGV failed. Returncode = 63 1 64                |
+|                                                                             |
+|       ---->  I REFUSE TO CONTINUE WITH THIS SICK JOB ... BYE!!! <----       |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+++++ Slurm JobID = 3945799
+
+Lmod is automatically replacing "cce/15.0.0" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Lmod is automatically replacing "craype-network-ofi" with "craype-network-ucx".
+
+
+Lmod is automatically replacing "cray-mpich/8.1.23" with
+"cray-mpich-ucx/8.1.23".
+
+
+Lmod is automatically replacing "craype-network-ucx" with "craype-network-ofi".
+
+
+Inactive Modules:
+  1) cray-mpich-ucx/8.1.23
+
+	linux-vdso.so.1 (0x00007ffd0ef5c000)
+	libstdc++.so.6 => /opt/cray/pe/gcc-libs/libstdc++.so.6 (0x000014e61f07a000)
+	libhdf5_fortran_parallel_gnu_91.so.200 => /opt/cray/pe/hdf5-parallel/1.12.2.1/gnu/9.1/lib/libhdf5_fortran_parallel_gnu_91.so.200 (0x000014e61ee27000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x000014e61ec23000)
+	libmpifort_gnu_91.so.12 => /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1/lib/libmpifort_gnu_91.so.12 (0x000014e61e99f000)
+	libfftw3_omp.so.mpi31.3 => /opt/cray/pe/fftw/3.3.10.3/x86_rome/lib/libfftw3_omp.so.mpi31.3 (0x000014e61e798000)
+	libsci_gnu_82_mpi_mp.so.5 => /opt/cray/pe/libsci/22.12.1.1/GNU/9.1/x86_64/lib/libsci_gnu_82_mpi_mp.so.5 (0x000014e61e019000)
+	libsci_gnu_82_mp.so.5 => /opt/cray/pe/libsci/22.12.1.1/GNU/9.1/x86_64/lib/libsci_gnu_82_mp.so.5 (0x000014e61a8a5000)
+	libxpmem.so.0 => /opt/cray/xpmem/default/lib64/libxpmem.so.0 (0x000014e61f69a000)
+	libgfortran.so.5 => /opt/cray/pe/gcc-libs/libgfortran.so.5 (0x000014e61a3f9000)
+	libquadmath.so.0 => /opt/cray/pe/gcc-libs/libquadmath.so.0 (0x000014e61a1b2000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x000014e619f8f000)
+	libm.so.6 => /lib64/libm.so.6 (0x000014e619c44000)
+	libmvec.so.1 => /lib64/libmvec.so.1 (0x000014e619a19000)
+	libgomp.so.1 => /opt/cray/pe/gcc-libs/libgomp.so.1 (0x000014e6197d6000)
+	libgcc_s.so.1 => /opt/cray/pe/gcc-libs/libgcc_s.so.1 (0x000014e6195bd000)
+	libc.so.6 => /lib64/libc.so.6 (0x000014e6191c8000)
+	/lib64/ld-linux-x86-64.so.2 (0x000014e61f48c000)
+	libhdf5_parallel_gnu_91.so.200 => /opt/cray/pe/hdf5-parallel/1.12.2.1/gnu/9.1/lib/libhdf5_parallel_gnu_91.so.200 (0x000014e618b4b000)
+	libmpi_gnu_91.so.12 => /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1/lib/libmpi_gnu_91.so.12 (0x000014e615fc6000)
+	libfabric.so.1 => /opt/cray/libfabric/1.12.1.2.2.0.0/lib64/libfabric.so.1 (0x000014e615d16000)
+	libatomic.so.1 => /opt/cray/pe/gcc-libs/libatomic.so.1 (0x000014e615b0e000)
+	librt.so.1 => /lib64/librt.so.1 (0x000014e615905000)
+	libpmi.so.0 => /opt/cray/pe/lib64/libpmi.so.0 (0x000014e615703000)
+	libpmi2.so.0 => /opt/cray/pe/lib64/libpmi2.so.0 (0x000014e6154ca000)
+	libfftw3.so.mpi31.3 => /opt/cray/pe/fftw/3.3.10.3/x86_rome/lib/libfftw3.so.mpi31.3 (0x000014e614fc5000)
+	libz.so.1 => /lib64/libz.so.1 (0x000014e614dae000)
+	librdmacm.so.1 => /usr/lib64/librdmacm.so.1 (0x000014e614b8e000)
+	libibverbs.so.1 => /usr/lib64/libibverbs.so.1 (0x000014e61496e000)
+	libpals.so.0 => /opt/cray/pe/lib64/libpals.so.0 (0x000014e614769000)
+	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x000014e614547000)
+	libnl-route-3.so.200 => /usr/lib64/libnl-route-3.so.200 (0x000014e6142d1000)
+rm: cannot remove 'WAVECAR': No such file or directory
+ running 4096 mpi-ranks, with    1 threads/rank, on   32 nodes
+ distrk:  each k-point on 2048 cores,    2 groups
+ distr:  one band on   32 cores,   64 groups
+ vasp.6.4.1 05Apr23 (build May 30 2023 08:55:05) complex                         
+ POSCAR found type information on POSCAR CdTe
+ POSCAR found :  2 types and      65 ions
+ Reading from existing POTCAR
+ scaLAPACK will be used
+ Reading from existing POTCAR
+ -----------------------------------------------------------------------------
+|                                                                             |
+|               ----> ADVICE to this user running VASP <----                  |
+|                                                                             |
+|     You have a (more or less) 'large supercell' and for larger cells it     |
+|     might be more efficient to use real-space projection operators.         |
+|     Therefore, try LREAL= Auto in the INCAR file.                           |
+|     Mind: For very accurate calculation, you might also keep the            |
+|     reciprocal projection scheme (i.e. LREAL=.FALSE.).                      |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+ LDA part: xc-table for Pade appr. of Perdew
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ WAVECAR not read
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          ort
+DAV:   1    -0.655269160302E+05   -0.65527E+05   -0.26028E+05  1280   0.146E+03
+DAV:   2    -0.692228231807E+05   -0.36959E+04   -0.36533E+04  1280   0.356E+02
+DAV:   3    -0.694707987614E+05   -0.24798E+03   -0.24703E+03  1280   0.837E+01
+DAV:   4    -0.694794687474E+05   -0.86700E+01   -0.86487E+01  1280   0.137E+01
+ -----------------------------------------------------------------------------
+|                                                                             |
+|     EEEEEEE  RRRRRR   RRRRRR   OOOOOOO  RRRRRR      ###     ###     ###     |
+|     E        R     R  R     R  O     O  R     R     ###     ###     ###     |
+|     E        R     R  R     R  O     O  R     R     ###     ###     ###     |
+|     EEEEE    RRRRRR   RRRRRR   O     O  RRRRRR       #       #       #      |
+|     E        R   R    R   R    O     O  R   R                               |
+|     E        R    R   R    R   O     O  R    R      ###     ###     ###     |
+|     EEEEEEE  R     R  R     R  OOOOOOO  R     R     ###     ###     ###     |
+|                                                                             |
+|     Error EDDDAV: Call to ZHEGV failed. Returncode = 63 1 64                |
+|                                                                             |
+|       ---->  I REFUSE TO CONTINUE WITH THIS SICK JOB ... BYE!!! <----       |
+|                                                                             |
+ -----------------------------------------------------------------------------
+
+MPICH ERROR [Rank 3458] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3458 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3458
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3458
+MPICH ERROR [Rank 3467] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3467 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3467
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3467
+MPICH ERROR [Rank 3516] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3516 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3516
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3516
+MPICH ERROR [Rank 3517] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3517 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3517
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3517
+MPICH ERROR [Rank 3997] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3997 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3997
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3997
+MPICH ERROR [Rank 3519] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3519 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3519
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3519
+MPICH ERROR [Rank 4031] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 4031 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4031
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4031
+MPICH ERROR [Rank 4028] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 4028 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4028
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4028
+MPICH ERROR [Rank 3459] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3459 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3459
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3459
+MPICH ERROR [Rank 3851] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3851 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3851
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3851
+MPICH ERROR [Rank 3979] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3979 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3979
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3979
+MPICH ERROR [Rank 3935] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3935 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3935
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3935
+MPICH ERROR [Rank 3971] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3971 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3971
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3971
+MPICH ERROR [Rank 3843] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3843 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3843
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3843
+MPICH ERROR [Rank 3999] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3999 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3999
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3999
+MPICH ERROR [Rank 3714] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004953] - Abort(1) (rank 3714 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3714
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3714
+MPICH ERROR [Rank 3933] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3933 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3933
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3933
+MPICH ERROR [Rank 3773] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004953] - Abort(1) (rank 3773 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3773
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3773
+MPICH ERROR [Rank 3842] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3842 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3842
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3842
+MPICH ERROR [Rank 3805] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004953] - Abort(1) (rank 3805 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3805
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3805
+MPICH ERROR [Rank 3973] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3973 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3973
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3973
+MPICH ERROR [Rank 3549] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3549 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3549
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3549
+MPICH ERROR [Rank 3775] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004953] - Abort(1) (rank 3775 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3775
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3775
+MPICH ERROR [Rank 4003] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 4003 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4003
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4003
+MPICH ERROR [Rank 3551] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3551 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3551
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3551
+MPICH ERROR [Rank 3981] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3981 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3981
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3981
+MPICH ERROR [Rank 3503] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3503 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3503
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3503
+MPICH ERROR [Rank 3311] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004949] - Abort(1) (rank 3311 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3311
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3311
+MPICH ERROR [Rank 2493] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003714] - Abort(1) (rank 2493 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2493
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2493
+MPICH ERROR [Rank 3975] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3975 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3975
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3975
+MPICH ERROR [Rank 3567] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004951] - Abort(1) (rank 3567 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3567
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3567
+MPICH ERROR [Rank 3983] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3983 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3983
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3983
+MPICH ERROR [Rank 3970] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3970 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3970
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3970
+MPICH ERROR [Rank 1794] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003704] - Abort(1) (rank 1794 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1794
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1794
+MPICH ERROR [Rank 3900] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3900 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3900
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3900
+MPICH ERROR [Rank 1852] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003704] - Abort(1) (rank 1852 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1852
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1852
+MPICH ERROR [Rank 3903] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3903 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3903
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3903
+MPICH ERROR [Rank 3823] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004953] - Abort(1) (rank 3823 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3823
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3823
+MPICH ERROR [Rank 3887] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3887 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3887
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3887
+MPICH ERROR [Rank 3919] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3919 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3919
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3919
+MPICH ERROR [Rank 3951] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3951 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3951
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3951
+MPICH ERROR [Rank 3965] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004954] - Abort(1) (rank 3965 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3965
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3965
+MPICH ERROR [Rank 3987] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 3987 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3987
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3987
+MPICH ERROR [Rank 4015] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 4015 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4015
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4015
+MPICH ERROR [Rank 4029] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004957] - Abort(1) (rank 4029 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4029
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 4029
+MPICH ERROR [Rank 1923] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1923 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1923
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1923
+MPICH ERROR [Rank 1922] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1922 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1922
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1922
+MPICH ERROR [Rank 1967] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1967 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1967
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1967
+MPICH ERROR [Rank 3439] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004950] - Abort(1) (rank 3439 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3439
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3439
+MPICH ERROR [Rank 1903] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003704] - Abort(1) (rank 1903 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1903
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1903
+MPICH ERROR [Rank 3183] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004948] - Abort(1) (rank 3183 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3183
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3183
+MPICH ERROR [Rank 2927] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004946] - Abort(1) (rank 2927 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2927
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2927
+MPICH ERROR [Rank 2543] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003714] - Abort(1) (rank 2543 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2543
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2543
+MPICH ERROR [Rank 1931] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1931 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1931
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1931
+MPICH ERROR [Rank 1980] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1980 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1980
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1980
+MPICH ERROR [Rank 1981] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1981 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1981
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1981
+MPICH ERROR [Rank 1983] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003707] - Abort(1) (rank 1983 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1983
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1983
+MPICH ERROR [Rank 1410] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003689] - Abort(1) (rank 1410 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1410
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1410
+MPICH ERROR [Rank 1468] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003689] - Abort(1) (rank 1468 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1468
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1468
+MPICH ERROR [Rank 1469] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003689] - Abort(1) (rank 1469 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1469
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1469
+MPICH ERROR [Rank 1519] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003689] - Abort(1) (rank 1519 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1519
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1519
+MPICH ERROR [Rank 898] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid001554] - Abort(1) (rank 898 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 898
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 898
+MPICH ERROR [Rank 2955] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004947] - Abort(1) (rank 2955 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2955
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 2955
+MPICH ERROR [Rank 3037] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004947] - Abort(1) (rank 3037 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3037
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3037
+MPICH ERROR [Rank 3039] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004947] - Abort(1) (rank 3039 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3039
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3039
+MPICH ERROR [Rank 956] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid001554] - Abort(1) (rank 956 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 956
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 956
+MPICH ERROR [Rank 957] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid001554] - Abort(1) (rank 957 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 957
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 957
+MPICH ERROR [Rank 1007] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid001554] - Abort(1) (rank 1007 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1007
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1007
+MPICH ERROR [Rank 3005] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004947] - Abort(1) (rank 3005 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3005
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3005
+MPICH ERROR [Rank 3055] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid004947] - Abort(1) (rank 3055 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3055
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 3055
+MPICH ERROR [Rank 1775] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003698] - Abort(1) (rank 1775 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1775
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1775
+MPICH ERROR [Rank 1727] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003698] - Abort(1) (rank 1727 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1727
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1727
+MPICH ERROR [Rank 1666] [job id 3945799.0] [Tue Jul 18 17:21:14 2023] [nid003698] - Abort(1) (rank 1666 in comm 0): application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1666
+
+aborting job:
+application called MPI_Abort(MPI_COMM_WORLD, 1) - process 1666
+srun: error: nid004946: task 2927: Exited with exit code 255
+srun: launch/slurm: _step_signal: Terminating StepId=3945799.0
+srun: error: nid004949: task 3311: Exited with exit code 255
+srun: error: nid004950: task 3439: Exited with exit code 255
+srun: error: nid004948: task 3183: Exited with exit code 255
+slurmstepd: error: *** STEP 3945799.0 ON nid001513 CANCELLED AT 2023-07-18T17:21:15 ***
+srun: error: nid003714: tasks 2493,2543: Exited with exit code 255
+srun: error: nid003689: tasks 1410,1468-1469,1519: Exited with exit code 255
+srun: error: nid003698: tasks 1666,1727,1775: Exited with exit code 255
+srun: error: nid003698: task 1790: Terminated
+srun: error: nid003704: tasks 1794,1852,1903: Exited with exit code 255
+srun: error: nid003704: task 1815: Terminated
+srun: error: nid001554: tasks 898,956-957,1007: Exited with exit code 255
+srun: error: nid004946: task 2834: Terminated
+srun: error: nid003709: task 2178: Terminated
+srun: error: nid001556: tasks 1154,1192: Terminated
+srun: error: nid001550: tasks 515,531: Terminated
+srun: error: nid001553: tasks 769,775: Terminated
+srun: error: nid001545: tasks 130,183: Terminated
+srun: error: nid001552: tasks 643,657,659: Terminated
+srun: error: nid004952: tasks 3587,3666,3686: Terminated
+srun: error: nid003707: tasks 1922-1923,1931,1967,1980-1981,1983: Exited with exit code 255
+srun: error: nid003714: tasks 2485-2486: Terminated
+srun: error: nid004953: tasks 3714,3773,3775,3805,3823: Exited with exit code 255
+srun: error: nid004953: tasks 3743,3760,3770: Terminated
+srun: error: nid004950: task 3345: Terminated
+srun: error: nid003708: tasks 2051,2127: Terminated
+srun: error: nid001549: tasks 386-387,400-401,444,466: Terminated
+srun: error: nid001513: tasks 3,81,93: Terminated
+srun: error: nid004954: tasks 3840-3841,3844-3850,3852-3886,3888-3899,3901-3902,3904-3918,3920-3932,3934,3937-3950,3952-3964,3966-3967: Terminated
+srun: error: nid004954: tasks 3842-3843,3851,3887,3900,3903,3919,3933,3935,3951,3965: Exited with exit code 255
+srun: error: nid004957: tasks 3968-3969,3972,3974,3976-3978,3980,3982,3984-3986,3988-3996,3998,4001-4002,4004-4014,4016-4027,4030,4032-4094: Terminated
+srun: error: nid004957: tasks 3970-3971,3973,3975,3979,3981,3983,3987,3997,3999,4003,4015,4028-4029,4031: Exited with exit code 255
+srun: error: nid004947: tasks 2944-2954,2956-3004,3006-3036,3038,3040-3054,3056-3071: Terminated
+srun: error: nid004947: tasks 2955,3005,3037,3039,3055: Exited with exit code 255
+srun: error: nid001554: tasks 896-897,899-955,958-960,962-1006,1008-1023: Terminated
+srun: error: nid003707: tasks 1920-1921,1924-1930,1932-1966,1968-1979,1982,1984-2046: Terminated
+srun: error: nid004953: tasks 3712-3713,3715-3742,3744-3759,3761-3769,3771-3772,3774,3776-3804,3806-3822,3824-3839: Terminated
+srun: error: nid004951: tasks 3456-3457,3460-3466,3468-3502,3504-3515,3518,3520-3548,3550,3552-3566,3568-3583: Terminated
+srun: error: nid004951: tasks 3458-3459,3467,3503,3516-3517,3519,3549,3551,3567: Exited with exit code 255
+srun: error: nid004949: tasks 3200-3310,3312-3327: Terminated
+srun: error: nid004945: tasks 2688-2815: Terminated
+srun: error: nid004948: tasks 3072-3182,3184-3199: Terminated
+srun: error: nid001552: tasks 640-642,644-656,658,660-767: Terminated
+srun: error: nid001555: tasks 1024-1151: Terminated
+srun: error: nid001556: tasks 1152-1153,1155-1191,1193-1279: Terminated
+srun: error: nid003689: tasks 1408-1409,1411-1467,1470-1518,1520-1535: Terminated
+srun: error: nid001549: tasks 384-385,388-399,402-443,445-465,467-511: Terminated
+srun: error: nid004954: task 3936: Terminated
+srun: error: nid004952: tasks 3584-3586,3588-3665,3667-3685,3687-3711: Terminated
+srun: error: nid001558: tasks 1280-1407: Terminated
+srun: error: nid001550: tasks 512-514,516-530,532-639: Terminated
+srun: error: nid004935: tasks 2560-2687: Terminated
+srun: error: nid003698: tasks 1664-1665,1667-1726,1728-1774,1776-1789,1791: Terminated
+srun: error: nid003714: tasks 2432-2484,2487-2492,2494-2542,2544-2559: Terminated
+srun: error: nid003710: tasks 2304-2431: Terminated
+srun: error: nid001553: tasks 768,770-774,776-895: Terminated
+srun: error: nid004950: tasks 3328-3344,3346-3438,3440-3455: Terminated
+srun: error: nid001546: tasks 256-383: Terminated
+srun: error: nid004946: tasks 2816-2833,2835-2926,2928-2943: Terminated
+srun: error: nid003697: tasks 1536-1663: Terminated
+srun: error: nid003708: tasks 2049-2050,2052-2126,2128-2175: Terminated
+srun: error: nid003704: tasks 1792-1793,1795-1814,1816-1851,1853-1902,1904-1919: Terminated
+srun: error: nid001545: tasks 128-129,131-182,184-255: Terminated
+srun: error: nid003709: tasks 2176-2177,2179-2303: Terminated
+srun: error: nid001513: tasks 0-2,4-80,82-92,94-127: Terminated
+srun: error: nid001554: task 961: Terminated
+srun: error: nid003707: task 2047: Terminated
+srun: error: nid004957: tasks 4000,4095: Terminated
+srun: error: nid003708: task 2048: Terminated
+srun: Force Terminated StepId=3945799.0

@@ -1,0 +1,59 @@
+++++ Slurm JobID = 3945792
+
+Lmod is automatically replacing "cce/15.0.0" with "gcc/11.2.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "PrgEnv-gnu/8.3.3".
+
+
+Lmod is automatically replacing "craype-network-ofi" with "craype-network-ucx".
+
+
+Lmod is automatically replacing "cray-mpich/8.1.23" with
+"cray-mpich-ucx/8.1.23".
+
+
+Lmod is automatically replacing "craype-network-ucx" with "craype-network-ofi".
+
+
+Inactive Modules:
+  1) cray-mpich-ucx/8.1.23
+
+	linux-vdso.so.1 (0x00007ffc5af88000)
+	libstdc++.so.6 => /opt/cray/pe/gcc-libs/libstdc++.so.6 (0x00001472b0086000)
+	libhdf5_fortran_parallel_gnu_91.so.200 => /opt/cray/pe/hdf5-parallel/1.12.2.1/gnu/9.1/lib/libhdf5_fortran_parallel_gnu_91.so.200 (0x00001472afe33000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00001472afc2f000)
+	libmpifort_gnu_91.so.12 => /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1/lib/libmpifort_gnu_91.so.12 (0x00001472af9ab000)
+	libfftw3_omp.so.mpi31.3 => /opt/cray/pe/fftw/3.3.10.3/x86_rome/lib/libfftw3_omp.so.mpi31.3 (0x00001472af7a4000)
+	libsci_gnu_82_mpi_mp.so.5 => /opt/cray/pe/libsci/22.12.1.1/GNU/9.1/x86_64/lib/libsci_gnu_82_mpi_mp.so.5 (0x00001472af025000)
+	libsci_gnu_82_mp.so.5 => /opt/cray/pe/libsci/22.12.1.1/GNU/9.1/x86_64/lib/libsci_gnu_82_mp.so.5 (0x00001472ab8b1000)
+	libxpmem.so.0 => /opt/cray/xpmem/default/lib64/libxpmem.so.0 (0x00001472b06a6000)
+	libgfortran.so.5 => /opt/cray/pe/gcc-libs/libgfortran.so.5 (0x00001472ab405000)
+	libquadmath.so.0 => /opt/cray/pe/gcc-libs/libquadmath.so.0 (0x00001472ab1be000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00001472aaf9b000)
+	libm.so.6 => /lib64/libm.so.6 (0x00001472aac50000)
+	libmvec.so.1 => /lib64/libmvec.so.1 (0x00001472aaa25000)
+	libgomp.so.1 => /opt/cray/pe/gcc-libs/libgomp.so.1 (0x00001472aa7e2000)
+	libgcc_s.so.1 => /opt/cray/pe/gcc-libs/libgcc_s.so.1 (0x00001472aa5c9000)
+	libc.so.6 => /lib64/libc.so.6 (0x00001472aa1d4000)
+	/lib64/ld-linux-x86-64.so.2 (0x00001472b0498000)
+	libhdf5_parallel_gnu_91.so.200 => /opt/cray/pe/hdf5-parallel/1.12.2.1/gnu/9.1/lib/libhdf5_parallel_gnu_91.so.200 (0x00001472a9b57000)
+	libmpi_gnu_91.so.12 => /opt/cray/pe/mpich/8.1.23/ofi/gnu/9.1/lib/libmpi_gnu_91.so.12 (0x00001472a6fd2000)
+	libfabric.so.1 => /opt/cray/libfabric/1.12.1.2.2.0.0/lib64/libfabric.so.1 (0x00001472a6d22000)
+	libatomic.so.1 => /opt/cray/pe/gcc-libs/libatomic.so.1 (0x00001472a6b1a000)
+	librt.so.1 => /lib64/librt.so.1 (0x00001472a6911000)
+	libpmi.so.0 => /opt/cray/pe/lib64/libpmi.so.0 (0x00001472a670f000)
+	libpmi2.so.0 => /opt/cray/pe/lib64/libpmi2.so.0 (0x00001472a64d6000)
+	libfftw3.so.mpi31.3 => /opt/cray/pe/fftw/3.3.10.3/x86_rome/lib/libfftw3.so.mpi31.3 (0x00001472a5fd1000)
+	libz.so.1 => /lib64/libz.so.1 (0x00001472a5dba000)
+	librdmacm.so.1 => /usr/lib64/librdmacm.so.1 (0x00001472a5b9a000)
+	libibverbs.so.1 => /usr/lib64/libibverbs.so.1 (0x00001472a597a000)
+	libpals.so.0 => /opt/cray/pe/lib64/libpals.so.0 (0x00001472a5775000)
+	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x00001472a5553000)
+	libnl-route-3.so.200 => /usr/lib64/libnl-route-3.so.200 (0x00001472a52dd000)
+rm: cannot remove 'WAVECAR': No such file or directory
+srun: error: Task launch for StepId=3945792.0 failed on node nid003933: Communication connection failure
+srun: error: Application launch failed: Communication connection failure
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: Timed out waiting for job step to complete
+mv: cannot stat 'OUTCAR': No such file or directory
