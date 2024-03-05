@@ -52,10 +52,15 @@ def get_perf_dict(filename, cpn, perftype="max"):
     - SCF: SCF cycle time in seconds
     - Perf: performance in SCF cycles per second
     - Count: set to 1, used for counting entries in performance results
+    - Bands: the number of BANDS in the calculation
+    - Runtime: the total elapsed time of the calculation
+    - PerfBands: performance per 1000 bands - this is 1000x the largest TRIAL time divided by the number of bands
+    - PerfBandsCore: performance per 1000 bands per core 
     """
     infile = open(filename, 'r')
     resdict = {}
-    tvals = []
+    loopvals = []
+    trialvals = []
     resdict['File'] = os.path.abspath(filename)
     # Default to 1 thread
     resdict['Threads'] = 1
@@ -64,10 +69,18 @@ def get_perf_dict(filename, cpn, perftype="max"):
             line = line.strip()
             tokens = line.split()
             if len(tokens) > 6:
-                tvals.append(float(tokens[6]))
+                loopvals.append(float(tokens[6]))
             else:
                 t = tokens[4].replace("time","")
-                tvals.append(float(t))
+                loopvals.append(float(t))
+        if re.search('TRIAL :', line):
+            line = line.strip()
+            tokens = line.split()
+            if len(tokens) > 7:
+                trialvals.append(float(tokens[7]))
+            else:
+                t = tokens[5].replace("time","")
+                trialvals.append(float(t))
         elif re.search('running on ', line):
             line = line.strip()
             tokens = line.split()
@@ -90,18 +103,28 @@ def get_perf_dict(filename, cpn, perftype="max"):
             tokens = line.split()
             resdict['Date'] = f"{tokens[4].strip()} {tokens[5].strip()}"
         elif re.search('distr:', line):
-            line = line.strip()
-            tokens = line.split()
-            resdict['NCORE'] = int(tokens[5].strip())
-            resdict['NPAR'] = int(tokens[7].strip())
+            if not 'NCORE' in resdict:
+               line = line.strip()
+               tokens = line.split()
+               resdict['NCORE'] = int(tokens[5].strip())
+               resdict['NPAR'] = int(tokens[7].strip())
         elif re.search('distrk:', line):
+            if not 'KPAR' in resdict:
+               line = line.strip()
+               tokens = line.split()
+               resdict['KPAR'] = int(tokens[6].strip())  
+        elif re.search('NBANDS=', line):
             line = line.strip()
             tokens = line.split()
-            resdict['KPAR'] = int(tokens[6].strip())            
+            resdict['Bands'] = int(tokens[14].strip())
+        elif re.search('Elapsed', line):
+            line = line.strip()
+            tokens = line.split()
+            resdict['Runtime'] = float(tokens[3].strip())    
     infile.close()
 
     # If we do not have enough SCF cycle data then exit and return None
-    if len(tvals) < 1:
+    if len(loopvals) < 1:
         resdict = None
         return resdict
 
@@ -123,28 +146,33 @@ def get_perf_dict(filename, cpn, perftype="max"):
     # Compute the SCF cycle times and remove extreme values
     resdict['LOOP'] = 0.0
     if perftype == "mean":
-        if len(tvals) > 2:
-            tvals.remove(max(tvals))
-            tvals.remove(min(tvals))
-        resdict['LOOP'] = sum(tvals)/len(tvals)
+        if len(loopvals) > 2:
+            loopvals.remove(max(loopvals))
+            loopvals.remove(min(loopvals))
+        resdict['LOOP'] = sum(loopvals)/len(loopvals)
     if perftype == "max":
-        resdict['LOOP'] = max(tvals)
+        resdict['LOOP'] = max(loopvals)
     if perftype == "min":
-        resdict['LOOP'] = min(tvals)
+        resdict['LOOP'] = min(loopvals)
 
     resdict['Perf'] = 1.0 / resdict['LOOP']
     resdict['Count'] = 1
+    if len(trialvals) > 0:
+        resdict['TRIAL'] = max(trialvals)
+        resdict['PerfBands'] = (1000.0 / resdict['TRIAL']) / resdict['Bands']
+        resdict['PerfBandsCore'] = resdict['PerfBands'] / resdict['Cores']
+        resdict['PerfBandsResCore'] = resdict['PerfBands'] / (resdict['Nodes'] * cpn)
 
     return resdict
 
-def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
+def get_perf_stats(df, stat, perf='Perf', threads=None, writestats=False, plot_cores=False):
     if threads is not None:
        query = '(Threads == {0})'.format(threads)
        df = df.query(query)
     df_num = df.drop(labels=['File', 'Date'], axis=1)
-    groupf = {'Perf':['min','median','max','mean'], 'LOOP':['min','median','max','mean'], 'Count':'sum'}
+    groupf = {perf:['min','median','max','mean'], 'LOOP':['min','median','max','mean'], 'Count':'sum'}
     if writestats:
-        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads','Cores','NCORE','NPAR','KPAR']).agg(groupf)
+        df_group = df_num.sort_values(by='Nodes').groupby(['Nodes','Processes','Threads','Cores','NCORE','NPAR','KPAR','Bands']).agg(groupf)
         print(df_group)
     if plot_cores:
         df_group = df_num.sort_values(by='Cores').groupby(['Cores']).agg(groupf)
@@ -152,8 +180,7 @@ def get_perf_stats(df, stat, threads=None, writestats=False, plot_cores=False):
         df_group = df_num.sort_values(by='Nodes').groupby(['Nodes']).agg(groupf)
     if writestats:
         print(df_group)
-    perf = df_group['Perf',stat].tolist()
+    perf = df_group[perf, stat].tolist()
     count = df_group.index.get_level_values(0).tolist()
     return count, perf
-
 
