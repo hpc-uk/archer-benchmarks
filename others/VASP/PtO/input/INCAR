@@ -1,0 +1,29 @@
+LFORCE=.F.
+
+LUSE_VDW = .TRUE.
+AGGAC    = 0.0000
+GGA      = MK
+PARAM1   = 0.1234
+PARAM2   = 0.711357
+Zab_vdW  = -1.8867
+
+ICORELEVEL=2
+CLN=4
+CLL=3
+CLZ=1
+
+LREAL=Auto
+ALGO=Fast
+ENCUT= 400
+ENAUG= 644.873
+
+NELM=160
+
+LWAVE =.F.
+LCHARG=.F.
+
+Ionic relaxation
+   ISIF= 0
+
+KPAR=2
+NCORE=4
