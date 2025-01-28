@@ -22,7 +22,7 @@ binary tpr file should be used. Both sets of input data are too large to be host
 so are available from external file hosting sites.
 
 * [Binary tpr file (nsteps800.tpr, 1.6GB, password: "gromacs")](https://datasync.ed.ac.uk/index.php/s/49Qg4UVsYE2EjvL)
-* [Raw input files (ARCHER_GROMACS_large.tar.gz, 628 MB, password: "gromacs")](https://datasync.ed.ac.uk/index.php/s/JutDxHuyvMaCe7a)
+* [Raw input files (ARCHER_GROMACS_large.tar.gz, 628 MB, password: "gromacs")](https://datasync.ed.ac.uk/index.php/s/hOr7c0lLpEIE9Te)
 
 #### Generating the binary tpr file from the raw input data
 
